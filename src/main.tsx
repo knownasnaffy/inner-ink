@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { themeChange } from 'theme-change'
 
 import ThemeChanger from './Components/ThemeChanger.tsx'
-import Layout from './Components/Layout.tsx'
+import App from './App.tsx'
 import ReloadPrompt from './Components/ReloadPrompt.tsx'
 
 import './index.css'
@@ -21,7 +21,7 @@ const AppRoot = () => {
 		<>
 			<BrowserRouter>
 				{loggedIn ? (
-					<Layout />
+					<App />
 				) : (
 					<button
 						className='btn btn-primary m-10'
