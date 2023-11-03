@@ -1,7 +1,7 @@
 import { useRegisterSW } from 'virtual:pwa-register/react'
 
 function ReloadPrompt() {
-	const intervalMS = 2 * 60 * 1000
+	// const intervalMS = 2 * 60 * 1000
 
 	const {
 		offlineReady: [offlineReady, setOfflineReady],
@@ -11,11 +11,11 @@ function ReloadPrompt() {
 		onRegistered(r) {
 			// eslint-disable-next-line prefer-template
 			console.info('SW Registered: ' + r)
-			r &&
-				setInterval(() => {
-					r.update()
-					console.log('Periodic Check after 2 minutes')
-				}, intervalMS)
+			// r &&
+			// 	setInterval(() => {
+			// 		r.update()
+			// 		console.log('Periodic Check after 2 minutes')
+			// 	}, intervalMS)
 		},
 		onRegisterError(error) {
 			console.error('SW registration error', error)
