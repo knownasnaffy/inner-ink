@@ -2,9 +2,6 @@ import { redirect } from 'react-router-dom'
 import DateSelector from '../Components/DateSelector'
 
 const HomePage = () => {
-	const dateSelectorModal = document.getElementById(
-		'dateSelectorModal'
-	) as HTMLDialogElement
 	const openDateSelector = () => (document.getElementById('dateSelectorModal') as HTMLDialogElement).showModal()
 
 	return (
