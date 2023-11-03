@@ -1,10 +1,11 @@
+import { redirect } from 'react-router-dom'
 import DateSelector from '../Components/DateSelector'
 
 const HomePage = () => {
 	const dateSelectorModal = document.getElementById(
 		'dateSelectorModal'
 	) as HTMLDialogElement
-	const openDateSelector = () => dateSelectorModal.showModal()
+	const openDateSelector = () => (document.getElementById('dateSelectorModal') as HTMLDialogElement).showModal()
 
 	return (
 		<>
@@ -17,7 +18,7 @@ const HomePage = () => {
 				<div className='flex flex-row w-fit h-fit'>
 					<button className='btn btn-ghost btn-square'>Oh</button>
 					<button className='btn btn-ghost btn-square'>Oh</button>
-					<button className='btn btn-ghost btn-square'>Oh</button>
+					<button className='btn btn-ghost btn-square' onClick={() => redirect('/login')}>Oh</button>
 				</div>
 			</div>
 			<div className='grow'></div>
