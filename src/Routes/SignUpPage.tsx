@@ -2,7 +2,7 @@ import clsx from 'clsx'
 
 const SignUpPage = () => {
 	return (
-		<div className='h-screen flex flex-col justify-center'>
+		<div className='h-screen flex flex-col justify-center bg-base-200'>
 			<div className='relative py-3 sm:max-w-xl sm:mx-auto'>
 				<div className='absolute inset-0 bg-gradient-to-r from-primary to-secondary shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl'></div>
 				<div className='relative shadow-lg sm:rounded-3xl'>
@@ -85,7 +85,7 @@ const TextInput = ({
 }
 
 const FormCard = () => (
-	<div className='card max-w-md bg-base-200 mx-auto'>
+	<div className='card max-w-md bg-base-100 mx-auto'>
 		<div className='card-body'>
 			<h1
 				className={clsx(
@@ -103,13 +103,14 @@ const FormCard = () => (
 						type='text'
 						placeholder='John'
 						altLabel='*First Name is required'
-						altLabelError
+						autoComplete='off'
 					/>
 					{/* Last Name Field */}
 					<TextInput
 						label='Last Name'
 						type='text'
 						placeholder='Doe'
+						autoComplete='off'
 					/>
 				</div>
 				{/* Password Field */}
