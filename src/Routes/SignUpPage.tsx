@@ -127,6 +127,8 @@ const FormCard = () => (
 					placeholder='********'
 					autoComplete='off'
 				/>
+				{/* Submit Button */}
+				{/* IDEA: A dialog pops up when pressing the button which says, "`Attention!` All access to data will be lost if you don't remember this password. The future is in your hands. [Change][Continue]" */}
 				<button
 					type='submit'
 					className='btn btn-primary btn-block mt-2'>
