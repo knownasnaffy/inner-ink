@@ -10,7 +10,6 @@ const App = () => {
 }
 
 function CurrentView() {
-	//
 	const { route } = useNavigation()
 	let view
 
@@ -26,6 +25,7 @@ function CurrentView() {
 				</>
 			)
 	}
+
 	return view
 }
 

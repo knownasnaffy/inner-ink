@@ -1,8 +1,8 @@
 import clsx from 'clsx'
-import useAuth from '../hooks/useAuth'
+// import useAuth from '../hooks/useAuth'
 
 const LoginPage = () => {
-	const logIn = useAuth((state: any) => state.logIn)
+	// const logIn = useAuth((state: any) => state.logIn)
 	return (
 		<div className='card max-w-md bg-base-100 mx-auto'>
 			<div className='card-body'>
@@ -33,7 +33,8 @@ const LoginPage = () => {
 				<button
 					type='submit'
 					className='btn btn-primary btn-block mt-2'
-					onClick={logIn}>
+					// onClick={logIn}
+					>
 					Continue
 				</button>
 			</div>
