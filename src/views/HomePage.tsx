@@ -32,7 +32,6 @@ const HomePage = () => {
 				</div>
 			</div>
 			<div className='grow'>
-				{/* TODO: Manage textarea height */}
 				<textarea
 					className='textarea resize-none box-border h-full w-full bg-base-200'
 					placeholder='How was your day?'></textarea>
