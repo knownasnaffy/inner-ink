@@ -1,26 +1,30 @@
 import clsx from 'clsx'
-import { NavLink } from 'react-router-dom'
+import useRouter, { ValidRoute } from '../../hooks/useNavigation'
 
 interface NavButtonProps {
-	targetPage: string
+	targetPage: ValidRoute
 	iconOutline: React.ReactNode
 	iconSolid: React.ReactNode
 }
 
-const NavButton = ({
-	targetPage, iconOutline, iconSolid
-}: NavButtonProps) => {
+const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
+	const { route, navigate } = useRouter()
+	const isActive = route === targetPage
 	return (
-			<NavLink
-				to={targetPage}
-				className={({ isActive }) => clsx(
-					'btn btn-square rounded-l-none transition-colors duration-300',
-					isActive ? 'btn-primary' : 'btn-ghost'
-				)}>
-				{({ isActive }) => {
-					return isActive ? iconSolid : iconOutline
-				} }
-			</NavLink>
+		<a
+			onClick={() => {
+				navigate(targetPage)
+				console.log(targetPage)
+				console.log(route);
+				
+			}}
+			className={clsx(
+				'btn btn-square transition-colors duration-300',
+				isActive ? 'btn-primary' : 'btn-ghost',
+				'[data-theme="valentine"]:rounded-none'
+			)}>
+			{isActive ? iconSolid : iconOutline}
+		</a>
 	)
 }
 

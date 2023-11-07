@@ -1,33 +1,50 @@
-import navButtonList from './navButtonList'
+// import navButtonList from './navButtonList'
 import NavButton from './NavButton'
+import viewsList, { viewsListType } from '../../data/viewsList'
+
+const getNavButtons = () => {
+	let topNavButtons: viewsListType = []
+	let bottomNavButtons: viewsListType = []
+
+	for (let i = 0; i < viewsList.length; i++) {
+		if (viewsList[i].sidebar) {
+			let position = viewsList[i].sidebar?.position
+			if (position === 'top') {
+				topNavButtons.push(viewsList[i])
+			} else bottomNavButtons.push(viewsList[i])
+		}
+	}
+	return { topNavButtons, bottomNavButtons }
+}
 
 const Sidebar = () => {
+	const { topNavButtons, bottomNavButtons } = getNavButtons()
 	return (
-		<div className='w-fit bg-base-300 flex flex-col pr-2 py-6'>
+		<div className='w-fit bg-base-300 flex flex-col px-2 py-6'>
 			{/* Upper Buttons */}
 			<div className='flex flex-col gap-2 grow'>
-				{navButtonList.upper.map(({ target, icon }, index) => {
+				{topNavButtons.map(({ path, sidebar }, index) => {
 					return (
 						<NavButton
 							// name={name}
 							key={index}
-							targetPage={target}
-							iconOutline={icon.outline}
-							iconSolid={icon.solid}
+							targetPage={path}
+							iconOutline={sidebar?.iconOutline}
+							iconSolid={sidebar?.iconSolid}
 						/>
 					)
 				})}
 			</div>
 			{/* Lower Buttons */}
 			<div className='flex flex-col gap-2'>
-				{navButtonList.lower.map(({ target, icon }, index) => {
+				{bottomNavButtons.map(({ path, sidebar }, index) => {
 					return (
 						<NavButton
 							// name={name}
 							key={index}
-							targetPage={target}
-							iconOutline={icon.outline}
-							iconSolid={icon.solid}
+							targetPage={path}
+							iconOutline={sidebar?.iconOutline}
+							iconSolid={sidebar?.iconSolid}
 						/>
 					)
 				})}

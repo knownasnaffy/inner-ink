@@ -1,65 +1,32 @@
-import { useEffect } from 'react'
-import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom'
-import { themeChange } from 'theme-change'
-
-import {
-	BookmarksPage,
-	HomePage,
-	SearchPage,
-	SettingsPage,
-	LoginPage,
-} from './Routes'
-
-import Sidebar from './Components/Sidebar'
-import ThemeChanger from './Components/ThemeChanger.tsx'
-import useAuth from './hooks/useAuth.ts'
-// import ReloadPrompt from './Components/ReloadPrompt.tsx'
-
-const AppLayout = () => {
-	const navigate = useNavigate()
-	const loggedIn = useAuth((state: any) => state.loggedIn)
-	useEffect(() => {
-		if (!loggedIn) {
-			navigate('/login')
-			return
-		}
-	})
-
-	if (loggedIn)
-		return (
-			<div className='h-screen w-full flex flex-row'>
-				<Sidebar />
-				<div className='grow flex flex-col py-6 px-12 gap-6'>
-					<Routes>
-						<Route path='/' element={<HomePage />} />
-						<Route path='search' element={<SearchPage />} />
-						<Route path='bookmarks' element={<BookmarksPage />} />
-						<Route path='settings' element={<SettingsPage />} />
-					</Routes>
-				</div>
-			</div>
-		)
-}
+import viewsList from './data/viewsList'
+import useNavigation from './hooks/useNavigation'
 
 const App = () => {
-	// Init theme-change functions
-	useEffect(() => {
-		themeChange(false)
-	}, [])
-
 	return (
 		<>
-			<BrowserRouter>
-				<Routes>
-					<Route path='/*' element={<AppLayout />} />
-					<Route path='/login' element={<LoginPage />} />
-				</Routes>
-				<ThemeChanger />
-				{/* Service worker reload prompt */}
-				{/* <ReloadPrompt /> */}
-			</BrowserRouter>
+			<CurrentView />
 		</>
 	)
+}
+
+function CurrentView() {
+	//
+	const { route } = useNavigation()
+	let view
+
+	for (let i = 0; i < viewsList.length; i++) {
+		if (viewsList[i].path === route) {
+			view = viewsList[i].element
+			break
+		} else
+			view = (
+				<>
+					<h1>404 - View not found</h1>
+					<p>Stop messing with the state</p>
+				</>
+			)
+	}
+	return view
 }
 
 export default App
