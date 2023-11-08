@@ -1,19 +1,64 @@
+import { DayClickEventHandler, DayPicker } from 'react-day-picker'
+import 'react-day-picker/dist/style.css'
+
+import { format } from 'date-fns'
+import dateStore from '../hooks/dateStore'
+
+const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
+const bookmarkStyle = { border: '2px solid currentColor' }
+
 const DateSelector = () => {
-	return ( <dialog id="dateSelectorModal" className="modal">
-  <div className="modal-box">
-    <h3 className="font-bold text-lg">Hello!</h3>
-    <p className="py-4">Press ESC key or click outside to close</p>
-		<div className="modal-action">
-      <form method="dialog">
-        {/* if there is a button in form, it will close the modal */}
-        <button className="btn">Close</button>
-      </form>
-    </div>
-  </div>
-  <form method="dialog" className="modal-backdrop">
-    <button>close</button>
-  </form>
-</dialog> );
+	const closeDateSelector = () =>
+		(
+			document.getElementById('dateSelectorModal') as HTMLDialogElement
+		).close()
+	const selectedDay = dateStore((state) => state.selectedDay)
+	const setSelectedDay = dateStore((state) => state.setSelectedDay)
+	const handleDayClick: DayClickEventHandler = (day) => {
+		setSelectedDay(day)
+		closeDateSelector()
+	}
+	let footer = <p>Please pick a day.</p>
+	if (selectedDay) {
+		footer = <p>You picked {format(selectedDay, 'PP')}.</p>
+	}
+	return (
+		<dialog id='dateSelectorModal' className='modal'>
+			<div className='modal-box max-w-fit'>
+				<DayPicker
+					id='datePicker'
+					mode='single'
+					selected={selectedDay}
+					onDayClick={handleDayClick}
+					footer={footer} // Footer displayed below calendar
+					toDate={new Date()} // Disable future selection
+					showOutsideDays // Display days of next and previous months
+					fixedWeeks // Display 6 weeks at a time
+					ISOWeek // Week starts from monday
+					modifiers={{ booked: bookmarkedDays }}
+					modifiersStyles={{ booked: bookmarkStyle }}
+          modifiersClassNames={{
+            selected: 'selected-day',
+            today: 'my-today',
+            bookmarked: 'bookmarked-day',
+            outside: 'outside-day',
+            disabled: 'disabled-day',
+          }}
+				/>
+				{/* <h3 className="font-bold text-lg">Hello!</h3>
+    <p className="py-4">Press ESC key or click outside to close</p> */}
+				{/* <div className="modal-action"> */}
+				{/* <form method="dialog"> */}
+				{/* if there is a button in form, it will close the modal */}
+				{/* <button className="btn">Close</button>
+      </form> */}
+				{/* </div> */}
+			</div>
+			<form method='dialog' className='modal-backdrop'>
+				<button>close</button>
+			</form>
+		</dialog>
+	)
 }
- 
-export default DateSelector;
+
+export default DateSelector
