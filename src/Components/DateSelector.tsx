@@ -3,6 +3,7 @@ import { ClassNames, DayClickEventHandler, DayPicker } from 'react-day-picker'
 
 import { format } from 'date-fns'
 import dateStore from '../hooks/dateStore'
+import appSettings from '../utils/appSettings'
 
 // import styles from 'react-day-picker/dist/style.module.css';
 
@@ -37,6 +38,7 @@ const DateSelector = () => {
 		table: 'dp-tabel',
   };
 	
+	const datePickerSettings = appSettings.datePicker
 	return (
 		<dialog id='dateSelectorModal' className='modal'>
 			<div className='modal-box max-w-fit px-8 h-[28rem] flex items-center'>
@@ -46,10 +48,10 @@ const DateSelector = () => {
 					selected={selectedDay}
 					onDayClick={handleDayClick}
 					// footer={footer} // Footer displayed below calendar
-					toDate={new Date()} // Disable future selection
+					toDate={datePickerSettings.disableFutureEntry ? new Date() : undefined} // Disable future selection
 					// showOutsideDays // Display days of next and previous months
 					fixedWeeks // Display 6 weeks at a time
-					ISOWeek // Week starts from monday
+					weekStartsOn={datePickerSettings.weekStart} // Start of the week
 					modifiers={{ booked: bookmarkedDays }}
           modifiersClassNames={{
             selected: 'dp-selected',
