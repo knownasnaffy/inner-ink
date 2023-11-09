@@ -9,24 +9,33 @@ body {
 
 @layer components {
 	.dp-caption {
-		@apply text-primary flex justify-between items-center
+		@apply text-primary flex justify-between items-center pb-2
 	}
 	.dp-caption-label {
 		@apply font-bold text-2xl pl-2.5
 	}
 	.dp-btn {
-		@apply btn btn-ghost btn-square btn-sm
+		@apply btn btn-ghost btn-circle 
 	}
 	.dp-bookmarked {
 		@apply btn-secondary
 	}
-	.dp-selected {
+	.dp-selected-day {
 		@apply btn-primary
+	}
+	.dp-outside-day {
+		@apply opacity-30
+	}
+	.dp-today {
+		@apply font-extrabold
 	}
 	.dp-nav {
 		@apply flex gap-1
 	}
-	.table {
+	.dp-nav-btn {
+		@apply btn-square
+	}
+	.dp-table {
 		@apply border-separate border-spacing-1
 	}
 }
