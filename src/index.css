@@ -6,3 +6,27 @@ body {
 	overscroll-behavior: none;
 	overflow: hidden;
 }
+
+@layer components {
+	.dp-caption {
+		@apply text-primary flex justify-between items-center
+	}
+	.dp-caption-label {
+		@apply font-bold text-2xl pl-2.5
+	}
+	.dp-btn {
+		@apply btn btn-ghost btn-square btn-sm
+	}
+	.dp-bookmarked {
+		@apply btn-secondary
+	}
+	.dp-selected {
+		@apply btn-primary
+	}
+	.dp-nav {
+		@apply flex gap-1
+	}
+	.table {
+		@apply border-separate border-spacing-1
+	}
+}
