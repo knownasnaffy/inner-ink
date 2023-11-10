@@ -1,7 +1,7 @@
 import { ClassNames, DayClickEventHandler, DayPicker } from 'react-day-picker'
 
 import dateStore from '../hooks/dateStore'
-import appSettings from '../utils/appSettings'
+import { datePickerSettings } from '../utils/settings'
 
 const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
 
@@ -33,7 +33,6 @@ const DateSelector = () => {
 		table: 'dp-table',
 	}
 
-	const datePickerSettings = appSettings.datePicker
 	return (
 		<dialog id='dateSelectorModal' className='modal align-top'>
 			<div className='modal-box max-w-fit flex flex-col justify-between'>

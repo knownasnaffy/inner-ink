@@ -1,7 +1,10 @@
+export type TypeOfDisableFutureEntry = boolean
+export type TypeOfWeekStart = 0 | 1 | 2 | 3 | 4 | 5 | 6
+
 export type defaultSettingsTypes = {
 	datePicker: {
-		disableFutureEntry: boolean
-		weekStart: 0 | 1 | 2 | 3 | 4 | 5 | 6
+		disableFutureEntry: TypeOfDisableFutureEntry
+		weekStart: TypeOfWeekStart
 	}
 }
 
