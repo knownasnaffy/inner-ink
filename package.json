@@ -8,7 +8,8 @@
 		"build": "tsc && vite build",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
-		"format": "prettier . --write"
+		"format": "prettier . --write",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@heroicons/react": "^2.0.18",
@@ -33,6 +34,8 @@
 		"eslint": "^8.45.0",
 		"eslint-plugin-react-hooks": "^4.6.0",
 		"eslint-plugin-react-refresh": "^0.4.3",
+		"husky": "^8.0.3",
+		"lint-staged": "^15.0.2",
 		"postcss": "^8.4.31",
 		"prettier": "^3.0.3",
 		"tailwindcss": "^3.3.5",
@@ -40,5 +43,9 @@
 		"vite": "^4.4.5",
 		"vite-plugin-pwa": "^0.16.5",
 		"workbox-window": "^7.0.0"
+	},
+	"lint-staged": {
+		"**/*.{js,jsx,ts,tsx}": "eslint --fix",
+		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
 	}
 }
