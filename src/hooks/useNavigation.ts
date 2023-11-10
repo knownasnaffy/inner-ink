@@ -5,11 +5,17 @@ type NavigatorState = {
 	navigate: (newRoute: ValidRoute) => void
 }
 
-export type ValidRoute = '/' | '/search' | '/bookmarks' | '/settings' | '/login' | '/register'
+export type ValidRoute =
+	| '/'
+	| '/search'
+	| '/bookmarks'
+	| '/settings'
+	| '/login'
+	| '/register'
 
 const useNavigation = create<NavigatorState>()((set) => ({
 	route: '/',
-	navigate: (newRoute) => set(() => ({route: newRoute}))
+	navigate: (newRoute) => set(() => ({ route: newRoute })),
 }))
 
 export default useNavigation

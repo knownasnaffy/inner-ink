@@ -9,8 +9,9 @@ const RegisterPage = () => {
 				<h1
 					className={clsx(
 						'card-title text-2xl w-full mb-5',
-						'table after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full pb-1.5'
-					)}>
+						'table after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full pb-1.5',
+					)}
+				>
 					Register
 				</h1>
 				<div className='flex gap-4'>
@@ -52,7 +53,7 @@ const RegisterPage = () => {
 					type='submit'
 					className='btn btn-primary btn-block mt-2'
 					// onClick={logIn}
-					>
+				>
 					Continue
 				</button>
 			</div>
@@ -92,8 +93,9 @@ const TextInput = ({
 							? 'text-warning'
 							: altLableSuccess
 							? 'text-success'
-							: null
-					)}>
+							: null,
+					)}
+				>
 					{label}
 				</span>
 			</label>
@@ -108,7 +110,7 @@ const TextInput = ({
 						? 'input-success'
 						: 'focus:input-primary',
 					'focus:focus-within:outline-offset-0 focus:border-none placeholder-neutral',
-					className
+					className,
 				)}
 				{...props}
 			/>
@@ -122,8 +124,9 @@ const TextInput = ({
 							? 'text-warning'
 							: altLableSuccess
 							? 'text-success'
-							: 'hidden'
-					)}>
+							: 'hidden',
+					)}
+				>
 					{altLabel || 'ㅤ'}
 				</span>
 			</label>

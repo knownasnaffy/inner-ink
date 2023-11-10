@@ -15,14 +15,14 @@ const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
 			onClick={() => {
 				navigate(targetPage)
 				console.log(targetPage)
-				console.log(route);
-				
+				console.log(route)
 			}}
 			className={clsx(
 				'btn btn-square transition-colors duration-300',
 				isActive ? 'btn-primary' : 'btn-ghost',
-				'[data-theme="valentine"]:rounded-none'
-			)}>
+				'[data-theme="valentine"]:rounded-none',
+			)}
+		>
 			{isActive ? iconSolid : iconOutline}
 		</a>
 	)

@@ -16,7 +16,8 @@ const HomePage = () => {
 			<div className='flex justify-between'>
 				<button
 					className='btn btn-ghost text-lg capitalize'
-					onClick={openDateSelector}>
+					onClick={openDateSelector}
+				>
 					12 November 2344
 				</button>
 				<div className='flex flex-row w-fit h-fit'>
@@ -34,7 +35,8 @@ const HomePage = () => {
 			<div className='grow'>
 				<textarea
 					className='textarea resize-none box-border h-full w-full bg-base-200'
-					placeholder='How was your day?'></textarea>
+					placeholder='How was your day?'
+				></textarea>
 			</div>
 			<DateSelector />
 		</>

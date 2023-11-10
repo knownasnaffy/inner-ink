@@ -1,6 +1,6 @@
 import Sidebar from '../components/Sidebar'
 
-const AppLayout = ({children}: {children: React.ReactNode}) => {
+const AppLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<>
 			<div className='h-screen w-full flex flex-row'>

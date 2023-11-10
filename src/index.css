@@ -9,33 +9,33 @@ body {
 
 @layer components {
 	.dp-caption {
-		@apply text-primary flex justify-between items-center pb-2
+		@apply text-primary flex justify-between items-center pb-2;
 	}
 	.dp-caption-label {
-		@apply font-bold text-2xl pl-2.5
+		@apply font-bold text-2xl pl-2.5;
 	}
 	.dp-btn {
-		@apply btn btn-ghost btn-circle 
+		@apply btn btn-ghost btn-circle;
 	}
 	.dp-bookmarked {
-		@apply btn-secondary
+		@apply btn-secondary;
 	}
 	.dp-selected-day {
-		@apply btn-primary
+		@apply btn-primary;
 	}
 	.dp-outside-day {
-		@apply opacity-30
+		@apply opacity-30;
 	}
 	.dp-today {
-		@apply font-extrabold
+		@apply font-extrabold;
 	}
 	.dp-nav {
-		@apply flex gap-1
+		@apply flex gap-1;
 	}
 	.dp-nav-btn {
-		@apply btn-square
+		@apply btn-square;
 	}
 	.dp-table {
-		@apply border-separate border-spacing-1
+		@apply border-separate border-spacing-1;
 	}
 }

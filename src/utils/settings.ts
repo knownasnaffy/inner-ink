@@ -13,13 +13,13 @@ export const datePickerSettings = {
 	get disableFutureEntry() {
 		return getOption(
 			this.disableFutureEntryLabel,
-			defaultSettings.datePicker.disableFutureEntry
+			defaultSettings.datePicker.disableFutureEntry,
 		)
 	},
 	set setDisableFutureEntry(value: defaultTypes.TypeOfDisableFutureEntry) {
 		localStorage.setItem(
 			this.disableFutureEntryLabel,
-			JSON.stringify(value)
+			JSON.stringify(value),
 		)
 	},
 
@@ -27,7 +27,7 @@ export const datePickerSettings = {
 	get weekStart() {
 		return getOption(
 			this.weekStartLabel,
-			defaultSettings.datePicker.weekStart
+			defaultSettings.datePicker.weekStart,
 		)
 	},
 	set setWeekStart(value: defaultTypes.TypeOfWeekStart) {
