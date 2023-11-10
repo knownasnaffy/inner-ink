@@ -14,12 +14,19 @@ export default defineConfig({
 			workbox: {
 				globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
 			},
-			includeAssets: ['/icons/favicon-196.png', '/icons/apple-icon-180.png', '/vite.svg', '/react.svg', '/logo.svg', '/logo.png'],
+			includeAssets: [
+				'/icons/favicon-196.png',
+				'/icons/apple-icon-180.png',
+				'/vite.svg',
+				'/react.svg',
+				'/logo.svg',
+				'/logo.png',
+			],
 			manifest: {
 				name: 'Inner Ink',
-        short_name: 'Inner Ink',
-        description: 'Your daily journal',
-        theme_color: '#6419e6',
+				short_name: 'Inner Ink',
+				description: 'Your daily journal',
+				theme_color: '#6419e6',
 				icons: [
 					{
 						src: '/icons/manifest-icon-192.maskable.png',
