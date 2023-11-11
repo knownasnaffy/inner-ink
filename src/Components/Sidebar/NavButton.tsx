@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import useRouter, { ValidRoute } from '../../hooks/useNavigation'
+import useRouter, { ValidRoute } from '../../hooks/navigationStore'
 
 interface NavButtonProps {
 	targetPage: ValidRoute

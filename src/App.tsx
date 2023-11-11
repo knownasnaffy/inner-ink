@@ -1,5 +1,5 @@
 import viewsList from './data/viewsList'
-import useNavigation from './hooks/useNavigation'
+import navigationStore from './hooks/navigationStore'
 
 const App = () => {
 	return (
@@ -10,7 +10,7 @@ const App = () => {
 }
 
 function CurrentView() {
-	const { route } = useNavigation()
+	const { route } = navigationStore()
 	let view
 
 	for (let i = 0; i < viewsList.length; i++) {

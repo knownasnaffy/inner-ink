@@ -13,9 +13,9 @@ export type ValidRoute =
 	| '/login'
 	| '/register'
 
-const useNavigation = create<NavigatorState>()((set) => ({
+const navigationStore = create<NavigatorState>()((set) => ({
 	route: '/',
 	navigate: (newRoute) => set(() => ({ route: newRoute })),
 }))
 
-export default useNavigation
+export default navigationStore

@@ -1,12 +1,12 @@
 import { create } from 'zustand'
 
-type Actions = {
+type AuthStoreState = {
 	loggedIn: boolean
 	logIn: () => void
 	logOut: () => void
 }
 
-const useAuth = create<Actions>((set) => ({
+const authStore = create<AuthStoreState>((set) => ({
 	loggedIn: false,
 	logIn: () => {
 		set(() => ({ loggedIn: true }))
@@ -18,4 +18,4 @@ const useAuth = create<Actions>((set) => ({
 	},
 }))
 
-export default useAuth
+export default authStore

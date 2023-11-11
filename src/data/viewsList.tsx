@@ -1,4 +1,4 @@
-import { ValidRoute } from '../hooks/useNavigation'
+import { ValidRoute } from '../hooks/navigationStore'
 import AppLayout from '../views/AppLayout'
 import AuthLayout from '../views/AuthLayout'
 import BookmarksPage from '../views/BookmarksPage'
