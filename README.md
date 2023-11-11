@@ -28,6 +28,4 @@ If you are developing a production application, we recommend updating the config
 
 <!-- TODO: Add icons8 reference to app according to https://icons8.com/license -->
 
-<!-- TODO: Remove href from sidebar buttons and use react-router functions to change routes -->
-
 <!-- TODO: Configure server settings to make pwa work => https://vite-pwa-org.netlify.app/guide/pwa-minimal-requirements.html#server-configuration -->

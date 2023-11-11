@@ -211,5 +211,3 @@ const viewsList: viewsListType = [
 ]
 
 export default viewsList
-
-// TODO: Modify the views object to have a name and a root path, then check if they both combine to form a typeOf ValidRoute in 'viewsList.test.ts'
