@@ -6,6 +6,7 @@ import {
 import DateSelector from '../components/DateSelector'
 import { format } from 'date-fns'
 import dateStore from '../hooks/dateStore'
+import MyEditor from '../components/MyEditor'
 
 const HomePage = () => {
 	const openDateSelector = () =>
@@ -36,10 +37,7 @@ const HomePage = () => {
 				</div>
 			</div>
 			<div className='grow'>
-				<textarea
-					className='textarea resize-none box-border h-full w-full bg-base-200'
-					placeholder='How was your day?'
-				></textarea>
+				<MyEditor />
 			</div>
 			<DateSelector />
 		</>
