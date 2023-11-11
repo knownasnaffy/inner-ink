@@ -21,7 +21,7 @@ const DateSelector = () => {
 		setVisibleMonth(day)
 		setTimeout(() => {
 			closeDateSelector()
-		}, 500)
+		}, 300)
 	}
 
 	const classNames: ClassNames = {

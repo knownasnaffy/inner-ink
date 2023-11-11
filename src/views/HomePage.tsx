@@ -4,13 +4,16 @@ import {
 	Bars3Icon,
 } from '@heroicons/react/20/solid'
 import DateSelector from '../components/DateSelector'
+import { format } from 'date-fns'
+import dateStore from '../hooks/dateStore'
 
 const HomePage = () => {
 	const openDateSelector = () =>
 		(
 			document.getElementById('dateSelectorModal') as HTMLDialogElement
 		).showModal()
-
+	const selectedDay = dateStore((state) => state.selectedDay)
+	const currentDate = format(selectedDay, 'PPPP')
 	return (
 		<>
 			<div className='flex justify-between'>
@@ -18,7 +21,7 @@ const HomePage = () => {
 					className='btn btn-ghost text-lg capitalize'
 					onClick={openDateSelector}
 				>
-					12 November 2344
+					{currentDate}
 				</button>
 				<div className='flex flex-row w-fit h-fit'>
 					<button className='btn btn-ghost btn-square'>
