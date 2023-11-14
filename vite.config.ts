@@ -10,7 +10,7 @@ export default defineConfig({
 			devOptions: {
 				enabled: true,
 			},
-			strategies: 'generateSW',
+			registerType: 'autoUpdate',
 			workbox: {
 				globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
 			},
