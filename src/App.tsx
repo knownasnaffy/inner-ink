@@ -1,17 +1,27 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import viewsList from './data/viewsList'
 import navigationStore from './hooks/navigationStore'
 import { themeChange } from 'theme-change'
 import ThemeChanger from './components/ThemeChanger'
+import { initDB } from './utils/db'
 
 const App = () => {
+	const [isDBReady, setIsDBReady] = useState(false)
+
+	const startInit = async () => {
+		const status = await initDB()
+		setIsDBReady(status)
+	}
+
 	useEffect(() => {
+		startInit()
 		themeChange(false)
 	})
 	return (
 		<>
 			<CurrentView />
 			<ThemeChanger />
+			{!isDBReady && <>DB Discontinued</>}
 		</>
 	)
 }
