@@ -4,6 +4,9 @@ import navigationStore from './hooks/navigationStore'
 import { themeChange } from 'theme-change'
 import ThemeChanger from './components/ThemeChanger'
 import { initDB } from './utils/db'
+import { registerSW } from 'virtual:pwa-register'
+
+registerSW({ immediate: true })
 
 const App = () => {
 	const [isDBReady, setIsDBReady] = useState(false)
