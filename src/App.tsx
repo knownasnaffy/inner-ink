@@ -1,10 +1,17 @@
+import { useEffect } from 'react'
 import viewsList from './data/viewsList'
 import navigationStore from './hooks/navigationStore'
+import { themeChange } from 'theme-change'
+import ThemeChanger from './components/ThemeChanger'
 
 const App = () => {
+	useEffect(() => {
+		themeChange(false)
+	})
 	return (
 		<>
 			<CurrentView />
+			<ThemeChanger />
 		</>
 	)
 }
