@@ -47,7 +47,7 @@
 		"workbox-window": "^7.0.0"
 	},
 	"lint-staged": {
-		"**/*.{js,jsx,ts,tsx}": "eslint --fix",
+		"./src/*.{js,jsx,ts,tsx}": "eslint --fix",
 		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
 	}
 }
