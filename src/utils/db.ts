@@ -1,37 +1,3 @@
-// const dbName = 'diary_db'
-// let db: IDBDatabase
-
-// const request = window.indexedDB.open(dbName, 1)
-
-// const entriesData = [
-// 	{ date: '123456', title: 'YEYE', content: 'yoyoyoyoyoyoyoyoyoyo' },
-// 	{ date: '567890', title: 'HeHe', content: 'hihihhihihihihihihhihhi' },
-// 	{ date: '278987', title: 'HoHO', content: 'zsetrfghujikjbhgfcxdgtrcy' },
-// ]
-
-// request.onerror = () => {
-// 	console.error(`Database Error: ${request.error}`)
-// }
-
-// request.onupgradeneeded = () => {
-// 	db = request.result
-
-// 	const objectStore = db.createObjectStore('entries', { keyPath: 'date' })
-
-// 	objectStore.createIndex('title', 'title', { unique: false })
-// 	objectStore.createIndex('content', 'content', { unique: false })
-
-// 	objectStore.transaction.oncomplete = () => {
-// 		const entriesObjectStore = db
-// 			.transaction('entries', 'readwrite')
-// 			.objectStore('entries')
-// 		entriesData.forEach((entry) => {
-// 			entriesObjectStore.add(entry)
-// 		})
-// 		console.log('entries added')
-// 	}
-// }
-
 let request: IDBOpenDBRequest
 let db: IDBDatabase
 const dbName = 'diary_db'
@@ -55,7 +21,7 @@ export const initDB = (): Promise<boolean> => {
 
 			// if the data object store doesn't exist, create it
 			if (!db.objectStoreNames.contains(entriesStoreName)) {
-				console.log('Creating users store')
+				console.log('Creating entries store')
 				db.createObjectStore(entriesStoreName, { keyPath: 'date' })
 			}
 		}
@@ -70,6 +36,30 @@ export const initDB = (): Promise<boolean> => {
 			const errMsg = (event.target as IDBOpenDBRequest).error?.message
 			console.error(errMsg ? errMsg : 'Something bad happened :(')
 			resolve(false)
+		}
+	})
+}
+
+export const addEntry = <T>(data: T): Promise<T | string | null> => {
+	return new Promise((resolve) => {
+		request = window.indexedDB.open(dbName, version)
+
+		request.onsuccess = () => {
+			console.log('request.onsuccess - addData', data)
+			db = request.result
+			const transaction = db.transaction(entriesStoreName, 'readwrite')
+			const store = transaction.objectStore(entriesStoreName)
+			store.add(data)
+			resolve(data)
+		}
+
+		request.onerror = () => {
+			const error = request.error?.message
+			if (error) {
+				resolve(error)
+			} else {
+				resolve('Unknown error')
+			}
 		}
 	})
 }
