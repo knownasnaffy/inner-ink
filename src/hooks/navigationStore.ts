@@ -12,6 +12,7 @@ export type ValidRoute =
 	| '/settings'
 	| '/login'
 	| '/register'
+	| '/test'
 
 const navigationStore = create<NavigatorState>()((set) => ({
 	route: '/',
