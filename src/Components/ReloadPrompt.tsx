@@ -1,38 +1,25 @@
-import { useRegisterSW } from 'virtual:pwa-register/react'
+import swStore from '../hooks/swStore'
+import { updateSW } from '../utils/pwa'
 
 function ReloadPrompt() {
-	// const intervalMS = 2 * 60 * 1000
-
-	const {
-		offlineReady: [offlineReady, setOfflineReady],
-		needRefresh: [needRefresh, setNeedRefresh],
-		updateServiceWorker,
-	} = useRegisterSW({
-		onRegistered(r) {
-			// eslint-disable-next-line prefer-template
-			console.info('SW Registered: ' + r)
-			// r &&
-			// 	setInterval(() => {
-			// 		r.update()
-			// 		console.log('Periodic Check after 2 minutes')
-			// 	}, intervalMS)
-		},
-		onRegisterError(error) {
-			console.error('SW registration error', error)
-		},
-	})
+	const needsRefresh = swStore((state) => state.needsRefresh)
+	const offlineReady = swStore((state) => state.offlineReady)
+	const setNeedsRefresh = swStore((state) => state.setOfflineReady)
+	const setOfflineReady = swStore((state) => state.setOfflineReady)
 
 	const close = () => {
 		setOfflineReady(false)
-		setNeedRefresh(false)
+		setNeedsRefresh(false)
 	}
 
-	offlineReady && console.log('App is ready to run offline')
-	needRefresh && console.log('App needs refresh')
+	const updateServiceWorker = () => {
+		updateSW()
+		close()
+	}
 
 	return (
 		<>
-			{(offlineReady || needRefresh) && (
+			{(offlineReady || needsRefresh) && (
 				<div className='alert alert-info w-fit fixed z-50 bottom-2 right-2'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -56,18 +43,15 @@ function ReloadPrompt() {
 						</span>
 					)}
 					<div>
-						{needRefresh && (
+						{needsRefresh && (
 							<button
 								className='btn btn-sm'
-								onClick={() => updateServiceWorker(true)}
+								onClick={updateServiceWorker}
 							>
 								Reload
 							</button>
 						)}
-						<button
-							className='btn btn-sm ml-2'
-							onClick={() => close()}
-						>
+						<button className='btn btn-sm ml-2' onClick={close}>
 							Close
 						</button>
 					</div>
