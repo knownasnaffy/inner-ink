@@ -72,7 +72,15 @@
 				"title": "Inner Ink",
 				"width": 800,
 				"titleBarStyle": "Overlay",
-				"decorations": false
+				"decorations": false,
+				"visible": false
+			},
+			{
+				"width": 400,
+				"height": 200,
+				"decorations": false,
+				"url": "splashscreen.html",
+				"label": "splashscreen"
 			}
 		]
 	}
