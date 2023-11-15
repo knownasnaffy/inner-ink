@@ -4,6 +4,7 @@ import navigationStore from './hooks/navigationStore'
 import { themeChange } from 'theme-change'
 import ThemeChanger from './components/ThemeChanger'
 import { initDB } from './utils/db'
+import SWPrompt from './components/SWPrompt'
 
 const App = () => {
 	const [isDBReady, setIsDBReady] = useState(false)
@@ -21,6 +22,7 @@ const App = () => {
 		<>
 			<CurrentView />
 			<ThemeChanger />
+			<SWPrompt />
 			{!isDBReady && <>DB Discontinued</>}
 		</>
 	)

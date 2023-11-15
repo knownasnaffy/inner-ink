@@ -1,7 +1,7 @@
 import swStore from '../hooks/swStore'
 import { updateSW } from '../utils/pwa'
 
-function ReloadPrompt() {
+function SWPrompt() {
 	const needsRefresh = swStore((state) => state.needsRefresh)
 	const offlineReady = swStore((state) => state.offlineReady)
 	const setNeedsRefresh = swStore((state) => state.setOfflineReady)
@@ -13,7 +13,7 @@ function ReloadPrompt() {
 	}
 
 	const updateServiceWorker = () => {
-		updateSW()
+		updateSW(true)
 		close()
 	}
 
@@ -61,4 +61,4 @@ function ReloadPrompt() {
 	)
 }
 
-export default ReloadPrompt
+export default SWPrompt
