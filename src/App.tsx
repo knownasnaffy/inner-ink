@@ -4,7 +4,7 @@ import navigationStore from './hooks/navigationStore'
 import { themeChange } from 'theme-change'
 import ThemeChanger from './components/ThemeChanger'
 import { initDB } from './utils/db'
-import TitleBar from './components/Titlebar'
+import TitleBar from './components/TitleBar'
 
 const App = () => {
 	const [isDBReady, setIsDBReady] = useState(false)
