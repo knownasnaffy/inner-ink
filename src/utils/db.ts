@@ -36,7 +36,7 @@ let request: IDBOpenDBRequest
 let db: IDBDatabase
 const dbName = 'diary_db'
 const version = 2
-const entriesStoreName = ''
+const entriesStoreName = 'entries_store'
 
 export interface User {
 	date: string
@@ -60,17 +60,15 @@ export const initDB = (): Promise<boolean> => {
 			}
 		}
 
-		request.onsuccess = (event) => {
-			db = (event.target as IDBOpenDBRequest).result
-			console.log('request.onsuccess - initDB')
+		request.onsuccess = () => {
+			// db = (event.target as IDBOpenDBRequest).result
+			console.log('initDB - Successfully executed')
 			resolve(true)
 		}
 
 		request.onerror = (event) => {
-			console.error(
-				'Something bad happened :(',
-				(event.target as IDBOpenDBRequest).error,
-			)
+			const errMsg = (event.target as IDBOpenDBRequest).error?.message
+			console.error(errMsg ? errMsg : 'Something bad happened :(')
 			resolve(false)
 		}
 	})
