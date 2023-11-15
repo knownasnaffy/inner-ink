@@ -4,7 +4,7 @@
 		"beforeBuildCommand": "pnpm build:web",
 		"beforeDevCommand": "pnpm dev:web",
 		"devPath": "http://localhost:5173",
-		"distDir": "../../dist"
+		"distDir": "../dist"
 	},
 	"package": {
 		"productName": "Inner Ink",
