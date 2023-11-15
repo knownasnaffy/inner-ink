@@ -4,6 +4,7 @@ import navigationStore from './hooks/navigationStore'
 import { themeChange } from 'theme-change'
 import ThemeChanger from './components/ThemeChanger'
 import { initDB } from './utils/db'
+import TitleBar from './components/Titlebar'
 
 const App = () => {
 	const [isDBReady, setIsDBReady] = useState(false)
@@ -19,7 +20,10 @@ const App = () => {
 	})
 	return (
 		<>
-			<CurrentView />
+			<div className='flex flex-col h-screen'>
+				<TitleBar />
+				<CurrentView />
+			</div>
 			<ThemeChanger />
 			{!isDBReady && <>DB Discontinued</>}
 		</>

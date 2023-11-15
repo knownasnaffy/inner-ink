@@ -3,12 +3,12 @@ import NavButton from './NavButton'
 import viewsList, { viewsListType } from '../../data/viewsList'
 
 const getNavButtons = () => {
-	let topNavButtons: viewsListType = []
-	let bottomNavButtons: viewsListType = []
+	const topNavButtons: viewsListType = []
+	const bottomNavButtons: viewsListType = []
 
 	for (let i = 0; i < viewsList.length; i++) {
 		if (viewsList[i].sidebar) {
-			let position = viewsList[i].sidebar?.position
+			const position = viewsList[i].sidebar?.position
 			if (position === 'top') {
 				topNavButtons.push(viewsList[i])
 			} else bottomNavButtons.push(viewsList[i])
