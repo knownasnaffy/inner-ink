@@ -20,7 +20,7 @@ const getNavButtons = () => {
 const Sidebar = () => {
 	const { topNavButtons, bottomNavButtons } = getNavButtons()
 	return (
-		<div className='w-fit bg-base-300 flex flex-col px-2 py-6'>
+		<div className='w-fit bg-base-300 flex flex-col pl-1.5 pr-1.5 pb-2'>
 			{/* Upper Buttons */}
 			<div className='flex flex-col gap-2 grow'>
 				{topNavButtons.map(({ path, sidebar }, index) => {
