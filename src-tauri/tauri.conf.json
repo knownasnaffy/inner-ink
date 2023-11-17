@@ -72,9 +72,7 @@
 				"width": 800,
 				"resizable": true,
 				"title": "Inner Ink",
-				"titleBarStyle": "Overlay",
 				"decorations": false,
-				"visible": false,
 				"center": true
 			}
 		]
