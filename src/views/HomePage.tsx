@@ -1,7 +1,7 @@
 import {
 	BookmarkSlashIcon,
 	EyeIcon,
-	Bars3Icon,
+	EllipsisVerticalIcon,
 } from '@heroicons/react/20/solid'
 import DateSelector from '../components/DateSelector'
 import { format } from 'date-fns'
@@ -32,7 +32,7 @@ const HomePage = () => {
 						<EyeIcon className='h-6' />
 					</button>
 					<button className='btn btn-ghost btn-square'>
-						<Bars3Icon className='h-6' />
+						<EllipsisVerticalIcon className='h-6' />
 					</button>
 				</div>
 			</div>
