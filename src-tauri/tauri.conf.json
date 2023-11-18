@@ -72,8 +72,7 @@
 				"width": 800,
 				"resizable": true,
 				"title": "Inner Ink",
-				"decorations": false,
-				"center": true
+				"decorations": false
 			}
 		]
 	}
