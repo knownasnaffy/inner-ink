@@ -20,7 +20,7 @@ const TitleBar = () => {
 export default TitleBar
 
 const ShellButtons = () => {
-	const [isMaximized, setMaximized] = useState(!!appWindow.isMaximized())
+	const [isMaximized, setMaximized] = useState(false)
 	const closeWindow = async () => {
 		await appWindow.close()
 	}
@@ -31,6 +31,9 @@ const ShellButtons = () => {
 		await appWindow.toggleMaximize()
 		setMaximized(await appWindow.isMaximized())
 	}
+	appWindow.onResized(async () => {
+		setMaximized(await appWindow.isMaximized())
+	})
 	return (
 		<div className='flex flex-row w-fit'>
 			<button
