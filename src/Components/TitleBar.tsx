@@ -20,46 +20,24 @@ const TitleBar = () => {
 export default TitleBar
 
 const ShellButtons = () => {
-	const [maximized, setMaximized] = useState(!!appWindow.isMaximized())
-	function close() {
-		appWindow.close
+	const [isMaximized, setMaximized] = useState(!!appWindow.isMaximized())
+	const closeWindow = async () => {
+		await appWindow.close()
 	}
-	function minimize() {
-		appWindow.minimize()
+	const minimize = async () => {
+		await appWindow.minimize()
 	}
-	function toggleMaximize() {
-		appWindow.toggleMaximize()
-		setMaximized(!maximized)
+	const toggleMaximize = async () => {
+		await appWindow.toggleMaximize()
+		setMaximized(await appWindow.isMaximized())
 	}
-	appWindow.onResized(() => {
-		setMaximized(!!appWindow.isMaximized())
-	})
 	return (
 		<div className='flex flex-row w-fit'>
 			<button
-				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content scale-75'
-				onClick={minimize}
-			>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					strokeWidth={1.5}
-					stroke='currentColor'
-					className='w-6 h-6'
-				>
-					<path
-						strokeLinecap='round'
-						strokeLinejoin='round'
-						d='M19.5 12h-15'
-					/>
-				</svg>
-			</button>
-			<button
-				className='btn btn-circle btn-sm btn-info text-info hover:text-info-content scale-75'
+				className='btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content scale-75'
 				onClick={toggleMaximize}
 			>
-				{!maximized ? (
+				{isMaximized ? (
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -92,8 +70,27 @@ const ShellButtons = () => {
 				)}
 			</button>
 			<button
-				className='btn btn-circle btn-sm btn-error text-error hover:text-error-content scale-75'
-				onClick={close}
+				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content scale-75'
+				onClick={minimize}
+			>
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					fill='none'
+					viewBox='0 0 24 24'
+					strokeWidth={1.5}
+					stroke='currentColor'
+					className='w-6 h-6'
+				>
+					<path
+						strokeLinecap='round'
+						strokeLinejoin='round'
+						d='M19.5 12h-15'
+					/>
+				</svg>
+			</button>
+			<button
+				className='btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content scale-75'
+				onClick={closeWindow}
 			>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'
