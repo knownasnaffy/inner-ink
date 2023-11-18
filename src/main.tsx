@@ -7,6 +7,7 @@ import Loader from './components/Loader'
 const theme = localStorage.getItem('theme') || ''
 document.documentElement.setAttribute('data-theme', theme)
 
+// eslint-disable-next-line react-refresh/only-export-components
 const App = React.lazy(() => import('./App'))
 
 createRoot(document.getElementById('root')!).render(
