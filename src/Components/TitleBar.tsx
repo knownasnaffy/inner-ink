@@ -37,7 +37,7 @@ const ShellButtons = () => {
 	return (
 		<div className='flex flex-row w-fit'>
 			<button
-				className='btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content scale-75'
+				className='btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content scale-75 cursor-default'
 				onClick={toggleMaximize}
 			>
 				{isMaximized ? (
@@ -73,7 +73,7 @@ const ShellButtons = () => {
 				)}
 			</button>
 			<button
-				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content scale-75'
+				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content scale-75 cursor-default'
 				onClick={minimize}
 			>
 				<svg
@@ -92,7 +92,7 @@ const ShellButtons = () => {
 				</svg>
 			</button>
 			<button
-				className='btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content scale-75'
+				className='btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content scale-75 cursor-default'
 				onClick={closeWindow}
 			>
 				<svg
