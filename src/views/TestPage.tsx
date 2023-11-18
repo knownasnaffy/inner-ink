@@ -1,5 +1,9 @@
 const TestPage = () => {
-	return <></>
+	return (
+		<>
+			<span className='loading loading-spinner'></span>
+		</>
+	)
 }
 
 export default TestPage

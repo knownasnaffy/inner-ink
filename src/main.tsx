@@ -1,12 +1,18 @@
-import { StrictMode } from 'react'
+import React, { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import App from './App'
-
 import './index.css'
+import Loader from './components/Loader'
+
+const theme = localStorage.getItem('theme') || ''
+document.documentElement.setAttribute('data-theme', theme)
+
+const App = React.lazy(() => import('./App'))
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<App />
+		<Suspense fallback={<Loader />}>
+			<App />
+		</Suspense>
 	</StrictMode>,
 )

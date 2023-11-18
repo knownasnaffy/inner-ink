@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import viewsList from './data/viewsList'
 import navigationStore from './hooks/navigationStore'
-import { themeChange } from 'theme-change'
-import ThemeChanger from './components/ThemeChanger'
 import { initDB } from './utils/db'
 import TitleBar from './components/TitleBar'
 
@@ -16,7 +14,6 @@ const App = () => {
 
 	useEffect(() => {
 		startInit()
-		themeChange(false)
 	})
 	return (
 		<>
@@ -24,7 +21,6 @@ const App = () => {
 				<TitleBar />
 				<CurrentView />
 			</div>
-			<ThemeChanger />
 			{!isDBReady && <>DB Discontinued</>}
 		</>
 	)
