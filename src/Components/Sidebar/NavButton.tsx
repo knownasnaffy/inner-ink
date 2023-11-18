@@ -14,8 +14,6 @@ const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
 		<button
 			onClick={() => {
 				navigate(targetPage)
-				console.log(targetPage)
-				console.log(route)
 			}}
 			className={clsx(
 				'btn btn-square transition-colors duration-300',
