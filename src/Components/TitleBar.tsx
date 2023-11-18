@@ -5,12 +5,14 @@ const TitleBar = () => {
 	return (
 		<div
 			data-tauri-drag-region
-			className='h-fit px-2 py-1.5 select-none bg-base-300 flex flex-row justify-between items-center'
+			className='h-8 px-2 py-1.5 select-none bg-base-300 flex flex-row justify-between items-center'
 		>
 			<span></span>
-			<span className='text-lg text-base-content/60 flex items-center'>
+			<span className='text-base-content/60 flex items-center'>
 				Inner Ink
-				<span className='badge badge-secondary ml-2'>Preview</span>
+				<span className='badge badge-sm badge-secondary ml-2'>
+					Preview
+				</span>
 			</span>
 			<ShellButtons />
 		</div>
@@ -35,7 +37,7 @@ const ShellButtons = () => {
 		setMaximized(await appWindow.isMaximized())
 	})
 	return (
-		<div className='flex flex-row w-fit'>
+		<div className='flex flex-row w-fit scale-90'>
 			<button
 				className='btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content scale-75 cursor-default'
 				onClick={toggleMaximize}
