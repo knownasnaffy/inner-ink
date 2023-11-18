@@ -11,7 +11,7 @@ const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
 	const { route, navigate } = useRouter()
 	const isActive = route === targetPage
 	return (
-		<a
+		<button
 			onClick={() => {
 				navigate(targetPage)
 				console.log(targetPage)
@@ -24,7 +24,7 @@ const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
 			)}
 		>
 			{isActive ? iconSolid : iconOutline}
-		</a>
+		</button>
 	)
 }
 
