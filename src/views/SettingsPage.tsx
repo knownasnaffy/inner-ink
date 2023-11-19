@@ -37,7 +37,7 @@ const SettingsPage = () => {
 				</button>
 			</div>
 			{/* ### Download updates automatically */}
-			<div className='flex flex-row items-center justify-between pr-4 border-t-2 rounded-t-none collapse-title bg-base-200 text-md card'>
+			<div className='flex flex-row items-center justify-between pr-4 border-t-2 border-base-100 rounded-t-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<div>
 						Download updates automatically
@@ -81,7 +81,7 @@ const SettingsPage = () => {
 				</div>
 			</div>
 			{/* ### Run at startup */}
-			<div className='flex flex-row items-center justify-between pr-4 border-t-2 rounded-none collapse-title bg-base-200 text-md card'>
+			<div className='flex flex-row items-center justify-between pr-4 border-t-2 border-base-100 rounded-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -107,7 +107,7 @@ const SettingsPage = () => {
 				<input type='checkbox' className='toggle toggle-primary' />
 			</div>
 			{/* ### Language */}
-			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 rounded-t-none collapse-title bg-base-200 text-md card'>
+			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 border-base-100 rounded-t-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
