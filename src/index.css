@@ -47,3 +47,22 @@ body {
 .clip-path-right {
 	clip-path: polygon(100% 100%, 0% 100%, 100% 0);
 }
+
+.gutter-stable {
+	scrollbar-gutter: stable;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	@apply bg-base-100;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	@apply bg-primary rounded-badge hover:bg-primary/75 active:bg-primary/60;
+}

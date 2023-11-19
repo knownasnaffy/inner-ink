@@ -16,7 +16,7 @@ const HomePage = () => {
 	const selectedDay = dateStore((state) => state.selectedDay)
 	const currentDate = format(selectedDay, 'PPPP')
 	return (
-		<div className='flex flex-col h-full gap-2'>
+		<div className='flex flex-col h-full gap-2 py-4 px-8 md:px-10 lg:px-12'>
 			<div className='flex justify-between'>
 				<button
 					className='text-lg capitalize btn btn-ghost'
