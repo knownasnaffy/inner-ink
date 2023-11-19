@@ -76,13 +76,7 @@ const SettingsPage = () => {
 				</div>
 				<div className='collapse-content'>
 					<div className='grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 w-full'>
-						<div className='bg-base-100 p-2 card gap-1'>
-							<span className='bg-primary card p-1.5'></span>
-							<span className='bg-secondary card p-1.5 w-3/4'></span>
-							<span className='bg-accent card p-1.5 w-1/2'></span>
-							<p className='text-sm'>System Default</p>
-						</div>
-						{ThemeList}
+						<ThemeList />
 					</div>
 				</div>
 			</div>
