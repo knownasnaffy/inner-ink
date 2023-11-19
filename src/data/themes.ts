@@ -28,6 +28,9 @@ export type typeOfThemes =
 	| 'night'
 	| 'coffee'
 	| 'winter'
+	| 'dim'
+	| 'nord'
+	| 'sunset'
 
 export const themes: typeOfThemes[] = [
 	'light',
@@ -59,4 +62,7 @@ export const themes: typeOfThemes[] = [
 	'night',
 	'coffee',
 	'winter',
+	'dim',
+	'nord',
+	'sunset',
 ]
