@@ -3,7 +3,7 @@ import { ThemeList } from '../components/ThemeList'
 const SettingsPage = () => {
 	return (
 		<>
-			<h2 className='text-2xl font-semibold table rounded-none pb-1 after:bg-base-300 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full'>
+			<h2 className='text-2xl font-semibold table rounded-none'>
 				Settings
 			</h2>
 			{/* ## Version */}
