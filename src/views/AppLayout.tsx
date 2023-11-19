@@ -2,14 +2,12 @@ import Sidebar from '../components/Sidebar'
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<>
-			<div className='h-screen w-full flex flex-row'>
-				<Sidebar />
-				<div className='grow flex flex-col py-6 px-12 gap-6'>
-					{children}
-				</div>
+		<div className='h-[calc(100vh-32px)] flex bg-base-300'>
+			<Sidebar />
+			<div className='grow py-5 px-8 md:px-10 lg:px-12 bg-base-100 rounded-tl-[var(--rounded-box)] overflow-auto'>
+				{children}
 			</div>
-		</>
+		</div>
 	)
 }
 

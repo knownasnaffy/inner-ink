@@ -11,11 +11,9 @@ const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
 	const { route, navigate } = useRouter()
 	const isActive = route === targetPage
 	return (
-		<a
+		<button
 			onClick={() => {
 				navigate(targetPage)
-				console.log(targetPage)
-				console.log(route)
 			}}
 			className={clsx(
 				'btn btn-square transition-colors duration-300',
@@ -24,7 +22,7 @@ const NavButton = ({ targetPage, iconOutline, iconSolid }: NavButtonProps) => {
 			)}
 		>
 			{isActive ? iconSolid : iconOutline}
-		</a>
+		</button>
 	)
 }
 

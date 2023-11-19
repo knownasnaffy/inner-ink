@@ -1,59 +1,32 @@
 import { defineConfig } from 'vite'
-import { VitePWA } from 'vite-plugin-pwa'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [
-		react(),
-		VitePWA({
-			devOptions: {
-				enabled: true,
-			},
-			registerType: 'autoUpdate',
-			workbox: {
-				globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
-			},
-			includeAssets: [
-				'/icons/favicon-196.png',
-				'/icons/apple-icon-180.png',
-				'/vite.svg',
-				'/react.svg',
-				'/logo.svg',
-				'/logo.png',
-			],
-			manifest: {
-				name: 'Inner Ink',
-				short_name: 'Inner Ink',
-				description: 'Your daily journal',
-				theme_color: '#6419e6',
-				icons: [
-					{
-						src: '/icons/manifest-icon-192.maskable.png',
-						sizes: '192x192',
-						type: 'image/png',
-						purpose: 'any',
-					},
-					{
-						src: '/icons/manifest-icon-192.maskable.png',
-						sizes: '192x192',
-						type: 'image/png',
-						purpose: 'maskable',
-					},
-					{
-						src: '/icons/manifest-icon-512.maskable.png',
-						sizes: '512x512',
-						type: 'image/png',
-						purpose: 'any',
-					},
-					{
-						src: '/icons/manifest-icon-512.maskable.png',
-						sizes: '512x512',
-						type: 'image/png',
-						purpose: 'maskable',
-					},
-				],
-			},
-		}),
+	// prevent vite from obscuring rust errors
+	clearScreen: false,
+	// Tauri expects a fixed port, fail if that port is not available
+	server: {
+		strictPort: true,
+	},
+	// to access the Tauri environment variables set by the CLI with information about the current target
+	envPrefix: [
+		'VITE_',
+		'TAURI_PLATFORM',
+		'TAURI_ARCH',
+		'TAURI_FAMILY',
+		'TAURI_PLATFORM_VERSION',
+		'TAURI_PLATFORM_TYPE',
+		'TAURI_DEBUG',
 	],
+	build: {
+		// Tauri uses Chromium on Windows and WebKit on macOS and Linux
+		target:
+			process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari13',
+		// don't minify for debug builds
+		minify: !process.env.TAURI_DEBUG ? 'esbuild' : false,
+		// produce sourcemaps for debug builds
+		sourcemap: !!process.env.TAURI_DEBUG,
+	},
+	plugins: [react()],
 })

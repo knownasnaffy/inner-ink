@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react'
 import viewsList from './data/viewsList'
 import navigationStore from './hooks/navigationStore'
-import { themeChange } from 'theme-change'
-import ThemeChanger from './components/ThemeChanger'
 import { initDB } from './utils/db'
-import SWPrompt from './components/SWPrompt'
+import TitleBar from './components/TitleBar'
 
 const App = () => {
 	const [isDBReady, setIsDBReady] = useState(false)
@@ -16,13 +14,13 @@ const App = () => {
 
 	useEffect(() => {
 		startInit()
-		themeChange(false)
 	})
 	return (
 		<>
-			<CurrentView />
-			<ThemeChanger />
-			<SWPrompt />
+			<div className='h-screen'>
+				<TitleBar />
+				<CurrentView />
+			</div>
 			{!isDBReady && <>DB Discontinued</>}
 		</>
 	)
