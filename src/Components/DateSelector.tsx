@@ -34,8 +34,8 @@ const DateSelector = () => {
 	}
 
 	return (
-		<dialog id='dateSelectorModal' className='modal align-top'>
-			<div className='modal-box max-w-fit flex flex-col justify-between'>
+		<dialog id='dateSelectorModal' className='align-top modal'>
+			<div className='flex flex-col justify-between modal-box max-w-fit'>
 				<DayPicker
 					id='datePicker'
 					mode='single' // Allow only a single day to be selected

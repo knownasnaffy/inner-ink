@@ -8,9 +8,9 @@ const TitleBar = () => {
 			className='h-8 px-2 py-1.5 select-none bg-base-300 flex flex-row justify-between items-center'
 		>
 			<span></span>
-			<span className='text-base-content/60 flex items-center'>
+			<span className='flex items-center text-base-content/60'>
 				Inner Ink
-				<span className='badge badge-sm badge-secondary ml-2'>
+				<span className='ml-2 badge badge-sm badge-secondary'>
 					Preview
 				</span>
 			</span>
@@ -37,9 +37,9 @@ const ShellButtons = () => {
 		setMaximized(await appWindow.isMaximized())
 	})
 	return (
-		<div className='flex flex-row w-fit scale-90'>
+		<div className='flex flex-row scale-90 w-fit'>
 			<button
-				className='btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content scale-75 cursor-default'
+				className='scale-75 cursor-default btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content'
 				onClick={toggleMaximize}
 			>
 				{isMaximized ? (
@@ -75,7 +75,7 @@ const ShellButtons = () => {
 				)}
 			</button>
 			<button
-				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content scale-75 cursor-default'
+				className='scale-75 cursor-default btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content'
 				onClick={minimize}
 			>
 				<svg
@@ -94,7 +94,7 @@ const ShellButtons = () => {
 				</svg>
 			</button>
 			<button
-				className='btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content scale-75 cursor-default'
+				className='scale-75 cursor-default btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content'
 				onClick={closeWindow}
 			>
 				<svg

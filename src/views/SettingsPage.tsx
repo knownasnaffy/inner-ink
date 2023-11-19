@@ -7,9 +7,9 @@ const SettingsPage = () => {
 				Settings
 			</h2>
 			{/* ## Version */}
-			<h3 className='text-lg font-semibold mt-4 mb-2'>Version</h3>
+			<h3 className='mt-4 mb-2 text-lg font-semibold'>Version</h3>
 			{/* ### Update check */}
-			<div className='collapse-title bg-base-200 text-md card rounded-b-none flex flex-row justify-between items-center pr-4'>
+			<div className='flex flex-row items-center justify-between pr-4 rounded-b-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -32,12 +32,12 @@ const SettingsPage = () => {
 						</p>
 					</div>
 				</div>
-				<button className='btn btn-primary btn-sm capitalize'>
+				<button className='capitalize btn btn-primary btn-sm'>
 					Check for updates
 				</button>
 			</div>
 			{/* ### Download updates automatically */}
-			<div className='collapse-title bg-base-200 text-md card rounded-t-none border-t-2 flex flex-row justify-between items-center pr-4'>
+			<div className='flex flex-row items-center justify-between pr-4 border-t-2 rounded-t-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<div>
 						Download updates automatically
@@ -49,13 +49,13 @@ const SettingsPage = () => {
 				<input type='checkbox' className='toggle toggle-primary' />
 			</div>
 			{/* ## Appearance and behavior */}
-			<h3 className='text-lg font-semibold mt-4 mb-2'>
+			<h3 className='mt-4 mb-2 text-lg font-semibold'>
 				Appearance & Behaviour
 			</h3>
 			{/* ### Application theme */}
-			<div className='collapse collapse-arrow bg-base-200 rounded-b-none'>
+			<div className='rounded-b-none collapse collapse-arrow bg-base-200'>
 				<input type='checkbox' />
-				<div className='collapse-title text-md font-semibold'>
+				<div className='font-semibold collapse-title text-md'>
 					<div className='flex flex-row items-center gap-2'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -75,13 +75,13 @@ const SettingsPage = () => {
 					</div>
 				</div>
 				<div className='collapse-content'>
-					<div className='grid grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 w-full'>
+					<div className='grid w-full grid-cols-4 gap-4 md:grid-cols-5 lg:grid-cols-6'>
 						<ThemeList />
 					</div>
 				</div>
 			</div>
 			{/* ### Run at startup */}
-			<div className='collapse-title bg-base-200 text-md card rounded-none border-t-2 flex flex-row justify-between items-center pr-4'>
+			<div className='flex flex-row items-center justify-between pr-4 border-t-2 rounded-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -107,7 +107,7 @@ const SettingsPage = () => {
 				<input type='checkbox' className='toggle toggle-primary' />
 			</div>
 			{/* ### Language */}
-			<div className='collapse-title bg-base-200 text-md card rounded-t-none border-t-2 flex flex-row justify-between items-center gap-4 pr-4'>
+			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 rounded-t-none collapse-title bg-base-200 text-md card'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -132,7 +132,7 @@ const SettingsPage = () => {
 					</div>
 				</div>
 				<select
-					className='select select-sm select-bordered w-full max-w-fit'
+					className='w-full select select-bordered select-sm max-w-fit'
 					defaultValue='System Default'
 				>
 					<option>System Default</option>

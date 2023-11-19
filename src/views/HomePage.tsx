@@ -16,15 +16,15 @@ const HomePage = () => {
 	const selectedDay = dateStore((state) => state.selectedDay)
 	const currentDate = format(selectedDay, 'PPPP')
 	return (
-		<div className='flex flex-col gap-2 h-full'>
+		<div className='flex flex-col h-full gap-2'>
 			<div className='flex justify-between'>
 				<button
-					className='btn btn-ghost text-lg capitalize'
+					className='text-lg capitalize btn btn-ghost'
 					onClick={openDateSelector}
 				>
 					{currentDate}
 				</button>
-				<div className='flex flex-row w-fit h-fit gap-1'>
+				<div className='flex flex-row gap-1 w-fit h-fit'>
 					<button className='btn btn-ghost btn-square'>
 						<BookmarkSlashIcon className='h-6' />
 					</button>
