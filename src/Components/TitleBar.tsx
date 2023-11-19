@@ -5,9 +5,8 @@ const TitleBar = () => {
 	return (
 		<div
 			data-tauri-drag-region
-			className='h-8 px-2 py-1.5 select-none bg-base-300 flex flex-row justify-between items-center'
+			className='h-8 pl-4 pr-2 select-none bg-base-300 flex flex-row justify-between items-center'
 		>
-			<span></span>
 			<span className='flex items-center text-base-content/60'>
 				Inner Ink
 				<span className='ml-2 badge badge-sm badge-secondary'>
