@@ -2,7 +2,7 @@ import { ThemeList } from '../components/ThemeList'
 
 const SettingsPage = () => {
 	return (
-		<div className='h-full py-4 px-8 md:px-10 lg:px-12 overflow-auto gutter-stable'>
+		<div className='h-full py-4 px-8 md:px-10 lg:px-14 overflow-auto gutter-stable'>
 			<h2 className='text-2xl font-semibold table rounded-none'>
 				Settings
 			</h2>

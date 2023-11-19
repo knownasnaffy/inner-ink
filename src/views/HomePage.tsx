@@ -16,7 +16,7 @@ const HomePage = () => {
 	const selectedDay = dateStore((state) => state.selectedDay)
 	const currentDate = format(selectedDay, 'PPPP')
 	return (
-		<div className='flex flex-col h-full gap-2 py-4 px-8 md:px-10 lg:px-12'>
+		<div className='flex flex-col h-full gap-2 pt-4 pb-6 px-8 md:px-10 lg:px-14'>
 			<div className='flex justify-between'>
 				<button
 					className='text-lg capitalize btn btn-ghost'
@@ -40,10 +40,10 @@ const HomePage = () => {
 						</label>
 						<ul
 							tabIndex={0}
-							className='dropdown-content z-[1] menu p-2 shadow-md bg-base-100/50 rounded-box w-52'
+							className='dropdown-content z-[1] menu p-2 pt-4 gap-1 shadow-md bg-base-100/50 rounded-box w-52'
 						>
 							<li>
-								<a className='text-error hover:text-error hover:bg-error/10'>
+								<button className='text-error hover:text-error hover:bg-error/10 focus:focus-visible:bg-error/10 focus:focus-visible:text-error active:bg-red-200'>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
 										fill='none'
@@ -59,10 +59,10 @@ const HomePage = () => {
 										/>
 									</svg>
 									Clear
-								</a>
+								</button>
 							</li>
 							<li>
-								<a>
+								<button>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
 										fill='none'
@@ -78,10 +78,10 @@ const HomePage = () => {
 										/>
 									</svg>
 									Undo
-								</a>
+								</button>
 							</li>
 							<li>
-								<a>
+								<button>
 									<svg
 										xmlns='http://www.w3.org/2000/svg'
 										fill='none'
@@ -97,10 +97,10 @@ const HomePage = () => {
 										/>
 									</svg>
 									Redo
-								</a>
+								</button>
 							</li>
 							<li>
-								<a>Item 2</a>
+								<button>Item 2</button>
 							</li>
 						</ul>
 					</div>
