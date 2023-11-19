@@ -3,10 +3,12 @@ import { ThemeList } from '../components/ThemeList'
 const SettingsPage = () => {
 	return (
 		<>
-			<h2 className='text-2xl font-semibold mb-4 table rounded-none pb-1 after:bg-base-300 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full'>
+			<h2 className='text-2xl font-semibold table rounded-none pb-1 after:bg-base-300 after:absolute after:left-0 after:bottom-0 after:h-0.5 after:w-full'>
 				Settings
 			</h2>
-			<h3 className='text-lg font-semibold mb-2'>Version</h3>
+			{/* ## Version */}
+			<h3 className='text-lg font-semibold mt-4 mb-2'>Version</h3>
+			{/* ### Update check */}
 			<div className='collapse-title bg-base-200 text-md card rounded-b-none flex flex-row justify-between items-center pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
@@ -34,6 +36,7 @@ const SettingsPage = () => {
 					Check for updates
 				</button>
 			</div>
+			{/* ### Download updates automatically */}
 			<div className='collapse-title bg-base-200 text-md card rounded-t-none border-t-2 flex flex-row justify-between items-center pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<div>
@@ -45,9 +48,11 @@ const SettingsPage = () => {
 				</div>
 				<input type='checkbox' className='toggle toggle-primary' />
 			</div>
+			{/* ## Appearance and behavior */}
 			<h3 className='text-lg font-semibold mt-4 mb-2'>
 				Appearance & Behaviour
 			</h3>
+			{/* ### Application theme */}
 			<div className='collapse collapse-arrow bg-base-200 rounded-b-none'>
 				<input type='checkbox' />
 				<div className='collapse-title text-md font-semibold'>
@@ -81,6 +86,7 @@ const SettingsPage = () => {
 					</div>
 				</div>
 			</div>
+			{/* ### Run at startup */}
 			<div className='collapse-title bg-base-200 text-md card rounded-none border-t-2 flex flex-row justify-between items-center pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
@@ -106,6 +112,7 @@ const SettingsPage = () => {
 				</div>
 				<input type='checkbox' className='toggle toggle-primary' />
 			</div>
+			{/* ### Language */}
 			<div className='collapse-title bg-base-200 text-md card rounded-t-none border-t-2 flex flex-row justify-between items-center gap-4 pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
