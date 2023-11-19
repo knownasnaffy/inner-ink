@@ -10,7 +10,7 @@ export const ThemeButton = ({ themeName }: { themeName: typeOfThemes }) => {
 	return (
 		<div
 			className={clsx(
-				'bg-base-100 p-2 card gap-1',
+				'bg-base-100 p-2 card gap-1 select-none hover:cursor-pointer',
 				isActive && 'outline-dashed outline-offset-1',
 			)}
 			onClick={() => setTheme(themeName)}

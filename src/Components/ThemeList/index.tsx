@@ -10,7 +10,7 @@ export const ThemeList = () => {
 		<>
 			<div
 				className={clsx(
-					'relative',
+					'relative select-none hover:cursor-pointer',
 					theme === '' &&
 						'rounded-box outline-dashed outline-offset-1',
 				)}
