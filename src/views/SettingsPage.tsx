@@ -75,7 +75,7 @@ const SettingsPage = () => {
 					</div>
 				</div>
 				<div className='collapse-content'>
-					<div className='grid w-full grid-cols-4 gap-4 md:grid-cols-5 lg:grid-cols-6'>
+					<div className='grid w-full grid-cols-4 gap-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 2xl:grid-cols-8'>
 						<ThemeList />
 					</div>
 				</div>
