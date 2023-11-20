@@ -1,4 +1,5 @@
 import { ClassNames, DayClickEventHandler, DayPicker } from 'react-day-picker'
+import { useHotkeys } from 'react-hotkeys-hook'
 
 import dateStore from '../hooks/dateStore'
 import { getSettings } from '../utils/settings'
@@ -23,6 +24,12 @@ const DateSelector = () => {
 			closeDateSelector()
 		}, 300)
 	}
+
+	useHotkeys('ctrl+d', () =>
+		(
+			document.getElementById('dateSelectorModal') as HTMLDialogElement
+		).showModal(),
+	)
 
 	const classNames: ClassNames = {
 		button: 'dp-btn',
