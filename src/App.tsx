@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react'
-import viewsList from './data/viewsList'
-import navigationStore from './hooks/navigationStore'
+import { Suspense, lazy, useEffect, useState } from 'react'
 import { initDB } from './utils/db'
 import TitleBar from './components/TitleBar'
+import Loader from './components/Loader'
+
+const CurrentView = lazy(() => import('./components/CurrentView'))
 
 const App = () => {
 	const [isDBReady, setIsDBReady] = useState(false)
@@ -17,33 +18,15 @@ const App = () => {
 	})
 	return (
 		<>
-			<div className='h-screen'>
-				<TitleBar />
-				<CurrentView />
-			</div>
+			<Suspense fallback={<Loader />}>
+				<div className='h-screen'>
+					<TitleBar />
+					<CurrentView />
+				</div>
+			</Suspense>
 			{!isDBReady && <>DB Discontinued</>}
 		</>
 	)
-}
-
-function CurrentView() {
-	const { route } = navigationStore()
-	let view
-
-	for (let i = 0; i < viewsList.length; i++) {
-		if (viewsList[i].path === route) {
-			view = viewsList[i].element
-			break
-		} else
-			view = (
-				<>
-					<h1>404 - View not found</h1>
-					<p>Stop messing with the state</p>
-				</>
-			)
-	}
-
-	return view
 }
 
 export default App
