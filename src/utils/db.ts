@@ -67,3 +67,17 @@ export const addEntry = <T>(data: T): Promise<T | string | null> => {
 		// }
 	})
 }
+
+export const fetchEntry = (date: Date) => {
+	const entry = {
+		date: date,
+		title: 'Some title',
+		content: 'Some content',
+	}
+	return entry
+}
+
+export const fetchEntries = () => {
+	const entries: any[] = []
+	return entries
+}
