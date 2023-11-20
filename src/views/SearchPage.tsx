@@ -3,7 +3,7 @@ import { useState } from 'react'
 const SearchPage = () => {
 	const [query, setQuery] = useState<string>()
 	return (
-		<div className='flex flex-col h-full px-8 py-4 overflow-auto md:px-10 lg:px-14 gutter-stable'>
+		<div className='flex flex-col h-full px-8 py-4 overflow-auto md:px-10 lg:px-14 gutter-stable animate-in slide-in-from-right'>
 			<div className='flex flex-row justify-between h-fit'>
 				<h2 className='table text-2xl font-semibold rounded-none'>
 					Search

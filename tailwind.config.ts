@@ -5,7 +5,11 @@ export default {
 	theme: {
 		extend: {},
 	},
-	plugins: [require('@tailwindcss/typography'), require('daisyui')],
+	plugins: [
+		require('@tailwindcss/typography'),
+		require('tailwindcss-animate'),
+		require('daisyui'),
+	],
 	daisyui: {
 		themes: true,
 	},
