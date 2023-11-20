@@ -1,36 +1,43 @@
-import defaultSettings from '../data/defaultSettings'
-import * as defaultTypes from '../data/defaultSettings'
+import { typeOfThemes } from '../data/themes'
 
-function getOption(optionName: string, defaultOption: any) {
-	const option = localStorage.getItem(optionName)
-	if (option) return JSON.parse(option)
-	if (defaultOption !== undefined) return defaultOption
-	else console.error('Default option provided probably does not exist.')
+// Define the structure of settings
+type AppSettings = {
+	general: {
+		theme?: typeOfThemes
+		runAtStartup?: boolean
+		language?: 'en' | 'fr'
+	}
+	datepicker: {
+		disableFutureEntry?: boolean
+		weekStart?: 0 | 1 | 2 | 3 | 4 | 5 | 6
+	}
 }
 
-export const datePickerSettings = {
-	disableFutureEntryLabel: 'disable-future-entry',
-	get disableFutureEntry() {
-		return getOption(
-			this.disableFutureEntryLabel,
-			defaultSettings.datePicker.disableFutureEntry,
-		)
+// Default settings
+const defaultSettings: AppSettings = {
+	general: {
+		theme: '',
+		runAtStartup: false,
+		language: 'en',
 	},
-	set setDisableFutureEntry(value: defaultTypes.TypeOfDisableFutureEntry) {
-		localStorage.setItem(
-			this.disableFutureEntryLabel,
-			JSON.stringify(value),
-		)
+	datepicker: {
+		disableFutureEntry: true,
+		weekStart: 0,
 	},
+}
 
-	weekStartLabel: 'week-start',
-	get weekStart() {
-		return getOption(
-			this.weekStartLabel,
-			defaultSettings.datePicker.weekStart,
-		)
-	},
-	set setWeekStart(value: defaultTypes.TypeOfWeekStart) {
-		localStorage.setItem(this.weekStart, JSON.stringify(value))
-	},
+// Function to retrieve settings from localStorage
+export function getSettings(): AppSettings {
+	const storedSettings = localStorage.getItem('appSettings')
+	if (storedSettings) {
+		return { ...defaultSettings, ...JSON.parse(storedSettings) }
+	}
+	return defaultSettings
+}
+
+// Function to save settings to localStorage
+export function saveSettings(settings: Partial<AppSettings>): void {
+	const currentSettings = getSettings()
+	const newSettings = { ...defaultSettings, ...currentSettings, ...settings }
+	localStorage.setItem('appSettings', JSON.stringify(newSettings))
 }

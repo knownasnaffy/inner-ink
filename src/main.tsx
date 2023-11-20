@@ -3,8 +3,9 @@ import { createRoot } from 'react-dom/client'
 
 import './index.css'
 import Loader from './components/Loader'
+import { getSettings } from './utils/settings'
 
-const theme = localStorage.getItem('theme') || ''
+const theme = getSettings().general.theme!
 document.documentElement.setAttribute('data-theme', theme)
 
 // eslint-disable-next-line react-refresh/only-export-components

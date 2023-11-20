@@ -31,6 +31,7 @@ export type typeOfThemes =
 	| 'dim'
 	| 'nord'
 	| 'sunset'
+	| ''
 
 export const themes: typeOfThemes[] = [
 	'light',

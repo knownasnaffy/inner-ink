@@ -1,7 +1,7 @@
 import { ClassNames, DayClickEventHandler, DayPicker } from 'react-day-picker'
 
 import dateStore from '../hooks/dateStore'
-import { datePickerSettings } from '../utils/settings'
+import { getSettings } from '../utils/settings'
 
 const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
 
@@ -42,7 +42,7 @@ const DateSelector = () => {
 					selected={selectedDay}
 					onDayClick={handleDayClick} // Perform other functions as well when day is selected
 					toDate={
-						datePickerSettings.disableFutureEntry
+						getSettings().datepicker.disableFutureEntry
 							? new Date()
 							: undefined
 					} // Disable future selection
@@ -50,7 +50,7 @@ const DateSelector = () => {
 					onMonthChange={setVisibleMonth} // Month displayed changes when an outside day is selected
 					showOutsideDays // Display days of next and previous months
 					fixedWeeks // Display 6 weeks at a time
-					weekStartsOn={datePickerSettings.weekStart} // Start of the week
+					weekStartsOn={getSettings().datepicker.weekStart} // Start of the week
 					modifiers={{ bookmarked: bookmarkedDays }}
 					modifiersClassNames={{
 						selected: 'dp-selected-day',
