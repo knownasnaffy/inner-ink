@@ -1,8 +1,29 @@
 import { appWindow } from '@tauri-apps/api/window'
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 export const ShellButtons = () => {
-	const [isMaximized, setMaximized] = useState(false)
+	const [isWindowMaximized, setIsWindowMaximized] = useState(false)
+
+	const updateIsWindowMaximized = useCallback(async () => {
+		const resolvedPromise = await appWindow.isMaximized()
+		setIsWindowMaximized(resolvedPromise)
+	}, [])
+
+	useEffect(() => {
+		updateIsWindowMaximized()
+
+		let unlisten: any
+
+		const listen = async () => {
+			unlisten = await appWindow.onResized(() => {
+				updateIsWindowMaximized()
+			})
+		}
+
+		listen()
+
+		return () => unlisten && unlisten()
+	}, [updateIsWindowMaximized])
 	const closeWindow = async () => {
 		await appWindow.close()
 	}
@@ -11,18 +32,15 @@ export const ShellButtons = () => {
 	}
 	const toggleMaximize = async () => {
 		await appWindow.toggleMaximize()
-		setMaximized(await appWindow.isMaximized())
+		setIsWindowMaximized(!isWindowMaximized)
 	}
-	appWindow.onResized(async () => {
-		setMaximized(await appWindow.isMaximized())
-	})
 	return (
 		<div className='flex flex-row scale-90 w-fit'>
 			<button
 				className='scale-75 cursor-default btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content'
 				onClick={toggleMaximize}
 			>
-				{isMaximized ? (
+				{isWindowMaximized ? (
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
