@@ -1,24 +1,31 @@
+import { useEffect, useRef } from 'react'
 import editorStore from '../hooks/editorStore'
 
 const MyEditor = () => {
 	const content = editorStore((state) => state.content)
 	const setContent = editorStore((state) => state.setContent)
-	const lastSave = editorStore((state) => state.lastSave)
-	const setLastSave = editorStore((state) => state.setLastSave)
+	const autoSaveTimeoutRef = useRef<number | null>(null)
 
-	const handleContentChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		e.preventDefault()
-		setContent(e.target.value)
+	useEffect(() => {
+		const savedText = localStorage.getItem('autoSavedText')
+		if (savedText) {
+			setContent(savedText)
+		}
+	})
 
-		if (!lastSave) {
-			setLastSave(new Date())
-			return console.log('First save initiated.')
+	const handleTextChange = (
+		event: React.ChangeEvent<HTMLTextAreaElement>,
+	) => {
+		const newText = event.target.value
+		setContent(newText)
+
+		if (autoSaveTimeoutRef.current) {
+			clearTimeout(autoSaveTimeoutRef.current)
 		}
-		if (new Date().getSeconds() - lastSave.getSeconds() >= 2) {
-			console.log('Content Save event')
-			return setLastSave(new Date())
-		}
-		console.log('No save required')
+
+		autoSaveTimeoutRef.current = window.setTimeout(() => {
+			localStorage.setItem('autoSavedText', newText)
+		}, 700)
 	}
 
 	return (
@@ -26,7 +33,7 @@ const MyEditor = () => {
 			className='box-border w-full h-full resize-none textarea bg-base-200'
 			placeholder='How was your day?'
 			value={content}
-			onChange={handleContentChange}
+			onChange={handleTextChange}
 		></textarea>
 	)
 }
