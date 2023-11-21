@@ -1,17 +1,10 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import editorStore from '../hooks/editorStore'
 
 const MyEditor = () => {
 	const content = editorStore((state) => state.content)
 	const setContent = editorStore((state) => state.setContent)
 	const autoSaveTimeoutRef = useRef<number | null>(null)
-
-	useEffect(() => {
-		const savedText = localStorage.getItem('autoSavedText')
-		if (savedText) {
-			setContent(savedText)
-		}
-	})
 
 	const handleTextChange = (
 		event: React.ChangeEvent<HTMLTextAreaElement>,
