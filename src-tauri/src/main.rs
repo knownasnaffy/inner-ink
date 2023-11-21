@@ -11,6 +11,7 @@ fn main() {
             set_shadow(&main_window, true).expect("Unsupported platform!");
             Ok(())
         })
+        .plugin(tauri_plugin_store::Builder::default().build())
         .plugin(tauri_plugin_window_state::Builder::default().build())
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

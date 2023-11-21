@@ -20,6 +20,7 @@ serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.5.2", features = [ "window-show", "window-hide", "window-minimize", "window-maximize", "window-close", "window-unmaximize", "window-start-dragging", "window-unminimize"] }
 window-shadows = { version = "0.2.2", features = [] }
 tauri-plugin-window-state = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
+tauri-plugin-store = { git = "https://github.com/tauri-apps/plugins-workspace", branch = "v1" }
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem and the built-in dev server is disabled.

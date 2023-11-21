@@ -23,6 +23,7 @@
 		"react-day-picker": "^8.9.1",
 		"react-dom": "^18.2.0",
 		"react-hotkeys-hook": "^4.4.1",
+		"tauri-plugin-store-api": "github:tauri-apps/tauri-plugin-store#v1",
 		"zustand": "^4.4.6"
 	},
 	"devDependencies": {
