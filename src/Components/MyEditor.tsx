@@ -22,12 +22,19 @@ const MyEditor = () => {
 	}
 
 	return (
-		<textarea
-			className='box-border w-full h-full resize-none textarea bg-base-200'
-			placeholder='How was your day?'
-			value={content}
-			onChange={handleTextChange}
-		></textarea>
+		<div className='flex flex-col h-full'>
+			<input
+				type='text'
+				placeholder='Have a title in mind?'
+				className='w-full max-w-full text-lg font-semibold border-b-2 rounded-b-none input border-base-100 bg-base-200'
+			/>
+			<textarea
+				className='box-border w-full h-full rounded-t-none resize-none textarea bg-base-200'
+				placeholder='How was your day?'
+				value={content}
+				onChange={handleTextChange}
+			></textarea>
+		</div>
 	)
 }
 
