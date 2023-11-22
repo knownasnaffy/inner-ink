@@ -29,9 +29,9 @@ dependencies:
   react-hotkeys-hook:
     specifier: ^4.4.1
     version: 4.4.1(react-dom@18.2.0)(react@18.2.0)
-  tauri-plugin-store-api:
-    specifier: github:tauri-apps/tauri-plugin-store#v1
-    version: github.com/tauri-apps/tauri-plugin-store/9eb678838515e8d5b7ed4d704fa6aefe21eb05bd
+  tauri-plugin-sql-api:
+    specifier: github:tauri-apps/tauri-plugin-sql#v1
+    version: github.com/tauri-apps/tauri-plugin-sql/3604825a4eded2be6cfa248aa0de9614a900cc2d
   zustand:
     specifier: ^4.4.6
     version: 4.4.6(@types/react@18.2.37)(react@18.2.0)
@@ -3437,9 +3437,9 @@ packages:
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
 
-  github.com/tauri-apps/tauri-plugin-store/9eb678838515e8d5b7ed4d704fa6aefe21eb05bd:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-store/tar.gz/9eb678838515e8d5b7ed4d704fa6aefe21eb05bd}
-    name: tauri-plugin-store-api
+  github.com/tauri-apps/tauri-plugin-sql/3604825a4eded2be6cfa248aa0de9614a900cc2d:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/3604825a4eded2be6cfa248aa0de9614a900cc2d}
+    name: tauri-plugin-sql-api
     version: 0.0.0
     dependencies:
       '@tauri-apps/api': 1.5.1
