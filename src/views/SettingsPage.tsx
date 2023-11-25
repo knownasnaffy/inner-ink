@@ -1,3 +1,4 @@
+import BooleanSettings from '../components/Settings/BooleanSetting'
 import { ThemeList } from '../components/ThemeList'
 
 const SettingsPage = () => {
@@ -37,17 +38,11 @@ const SettingsPage = () => {
 				</button>
 			</div>
 			{/* ### Download updates automatically */}
-			<div className='flex flex-row items-center justify-between pr-4 border-t-2 border-base-100 rounded-b-btn collapse-title bg-base-200 text-md'>
-				<div className='flex flex-row items-center gap-2 font-semibold'>
-					<div>
-						Download updates automatically
-						<p className='text-sm text-base-content/50'>
-							Except on metered connections
-						</p>
-					</div>
-				</div>
-				<input type='checkbox' className='toggle toggle-primary' />
-			</div>
+			<BooleanSettings
+				title='Download updates automatically'
+				description='Except on metered connections'
+				position='bottom'
+			/>
 			{/* ## Appearance and behavior */}
 			<h3 className='mt-4 mb-2 text-lg font-semibold'>
 				Appearance & Behaviour
@@ -81,8 +76,8 @@ const SettingsPage = () => {
 				</div>
 			</div>
 			{/* ### Run at startup */}
-			<div className='flex flex-row items-center justify-between pr-4 border-t-2 border-base-100 collapse-title bg-base-200 text-md'>
-				<div className='flex flex-row items-center gap-2 font-semibold'>
+			<BooleanSettings
+				icon={
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -97,15 +92,11 @@ const SettingsPage = () => {
 							d='M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z'
 						/>
 					</svg>
-					<div className=''>
-						Run at startup{' '}
-						<p className='text-sm text-base-content/50'>
-							Start when windows starts
-						</p>
-					</div>
-				</div>
-				<input type='checkbox' className='toggle toggle-primary' />
-			</div>
+				}
+				title='Run at startup'
+				description='Start when windows starts'
+				position='middle'
+			/>
 			{/* ### Language */}
 			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 border-base-100 rounded-b-btn collapse-title bg-base-200 text-md'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
@@ -143,18 +134,12 @@ const SettingsPage = () => {
 			{/* ## Date picker */}
 			<h3 className='mt-4 mb-2 text-lg font-semibold'>Date Picker</h3>
 			{/* ### Disable Entry in Future */}
-			<div className='flex flex-row items-center justify-between pr-4 border-t-2 border-base-100 collapse-title bg-base-200 text-md rounded-t-btn'>
-				<div className='flex flex-row items-center gap-2 font-semibold'>
-					<div className=''>
-						Disable entry in future
-						<p className='text-sm text-base-content/50'>
-							You will not be able to write an entry for a date in
-							future
-						</p>
-					</div>
-				</div>
-				<input type='checkbox' className='toggle toggle-primary' />
-			</div>
+			{/* TODO: Change disableFutureEntry to enableFutureEntry everywhere */}
+			<BooleanSettings
+				title='Disable entry in future'
+				description='Permission to write for future days'
+				position='top'
+			/>
 			{/* ### First day of the week */}
 			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 border-base-100 rounded-b-btn collapse-title bg-base-200 text-md'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
