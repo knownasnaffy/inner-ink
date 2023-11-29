@@ -6,22 +6,32 @@ import dateStore from '../hooks/dateStore'
 const MyEditor = () => {
 	const content = editorStore((state) => state.content)
 	const setContent = editorStore((state) => state.setContent)
+	const title = editorStore((state) => state.title)
+	const setTitle = editorStore((state) => state.setTitle)
 	const selectedDay = dateStore((state) => state.selectedDay)
 
 	const autoSaveTimeoutRef = useRef<number | null>(null)
 
 	const handleTextChange = (
-		event: React.ChangeEvent<HTMLTextAreaElement>,
+		event: React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>,
+		field: 'title' | 'content',
 	) => {
 		const newText = event.target.value
-		setContent(newText)
 
+		switch (field) {
+			case 'title':
+				setTitle(newText)
+				break
+			case 'content':
+				setContent(newText)
+				break
+		}
 		if (autoSaveTimeoutRef.current) {
 			clearTimeout(autoSaveTimeoutRef.current)
 		}
 
 		autoSaveTimeoutRef.current = window.setTimeout(() => {
-			saveEntry(selectedDay, '', newText)
+			saveEntry(selectedDay, title, content)
 			console.log('Auto-saving')
 		}, 700)
 	}
@@ -32,18 +42,24 @@ const MyEditor = () => {
 				const entry = await getEntry(selectedDay)
 				if (entry) {
 					setContent(entry.content)
-				} else setContent('')
+					setTitle(entry.title)
+				} else {
+					setContent('')
+					setTitle('')
+				}
 			} catch (error) {
 				console.error('Failed to fetch saved data', error)
 			}
 		}
 
 		fetchSavedData()
-	}, [selectedDay, setContent])
+	}, [selectedDay, setContent, setTitle])
 	return (
 		<div className='flex flex-col h-full'>
 			<input
 				type='text'
+				value={title}
+				onChange={(e) => handleTextChange(e, 'title')}
 				placeholder='Have a title in mind?'
 				className='w-full max-w-full text-lg font-semibold border-b-2 rounded-b-none input border-base-100 bg-base-200'
 			/>
@@ -51,7 +67,7 @@ const MyEditor = () => {
 				className='box-border w-full h-full rounded-t-none resize-none textarea bg-base-200'
 				placeholder='How was your day?'
 				value={content}
-				onChange={handleTextChange}
+				onChange={(e) => handleTextChange(e, 'content')}
 			></textarea>
 		</div>
 	)
