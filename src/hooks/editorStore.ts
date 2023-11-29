@@ -1,11 +1,11 @@
 import { create } from 'zustand'
 
-type DateStoreState = {
+type EditorStoreState = {
 	content: string
 	setContent: (newContent: string) => void
 }
 
-const editorStore = create<DateStoreState>((set) => ({
+const editorStore = create<EditorStoreState>((set) => ({
 	content: '',
 	setContent: (newContent) => set(() => ({ content: newContent })),
 }))
