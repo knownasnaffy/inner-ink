@@ -1,21 +1,10 @@
-import { Suspense, lazy, useEffect, useState } from 'react'
-import { initDB } from './utils/db'
+import { Suspense, lazy } from 'react'
 import TitleBar from './components/TitleBar'
 import Loader from './components/Loader'
 
 const CurrentView = lazy(() => import('./components/CurrentView'))
 
 const App = () => {
-	const [isDBReady, setIsDBReady] = useState(false)
-
-	const startInit = async () => {
-		const status = await initDB()
-		setIsDBReady(status)
-	}
-
-	useEffect(() => {
-		startInit()
-	})
 	return (
 		<>
 			<Suspense fallback={<Loader />}>
@@ -24,7 +13,6 @@ const App = () => {
 					<CurrentView />
 				</div>
 			</Suspense>
-			{!isDBReady && <>DB Discontinued</>}
 		</>
 	)
 }

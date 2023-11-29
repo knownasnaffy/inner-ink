@@ -1,9 +1,13 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import editorStore from '../hooks/editorStore'
+import { getEntry, saveEntry } from '../utils/database'
+import dateStore from '../hooks/dateStore'
 
 const MyEditor = () => {
 	const content = editorStore((state) => state.content)
 	const setContent = editorStore((state) => state.setContent)
+	const selectedDay = dateStore((state) => state.selectedDay)
+
 	const autoSaveTimeoutRef = useRef<number | null>(null)
 
 	const handleTextChange = (
@@ -17,10 +21,25 @@ const MyEditor = () => {
 		}
 
 		autoSaveTimeoutRef.current = window.setTimeout(() => {
-			localStorage.setItem('autoSavedText', newText)
+			saveEntry(selectedDay, '', newText)
+			console.log('Auto-saving')
 		}, 700)
 	}
 
+	useEffect(() => {
+		const fetchSavedData = async () => {
+			try {
+				const entry = await getEntry(selectedDay)
+				if (entry) {
+					setContent(entry.content)
+				} else setContent('')
+			} catch (error) {
+				console.error('Failed to fetch saved data', error)
+			}
+		}
+
+		fetchSavedData()
+	}, [selectedDay, setContent])
 	return (
 		<div className='flex flex-col h-full'>
 			<input

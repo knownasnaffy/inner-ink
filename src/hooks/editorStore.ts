@@ -6,7 +6,7 @@ type DateStoreState = {
 }
 
 const editorStore = create<DateStoreState>((set) => ({
-	content: localStorage.getItem('autoSavedText') ?? '',
+	content: '',
 	setContent: (newContent) => set(() => ({ content: newContent })),
 }))
 
