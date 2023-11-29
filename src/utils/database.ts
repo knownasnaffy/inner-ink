@@ -41,14 +41,11 @@ export const saveEntry = async (date: Date, title: string, content: string) => {
 			'UPDATE entries SET title = $1, content = $2 WHERE date = $3',
 			[title, content, formattedDate],
 		)
-		console.log('Updating existing entry')
-		console.log(existingRecord)
 	} else {
 		await db.execute(
 			'INSERT INTO entries (date, title, content) VALUES ($1, $2, $3)',
 			[formattedDate, title, content],
 		)
-		console.log('Adding new entry')
 	}
 }
 
@@ -62,7 +59,6 @@ export const getEntry = async (date: Date): Promise<Entry | null> => {
 	)
 
 	if (existingRecord.length !== 0) {
-		console.log('Entry found', existingRecord)
 		return existingRecord[0]
 	} else return null
 }

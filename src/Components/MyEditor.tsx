@@ -32,7 +32,6 @@ const MyEditor = () => {
 
 		autoSaveTimeoutRef.current = window.setTimeout(() => {
 			saveEntry(selectedDay, title, content)
-			console.log('Auto-saving')
 		}, 700)
 	}
 
