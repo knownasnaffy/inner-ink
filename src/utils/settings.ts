@@ -36,7 +36,7 @@ export function getSettings(): AppSettings {
 }
 
 // Function to save settings to localStorage
-export function saveSettings(settings: Partial<AppSettings>): void {
+export function updateSettings(settings: Partial<AppSettings>): void {
 	const currentSettings = getSettings()
 	const newSettings = { ...defaultSettings, ...currentSettings, ...settings }
 	localStorage.setItem('appSettings', JSON.stringify(newSettings))

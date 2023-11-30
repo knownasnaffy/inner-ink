@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { typeOfThemes } from '../data/themes'
-import { getSettings, saveSettings } from '../utils/settings'
+import { getSettings, updateSettings } from '../utils/settings'
 
 type ThemeStoreState = {
 	theme?: typeOfThemes | ''
@@ -11,7 +11,7 @@ const themeStore = create<ThemeStoreState>((set) => ({
 	theme: getSettings().general.theme,
 	setTheme(newTheme) {
 		set(() => ({ theme: newTheme }))
-		saveSettings({ general: { theme: newTheme } })
+		updateSettings({ general: { theme: newTheme } })
 		document.documentElement.setAttribute('data-theme', newTheme)
 	},
 }))
