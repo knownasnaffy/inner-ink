@@ -18,7 +18,7 @@ const SearchPage = () => {
 			if (!searchResult) {
 				setSearchResult(<ResultNotFound />)
 			} else {
-				setSearchResult(<SearchResult />)
+				setSearchResult(<SearchResult entries={searchResult} />)
 			}
 		} else setSearchResult(<EmptySearchResult />)
 	}
