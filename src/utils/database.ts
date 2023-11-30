@@ -62,3 +62,13 @@ export const getEntry = async (date: Date): Promise<Entry | null> => {
 		return existingRecord[0]
 	} else return null
 }
+
+export const searchEntries = async (query: string) => {
+	const db = await Database.load('sqlite:database.db')
+
+	const existingRecord: Entry[] = await db.select(
+		`SELECT * FROM entries WHERE content LIKE '%${query}%'`,
+	)
+	if (existingRecord.length > 0) return existingRecord
+	else return null
+}
