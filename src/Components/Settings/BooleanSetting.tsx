@@ -3,7 +3,7 @@ import clsx from 'clsx'
 interface BooleanSettingsProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	title: string
-	description: string
+	description?: string
 	position?: 'top' | 'middle' | 'bottom'
 	icon?: React.ReactNode
 }
