@@ -8,10 +8,10 @@ type ThemeStoreState = {
 }
 
 const themeStore = create<ThemeStoreState>((set) => ({
-	theme: getSettings().general.theme,
+	theme: getSettings().theme,
 	setTheme(newTheme) {
 		set(() => ({ theme: newTheme }))
-		updateSettings({ general: { theme: newTheme } })
+		updateSettings({ theme: newTheme })
 		document.documentElement.setAttribute('data-theme', newTheme)
 	},
 }))

@@ -49,7 +49,7 @@ const DateSelector = () => {
 					selected={selectedDay}
 					onDayClick={handleDayClick} // Perform other functions as well when day is selected
 					toDate={
-						getSettings().datepicker.disableFutureEntry
+						getSettings().disableFutureEntry
 							? new Date()
 							: undefined
 					} // Disable future selection
@@ -57,7 +57,7 @@ const DateSelector = () => {
 					onMonthChange={setVisibleMonth} // Month displayed changes when an outside day is selected
 					showOutsideDays // Display days of next and previous months
 					fixedWeeks // Display 6 weeks at a time
-					weekStartsOn={getSettings().datepicker.weekStart} // Start of the week
+					weekStartsOn={getSettings().weekStart} // Start of the week
 					modifiers={{ bookmarked: bookmarkedDays }}
 					modifiersClassNames={{
 						selected: 'dp-selected-day',

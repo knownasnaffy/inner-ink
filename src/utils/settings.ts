@@ -2,28 +2,22 @@ import { typeOfThemes } from '../data/themes'
 
 // Define the structure of settings
 type AppSettings = {
-	general: {
-		theme?: typeOfThemes
-		runAtStartup?: boolean
-		language?: 'en' | 'fr'
-	}
-	datepicker: {
-		disableFutureEntry?: boolean
-		weekStart?: 0 | 1 | 2 | 3 | 4 | 5 | 6
-	}
+	autoDownloadUpdates: boolean
+	theme: typeOfThemes
+	runAtStartup: boolean
+	language: 'en' | 'fr'
+	disableFutureEntry: boolean
+	weekStart: 0 | 1 | 2 | 3 | 4 | 5 | 6
 }
 
 // Default settings
 const defaultSettings: AppSettings = {
-	general: {
-		theme: '',
-		runAtStartup: false,
-		language: 'en',
-	},
-	datepicker: {
-		disableFutureEntry: true,
-		weekStart: 0,
-	},
+	autoDownloadUpdates: false,
+	theme: '',
+	runAtStartup: false,
+	language: 'en',
+	disableFutureEntry: true,
+	weekStart: 0,
 }
 
 // Function to retrieve settings from localStorage
