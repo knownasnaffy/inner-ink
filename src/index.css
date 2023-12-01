@@ -8,12 +8,6 @@ body {
 }
 
 @layer components {
-	.dp-caption {
-		@apply text-primary flex justify-between items-center pb-2;
-	}
-	.dp-caption-label {
-		@apply font-bold text-2xl pl-2.5;
-	}
 	.dp-btn {
 		@apply btn btn-circle;
 	}
@@ -28,12 +22,6 @@ body {
 	}
 	.dp-today {
 		@apply font-extrabold;
-	}
-	.dp-nav {
-		@apply flex gap-1;
-	}
-	.dp-nav-btn {
-		@apply btn-square btn-ghost;
 	}
 	.dp-table {
 		@apply border-separate border-spacing-1;
