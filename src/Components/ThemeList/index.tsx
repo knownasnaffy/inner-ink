@@ -8,7 +8,7 @@ export const ThemeList = () => {
 	const setTheme = themeStore((state) => state.setTheme)
 	return (
 		<>
-			<div
+			<button
 				className={clsx(
 					'relative select-none hover:cursor-pointer rounded-box overflow-hidden',
 					theme === '' && 'outline-dashed outline-offset-1',
@@ -33,7 +33,7 @@ export const ThemeList = () => {
 					<span className='bg-accent card p-1.5 w-full'></span>
 					<p className='text-sm self-end'>Default</p>
 				</div>
-			</div>
+			</button>
 			{themes.map((theme, index) => {
 				return <ThemeButton key={index} themeName={theme} />
 			})}

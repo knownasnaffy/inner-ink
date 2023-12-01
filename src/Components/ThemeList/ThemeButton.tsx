@@ -8,7 +8,7 @@ export const ThemeButton = ({ themeName }: { themeName: typeOfThemes }) => {
 	const setTheme = themeStore((state) => state.setTheme)
 	const isActive = theme === themeName
 	return (
-		<div
+		<button
 			className={clsx(
 				'bg-base-100 p-2 card gap-1 select-none hover:cursor-pointer',
 				isActive && 'outline-dashed outline-offset-1',
@@ -20,6 +20,6 @@ export const ThemeButton = ({ themeName }: { themeName: typeOfThemes }) => {
 			<span className='bg-secondary card p-1.5 w-3/4'></span>
 			<span className='bg-accent card p-1.5 w-1/2'></span>
 			<p className='text-sm capitalize'>{themeName}</p>
-		</div>
+		</button>
 	)
 }
