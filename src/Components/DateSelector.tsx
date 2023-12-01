@@ -152,12 +152,6 @@ const DateSelector = () => {
 						Caption: CustomCaption,
 					}}
 				/>
-				<div className='modal-action'>
-					<form method='dialog'>
-						{/* if there is a button in form, it will close the modal */}
-						<button className='btn'>Cancel</button>
-					</form>
-				</div>
 			</div>
 			<form method='dialog' className='modal-backdrop'>
 				<button>close</button>
