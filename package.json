@@ -15,6 +15,7 @@
 		"lint-staged": "lint-staged"
 	},
 	"dependencies": {
+		"@headlessui/react": "^1.7.17",
 		"@heroicons/react": "^2.0.18",
 		"@tauri-apps/api": "^1.5.1",
 		"clsx": "^2.0.0",
