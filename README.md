@@ -40,7 +40,7 @@ Daily notes are stored according to dates in the database.
 ### Others
 
 -   Bookmark entries
--   Search entries
+-   ~~Search entries~~
 
 <!-- TODO: Add icons8 reference to app according to https://icons8.com/license -->
 
