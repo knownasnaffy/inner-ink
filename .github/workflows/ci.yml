@@ -81,5 +81,13 @@ jobs:
     - name: Install dependencies
       run: pnpm install
 
-    - name: Build Windows App
+    - name: Setup Rust
+      uses: actions-rust-lang/setup-rust-toolchain@v1
+
+    - name: Setup Rust Cache
+      uses: Swatinem/rust-cache@v2
+      with:
+        cache-targets: true
+
+    - name: Build App
       run: pnpm build
