@@ -54,7 +54,7 @@
 		"vite": "^5.0.4"
 	},
 	"lint-staged": {
-		"./src/*.{js,jsx,ts,tsx}": "eslint --fix",
+		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
 		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
 	}
 }
