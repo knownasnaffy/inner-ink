@@ -16,7 +16,7 @@ export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 		<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-4 animate-in fade-in duration-300'>
 			{entries.map((entry, index) => {
 				return (
-					<div
+					<button
 						key={index}
 						className='card card-compact bg-base-200 shadow-sm hover:shadow-md transition duration-300 hover:cursor-pointer'
 						onClick={() =>
@@ -45,7 +45,7 @@ export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 								)}
 							</div>
 						</div>
-					</div>
+					</button>
 				)
 			})}
 		</div>
