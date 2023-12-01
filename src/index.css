@@ -15,15 +15,15 @@ body {
 		@apply font-bold text-2xl pl-2.5;
 	}
 	.dp-btn {
-		@apply btn btn-ghost btn-circle;
+		@apply btn btn-circle;
 	}
 	.dp-bookmarked {
-		@apply btn-secondary bg-primary;
+		@apply btn-secondary;
 	}
 	.dp-selected-day {
 		@apply btn-primary;
 	}
-	.dp-outside-day {
+	.dp-outside-day:not(.dp-disabled-day) {
 		@apply opacity-30;
 	}
 	.dp-today {
@@ -33,7 +33,7 @@ body {
 		@apply flex gap-1;
 	}
 	.dp-nav-btn {
-		@apply btn-square;
+		@apply btn-square btn-ghost;
 	}
 	.dp-table {
 		@apply border-separate border-spacing-1;
@@ -52,17 +52,17 @@ body {
 	scrollbar-gutter: stable;
 }
 
-/* width */
+/* Scrollbar wifth */
 ::-webkit-scrollbar {
 	width: 10px;
 }
 
-/* Track */
+/* Scrollbar Track */
 ::-webkit-scrollbar-track {
 	@apply bg-base-100;
 }
 
-/* Handle */
+/* Scrollbar Handle */
 ::-webkit-scrollbar-thumb {
 	@apply bg-primary rounded-badge hover:bg-primary/75 active:bg-primary/60;
 }
@@ -78,6 +78,7 @@ body {
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 }
+
 .loader:before,
 .loader:after {
 	content: '';
@@ -86,12 +87,14 @@ body {
 	animation: pulsOut 1.8s ease-in-out infinite;
 	filter: drop-shadow(0 0 1rem var(--fallback-p, oklch(var(--p) / 0.75)));
 }
+
 .loader:before {
 	width: 100%;
 	padding-bottom: 100%;
 	box-shadow: inset 0 0 0 1rem var(--fallback-p, oklch(var(--p)));
 	animation-name: pulsIn;
 }
+
 .loader:after {
 	width: calc(100% - 2rem);
 	padding-bottom: calc(100% - 2rem);
