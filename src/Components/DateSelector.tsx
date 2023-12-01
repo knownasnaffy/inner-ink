@@ -6,10 +6,10 @@ import {
 	useNavigation,
 } from 'react-day-picker'
 import { useHotkeys } from 'react-hotkeys-hook'
+import { addDays, format, isSameDay, subDays } from 'date-fns'
 
 import dateStore from '../hooks/dateStore'
 import { getSettings } from '../utils/settings'
-import { format } from 'date-fns'
 
 const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
 
@@ -120,6 +120,21 @@ const DateSelector = () => {
 			document.getElementById('dateSelectorModal') as HTMLDialogElement
 		).showModal(),
 	)
+
+	useHotkeys('ctrl+tab', () => {
+		if (
+			getSettings().disableFutureEntry &&
+			isSameDay(selectedDay, new Date())
+		) {
+			return
+		} else {
+			setSelectedDay(addDays(selectedDay, 1))
+		}
+	})
+
+	useHotkeys('ctrl+shift+tab', () => {
+		setSelectedDay(subDays(selectedDay, 1))
+	})
 
 	return (
 		<dialog id='dateSelectorModal' className='align-top modal'>
