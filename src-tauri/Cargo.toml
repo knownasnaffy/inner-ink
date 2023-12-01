@@ -1,11 +1,11 @@
 [package]
-name = "app"
+name = "inner-ink"
 version = "0.1.0"
-description = "A Tauri App"
-authors = ["you"]
+description = "Your daily journal"
+authors = ["Naffy Dharni"]
 license = ""
-repository = ""
-default-run = "app"
+repository = "https://github.com/knownasnaffy/inner-ink"
+default-run = "inner-ink"
 edition = "2021"
 rust-version = "1.60"
 
