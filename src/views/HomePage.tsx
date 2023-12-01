@@ -4,23 +4,43 @@ import {
 	EllipsisVerticalIcon,
 } from '@heroicons/react/20/solid'
 import DateSelector from '../components/DateSelector'
-import { format } from 'date-fns'
+import { addDays, format, isSameDay, subDays } from 'date-fns'
 import dateStore from '../hooks/dateStore'
 import MyEditor from '../components/MyEditor'
+import { isHotkeyPressed } from 'react-hotkeys-hook'
+import { getSettings } from '../utils/settings'
 
 const HomePage = () => {
-	const openDateSelector = () =>
-		(
-			document.getElementById('dateSelectorModal') as HTMLDialogElement
-		).showModal()
 	const selectedDay = dateStore((state) => state.selectedDay)
+	const setSelectedDay = dateStore((state) => state.setSelectedDay)
 	const currentDate = format(selectedDay, 'PPPP')
+
+	const handleDateSelect = () => {
+		if (isHotkeyPressed('shift')) {
+			setSelectedDay(subDays(selectedDay, 1))
+		} else if (isHotkeyPressed('ctrl')) {
+			if (
+				getSettings().disableFutureEntry &&
+				isSameDay(selectedDay, new Date())
+			) {
+				return
+			} else {
+				setSelectedDay(addDays(selectedDay, 1))
+			}
+		} else {
+			;(
+				document.getElementById(
+					'dateSelectorModal',
+				) as HTMLDialogElement
+			).showModal()
+		}
+	}
 	return (
 		<div className='flex flex-col h-full gap-2 pt-4 pb-6 px-8 md:px-10 lg:px-14 animate-in slide-in-from-right'>
 			<div className='flex justify-between'>
 				<button
 					className='text-lg capitalize btn btn-ghost'
-					onClick={openDateSelector}
+					onClick={handleDateSelect}
 				>
 					{currentDate}
 				</button>
