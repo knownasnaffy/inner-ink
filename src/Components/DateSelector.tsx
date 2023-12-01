@@ -14,7 +14,10 @@ import { format } from 'date-fns'
 const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
 
 function CustomCaption(props: CaptionProps) {
-	const { goToMonth, nextMonth, previousMonth } = useNavigation()
+	const { goToMonth, nextMonth, previousMonth, isDateDisplayed } =
+		useNavigation()
+	const setVisibleMonth = dateStore((state) => state.setVisibleMonth)
+
 	return (
 		<div className='text-primary flex justify-between items-center pb-2'>
 			<p className='font-bold text-2xl pl-2.5'>
@@ -30,7 +33,7 @@ function CustomCaption(props: CaptionProps) {
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'
-						strokeWidth={3}
+						strokeWidth={2.5}
 						stroke='currentColor'
 						className='w-6 h-6'
 					>
@@ -50,7 +53,7 @@ function CustomCaption(props: CaptionProps) {
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
 						viewBox='0 0 24 24'
-						strokeWidth={3}
+						strokeWidth={2.5}
 						stroke='currentColor'
 						className='w-6 h-6'
 					>
@@ -61,9 +64,36 @@ function CustomCaption(props: CaptionProps) {
 						/>
 					</svg>
 				</button>
+				<button
+					className='btn btn-circle btn-ghost'
+					disabled={isDateDisplayed(new Date())}
+					onClick={() => {
+						setVisibleMonth(new Date())
+					}}
+				>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						strokeWidth={2.5}
+						stroke='currentColor'
+						className='w-6 h-6'
+					>
+						<path
+							strokeLinecap='round'
+							strokeLinejoin='round'
+							d='M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5'
+						/>
+					</svg>
+				</button>
 			</div>
 		</div>
 	)
+}
+
+const classNames: ClassNames = {
+	button: 'dp-btn',
+	table: 'dp-table',
 }
 
 const DateSelector = () => {
@@ -90,15 +120,6 @@ const DateSelector = () => {
 			document.getElementById('dateSelectorModal') as HTMLDialogElement
 		).showModal(),
 	)
-
-	const classNames: ClassNames = {
-		button: 'dp-btn',
-		caption: 'dp-caption',
-		caption_label: 'dp-caption-label',
-		nav: 'dp-nav',
-		nav_button: 'dp-nav-btn',
-		table: 'dp-table',
-	}
 
 	return (
 		<dialog id='dateSelectorModal' className='align-top modal'>
