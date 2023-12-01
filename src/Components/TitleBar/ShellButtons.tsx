@@ -13,7 +13,7 @@ export const ShellButtons = () => {
 	useEffect(() => {
 		updateIsWindowMaximized()
 
-		let unlisten: any
+		let unlisten: () => void
 
 		const listen = async () => {
 			unlisten = await appWindow.onResized(() => {
