@@ -86,6 +86,8 @@ jobs:
 
     - name: Setup Rust Cache
       uses: Swatinem/rust-cache@v2
+      with:
+        cache-targets: true
 
     - name: Build App
-      run: cargo tauri build
+      run: pnpm build
