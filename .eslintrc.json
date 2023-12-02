@@ -1,6 +1,7 @@
 {
 	"root": true,
 	"env": { "browser": true, "es2020": true },
+	"plugins": ["react-refresh", "jsx-a11y"],
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
@@ -20,9 +21,8 @@
 		"project": ["./tsconfig.json", "./tsconfig.node.json"],
 		"tsconfigRootDir": "__dirname"
 	},
-	"ignorePatterns": ["dist"],
 	"parser": "@typescript-eslint/parser",
-	"plugins": ["react-refresh", "jsx-a11y"],
+	"ignorePatterns": ["dist"],
 	"rules": {
 		"react-refresh/only-export-components": [
 			"warn",
