@@ -37,7 +37,7 @@ dependencies:
     version: github.com/tauri-apps/tauri-plugin-sql/3604825a4eded2be6cfa248aa0de9614a900cc2d
   zustand:
     specifier: ^4.4.6
-    version: 4.4.6(@types/react@18.2.37)(react@18.2.0)
+    version: 4.4.6(@types/react@18.2.40)(react@18.2.0)
 
 devDependencies:
   '@tailwindcss/typography':
@@ -47,14 +47,14 @@ devDependencies:
     specifier: ^1.5.6
     version: 1.5.6
   '@types/node':
-    specifier: ^20.9.0
-    version: 20.9.0
+    specifier: ^20.10.2
+    version: 20.10.2
   '@types/react':
-    specifier: ^18.2.37
-    version: 18.2.37
+    specifier: ^18.2.40
+    version: 18.2.40
   '@types/react-dom':
-    specifier: ^18.2.15
-    version: 18.2.15
+    specifier: ^18.2.17
+    version: 18.2.17
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.10.0
     version: 6.10.0(@typescript-eslint/parser@6.10.0)(eslint@8.55.0)(typescript@5.2.2)
@@ -114,7 +114,7 @@ devDependencies:
     version: 5.2.2
   vite:
     specifier: ^5.0.4
-    version: 5.0.4(@types/node@20.9.0)
+    version: 5.0.4(@types/node@20.10.2)
 
 packages:
 
@@ -937,8 +937,8 @@ packages:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
     dev: true
 
-  /@types/node@20.9.0:
-    resolution: {integrity: sha512-nekiGu2NDb1BcVofVcEKMIwzlx4NjHlcjhoxxKBNLtz15Y1z7MYf549DFvkHSId02Ax6kGwWntIBPC3l/JZcmw==}
+  /@types/node@20.10.2:
+    resolution: {integrity: sha512-37MXfxkb0vuIlRKHNxwCkb60PNBpR94u4efQuN4JgIAm66zfCDXGSAFCef9XUWFovX2R1ok6Z7MHhtdVXXkkIw==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -946,14 +946,14 @@ packages:
   /@types/prop-types@15.7.10:
     resolution: {integrity: sha512-mxSnDQxPqsZxmeShFH+uwQ4kO4gcJcGahjjMFeLbKE95IAZiiZyiEepGZjtXJ7hN/yfu0bu9xN2ajcU0JcxX6A==}
 
-  /@types/react-dom@18.2.15:
-    resolution: {integrity: sha512-HWMdW+7r7MR5+PZqJF6YFNSCtjz1T0dsvo/f1BV6HkV+6erD/nA7wd9NM00KVG83zf2nJ7uATPO9ttdIPvi3gg==}
+  /@types/react-dom@18.2.17:
+    resolution: {integrity: sha512-rvrT/M7Df5eykWFxn6MYt5Pem/Dbyc1N8Y0S9Mrkw2WFCRiqUgw9P7ul2NpwsXCSM1DVdENzdG9J5SreqfAIWg==}
     dependencies:
-      '@types/react': 18.2.37
+      '@types/react': 18.2.40
     dev: true
 
-  /@types/react@18.2.37:
-    resolution: {integrity: sha512-RGAYMi2bhRgEXT3f4B92WTohopH6bIXw05FuGlmJEnv/omEn190+QYEIYxIAuIBdKgboYYdVved2p1AxZVQnaw==}
+  /@types/react@18.2.40:
+    resolution: {integrity: sha512-H+BUhb9C1zBtogDLAk+KCNRKiHDrqSwQT/0z0PVTwMFBxqg3011ByLomADtgkgMkfwj4AMOiXBReyLTUBg681g==}
     dependencies:
       '@types/prop-types': 15.7.10
       '@types/scheduler': 0.16.6
@@ -1112,7 +1112,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.23.5)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.0.4(@types/node@20.9.0)
+      vite: 5.0.4(@types/node@20.10.2)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3508,7 +3508,7 @@ packages:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
     dev: true
 
-  /vite@5.0.4(@types/node@20.9.0):
+  /vite@5.0.4(@types/node@20.10.2):
     resolution: {integrity: sha512-RzAr8LSvM8lmhB4tQ5OPcBhpjOZRZjuxv9zO5UcxeoY2bd3kP3Ticd40Qma9/BqZ8JS96Ll/jeBX9u+LJZrhVg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -3536,7 +3536,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.9.0
+      '@types/node': 20.10.2
       esbuild: 0.19.8
       postcss: 8.4.32
       rollup: 4.6.1
@@ -3631,7 +3631,7 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zustand@4.4.6(@types/react@18.2.37)(react@18.2.0):
+  /zustand@4.4.6(@types/react@18.2.40)(react@18.2.0):
     resolution: {integrity: sha512-Rb16eW55gqL4W2XZpJh0fnrATxYEG3Apl2gfHTyDSE965x/zxslTikpNch0JgNjJA9zK6gEFW8Fl6d1rTZaqgg==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -3646,7 +3646,7 @@ packages:
       react:
         optional: true
     dependencies:
-      '@types/react': 18.2.37
+      '@types/react': 18.2.40
       react: 18.2.0
       use-sync-external-store: 1.2.0(react@18.2.0)
     dev: false
