@@ -36,8 +36,8 @@ dependencies:
     specifier: github:tauri-apps/tauri-plugin-sql#v1
     version: github.com/tauri-apps/tauri-plugin-sql/3604825a4eded2be6cfa248aa0de9614a900cc2d
   zustand:
-    specifier: ^4.4.6
-    version: 4.4.6(@types/react@18.2.40)(react@18.2.0)
+    specifier: ^4.4.7
+    version: 4.4.7(@types/react@18.2.40)(react@18.2.0)
 
 devDependencies:
   '@tailwindcss/typography':
@@ -3631,8 +3631,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /zustand@4.4.6(@types/react@18.2.40)(react@18.2.0):
-    resolution: {integrity: sha512-Rb16eW55gqL4W2XZpJh0fnrATxYEG3Apl2gfHTyDSE965x/zxslTikpNch0JgNjJA9zK6gEFW8Fl6d1rTZaqgg==}
+  /zustand@4.4.7(@types/react@18.2.40)(react@18.2.0):
+    resolution: {integrity: sha512-QFJWJMdlETcI69paJwhSMJz7PPWjVP8Sjhclxmxmxv/RYI7ZOvR5BHX+ktH0we9gTWQMxcne8q1OY8xxz604gw==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
       '@types/react': '>=16.8'

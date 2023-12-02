@@ -25,7 +25,7 @@
 		"react-dom": "^18.2.0",
 		"react-hotkeys-hook": "^4.4.1",
 		"tauri-plugin-sql-api": "github:tauri-apps/tauri-plugin-sql#v1",
-		"zustand": "^4.4.6"
+		"zustand": "^4.4.7"
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.10",
