@@ -26,20 +26,19 @@ jobs:
               id: filter
               with:
                   filters: |
-                      backend:
-                        - 'backend/**'
-                      frontend:
-                        - 'frontend/**'
+                      src:
+                        - 'src/**'
+                        - 'src-tauri/**'
                       typescript:
                         - '**/*.{ts,tsx}'
 
-            - name: Setup Node.js 18.x
+            - name: Setup node.js 18.x
               uses: actions/setup-node@v4
               with:
                   node-version: 18
 
-            - uses: pnpm/action-setup@v2
-              name: Install pnpm
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2
               with:
                   version: 8
                   run_install: false
@@ -49,8 +48,8 @@ jobs:
               run: |
                   echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-            - uses: actions/cache@v3
-              name: Setup pnpm cache
+            - name: Setup pnpm cache
+              uses: actions/cache@v3
               with:
                   path: ${{ env.STORE_PATH }}
                   key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -64,22 +63,18 @@ jobs:
               if: steps.filter.outputs.typescript == 'true'
               run: pnpm lint
 
-            - name: Build frontend
-              if: steps.filter.outputs.frontend == 'true' && steps.filter.outputs.backend == 'false'
-              run: pnpm build:web
-
-            - name: Setup Rust
-              if: steps.filter.outputs.backend == 'true'
+            - name: Setup rust
+              if: steps.filter.outputs.src == 'true'
               uses: actions-rust-lang/setup-rust-toolchain@v1
 
-            - name: Setup Rust Cache
-              if: steps.filter.outputs.backend == 'true'
+            - name: Setup rust cache
+              if: steps.filter.outputs.src == 'true'
               uses: Swatinem/rust-cache@v2
               with:
                   workspaces: './src-tauri -> target'
 
-            - name: Build App
-              if: steps.filter.outputs.backend == 'true'
+            - name: Build app
+              if: steps.filter.outputs.src == 'true'
               uses: tauri-apps/tauri-action@v0
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
