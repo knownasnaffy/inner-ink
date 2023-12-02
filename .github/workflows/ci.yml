@@ -10,8 +10,34 @@ on:
         branches: ['dev']
 
 jobs:
-    lint:
+    changes:
+        name: Filter changes
         runs-on: windows-latest
+        # Required permissions
+        permissions:
+            pull-requests: read
+        # Set job outputs to values from filter step
+        outputs:
+            backend: ${{ steps.filter.outputs.backend }}
+            frontend: ${{ steps.filter.outputs.frontend }}
+        steps:
+            # For pull requests it's not necessary to checkout the code
+            - uses: dorny/paths-filter@v2
+              id: filter
+              with:
+                  filters: |
+                      backend:
+                        - 'backend/**'
+                      frontend:
+                        - 'frontend/**'
+                      typescript:
+                        - '**/*.{ts,tsx}'
+
+    lint-ts:
+        name: Lint TS Files
+        runs-on: windows-latest
+        needs: changes
+        if: ${{ needs.changes.outputs.typescript }}
 
         steps:
             - name: Checkout
@@ -47,25 +73,17 @@ jobs:
             - name: Run Linter
               run: pnpm lint
 
-    build:
-        needs: lint
+    build-frontend-only:
+        name: Build frontend only
         runs-on: windows-latest
+        needs: changes
+        if: ${{ needs.changes.outputs.frontend }}
         strategy:
             fail-fast: false
 
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-
-            - name: Filter paths
-              uses: dorny/paths-filter@v2
-              id: filter
-              with:
-                  filters: |
-                      frontend:
-                        - 'src/**'
-                      backend:
-                        - 'src-tauri/**'
 
             - name: Setup Node.js 18.x
               uses: actions/setup-node@v4
@@ -95,21 +113,56 @@ jobs:
               run: pnpm install
 
             - name: Build Frontend
-              if: steps.filter.outputs.frontend == 'true' && steps.filter.outputs.backend == 'false'
               run: pnpm build:web
 
+    build-app:
+        name: Build app
+        runs-on: windows-latest
+        needs: changes
+        if: ${{ needs.changes.outputs.frontend }}
+        strategy:
+            fail-fast: false
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js 18.x
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 18
+
+            - uses: pnpm/action-setup@v2
+              name: Install pnpm
+              with:
+                  version: 8
+                  run_install: false
+
+            - name: Get pnpm store directory
+              shell: bash
+              run: |
+                  echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+            - uses: actions/cache@v3
+              name: Setup pnpm cache
+              with:
+                  path: ${{ env.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
+
+            - name: Install dependencies
+              run: pnpm install
+
             - name: Setup Rust
-              if: steps.filter.outputs.backend == 'true'
               uses: actions-rust-lang/setup-rust-toolchain@v1
 
             - name: Setup Rust Cache
-              if: steps.filter.outputs.backend == 'true'
               uses: Swatinem/rust-cache@v2
               with:
                   workspaces: './src-tauri -> target'
 
             - name: Build App
-              if: steps.filter.outputs.backend == 'true'
               uses: tauri-apps/tauri-action@v0
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
