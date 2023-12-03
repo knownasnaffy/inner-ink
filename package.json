@@ -4,6 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
+		"commit": "cz",
 		"dev": "tauri dev",
 		"dev:web": "vite",
 		"build": "tauri build",
@@ -37,6 +38,8 @@
 		"@typescript-eslint/parser": "^6.13.1",
 		"@vitejs/plugin-react": "^4.2.0",
 		"autoprefixer": "^10.4.16",
+		"commitizen": "^4.3.0",
+		"cz-conventional-changelog": "^3.3.0",
 		"daisyui": "^4.4.17",
 		"eslint": "^8.55.0",
 		"eslint-config-prettier": "^9.1.0",
@@ -57,5 +60,10 @@
 	"lint-staged": {
 		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
 		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
 	}
 }
