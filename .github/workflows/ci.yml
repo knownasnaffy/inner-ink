@@ -162,7 +162,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-macos-dmg
                   path: |
-                      'src/backend/target/release/bundle/dmg/inner-ink_*_x64.dmg'
+                      src/backend/target/release/bundle/dmg/inner-ink_*_x64.dmg
 
             - name: Upload binary - .app (macos only)
               uses: actions/upload-artifact@v3
@@ -170,7 +170,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-macos-app
                   path: |
-                      'src/backend/target/release/bundle/macos/inner-ink.app.tar.gz'
+                      src/backend/target/release/bundle/macos/inner-ink.app.tar.gz
 
             - name: Upload binary - .deb (ubuntu only)
               uses: actions/upload-artifact@v3
@@ -220,6 +220,6 @@ jobs:
                   GIT_COMMITTER_EMAIL: naffydharni006@gmail.com
               with:
                   plugins: |
-                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"], "draftRelease": true, "releaseNameTemplate": "Inner Ink <%= nextverison.name %>" } ], "@semantic-release/changelog", "@semantic-release/git" ]
+                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"], "draftRelease": true, "releaseNameTemplate": "Inner Ink v<%= nextRelease.version %>" } ], "@semantic-release/changelog", "@semantic-release/git" ]
                   additional-packages: |
                       ["@semantic-release/git"]
