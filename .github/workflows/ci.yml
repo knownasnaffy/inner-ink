@@ -23,7 +23,7 @@ jobs:
             newVer: ${{ steps.filter2.outputs.release-version }}
 
         steps:
-            - uses: actions/checkout@v3
+            - uses: actions/checkout@v4
 
             - name: Filter paths
               uses: dorny/paths-filter@v2
@@ -102,7 +102,7 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Install Node.js
               uses: actions/setup-node@v3
@@ -203,7 +203,7 @@ jobs:
 
         steps:
             - name: Checkout
-              uses: actions/checkout@v3
+              uses: actions/checkout@v4
 
             - name: Download binaries
               uses: actions/download-artifact@v3
