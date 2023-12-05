@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 // import useAuth from '../hooks/useAuth'
 
-const RegisterPage = () => {
+const LoginPage = () => {
 	// const logIn = useAuth((state: any) => state.logIn)
 	return (
 		<div className='max-w-md mx-auto card bg-base-100'>
@@ -12,26 +12,8 @@ const RegisterPage = () => {
 						'table after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full pb-1.5',
 					)}
 				>
-					Register
+					Login
 				</h1>
-				<div className='flex gap-4'>
-					{/* First Name Field */}
-					{/* IDEA: An option in settings to select honorifics(based on gender as well). For eg. Mr/Mrs FirstName, Mr/Mrs LastName, FirstName, LastName */}
-					<TextInput
-						label='First Name'
-						type='text'
-						placeholder='John'
-						altLabel='*First Name is required'
-						autoComplete='off'
-					/>
-					{/* Last Name Field */}
-					<TextInput
-						label='Last Name'
-						type='text'
-						placeholder='Doe'
-						autoComplete='off'
-					/>
-				</div>
 				{/* Password Field */}
 				{/* IDEA: An option in settings to only except numbers(pin) using attributes [inputmode="numeric"] and [minlength="4"] */}
 				<TextInput
@@ -61,7 +43,7 @@ const RegisterPage = () => {
 	)
 }
 
-export default RegisterPage
+export default LoginPage
 
 interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 	label?: string
@@ -90,10 +72,10 @@ const TextInput = ({
 						altLabelError
 							? 'text-error'
 							: altLabelWarn
-							? 'text-warning'
-							: altLableSuccess
-							? 'text-success'
-							: null,
+							  ? 'text-warning'
+							  : altLableSuccess
+							    ? 'text-success'
+							    : null,
 					)}
 				>
 					{label}
@@ -105,10 +87,10 @@ const TextInput = ({
 					altLabelError
 						? 'input-error'
 						: altLabelWarn
-						? 'input-warning'
-						: altLableSuccess
-						? 'input-success'
-						: 'focus:input-primary',
+						  ? 'input-warning'
+						  : altLableSuccess
+						    ? 'input-success'
+						    : 'focus:input-primary',
 					'focus:focus-within:outline-offset-0 focus:border-none placeholder-neutral',
 					className,
 				)}
@@ -121,10 +103,10 @@ const TextInput = ({
 						altLabelError
 							? 'text-error'
 							: altLabelWarn
-							? 'text-warning'
-							: altLableSuccess
-							? 'text-success'
-							: 'hidden',
+							  ? 'text-warning'
+							  : altLableSuccess
+							    ? 'text-success'
+							    : 'hidden',
 					)}
 				>
 					{altLabel || 'ㅤ'}
