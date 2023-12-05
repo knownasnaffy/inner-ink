@@ -10,13 +10,11 @@
 <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/knownasnaffy/inner-ink/ci.yml?style=for-the-badge&label=CI">
 </div>
 
-> This app is in **Development Stage**. Expect breaking changes most of the time.
+> Write Your Story, One Entry at a Time
 
-## About
+Welcome to an elegantly designed diary app, meticulously crafted to serve as your virtual testament to life's moments. Indulge in the art of journaling reimagined—where your thoughts, dreams, and experiences seamlessly converge. Imbued with an array of customization options, our app invites you to infuse your personal touch, transforming each entry into an artistic rendition of your narrative.
 
-Inner ink is a personal journal app in which you can write notes for each day. Unlike note-taking apps where all of your data is in a single collection, this app has a single purpose.
-
-Daily notes are stored according to dates in the database.
+Secure in its encryption, your expressions find solace in this digital haven. Discover the therapeutic catharsis of self-expression as you inscribe your odyssey with us.
 
 ## Upcoming Features
 
