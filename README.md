@@ -1,5 +1,5 @@
 <div align='center'>
-<img src='./src-tauri/icons/128x128.png' align='middle' />
+<img src='./src/backend/icons/128x128.png' align='middle' />
 
 <h1>Inner Ink</h1>
 <p>Write Your Story, One Entry at a Time</p>

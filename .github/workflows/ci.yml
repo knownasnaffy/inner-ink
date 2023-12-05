@@ -32,13 +32,11 @@ jobs:
                   filters: |
                       src:
                         - 'src/**'
-                        - 'src-tauri/**'
                         - '*.config.ts'
                         - '.postcssrc.*'
                         - 'package.json'
                       tsc:
                         - '**/*.{ts,tsx}'
-                        - '*.config.ts'
                         - '.eslintrc.*'
                         - 'tsconfig*.json'
 
@@ -142,7 +140,7 @@ jobs:
             - name: Rust cache
               uses: swatinem/rust-cache@v2
               with:
-                  workspaces: './src-tauri -> target'
+                  workspaces: './src/backend -> target'
 
             - name: Install dependencies
               run: pnpm install
@@ -160,7 +158,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-windows
                   path: |
-                      src-tauri/target/release/bundle/**
+                      src/backend/target/release/bundle/**
 
             - name: Upload binary - .dmg (macos only)
               uses: actions/upload-artifact@v3
@@ -168,7 +166,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-macos-dmg
                   path: |
-                      'src-tauri/target/release/bundle/dmg/Inner Ink_*_x64.dmg'
+                      'src/backend/target/release/bundle/dmg/Inner Ink_*_x64.dmg'
 
             - name: Upload binary - .app (macos only)
               uses: actions/upload-artifact@v3
@@ -176,7 +174,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-macos-app
                   path: |
-                      'src-tauri/target/release/bundle/macos/Inner Ink.app.tar.gz'
+                      'src/backend/target/release/bundle/macos/Inner Ink.app.tar.gz'
 
             - name: Upload binary - .deb (ubuntu only)
               uses: actions/upload-artifact@v3
@@ -184,7 +182,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-deb
                   path: |
-                      src-tauri/target/release/bundle/deb/'Inner Ink'_${{ needs.changes.outputs.newVer }}_amd64.deb
+                      src/backend/target/release/bundle/deb/'Inner Ink'_${{ needs.changes.outputs.newVer }}_amd64.deb
 
             - name: Upload binary - .appimage (ubuntu only)
               uses: actions/upload-artifact@v3
@@ -192,7 +190,7 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-appimage
                   path: |
-                      src-tauri/target/release/bundle/appimage/'Inner Ink'_${{ needs.changes.outputs.newVer }}_amd64.AppImage
+                      src/backend/target/release/bundle/appimage/'Inner Ink'_${{ needs.changes.outputs.newVer }}_amd64.AppImage
 
     release:
         needs:
