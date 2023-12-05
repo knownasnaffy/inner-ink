@@ -161,28 +161,28 @@ jobs:
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-macos-dmg
                   path: |
-                      src-tauri/target/release/bundle/dmg/tauri-release-test_*_x64.dmg
+                      'src-tauri/target/release/bundle/dmg/Inner Ink_*_x64.dmg'
 
             - uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'macos-latest' }}
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-macos-app
                   path: |
-                      src-tauri/target/release/bundle/macos/tauri-release-test.app.tar.gz
+                      'src-tauri/target/release/bundle/macos/Inner Ink.app.tar.gz'
 
             - uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-deb
                   path: |
-                      src-tauri/target/release/bundle/deb/tauri-release-test_${{ needs.changes.outputs.newVer }}_amd64.deb
+                      src-tauri/target/release/bundle/deb/'Inner Ink'_${{ needs.changes.outputs.newVer }}_amd64.deb
 
             - uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
               with:
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-appimage
                   path: |
-                      src-tauri/target/release/bundle/appimage/tauri-release-test_${{ needs.changes.outputs.newVer }}_amd64.AppImage
+                      src-tauri/target/release/bundle/appimage/'Inner Ink'_${{ needs.changes.outputs.newVer }}_amd64.AppImage
 
     release:
         needs:
