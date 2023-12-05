@@ -222,6 +222,6 @@ jobs:
                   GIT_COMMITTER_EMAIL: naffydharni006@gmail.com
               with:
                   plugins: |
-                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"], "draftRelease": true, "releaseNameTemplate": "Inner Ink <%= nextverison.name %>" } ], "@semantic-release/changelog", [ "@semantic-release/git", { "assets": ["CHANGELOG.md", "package.json", "package-lock.json"], "message": "chore(release): publish ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}" } ] ]
+                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"], "draftRelease": true, "releaseNameTemplate": "Inner Ink <%= nextverison.name %>" } ], "@semantic-release/changelog", [ "@semantic-release/git", { "assets": ["CHANGELOG.md", "package.json", "package-lock.json"] } ] ]
                   additional-packages: |
                       ["@semantic-release/git"]
