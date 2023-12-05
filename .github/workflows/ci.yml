@@ -6,13 +6,10 @@ on:
     pull_request:
         branches: ['dev', 'main']
 
-permissions:
-    contents: write # to be able to publish a GitHub release
-    issues: write # to be able to comment on released issues
-    pull-requests: write # to be able to comment on released pull requests
-
 jobs:
     changes:
+        permissions:
+            contents: write # to be able to publish a GitHub release
         name: Filter changes
         runs-on: ubuntu-latest
         # Set job outputs to values from filter step
@@ -212,7 +209,7 @@ jobs:
             - name: Release new app version
               uses: codfish/semantic-release-action@v3
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
                   GIT_AUTHOR_NAME: Barinderpreet Singh
                   GIT_AUTHOR_EMAIL: naffydharni006@gmail.com
                   GIT_COMMITTER_NAME: Barinderpreet Singh
