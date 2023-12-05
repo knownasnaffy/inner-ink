@@ -29,6 +29,10 @@
 			"active": true,
 			"category": "Utility",
 			"copyright": "Naffy Dharni",
+			"identifier": "com.naffy.inner-ink",
+			"shortDescription": "Write Your Story, One Entry at a Time",
+			"longDescription": "Welcome to an elegantly designed diary app, meticulously crafted to serve as your virtual testament to life's moments. Indulge in the art of journaling reimagined—where your thoughts, dreams, and experiences seamlessly converge. Imbued with an array of customization options, our app invites you to infuse your personal touch, transforming each entry into an artistic rendition of your narrative. Secure in its encryption, your expressions find solace in this digital haven. Discover the therapeutic catharsis of self-expression as you inscribe your odyssey with us.",
+			"targets": "all",
 			"deb": {
 				"depends": []
 			},
@@ -40,8 +44,6 @@
 				"icons/icon.icns",
 				"icons/icon.ico"
 			],
-			"identifier": "com.naffy.inner-ink",
-			"longDescription": "",
 			"macOS": {
 				"entitlements": null,
 				"exceptionDomain": "",
@@ -50,8 +52,6 @@
 				"signingIdentity": null
 			},
 			"resources": [],
-			"shortDescription": "",
-			"targets": "all",
 			"windows": {
 				"certificateThumbprint": null,
 				"digestAlgorithm": "sha256",
