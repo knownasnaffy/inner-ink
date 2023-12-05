@@ -196,6 +196,10 @@ jobs:
         if: ${{ needs.changes.outputs.isNewVer == 'true' }}
         name: Release
         runs-on: ubuntu-latest
+        permissions:
+            contents: write # to be able to publish a GitHub release
+            issues: write # to be able to comment on released issues
+            pull-requests: write # to be able to comment on released pull requests
 
         steps:
             - name: Checkout
@@ -209,7 +213,7 @@ jobs:
             - name: Release new app version
               uses: codfish/semantic-release-action@v3
               env:
-                  GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   GIT_AUTHOR_NAME: Barinderpreet Singh
                   GIT_AUTHOR_EMAIL: naffydharni006@gmail.com
                   GIT_COMMITTER_NAME: Barinderpreet Singh
