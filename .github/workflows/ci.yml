@@ -152,6 +152,7 @@ jobs:
               uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'windows-latest' }}
               with:
+                  if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-windows
                   path: |
                       src/backend/target/release/bundle/**
@@ -160,6 +161,7 @@ jobs:
               uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'macos-latest' }}
               with:
+                  if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-macos-dmg
                   path: |
                       src/backend/target/release/bundle/dmg/inner-ink_*_x64.dmg
@@ -168,14 +170,16 @@ jobs:
               uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'macos-latest' }}
               with:
+                  if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-macos-app
                   path: |
-                      src/backend/target/release/bundle/macos/inner-ink.app.tar.gz
+                      src/backend/target/release/bundle/macos/inner-ink*.app.tar.gz
 
             - name: Upload binary - .deb (ubuntu only)
               uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
               with:
+                  if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-deb
                   path: |
                       src/backend/target/release/bundle/deb/inner-ink_${{ needs.changes.outputs.newVer }}_amd64.deb
@@ -184,6 +188,7 @@ jobs:
               uses: actions/upload-artifact@v3
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
               with:
+                  if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-appimage
                   path: |
                       src/backend/target/release/bundle/appimage/inner-ink_${{ needs.changes.outputs.newVer }}_amd64.AppImage
