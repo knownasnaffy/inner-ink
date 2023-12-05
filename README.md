@@ -5,7 +5,7 @@
 <p>Write Your Story, One Entry at a Time</p>
 
 <img alt="GitHub License" src="https://img.shields.io/github/license/knownasnaffy/inner-ink?style=for-the-badge">
-<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/knownasnaffy/inner-ink/dev?style=for-the-badge&label=version">
+<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/knownasnaffy/inner-ink/main?style=for-the-badge&label=version">
 <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/knownasnaffy/inner-ink/ci.yml?style=for-the-badge&label=CI">
 </div>
 
