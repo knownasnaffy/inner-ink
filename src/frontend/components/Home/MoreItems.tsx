@@ -20,7 +20,7 @@ const MoreItems = () => {
 				leaveFrom='transform opacity-100 scale-100'
 				leaveTo='transform opacity-0 scale-95'
 			>
-				<Menu.Items className='absolute right-0 mt-2 origin-top-right shadow-lg bg-base-100 rounded-box divide-y divide-base-300 focus:outline-none px-1.5 w-40'>
+				<Menu.Items className='absolute right-0 mt-1 origin-top-right shadow-lg bg-base-100 border border-base-300 rounded-box divide-y divide-base-300 focus:outline-none px-1.5 w-40'>
 					<div className='py-1.5'>
 						<Menu.Item>
 							{({ active }) => (
