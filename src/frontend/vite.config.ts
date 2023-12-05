@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+	root: './',
 	// prevent vite from obscuring rust errors
 	clearScreen: false,
 	// Tauri expects a fixed port, fail if that port is not available
@@ -20,6 +21,7 @@ export default defineConfig({
 		'TAURI_DEBUG',
 	],
 	build: {
+		outDir: '../../dist',
 		// Tauri uses Chromium on Windows and WebKit on macOS and Linux
 		target:
 			process.env.TAURI_PLATFORM == 'windows' ? 'chrome105' : 'safari13',
