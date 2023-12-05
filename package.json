@@ -1,7 +1,7 @@
 {
 	"name": "inner-ink",
 	"private": true,
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"type": "module",
 	"repository": "https://github.com/knownasnaffy/inner-ink",
 	"scripts": {
