@@ -206,6 +206,6 @@ jobs:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               with:
                   plugins: |
-                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"] } ], "@semantic-release/changelog", [ "@semantic-release/git", { "assets": ["CHANGELOG.md", "package.json", "package-lock.json"], "message": "chore(release): publish ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}" } ] ]
+                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"], "draftRelease": true } ], "@semantic-release/changelog", [ "@semantic-release/git", { "assets": ["CHANGELOG.md", "package.json", "package-lock.json"], "message": "chore(release): publish ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}" } ] ]
                   additional-packages: |
                       ["@semantic-release/git"]
