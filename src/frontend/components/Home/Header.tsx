@@ -1,4 +1,4 @@
-import { BookmarkSlashIcon, EyeIcon } from '@heroicons/react/20/solid'
+import { BookmarkSlashIcon } from '@heroicons/react/20/solid'
 import { addDays, format, isSameDay, subDays } from 'date-fns'
 import dateStore from '../../hooks/dateStore'
 import { isHotkeyPressed } from 'react-hotkeys-hook'
@@ -40,9 +40,6 @@ export default function Header() {
 			<div className='flex flex-row gap-1 w-fit h-fit'>
 				<button className='btn btn-ghost btn-square'>
 					<BookmarkSlashIcon className='h-6' />
-				</button>
-				<button className='btn btn-ghost btn-square'>
-					<EyeIcon className='h-6' />
 				</button>
 				<MoreItems />
 			</div>
