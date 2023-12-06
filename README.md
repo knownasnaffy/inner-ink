@@ -41,3 +41,5 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 <!-- TODO: Add icons8 reference to app according to https://icons8.com/license -->
 
 <!-- TODO: Configure server settings to make pwa work => https://vite-pwa-org.netlify.app/guide/pwa-minimal-requirements.html#server-configuration -->
+
+<!-- TODO: Add file SUPPORT.md similar to https://github.com/microsoft/PowerToys/blob/main/SUPPORT.md -->
