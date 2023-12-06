@@ -224,7 +224,6 @@ jobs:
                   GIT_COMMITTER_NAME: Barinderpreet Singh
                   GIT_COMMITTER_EMAIL: naffydharni006@gmail.com
               with:
-                  plugins: |
-                      ["@semantic-release/commit-analyzer", "@semantic-release/release-notes-generator", "@semantic-release/npm", [ "@semantic-release/github", { "assets": ["release-artifacts/**"], "draftRelease": true, "releaseNameTemplate": "Inner Ink v<%= nextRelease.version %>" } ], "@semantic-release/changelog", "@semantic-release/git" ]
+                  extends: /home/runner/work/inner-ink/inner-ink/other/semantic-release-config
                   additional-packages: |
                       ["@semantic-release/git"]
