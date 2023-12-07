@@ -36,7 +36,7 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 -   Icons by: [Heroicons](https://heroicons.com/)
 -   UI library: [DaisyUI](https://daisyui.com/)
 -   Backend framework: [Tauri](https://tauri.app/)
--   Other dependencies: [`package.json`](./package.json)
+-   Other dependencies: [`package.json`](./package.json), [`cargo.toml`](./src/backend/Cargo.toml)
 
 <!-- TODO: Add icons8 reference to app according to https://icons8.com/license -->
 
