@@ -1,5 +1,4 @@
 {
-	"root": true,
 	"env": { "browser": true, "es2020": true },
 	"plugins": ["react-refresh", "jsx-a11y"],
 	"extends": [
