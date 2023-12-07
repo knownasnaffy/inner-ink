@@ -1,0 +1,78 @@
+name: Bug Report
+description: File a bug report
+title: '[Bug]: '
+labels: ['type: bug', 'status: needs triage']
+assignees:
+    - knownasnaffy
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Thanks for taking the time to fill out this bug report!
+
+    - type: checkboxes
+      attributes:
+          label: I have
+          options:
+              - label: updated to the latest version of Inner Ink
+                required: true
+              - label: confirmed that this issue is not a duplicate
+                required: true
+
+    - type: textarea
+      id: steps-to-reproduce
+      attributes:
+          label: Steps to reproduce
+          placeholder: Open app -> Click <something> -> ...
+      validations:
+          required: true
+
+    - type: textarea
+      id: expected-behavior
+      attributes:
+          label: Expected behavior
+          description: What did you expect to happen?
+      validations:
+          required: true
+
+    - type: textarea
+      id: actual-behavior
+      attributes:
+          label: Actual behavior
+          description: What did you expect to happen?
+      validations:
+          required: true
+
+    - type: textarea
+      id: possible-solution
+      attributes:
+          label: Possible Solution
+
+    - type: dropdown
+      id: version
+      attributes:
+          label: Inner Ink Version
+          description: What version of our software are you running?
+          options:
+              - v1.0.0
+      validations:
+          required: true
+
+    - type: checkboxes
+      id: operating-systems
+      attributes:
+          label: Which operating systems have you used?
+          description: You may select more than one.
+          options:
+              - label: Windows
+              - label: MacOS
+              - label: Linux
+
+    - type: checkboxes
+      id: terms
+      attributes:
+          label: Code of Conduct
+          description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/knownasnaffy/inner-ink/blob/main/CODE_OF_CONDUCT.md)
+          options:
+              - label: I agree to follow this project's Code of Conduct
+                required: true
