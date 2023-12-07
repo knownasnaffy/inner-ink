@@ -20,11 +20,11 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 -   [Code of Conduct](#code-of-conduct)
 -   [I Have a Question](#i-have-a-question)
 -   [I Want To Contribute](#i-want-to-contribute)
--   [Reporting Bugs](#reporting-bugs)
--   [Suggesting Enhancements](#suggesting-enhancements)
+    -   [Reporting Bugs](#reporting-bugs)
+    -   [Suggesting Enhancements](#suggesting-enhancements)
+    -   [Improving The Documentation](#improving-the-documentation)
 -   [Your First Code Contribution](#your-first-code-contribution)
--   [Improving The Documentation](#improving-the-documentation)
--   [Commit Messages](#commit-message-format)
+-   [Commit Message Format](#commit-message-format)
 
 ## Code of Conduct
 
