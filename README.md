@@ -1,12 +1,13 @@
 <div align='center'>
-<img src='./src/backend/icons/128x128.png' align='middle' />
+  <img src='./src/backend/icons/128x128.png' align='middle' />
 
-<h1>Inner Ink</h1>
-<p><i>~ Write Your Story, One Entry at a Time</i></p>
+# Inner Ink
 
-<img alt="GitHub License" src="https://img.shields.io/github/license/knownasnaffy/inner-ink?style=for-the-badge">
-<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/knownasnaffy/inner-ink/main?style=for-the-badge&label=version">
-<img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/knownasnaffy/inner-ink/ci.yml?style=for-the-badge&label=CI">
+  <p><i>~ Write Your Story, One Entry at a Time</i></p>
+
+  <img alt="GitHub License" src="https://img.shields.io/github/license/knownasnaffy/inner-ink?style=for-the-badge">
+  <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/knownasnaffy/inner-ink/main?style=for-the-badge&label=version">
+  <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/knownasnaffy/inner-ink/ci.yml?style=for-the-badge&label=CI">
 </div>
 
 ## Description
@@ -20,15 +21,15 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 -   **Intuitive Interface:** Simple and user-friendly interface for easy navigation and journaling.
 -   **Organization and Search:** Effortlessly organize entries by date, mood, or themes. Search feature for quick access.
 -   **Customizable UI:** Change themes and more visible features.
--   **Accessibility**: Keyboard-friendly interface
+-   **Accessibility:** Keyboard-friendly interface.
 
 ## Upcoming Features
 
 -   **Privacy and Security:** Robust encryption and privacy settings to ensure confidentiality.
 -   **Backup and Restore:** Option to back up and restore data from previous installations.
--   **Rich-Text Entries:** Add multimedia elements, font styles, lists and more to personalize your entries.
--   **Updates and Maintenance**: In-built update check and automatic updates.
--   **Internationalization:** Support for more locales
+-   **Rich-Text Entries:** Add multimedia elements, font styles, lists, and more to personalize your entries.
+-   **Updates and Maintenance:** In-built update check and automatic updates.
+-   **Internationalization:** Support for more locales.
 
 ## Contributing
 
@@ -40,7 +41,7 @@ We appreciate your interest in making Inner Ink better!
 
 This project uses [GitHub Issues](https://github.com/knownasnaffy/inner-ink/issues) to [track bugs](CONTRIBUTING.md#reporting-bugs) and [feature requests](CONTRIBUTING.md#suggesting-enhancements). Please search the existing issues before filing new issues to avoid duplicates.
 
-## Resources used
+## Resources Used
 
 -   Logo icon by: [Icons8](https://icons8.com/)
 -   Icons by: [Heroicons](https://heroicons.com/)
