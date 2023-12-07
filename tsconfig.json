@@ -6,6 +6,9 @@
 		"module": "ESNext",
 		"skipLibCheck": true,
 
+		"composite": true,
+		"allowSyntheticDefaultImports": true,
+
 		/* Bundler mode */
 		"moduleResolution": "bundler",
 		"allowImportingTsExtensions": true,
@@ -20,6 +23,5 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["frontend"],
-	"references": [{ "path": "./tsconfig.node.json" }]
+	"include": ["app"]
 }
