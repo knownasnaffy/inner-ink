@@ -2,7 +2,7 @@
 <img src='./src/backend/icons/128x128.png' align='middle' />
 
 <h1>Inner Ink</h1>
-<p>Write Your Story, One Entry at a Time</p>
+<p><i>~ Write Your Story, One Entry at a Time</i></p>
 
 <img alt="GitHub License" src="https://img.shields.io/github/license/knownasnaffy/inner-ink?style=for-the-badge">
 <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/knownasnaffy/inner-ink/main?style=for-the-badge&label=version">
@@ -30,6 +30,16 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 -   **Updates and Maintenance**: In-built update check and automatic updates.
 -   **Internationalization:** Support for more locales
 
+## Contributing
+
+We welcome contributions from the community to help improve Inner Ink. Please read our [Contribution Guidelines](CONTRIBUTING.md) to learn about our development process, coding standards, and how to contribute.
+
+We appreciate your interest in making Inner Ink better!
+
+## Support
+
+This project uses [GitHub Issues](https://github.com/knownasnaffy/inner-ink/issues) to [track bugs](CONTRIBUTING.md#reporting-bugs) and [feature requests](CONTRIBUTING.md#suggesting-enhancements). Please search the existing issues before filing new issues to avoid duplicates.
+
 ## Resources used
 
 -   Logo icon by: [Icons8](https://icons8.com/)
@@ -39,7 +49,3 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 -   Other dependencies: [`package.json`](./package.json), [`cargo.toml`](./src/backend/Cargo.toml)
 
 <!-- TODO: Add icons8 reference to app according to https://icons8.com/license -->
-
-<!-- TODO: Configure server settings to make pwa work => https://vite-pwa-org.netlify.app/guide/pwa-minimal-requirements.html#server-configuration -->
-
-<!-- TODO: Add file SUPPORT.md similar to https://github.com/microsoft/PowerToys/blob/main/SUPPORT.md -->
