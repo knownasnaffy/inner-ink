@@ -20,7 +20,7 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module",
 		"project": ["./tsconfig.json", "./tsconfig.node.json"],
-		"tsconfigRootDir": "./app"
+		"tsconfigRootDir": "./"
 	},
 	"parser": "@typescript-eslint/parser",
 	"ignorePatterns": ["dist"],

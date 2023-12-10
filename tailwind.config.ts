@@ -2,7 +2,7 @@
 import type { Config } from 'tailwindcss'
 
 export default {
-	content: ['./frontend/**/*.{js,ts,jsx,tsx,html}'],
+	content: ['./index.html', './src/frontend/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		extend: {},
 	},
