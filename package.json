@@ -1,35 +1,26 @@
 {
 	"name": "inner-ink",
-	"private": true,
 	"version": "1.0.0",
 	"type": "module",
 	"repository": "https://github.com/knownasnaffy/inner-ink",
+	"private": true,
 	"scripts": {
+		"build": "tauri build",
+		"build:web": "vite build src/frontend",
 		"commit": "cz",
 		"commitlint": "commitlint --edit",
 		"dev": "tauri dev",
 		"dev:web": "vite src/frontend",
-		"build": "tauri build",
-		"build:web": "vite build src/frontend",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-		"preview": "vite preview",
 		"format": "prettier . --write",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"lint-staged": "lint-staged",
 		"prepare": "husky install",
-		"lint-staged": "lint-staged"
-	},
-	"lint-staged": {
-		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
-		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
+		"preview": "vite preview"
 	},
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
-	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
 	},
 	"dependencies": {
 		"@headlessui/react": "^1.7.17",
@@ -71,10 +62,20 @@
 		"postcss": "^8.4.32",
 		"postcss-load-config": "^5.0.0",
 		"prettier": "^3.1.0",
+		"prettier-plugin-pkg": "^0.18.0",
 		"semantic-release": "^22.0.8",
 		"tailwindcss": "^3.3.5",
 		"tailwindcss-animate": "^1.0.7",
 		"typescript": "^5.3.2",
 		"vite": "^5.0.4"
+	},
+	"commitlint": {
+		"extends": [
+			"@commitlint/config-conventional"
+		]
+	},
+	"lint-staged": {
+		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
+		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
 	}
 }

@@ -2,12 +2,12 @@
 	"name": "semantic-release-config",
 	"version": "1.0.0",
 	"description": "",
-	"main": ".releaserc.json",
+	"author": "",
+	"license": "ISC",
 	"private": true,
+	"main": ".releaserc.json",
+	"keywords": [],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC"
+	}
 }

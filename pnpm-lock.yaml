@@ -118,6 +118,9 @@ devDependencies:
   prettier:
     specifier: ^3.1.0
     version: 3.1.0
+  prettier-plugin-pkg:
+    specifier: ^0.18.0
+    version: 0.18.0(prettier@3.1.0)
   semantic-release:
     specifier: ^22.0.8
     version: 22.0.8(typescript@5.3.2)
@@ -4769,6 +4772,15 @@ packages:
   /prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier-plugin-pkg@0.18.0(prettier@3.1.0):
+    resolution: {integrity: sha512-cme+OUHj25cVj3HwGK6ek/GkCHhlhM1u/IYspOHYsFImaXMJCmjs8xeCcvLreD0HMX5QxObot+3TtQR3Bd2wHw==}
+    engines: {node: ^14.18.0 || >=16.0.0}
+    peerDependencies:
+      prettier: ^3.0.0
+    dependencies:
+      prettier: 3.1.0
     dev: true
 
   /prettier@3.1.0:
