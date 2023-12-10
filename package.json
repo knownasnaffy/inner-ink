@@ -1,56 +1,29 @@
 {
-	"name": "inner-ink",
+	"name": "inner-ink-monorepo",
 	"version": "1.0.0",
-	"type": "module",
 	"repository": "https://github.com/knownasnaffy/inner-ink",
 	"private": true,
 	"scripts": {
-		"build": "tauri build",
-		"build:web": "vite build src/frontend",
 		"commit": "cz",
 		"commitlint": "commitlint --edit",
-		"dev": "tauri dev",
-		"dev:web": "vite src/frontend",
 		"format": "prettier . --write",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"lint-staged": "lint-staged",
-		"prepare": "husky install",
-		"preview": "vite preview"
+		"prepare": "husky install"
 	},
 	"config": {
 		"commitizen": {
 			"path": "./node_modules/cz-conventional-changelog"
 		}
 	},
-	"dependencies": {
-		"@headlessui/react": "^1.7.17",
-		"@heroicons/react": "^2.0.18",
-		"@tauri-apps/api": "^1.5.1",
-		"clsx": "^2.0.0",
-		"date-fns": "^2.30.0",
-		"react": "^18.2.0",
-		"react-day-picker": "^8.9.1",
-		"react-dom": "^18.2.0",
-		"react-hotkeys-hook": "^4.4.1",
-		"tauri-plugin-sql-api": "github:tauri-apps/tauri-plugin-sql#v1",
-		"zustand": "^4.4.7"
-	},
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
 		"@semantic-release/changelog": "^6.0.3",
-		"@tailwindcss/typography": "^0.5.10",
-		"@tauri-apps/cli": "^1.5.6",
-		"@types/node": "^20.10.2",
-		"@types/react": "^18.2.40",
-		"@types/react-dom": "^18.2.17",
 		"@typescript-eslint/eslint-plugin": "^6.13.1",
 		"@typescript-eslint/parser": "^6.13.1",
-		"@vitejs/plugin-react": "^4.2.0",
-		"autoprefixer": "^10.4.16",
 		"commitizen": "^4.3.0",
 		"cz-conventional-changelog": "^3.3.0",
-		"daisyui": "^4.4.17",
 		"eslint": "^8.55.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
@@ -60,15 +33,10 @@
 		"eslint-plugin-unicorn": "^49.0.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.1.0",
-		"postcss": "^8.4.32",
-		"postcss-load-config": "^5.0.0",
 		"prettier": "^3.1.0",
 		"prettier-plugin-pkg": "^0.18.0",
 		"semantic-release": "^22.0.8",
-		"tailwindcss": "^3.3.5",
-		"tailwindcss-animate": "^1.0.7",
-		"typescript": "^5.3.2",
-		"vite": "^5.0.4"
+		"typescript": "^5.3.2"
 	},
 	"commitlint": {
 		"extends": [
