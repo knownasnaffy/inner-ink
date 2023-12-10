@@ -6,7 +6,7 @@ import App from './App'
 import './index.css'
 import './utils/init'
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.querySelector('#root')!).render(
 	<StrictMode>
 		<App />
 	</StrictMode>,

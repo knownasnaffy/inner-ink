@@ -15,10 +15,10 @@ const SearchPage = () => {
 	const handleSubmit = async () => {
 		if (searchQuery && searchQuery?.trim().length !== 0) {
 			const searchResult = await searchEntries(searchQuery)
-			if (!searchResult) {
-				setSearchResult(<ResultNotFound />)
-			} else {
+			if (searchResult) {
 				setSearchResult(<SearchResult entries={searchResult} />)
+			} else {
+				setSearchResult(<ResultNotFound />)
 			}
 		} else setSearchResult(<EmptySearchResult />)
 	}

@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-interface BooleanSettingsProps
+interface BooleanSettingsProperties
 	extends React.InputHTMLAttributes<HTMLInputElement> {
 	title: string
 	description?: string
@@ -13,8 +13,8 @@ const BooleanSettings = ({
 	description,
 	position,
 	icon,
-	...props
-}: BooleanSettingsProps) => {
+	...properties
+}: BooleanSettingsProperties) => {
 	return (
 		<div
 			className={clsx(
@@ -40,7 +40,7 @@ const BooleanSettings = ({
 			<input
 				type='checkbox'
 				className='toggle toggle-primary'
-				{...props}
+				{...properties}
 			/>
 		</div>
 	)

@@ -13,7 +13,7 @@ import { getSettings } from '../../utils/settings'
 
 const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
 
-function CustomCaption(props: CaptionProps) {
+function CustomCaption(properties: CaptionProps) {
 	const { goToMonth, nextMonth, previousMonth, isDateDisplayed } =
 		useNavigation()
 	const setVisibleMonth = dateStore((state) => state.setVisibleMonth)
@@ -21,7 +21,7 @@ function CustomCaption(props: CaptionProps) {
 	return (
 		<div className='text-primary flex justify-between items-center pb-2'>
 			<p className='font-bold text-2xl pl-2.5'>
-				{format(props.displayMonth, 'MMMM yyyy')}
+				{format(properties.displayMonth, 'MMMM yyyy')}
 			</p>
 			<div className='w-fit flex gap-1'>
 				<button
@@ -96,18 +96,16 @@ const classNames: ClassNames = {
 	table: 'dp-table',
 }
 
-const DateSelector = () => {
-	const closeDateSelector = () =>
-		(
-			document.getElementById('dateSelectorModal') as HTMLDialogElement
-		).close()
+const closeDateSelector = () =>
+	(document.querySelector('#dateSelectorModal') as HTMLDialogElement).close()
 
+const DateSelector = () => {
 	const selectedDay = dateStore((state) => state.selectedDay)
 	const setSelectedDay = dateStore((state) => state.setSelectedDay)
 	const visibleMonth = dateStore((state) => state.visibleMonth)
 	const setVisibleMonth = dateStore((state) => state.setVisibleMonth)
 
-	const handleDayClick: DayClickEventHandler = (day) => {
+	const handleDayClick: DayClickEventHandler = (day: Date) => {
 		setSelectedDay(day)
 		setVisibleMonth(day)
 		setTimeout(() => {
@@ -117,7 +115,7 @@ const DateSelector = () => {
 
 	useHotkeys('ctrl+d', () =>
 		(
-			document.getElementById('dateSelectorModal') as HTMLDialogElement
+			document.querySelector('#dateSelectorModal') as HTMLDialogElement
 		).showModal(),
 	)
 

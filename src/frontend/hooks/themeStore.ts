@@ -12,7 +12,7 @@ const themeStore = create<ThemeStoreState>((set) => ({
 	setTheme(newTheme) {
 		set(() => ({ theme: newTheme }))
 		updateSettings({ theme: newTheme })
-		document.documentElement.setAttribute('data-theme', newTheme)
+		document.documentElement.dataset.theme = newTheme
 	},
 }))
 

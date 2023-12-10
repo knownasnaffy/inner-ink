@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/prefer-module */
 import type { Config } from 'tailwindcss'
 
 export default {

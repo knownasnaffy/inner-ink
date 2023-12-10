@@ -5,9 +5,9 @@ export default function CurrentView() {
 	const { route } = navigationStore()
 	let view
 
-	for (let i = 0; i < viewsList.length; i++) {
-		if (viewsList[i].path === route) {
-			view = viewsList[i].element
+	for (const element of viewsList) {
+		if (element.path === route) {
+			view = element.element
 			break
 		} else
 			view = (

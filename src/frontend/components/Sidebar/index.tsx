@@ -6,12 +6,12 @@ const getNavButtons = () => {
 	const topNavButtons: viewsListType = []
 	const bottomNavButtons: viewsListType = []
 
-	for (let i = 0; i < viewsList.length; i++) {
-		if (viewsList[i].sidebar) {
-			const position = viewsList[i].sidebar?.position
+	for (const element of viewsList) {
+		if (element.sidebar) {
+			const position = element.sidebar?.position
 			if (position === 'top') {
-				topNavButtons.push(viewsList[i])
-			} else bottomNavButtons.push(viewsList[i])
+				topNavButtons.push(element)
+			} else bottomNavButtons.push(element)
 		}
 	}
 	return { topNavButtons, bottomNavButtons }

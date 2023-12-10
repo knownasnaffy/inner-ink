@@ -1,6 +1,13 @@
 import { appWindow } from '@tauri-apps/api/window'
 import { useCallback, useEffect, useState } from 'react'
 
+const closeWindow = async () => {
+	await appWindow.close()
+}
+const minimize = async () => {
+	await appWindow.minimize()
+}
+
 // TODO: Add a setting to change shell buttons to default OS buttons (Probably only on windows)
 export const ShellButtons = () => {
 	const [isWindowMaximized, setIsWindowMaximized] = useState(false)
@@ -25,12 +32,6 @@ export const ShellButtons = () => {
 
 		return () => unlisten && unlisten()
 	}, [updateIsWindowMaximized])
-	const closeWindow = async () => {
-		await appWindow.close()
-	}
-	const minimize = async () => {
-		await appWindow.minimize()
-	}
 	const toggleMaximize = async () => {
 		await appWindow.toggleMaximize()
 		setIsWindowMaximized(!isWindowMaximized)

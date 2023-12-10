@@ -45,7 +45,8 @@ const LoginPage = () => {
 
 export default LoginPage
 
-interface TextInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+interface TextInputProperties
+	extends React.InputHTMLAttributes<HTMLInputElement> {
 	label?: string
 	altLabel?: string
 	altLableClassName?: string
@@ -61,8 +62,8 @@ const TextInput = ({
 	altLabelWarn,
 	altLableSuccess,
 	className,
-	...props
-}: TextInputProps) => {
+	...properties
+}: TextInputProperties) => {
 	return (
 		<div className='w-full form-control'>
 			<label className='label'>
@@ -75,7 +76,7 @@ const TextInput = ({
 							  ? 'text-warning'
 							  : altLableSuccess
 							    ? 'text-success'
-							    : null,
+							    : undefined,
 					)}
 				>
 					{label}
@@ -94,7 +95,7 @@ const TextInput = ({
 					'focus:focus-within:outline-offset-0 focus:border-none placeholder-neutral',
 					className,
 				)}
-				{...props}
+				{...properties}
 			/>
 			<label className='label'>
 				<span

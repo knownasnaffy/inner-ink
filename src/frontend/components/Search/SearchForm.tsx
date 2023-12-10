@@ -1,11 +1,11 @@
 import React from 'react'
 import searchStore from '../../hooks/searchStore'
 
-interface SearchFormProps {
+interface SearchFormProperties {
 	onSubmit: () => void
 }
 
-export const SearchForm = ({ onSubmit }: SearchFormProps) => {
+export const SearchForm = ({ onSubmit }: SearchFormProperties) => {
 	const searchQuery = searchStore((state) => state.searchQuery)
 	const setSearchQuery = searchStore((state) => state.setSearchQuery)
 

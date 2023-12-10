@@ -23,8 +23,8 @@ export default function Header() {
 			}
 		} else {
 			;(
-				document.getElementById(
-					'dateSelectorModal',
+				document.querySelector(
+					'#dateSelectorModal',
 				) as HTMLDialogElement
 			).showModal()
 		}

@@ -33,7 +33,7 @@ export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 										'text-base-content/80',
 								)}
 							>
-								{entry.title.trim().length !== 0
+								{entry.title.trim().length > 0
 									? entry.title
 									: 'No Title'}
 							</div>
