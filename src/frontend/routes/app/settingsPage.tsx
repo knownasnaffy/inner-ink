@@ -1,5 +1,5 @@
-import BooleanSettings from '../components/Settings/BooleanSetting'
-import { ThemeList } from '../components/ThemeList'
+import BooleanSettings from '../../components/Settings/BooleanSetting'
+import { ThemeList } from '../../components/ThemeList'
 
 const SettingsPage = () => {
 	return (

@@ -2,15 +2,15 @@ import { format, parse } from 'date-fns'
 import { Entry } from '../../utils/database'
 import clsx from 'clsx'
 import dateStore from '../../hooks/dateStore'
-import navigationStore from '../../hooks/navigationStore'
+// import navigationStore from '../../hooks/navigationStore'
 
 export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 	const setSelectedDay = dateStore((state) => state.setSelectedDay)
-	const navigate = navigationStore((state) => state.navigate)
+	// const navigate = navigationStore((state) => state.navigate)
 
 	const selectEntry = (date: Date) => {
 		setSelectedDay(date)
-		navigate('/')
+		// navigate('/')
 	}
 	return (
 		<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-4 animate-in fade-in duration-300'>

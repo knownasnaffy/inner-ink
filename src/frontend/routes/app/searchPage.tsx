@@ -1,11 +1,11 @@
-import { searchEntries } from '../utils/database'
-import { SearchForm } from '../components/Search/SearchForm'
+import { searchEntries } from '../../utils/database'
+import { SearchForm } from '../../components/Search/SearchForm'
 import {
 	ResultNotFound,
 	EmptySearchResult,
 	SearchResult,
-} from '../components/Search/SearchResults'
-import searchStore from '../hooks/searchStore'
+} from '../../components/Search/SearchResults'
+import searchStore from '../../hooks/searchStore'
 
 const SearchPage = () => {
 	const searchResult = searchStore((state) => state.searchResult)

@@ -32,6 +32,7 @@
 		"react-day-picker": "^8.9.1",
 		"react-dom": "^18.2.0",
 		"react-hotkeys-hook": "^4.4.1",
+		"react-router-dom": "^6.20.1",
 		"tauri-plugin-sql-api": "github:tauri-apps/tauri-plugin-sql#v1",
 		"zustand": "^4.4.7"
 	},

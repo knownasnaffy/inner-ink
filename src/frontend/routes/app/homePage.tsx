@@ -1,6 +1,6 @@
-import DateSelector from '../components/Home/DateSelector'
-import MyEditor from '../components/Home/MyEditor'
-import Header from '../components/Home/Header'
+import DateSelector from '../../components/Home/DateSelector'
+import MyEditor from '../../components/Home/MyEditor'
+import Header from '../../components/Home/Header'
 
 const HomePage = () => {
 	return (
