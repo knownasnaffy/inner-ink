@@ -1,4 +1,9 @@
-import { Navigate, Route, Routes } from 'react-router-dom'
+import {
+	Navigate,
+	Outlet,
+	RouterProvider,
+	createBrowserRouter,
+} from 'react-router-dom'
 import AuthProvider from './AuthProvider'
 import AppLayout from './routes/app'
 import HomePage from './routes/app/homePage'
@@ -8,26 +13,57 @@ import SettingsPage from './routes/app/settingsPage'
 import AuthLayout from './routes/auth'
 import LoginPage from './routes/auth/loginPage'
 
-const Router = () => {
-	return (
-		<>
-			<AuthProvider>
+const router = createBrowserRouter([
+	{
+		element: (
+			<>
 				<TitleBar />
-				<Routes>
-					<Route path='/' element={<Navigate to='/app' />}></Route>
-					<Route path='/auth' element={<AuthLayout />}>
-						<Route path='login' element={<LoginPage />}></Route>
-					</Route>
+				<Outlet />
+			</>
+		),
+		children: [
+			{
+				path: '/',
+				element: <Navigate to='/app' />,
+			},
+			{
+				path: '/app',
+				element: <AppLayout />,
+				children: [
+					{
+						index: true,
+						element: <HomePage />,
+					},
+					{
+						path: 'search',
+						element: <SearchPage />,
+					},
+					{
+						path: 'settings',
+						element: <SettingsPage />,
+					},
+				],
+			},
+			{
+				path: '/auth',
+				element: <AuthLayout />,
+				children: [
+					{
+						path: 'login',
+						element: <LoginPage />,
+					},
+				],
+			},
+		],
+	},
+])
 
-					<Route path='/app' element={<AppLayout />}>
-						<Route index element={<HomePage />} />
-						<Route path='search' element={<SearchPage />} />
-						<Route path='settings' element={<SettingsPage />} />
-					</Route>
-				</Routes>
-			</AuthProvider>
-		</>
+const RouterComponent = () => {
+	return (
+		<AuthProvider>
+			<RouterProvider router={router} />
+		</AuthProvider>
 	)
 }
 
-export default Router
+export default RouterComponent
