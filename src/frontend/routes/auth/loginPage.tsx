@@ -1,7 +1,26 @@
 import clsx from 'clsx'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../hooks/authStore'
+// import { useAuth } from '../../AuthProvider';
 // import useAuth from '../hooks/useAuth'
 
 const LoginPage = () => {
+	const navigate = useNavigate()
+	const location = useLocation()
+	const auth = useAuth()
+
+	const from = location.state?.from?.pathname || '/'
+	function logIn() {
+		auth.signin('username', () => {
+			// Send them back to the page they tried to visit when they were
+			// redirected to the login page. Use { replace: true } so we don't create
+			// another entry in the history stack for the login page.  This means that
+			// when they get to the protected page and click the back button, they
+			// won't end up back on the login page, which is also really nice for the
+			// user experience.
+			navigate(from, { replace: true })
+		})
+	}
 	// const logIn = useAuth((state: any) => state.logIn)
 	return (
 		<div className='max-w-md mx-auto card bg-base-100'>
@@ -34,7 +53,7 @@ const LoginPage = () => {
 				<button
 					type='submit'
 					className='mt-2 btn btn-primary btn-block'
-					// onClick={logIn}
+					onClick={logIn}
 				>
 					Continue
 				</button>

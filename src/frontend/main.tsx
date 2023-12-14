@@ -5,9 +5,12 @@ import Router from './Router'
 
 import './index.css'
 import './utils/init'
+import { BrowserRouter } from 'react-router-dom'
 
 createRoot(document.querySelector('#root')!).render(
 	<StrictMode>
-		<Router />
+		<BrowserRouter>
+			<Router />
+		</BrowserRouter>
 	</StrictMode>,
 )
