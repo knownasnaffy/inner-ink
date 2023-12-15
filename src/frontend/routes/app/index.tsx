@@ -1,15 +1,15 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar'
 import { useAuth } from '../../hooks/authStore'
-import { exists, BaseDirectory } from '@tauri-apps/api/fs'
 
-// Check if the `$APPDATA/avatar.png` file exists
-const newUser = await exists('database.db', { dir: BaseDirectory.AppData })
+// import { exists, BaseDirectory } from '@tauri-apps/api/fs'
+// Check if the `$APPDATA/database.db` file exists
+// const newUser = await exists('database.db', { dir: BaseDirectory.AppData })
+const newUser = localStorage.getItem('username')
 
 const AppLayout = () => {
 	const auth = useAuth()
 	const location = useLocation()
-	// const user = localStorage.getItem('user')
 	if (!auth.user) {
 		// Redirect them to the /login page, but save the current location they were
 		// trying to go to when they were redirected. This allows us to send them

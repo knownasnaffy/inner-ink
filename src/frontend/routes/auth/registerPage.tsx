@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/authStore'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import bcrypt from 'bcryptjs'
 
 const RegisterPage = () => {
 	const navigate = useNavigate()
@@ -37,8 +38,16 @@ const RegisterPage = () => {
 			.required('Repeat Password is required'),
 	})
 
-	const onSubmit = (values: unknown) => {
-		console.log(values) // You can handle form submission here
+	const onSubmit = (values: { name: string; password: string }) => {
+		const { name, password } = values
+		const hashedPassword = bcrypt.hashSync(password, 10) // Hash the password
+
+		// Save user data to localStorage
+		localStorage.setItem('username', name)
+		localStorage.setItem('password', hashedPassword)
+
+		console.log('User registered:', name)
+		console.log('Hashed password saved to localStorage')
 		logIn()
 	}
 

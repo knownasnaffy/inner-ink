@@ -3,8 +3,9 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/authStore'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import * as Yup from 'yup'
+import bcrypt from 'bcryptjs'
 
-const fakePassword = 'pass' // Simulated fake password
+const hashedPassword = localStorage.getItem('password') || ''
 
 const LoginPage = () => {
 	const navigate = useNavigate()
@@ -31,10 +32,8 @@ const LoginPage = () => {
 	const validationSchema = Yup.object({
 		password: Yup.string()
 			.required('Password is required')
-			.test(
-				'fakePasswordCheck',
-				'Invalid password',
-				(value: string) => value === fakePassword,
+			.test('fakePasswordCheck', 'Invalid password', (value: string) =>
+				bcrypt.compareSync(value, hashedPassword),
 			),
 	})
 
@@ -57,6 +56,7 @@ const LoginPage = () => {
 					initialValues={initialValues}
 					validationSchema={validationSchema}
 					onSubmit={onSubmit}
+					validateOnChange={false}
 					className='flex'
 				>
 					<Form>
