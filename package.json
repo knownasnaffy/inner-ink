@@ -8,7 +8,6 @@
 		"build": "tauri build",
 		"build:web": "vite build src/frontend",
 		"commit": "cz",
-		"commitlint": "commitlint --edit",
 		"dev": "tauri dev",
 		"dev:web": "vite src/frontend",
 		"format": "prettier . --write",
@@ -40,8 +39,6 @@
 		"zustand": "^4.4.7"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "^18.4.3",
-		"@commitlint/config-conventional": "^18.4.3",
 		"@tailwindcss/typography": "^0.5.10",
 		"@tauri-apps/cli": "^1.5.8",
 		"@types/bcryptjs": "^2.4.6",
@@ -72,11 +69,6 @@
 		"tailwindcss-animate": "^1.0.7",
 		"typescript": "^5.3.3",
 		"vite": "^5.0.10"
-	},
-	"commitlint": {
-		"extends": [
-			"@commitlint/config-conventional"
-		]
 	},
 	"lint-staged": {
 		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
