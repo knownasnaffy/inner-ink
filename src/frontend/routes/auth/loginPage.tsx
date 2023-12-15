@@ -23,7 +23,7 @@ const LoginPage = () => {
 	}
 	// const logIn = useAuth((state: any) => state.logIn)
 	return (
-		<div className='max-w-md mx-auto card bg-base-100'>
+		<div className='card bg-base-100'>
 			<div className='card-body'>
 				<h1
 					className={clsx(
@@ -40,13 +40,6 @@ const LoginPage = () => {
 					type='password'
 					placeholder='********'
 					autoComplete='new-password'
-				/>
-				{/* Repeat Password field */}
-				<TextInput
-					label='Repeat Password'
-					type='password'
-					placeholder='********'
-					autoComplete='off'
 				/>
 				{/* Submit Button */}
 				{/* IDEA: A dialog pops up when pressing the button which says, "`Attention!` All access to data will be lost if you don't remember this password. The future is in your hands. [Change][Continue]" */}

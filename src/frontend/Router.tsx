@@ -12,6 +12,7 @@ import TitleBar from './components/TitleBar'
 import SettingsPage from './routes/app/settingsPage'
 import AuthLayout from './routes/auth'
 import LoginPage from './routes/auth/loginPage'
+import RegisterPage from './routes/auth/registerPage'
 
 const router = createBrowserRouter([
 	{
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
 					{
 						path: 'login',
 						element: <LoginPage />,
+					},
+					{
+						path: 'register',
+						element: <RegisterPage />,
 					},
 				],
 			},

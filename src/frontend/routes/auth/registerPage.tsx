@@ -1,10 +1,26 @@
 import clsx from 'clsx'
-// import useAuth from '../hooks/useAuth'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { useAuth } from '../../hooks/authStore'
 
 const RegisterPage = () => {
-	// const logIn = useAuth((state: any) => state.logIn)
+	const navigate = useNavigate()
+	const location = useLocation()
+	const auth = useAuth()
+
+	const from = location.state?.from?.pathname || '/'
+	function logIn() {
+		auth.signin('username', () => {
+			// Send them back to the page they tried to visit when they were
+			// redirected to the login page. Use { replace: true } so we don't create
+			// another entry in the history stack for the login page.  This means that
+			// when they get to the protected page and click the back button, they
+			// won't end up back on the login page, which is also really nice for the
+			// user experience.
+			navigate(from, { replace: true })
+		})
+	}
 	return (
-		<div className='max-w-md mx-auto card bg-base-100'>
+		<div className='card bg-base-100'>
 			<div className='card-body'>
 				<h1
 					className={clsx(
@@ -52,7 +68,7 @@ const RegisterPage = () => {
 				<button
 					type='submit'
 					className='mt-2 btn btn-primary btn-block'
-					// onClick={logIn}
+					onClick={logIn}
 				>
 					Continue
 				</button>
@@ -84,7 +100,7 @@ const TextInput = ({
 }: TextInputProperties) => {
 	return (
 		<div className='w-full form-control'>
-			<label className='label'>
+			<label className='label pt-0 -mt-1'>
 				<span
 					className={clsx(
 						'label-text',
@@ -128,7 +144,7 @@ const TextInput = ({
 							    : 'hidden',
 					)}
 				>
-					{altLabel || 'ㅤ'}
+					{altLabel || 'ㅤOhh'}
 				</span>
 			</label>
 		</div>
