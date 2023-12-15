@@ -242,6 +242,8 @@ When making contributions to Inner Ink, please format your commit messages follo
 -   Separate the summary from the body of the message with a blank line.
 -   Provide detailed explanations or additional context in the commit body if necessary.
 
+> **Tip:** Use `pnpm commit` command to run commitizen for formatting commits with ease
+
 Examples:
 
 ```
