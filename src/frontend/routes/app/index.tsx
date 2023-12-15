@@ -1,11 +1,9 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar'
 import { useAuth } from '../../hooks/authStore'
+import { getUser } from '../../utils/database'
 
-// import { exists, BaseDirectory } from '@tauri-apps/api/fs'
-// Check if the `$APPDATA/database.db` file exists
-// const newUser = await exists('database.db', { dir: BaseDirectory.AppData })
-const newUser = localStorage.getItem('username')
+const user = await getUser()
 
 const AppLayout = () => {
 	const auth = useAuth()
@@ -16,7 +14,7 @@ const AppLayout = () => {
 		// along to that page after they login, which is a nicer user experience
 		// than dropping them off on the home page.
 		// console.log(filepath)
-		return newUser ? (
+		return user ? (
 			<Navigate to='/auth/login' state={{ from: location }} replace />
 		) : (
 			<Navigate to='/auth/register' replace />

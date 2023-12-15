@@ -13,6 +13,8 @@ import SettingsPage from './routes/app/settingsPage'
 import AuthLayout from './routes/auth'
 import LoginPage from './routes/auth/loginPage'
 import RegisterPage from './routes/auth/registerPage'
+import { useEffect } from 'react'
+import { getSettings } from './utils/settings'
 
 const router = createBrowserRouter([
 	{
@@ -64,6 +66,11 @@ const router = createBrowserRouter([
 ])
 
 const RouterComponent = () => {
+	useEffect(() => {
+		// Get current theme from settings and apply it
+		const theme = getSettings().theme
+		document.documentElement.dataset.theme = theme
+	})
 	return (
 		<AuthProvider>
 			<RouterProvider router={router} />
