@@ -73,7 +73,7 @@
 		"tailwindcss": "^3.3.5",
 		"tailwindcss-animate": "^1.0.7",
 		"typescript": "^5.3.2",
-		"vite": "^5.0.4"
+		"vite": "^5.0.10"
 	},
 	"commitlint": {
 		"extends": [
