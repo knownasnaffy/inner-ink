@@ -150,7 +150,7 @@ jobs:
               uses: tauri-apps/tauri-action@v0
 
             - name: Upload binaries - .msi, .setup.exe (windows only)
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'windows-latest' }}
               with:
                   if-no-files-found: error
@@ -159,7 +159,7 @@ jobs:
                       src/backend/target/release/bundle/**
 
             - name: Upload binary - .dmg (macos only)
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'macos-latest' }}
               with:
                   if-no-files-found: error
@@ -168,7 +168,7 @@ jobs:
                       src/backend/target/release/bundle/dmg/inner-ink_*_x64.dmg
 
             - name: Upload binary - .app (macos only)
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'macos-latest' }}
               with:
                   if-no-files-found: error
@@ -177,7 +177,7 @@ jobs:
                       src/backend/target/release/bundle/macos/inner-ink*.app.tar.gz
 
             - name: Upload binary - .deb (ubuntu only)
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
               with:
                   if-no-files-found: error
@@ -186,7 +186,7 @@ jobs:
                       src/backend/target/release/bundle/deb/inner-ink_${{ needs.changes.outputs.newVer }}_amd64.deb
 
             - name: Upload binary - .appimage (ubuntu only)
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
               with:
                   if-no-files-found: error
