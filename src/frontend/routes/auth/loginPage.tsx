@@ -1,8 +1,10 @@
 import clsx from 'clsx'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../hooks/authStore'
-// import { useAuth } from '../../AuthProvider';
-// import useAuth from '../hooks/useAuth'
+import { Formik, Form, Field, ErrorMessage } from 'formik'
+import * as Yup from 'yup'
+
+const fakePassword = 'pass' // Simulated fake password
 
 const LoginPage = () => {
 	const navigate = useNavigate()
@@ -21,110 +23,71 @@ const LoginPage = () => {
 			navigate(from, { replace: true })
 		})
 	}
-	// const logIn = useAuth((state: any) => state.logIn)
+
+	const initialValues = {
+		password: '',
+	}
+
+	const validationSchema = Yup.object({
+		password: Yup.string()
+			.required('Password is required')
+			.test(
+				'fakePasswordCheck',
+				'Invalid password',
+				(value: string) => value === fakePassword,
+			),
+	})
+
+	const onSubmit = () => {
+		logIn()
+	}
+
 	return (
 		<div className='card bg-base-100'>
 			<div className='card-body'>
 				<h1
 					className={clsx(
-						'card-title text-2xl w-full mb-5',
+						'card-title text-2xl w-full',
 						'table after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full pb-1.5',
 					)}
 				>
 					Login
 				</h1>
-				{/* Password Field */}
-				{/* IDEA: An option in settings to only except numbers(pin) using attributes [inputmode="numeric"] and [minlength="4"] */}
-				<TextInput
-					label='Password'
-					type='password'
-					placeholder='********'
-					autoComplete='new-password'
-				/>
-				{/* Submit Button */}
-				{/* IDEA: A dialog pops up when pressing the button which says, "`Attention!` All access to data will be lost if you don't remember this password. The future is in your hands. [Change][Continue]" */}
-				<button
-					type='submit'
-					className='mt-2 btn btn-primary btn-block'
-					onClick={logIn}
+				<Formik
+					initialValues={initialValues}
+					validationSchema={validationSchema}
+					onSubmit={onSubmit}
+					className='flex'
 				>
-					Continue
-				</button>
+					<Form>
+						<div className='w-full form-control'>
+							<label htmlFor='password' className='label'>
+								<span className='label-text'>Password</span>
+							</label>
+							<Field
+								type='password'
+								id='password'
+								name='password'
+								className='input input-bordered w-full input-primary placeholder-neutral'
+							/>
+							<ErrorMessage
+								name='password'
+								component='label'
+								className='label label-text-alt text-error'
+							/>
+						</div>
+
+						<button
+							type='submit'
+							className='btn btn-primary btn-block mt-4'
+						>
+							Submit
+						</button>
+					</Form>
+				</Formik>
 			</div>
 		</div>
 	)
 }
 
 export default LoginPage
-
-interface TextInputProperties
-	extends React.InputHTMLAttributes<HTMLInputElement> {
-	label?: string
-	altLabel?: string
-	altLableClassName?: string
-	altLabelError?: boolean
-	altLabelWarn?: boolean
-	altLableSuccess?: boolean
-}
-
-const TextInput = ({
-	label,
-	altLabel,
-	altLabelError,
-	altLabelWarn,
-	altLableSuccess,
-	className,
-	...properties
-}: TextInputProperties) => {
-	return (
-		<div className='w-full form-control'>
-			<label className='label'>
-				<span
-					className={clsx(
-						'label-text',
-						altLabelError
-							? 'text-error'
-							: altLabelWarn
-							  ? 'text-warning'
-							  : altLableSuccess
-							    ? 'text-success'
-							    : undefined,
-					)}
-				>
-					{label}
-				</span>
-			</label>
-			<input
-				className={clsx(
-					'input input-bordered w-full',
-					altLabelError
-						? 'input-error'
-						: altLabelWarn
-						  ? 'input-warning'
-						  : altLableSuccess
-						    ? 'input-success'
-						    : 'focus:input-primary',
-					'focus:focus-within:outline-offset-0 focus:border-none placeholder-neutral',
-					className,
-				)}
-				{...properties}
-			/>
-			<label className='label'>
-				<span
-					className={clsx(
-						'label-text-alt',
-						altLabelError
-							? 'text-error'
-							: altLabelWarn
-							  ? 'text-warning'
-							  : altLableSuccess
-							    ? 'text-success'
-							    : 'hidden',
-					)}
-				>
-					{altLabel || 'ㅤ'}
-				</span>
-			</label>
-		</div>
-	)
-}
