@@ -8,10 +8,20 @@ export const ThemeList = () => {
 	const setTheme = themeStore((state) => state.setTheme)
 	return (
 		<>
-			<button
+			<div
+				role='button'
+				tabIndex={0}
+				onKeyDown={(event) => {
+					if ([' ', 'Enter'].includes(event.key)) {
+						event.preventDefault()
+						setTheme('')
+					}
+				}}
 				className={clsx(
-					'relative select-none hover:cursor-pointer rounded-box overflow-hidden',
-					theme === '' && 'outline-dashed outline-offset-1',
+					'relative select-none hover:cursor-pointer rounded-2xl overflow-hidden',
+					'focus:outline focus:outline-primary hover:opacity-90 focus:outline-[3px] focus:outline-offset-1',
+					theme === '' &&
+						'outline-dashed outline-offset-1 outline-primary',
 				)}
 				onClick={() => setTheme('')}
 			>
@@ -33,7 +43,7 @@ export const ThemeList = () => {
 					<span className='bg-accent card p-1.5 w-full'></span>
 					<p className='text-sm self-end'>Default</p>
 				</div>
-			</button>
+			</div>
 			{themes.map((theme, index) => {
 				return <ThemeButton key={index} themeName={theme} />
 			})}
