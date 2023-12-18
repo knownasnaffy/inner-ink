@@ -39,6 +39,25 @@ export const ShellButtons = () => {
 	return (
 		<div className='flex flex-row scale-90 w-fit'>
 			<button
+				className='scale-75 cursor-default btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content'
+				onClick={minimize}
+			>
+				<svg
+					xmlns='http://www.w3.org/2000/svg'
+					fill='none'
+					viewBox='0 0 24 24'
+					strokeWidth={1.5}
+					stroke='currentColor'
+					className='w-6 h-6'
+				>
+					<path
+						strokeLinecap='round'
+						strokeLinejoin='round'
+						d='M19.5 12h-15'
+					/>
+				</svg>
+			</button>
+			<button
 				className='scale-75 cursor-default btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content'
 				onClick={toggleMaximize}
 			>
@@ -73,25 +92,6 @@ export const ShellButtons = () => {
 						/>
 					</svg>
 				)}
-			</button>
-			<button
-				className='scale-75 cursor-default btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content'
-				onClick={minimize}
-			>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					strokeWidth={1.5}
-					stroke='currentColor'
-					className='w-6 h-6'
-				>
-					<path
-						strokeLinecap='round'
-						strokeLinejoin='round'
-						d='M19.5 12h-15'
-					/>
-				</svg>
 			</button>
 			<button
 				className='scale-75 cursor-default btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content'
