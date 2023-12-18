@@ -4,7 +4,7 @@ import {
 	RouterProvider,
 	createBrowserRouter,
 } from 'react-router-dom'
-import AuthProvider from './AuthProvider'
+import AuthProvider from './components/Auth'
 import AppLayout from './routes/App'
 import HomePage from './routes/App/HomePage'
 import SearchPage from './routes/App/SearchPage'

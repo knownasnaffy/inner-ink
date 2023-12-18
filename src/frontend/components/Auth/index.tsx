@@ -1,5 +1,5 @@
 import React from 'react'
-import { AuthContext, fakeAuthProvider } from './hooks/authStore'
+import { AuthContext, fakeAuthProvider } from '../../hooks/authStore'
 
 function AuthProvider({ children }: { children: React.ReactNode }) {
 	const [user, setUser] = React.useState<unknown>()
