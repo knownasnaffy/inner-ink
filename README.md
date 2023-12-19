@@ -31,6 +31,10 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 -   **Updates and Maintenance:** In-built update check and automatic updates.
 -   **Internationalization:** Support for more locales.
 
+## Limitations
+
+-   Currently, the editor is unable to save the last change made. Whether it is a character types or a line pasted or deleted at once. We will try to fix this issue in upcoming.
+
 ## Contributing
 
 We welcome contributions from the community to help improve Inner Ink. Please read our [Contribution Guidelines](CONTRIBUTING.md) to learn about our development process, coding standards, and how to contribute.
