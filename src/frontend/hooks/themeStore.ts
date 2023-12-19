@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { typeOfThemes } from '../data/themes'
+import { typeOfThemes } from '../config/themes'
 import { getSettings, updateSettings } from '../utils/settings'
 
 type ThemeStoreState = {

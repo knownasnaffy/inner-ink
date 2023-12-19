@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import themeStore from '../../hooks/themeStore'
-import { typeOfThemes } from '../../data/themes'
+import { typeOfThemes } from '../../config/themes'
 
 export const ThemeButton = ({ themeName }: { themeName: typeOfThemes }) => {
 	// const currentTheme = localStorage.getItem('theme') || '';

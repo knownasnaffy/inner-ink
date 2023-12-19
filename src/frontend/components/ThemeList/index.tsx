@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { themes } from '../../data/themes'
+import { themes } from '../../config/themes'
 import themeStore from '../../hooks/themeStore'
 import { ThemeButton } from './ThemeButton'
 
