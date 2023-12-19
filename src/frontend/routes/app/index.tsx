@@ -2,10 +2,15 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom'
 import Sidebar from '../../components/Sidebar'
 import { useAuth } from '../../hooks/authStore'
 import { getUser } from '../../utils/database'
-
-const user = await getUser()
+import { useEffect, useRef } from 'react'
 
 const AppLayout = () => {
+	const newUser = useRef<boolean>()
+	useEffect(() => {
+		;async () => {
+			newUser.current = (await getUser()) ? true : false
+		}
+	})
 	const auth = useAuth()
 	const location = useLocation()
 	if (!auth.user) {
@@ -14,7 +19,7 @@ const AppLayout = () => {
 		// along to that page after they login, which is a nicer user experience
 		// than dropping them off on the home page.
 		// console.log(filepath)
-		return user ? (
+		return newUser ? (
 			<Navigate to='/auth/login' state={{ from: location }} replace />
 		) : (
 			<Navigate to='/auth/register' replace />
