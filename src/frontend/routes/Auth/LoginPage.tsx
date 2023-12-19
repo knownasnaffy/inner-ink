@@ -59,31 +59,39 @@ const LoginPage = () => {
 					validateOnChange={false}
 					className='flex'
 				>
-					<Form>
-						<div className='w-full form-control'>
-							<label htmlFor='password' className='label'>
-								<span className='label-text'>Password</span>
-							</label>
-							<Field
-								type='password'
-								id='password'
-								name='password'
-								className='input input-bordered w-full input-primary placeholder-neutral'
-							/>
-							<ErrorMessage
-								name='password'
-								component='label'
-								className='label label-text-alt text-error'
-							/>
-						</div>
+					{({ isSubmitting }) => (
+						<Form>
+							<div className='w-full form-control'>
+								<label htmlFor='password' className='label'>
+									<span className='label-text'>Password</span>
+								</label>
+								<Field
+									type='password'
+									id='password'
+									name='password'
+									className='input input-bordered w-full input-primary placeholder-neutral'
+								/>
+								<ErrorMessage
+									name='password'
+									component='label'
+									className='label label-text-alt text-error'
+								/>
+							</div>
 
-						<button
-							type='submit'
-							className='btn btn-primary btn-block mt-4'
-						>
-							Submit
-						</button>
-					</Form>
+							<button
+								type='submit'
+								className='btn btn-primary btn-block mt-4'
+							>
+								<span
+									className={clsx(
+										'loading loading-ring loading-md',
+										!isSubmitting && 'hidden',
+									)}
+								></span>
+								Submit
+							</button>
+						</Form>
+					)}
 				</Formik>
 			</div>
 		</div>

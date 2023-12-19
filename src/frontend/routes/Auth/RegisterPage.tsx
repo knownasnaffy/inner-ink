@@ -66,67 +66,78 @@ const RegisterPage = () => {
 					onSubmit={onSubmit}
 					className='flex'
 				>
-					<Form>
-						<div className='w-full form-control'>
-							<label htmlFor='name' className='label'>
-								<span className='label-text'>Name</span>
-							</label>
-							<Field
-								type='text'
-								id='name'
-								name='name'
-								className='input input-bordered w-full input-primary placeholder-neutral'
-							/>
-							<ErrorMessage
-								name='name'
-								component='label'
-								className='label label-text-alt text-error'
-							/>
-						</div>
+					{({ isSubmitting }) => (
+						<Form>
+							<div className='w-full form-control'>
+								<label htmlFor='name' className='label'>
+									<span className='label-text'>Name</span>
+								</label>
+								<Field
+									type='text'
+									id='name'
+									name='name'
+									className='input input-bordered w-full input-primary placeholder-neutral'
+								/>
+								<ErrorMessage
+									name='name'
+									component='label'
+									className='label label-text-alt text-error'
+								/>
+							</div>
 
-						<div className='w-full form-control'>
-							<label htmlFor='password' className='label'>
-								<span className='label-text'>Password</span>
-							</label>
-							<Field
-								type='password'
-								id='password'
-								name='password'
-								className='input input-bordered w-full input-primary placeholder-neutral'
-							/>
-							<ErrorMessage
-								name='password'
-								component='label'
-								className='label label-text-alt text-error'
-							/>
-						</div>
+							<div className='w-full form-control'>
+								<label htmlFor='password' className='label'>
+									<span className='label-text'>Password</span>
+								</label>
+								<Field
+									type='password'
+									id='password'
+									name='password'
+									className='input input-bordered w-full input-primary placeholder-neutral'
+								/>
+								<ErrorMessage
+									name='password'
+									component='label'
+									className='label label-text-alt text-error'
+								/>
+							</div>
 
-						<div className='w-full form-control'>
-							<label htmlFor='repeatPassword' className='label'>
-								<span className='label-text'>
-									Repeat Password
-								</span>
-							</label>
-							<Field
-								type='password'
-								id='repeatPassword'
-								name='repeatPassword'
-								className='input input-bordered w-full input-primary placeholder-neutral'
-							/>
-							<ErrorMessage
-								name='repeatPassword'
-								component='label'
-								className='label label-text-alt text-error'
-							/>
-						</div>
+							<div className='w-full form-control'>
+								<label
+									htmlFor='repeatPassword'
+									className='label'
+								>
+									<span className='label-text'>
+										Repeat Password
+									</span>
+								</label>
+								<Field
+									type='password'
+									id='repeatPassword'
+									name='repeatPassword'
+									className='input input-bordered w-full input-primary placeholder-neutral'
+								/>
+								<ErrorMessage
+									name='repeatPassword'
+									component='label'
+									className='label label-text-alt text-error'
+								/>
+							</div>
 
-						<button
-							type='submit'
-							className='btn btn-primary btn-block mt-4'
-						>
-							Submit
-						</button>
-					</Form>
+							<button
+								type='submit'
+								className='btn btn-primary btn-block mt-4'
+							>
+								<span
+									className={clsx(
+										'loading loading-ring loading-md',
+										!isSubmitting && 'hidden',
+									)}
+								></span>
+								Submit
+							</button>
+						</Form>
+					)}
 				</Formik>
 			</div>
 		</div>
