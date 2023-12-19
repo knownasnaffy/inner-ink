@@ -8,8 +8,8 @@ import {
 import { useHotkeys } from 'react-hotkeys-hook'
 import { addDays, format, isSameDay, subDays } from 'date-fns'
 
-import dateStore from '../../hooks/dateStore'
-import { getSettings } from '../../utils/settings'
+import dateStore from '../../../hooks/dateStore'
+import { getSettings } from '../../../utils/settings'
 
 const bookmarkedDays = [new Date(2023, 10, 1), new Date(2023, 10, 4)]
 

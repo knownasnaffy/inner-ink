@@ -1,8 +1,8 @@
 import { BookmarkSlashIcon } from '@heroicons/react/20/solid'
 import { addDays, format, isSameDay, subDays } from 'date-fns'
-import dateStore from '../../hooks/dateStore'
+import dateStore from '../../../hooks/dateStore'
 import { isHotkeyPressed } from 'react-hotkeys-hook'
-import { getSettings } from '../../utils/settings'
+import { getSettings } from '../../../utils/settings'
 
 export default function Header() {
 	const selectedDay = dateStore((state) => state.selectedDay)

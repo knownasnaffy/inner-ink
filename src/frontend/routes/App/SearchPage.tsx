@@ -1,10 +1,10 @@
 import { searchEntries } from '../../utils/database'
-import { SearchForm } from '../../components/Search/SearchForm'
+import { SearchForm } from '../../components/App/Search/SearchForm'
 import {
 	ResultNotFound,
 	EmptySearchResult,
 	SearchResult,
-} from '../../components/Search/SearchResults'
+} from '../../components/App/Search/SearchResults'
 import searchStore from '../../hooks/searchStore'
 
 const SearchPage = () => {

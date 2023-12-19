@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
-import sidebarItems, { SidebarItem } from '../../config/sidebar'
+import sidebarItems, { SidebarItem } from '../../../config/sidebar'
 import NavButton from './NavButton'
 import clsx from 'clsx'
-import { useAuth } from '../../hooks/authStore'
+import { useAuth } from '../../../hooks/authStore'
 
 const getNavButtons = () => {
 	const topNavButtons: SidebarItem[] = []

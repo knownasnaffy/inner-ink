@@ -22,10 +22,10 @@ const BooleanSettings = ({
 				position === 'top'
 					? 'rounded-t-btn'
 					: position === 'middle'
-					  ? 'rounded-none'
-					  : position === 'bottom'
-					    ? 'rounded-b-btn'
-					    : 'rounded-btn',
+						? 'rounded-none'
+						: position === 'bottom'
+							? 'rounded-b-btn'
+							: 'rounded-btn',
 			)}
 		>
 			<div className='flex flex-row items-center gap-2 font-semibold'>

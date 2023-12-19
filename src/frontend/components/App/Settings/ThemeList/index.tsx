@@ -1,6 +1,6 @@
 import clsx from 'clsx'
-import { themes } from '../../config/themes'
-import themeStore from '../../hooks/themeStore'
+import { themes } from '../../../../config/themes'
+import themeStore from '../../../../hooks/themeStore'
 import { ThemeButton } from './ThemeButton'
 
 export const ThemeList = () => {

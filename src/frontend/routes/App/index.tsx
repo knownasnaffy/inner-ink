@@ -1,5 +1,5 @@
 import { Navigate, Outlet, useLocation } from 'react-router-dom'
-import Sidebar from '../../components/Sidebar'
+import Sidebar from '../../components/App/Sidebar'
 import { useAuth } from '../../hooks/authStore'
 import { getUser } from '../../utils/database'
 import { useEffect, useRef } from 'react'

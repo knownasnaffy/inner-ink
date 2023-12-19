@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react'
-import editorStore from '../../hooks/editorStore'
-import { getEntry, saveEntry } from '../../utils/database'
-import dateStore from '../../hooks/dateStore'
+import editorStore from '../../../hooks/editorStore'
+import { getEntry, saveEntry } from '../../../utils/database'
+import dateStore from '../../../hooks/dateStore'
 
 const MyEditor = () => {
 	const content = editorStore((state) => state.content)

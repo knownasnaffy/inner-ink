@@ -1,5 +1,5 @@
 import React from 'react'
-import searchStore from '../../hooks/searchStore'
+import searchStore from '../../../hooks/searchStore'
 
 interface SearchFormProperties {
 	onSubmit: () => void

@@ -1,7 +1,7 @@
 import { format, parse } from 'date-fns'
-import { Entry } from '../../utils/database'
+import { Entry } from '../../../utils/database'
 import clsx from 'clsx'
-import dateStore from '../../hooks/dateStore'
+import dateStore from '../../../hooks/dateStore'
 // import navigationStore from '../../hooks/navigationStore'
 
 export const SearchResult = ({ entries }: { entries: Entry[] }) => {
