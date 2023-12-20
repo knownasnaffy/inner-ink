@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { typeOfThemes } from '../data/themes'
+import { typeOfThemes } from '../config/themes'
 import { getSettings, updateSettings } from '../utils/settings'
 
 type ThemeStoreState = {
@@ -12,7 +12,7 @@ const themeStore = create<ThemeStoreState>((set) => ({
 	setTheme(newTheme) {
 		set(() => ({ theme: newTheme }))
 		updateSettings({ theme: newTheme })
-		document.documentElement.setAttribute('data-theme', newTheme)
+		document.documentElement.dataset.theme = newTheme
 	},
 }))
 

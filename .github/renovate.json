@@ -1,0 +1,8 @@
+{
+	"baseBranches": ["dev"],
+	"extends": [
+		"config:recommended",
+		":assignAndReview(knownasnaffy)",
+		":automergeDisabled"
+	]
+}

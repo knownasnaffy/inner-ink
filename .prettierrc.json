@@ -3,5 +3,6 @@
 	"semi": false,
 	"singleQuote": true,
 	"tabWidth": 4,
-	"useTabs": true
+	"useTabs": true,
+	"plugins": ["prettier-plugin-pkg"]
 }

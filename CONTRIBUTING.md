@@ -216,7 +216,7 @@ Follow these steps to set up the Inner Ink project on your local machine:
         pnpm dev
         ```
     - This will
-        - build the frontend files in `/dist` folder
+        - build the frontend files and serve them on localhost
         - download and build cargo dependencies
         - run Inner Ink locally using Tauri in development mode.
 
@@ -241,6 +241,8 @@ When making contributions to Inner Ink, please format your commit messages follo
 -   Use a short, descriptive summary of your changes in the commit message's first line (limited to 72 characters).
 -   Separate the summary from the body of the message with a blank line.
 -   Provide detailed explanations or additional context in the commit body if necessary.
+
+> **Tip:** Use `pnpm commit` command to run commitizen for formatting commits with ease
 
 Examples:
 

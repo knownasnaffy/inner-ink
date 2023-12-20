@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { EmptySearchResult } from '../components/Search/SearchResults'
+import { EmptySearchResult } from '../components/App/Search/SearchResults'
 
 type SearchStoreState = {
 	searchResult: JSX.Element

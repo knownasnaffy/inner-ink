@@ -1,4 +1,4 @@
-import { typeOfThemes } from '../data/themes'
+import { typeOfThemes } from '../config/themes'
 
 // Define the structure of settings
 type AppSettings = {
