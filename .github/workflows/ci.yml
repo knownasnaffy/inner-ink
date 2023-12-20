@@ -174,7 +174,7 @@ jobs:
                   if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-macos-app
                   path: |
-                      src/backend/target/release/bundle/macos/inner-ink*.app.tar.gz
+                      src/backend/target/release/bundle/macos/inner-ink.app.tar.gz
 
             - name: Upload binary - .deb (ubuntu only)
               uses: actions/upload-artifact@v4
