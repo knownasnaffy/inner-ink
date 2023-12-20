@@ -226,4 +226,4 @@ jobs:
               with:
                   extends: /home/runner/work/inner-ink/inner-ink/other/semantic-release-config
                   additional-packages: |
-                      ["@semantic-release/git"]
+                      ["@semantic-release/git", "@semantic-release/changelog"]
