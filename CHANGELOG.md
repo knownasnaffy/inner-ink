@@ -1,3 +1,26 @@
+# [1.1.0](https://github.com/knownasnaffy/inner-ink/compare/v1.0.0...v1.1.0) (2023-12-20)
+
+
+### Bug Fixes
+
+* :bug: correct import paths ([5e008b3](https://github.com/knownasnaffy/inner-ink/commit/5e008b36ded15e5209983779ca59f380699a50cc))
+* :bug: remove await from top level of AppLayout component file ([6d223b9](https://github.com/knownasnaffy/inner-ink/commit/6d223b9de4345478a5f693320e8a5622a97b7bce))
+* :fire: update file names to PascalCase ([d6553f3](https://github.com/knownasnaffy/inner-ink/commit/d6553f3b5558c242396942cbb4c050467499190c))
+* :green_heart: add "@semantic-release/changelog" to additional deps for release step ([5fb8461](https://github.com/knownasnaffy/inner-ink/commit/5fb8461bf4e89a4e830b0e10946712df45a35b88))
+* :green_heart: correct upload artifact name for macos ([2e5ec9c](https://github.com/knownasnaffy/inner-ink/commit/2e5ec9cc41ee950031e67399c1ce417051ab97a9))
+* :green_heart: remove .app.tar.gz file from upload artifacts ([ed5b8b4](https://github.com/knownasnaffy/inner-ink/commit/ed5b8b4843f3b76033808a92b149cd4a6deb52cf))
+* :wheelchair: improve themeList accessibility ([d80e71d](https://github.com/knownasnaffy/inner-ink/commit/d80e71d3c47d97d525ce127c7b9c11e88d5e293f))
+
+
+### Features
+
+* :sparkles: add reset button in settings ([b3530e6](https://github.com/knownasnaffy/inner-ink/commit/b3530e6e2a9a31d5efe06a1d73a1cb85ea18c04b))
+
+
+### Reverts
+
+* remove auth ([e917cb5](https://github.com/knownasnaffy/inner-ink/commit/e917cb5fc578fd42699b3a39504e9faab1cab68e))
+
 # 1.0.0 (2023-12-05)
 
 
