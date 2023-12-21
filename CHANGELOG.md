@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/knownasnaffy/inner-ink/compare/v1.1.0...v1.1.1) (2023-12-21)
+
+
+### Bug Fixes
+
+* **deps:** update tauri monorepo ([b1c044b](https://github.com/knownasnaffy/inner-ink/commit/b1c044b3ec2ab0461ca9b547b89c6cd3970bb0cc))
+
 # [1.1.0](https://github.com/knownasnaffy/inner-ink/compare/v1.0.0...v1.1.0) (2023-12-20)
 
 
