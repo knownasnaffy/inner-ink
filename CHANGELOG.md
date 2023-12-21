@@ -3,12 +3,7 @@
 
 ### Bug Fixes
 
-* :bug: correct import paths ([5e008b3](https://github.com/knownasnaffy/inner-ink/commit/5e008b36ded15e5209983779ca59f380699a50cc))
-* :bug: remove await from top level of AppLayout component file ([6d223b9](https://github.com/knownasnaffy/inner-ink/commit/6d223b9de4345478a5f693320e8a5622a97b7bce))
 * :fire: update file names to PascalCase ([d6553f3](https://github.com/knownasnaffy/inner-ink/commit/d6553f3b5558c242396942cbb4c050467499190c))
-* :green_heart: add "@semantic-release/changelog" to additional deps for release step ([5fb8461](https://github.com/knownasnaffy/inner-ink/commit/5fb8461bf4e89a4e830b0e10946712df45a35b88))
-* :green_heart: correct upload artifact name for macos ([2e5ec9c](https://github.com/knownasnaffy/inner-ink/commit/2e5ec9cc41ee950031e67399c1ce417051ab97a9))
-* :green_heart: remove .app.tar.gz file from upload artifacts ([ed5b8b4](https://github.com/knownasnaffy/inner-ink/commit/ed5b8b4843f3b76033808a92b149cd4a6deb52cf))
 * :wheelchair: improve themeList accessibility ([d80e71d](https://github.com/knownasnaffy/inner-ink/commit/d80e71d3c47d97d525ce127c7b9c11e88d5e293f))
 
 
@@ -16,179 +11,13 @@
 
 * :sparkles: add reset button in settings ([b3530e6](https://github.com/knownasnaffy/inner-ink/commit/b3530e6e2a9a31d5efe06a1d73a1cb85ea18c04b))
 
-
-### Reverts
-
-* remove auth ([e917cb5](https://github.com/knownasnaffy/inner-ink/commit/e917cb5fc578fd42699b3a39504e9faab1cab68e))
-
 # 1.0.0 (2023-12-05)
-
-
-### Bug Fixes
-
-* :adhesive_bandage: make param `description` conditional ([2504397](https://github.com/knownasnaffy/inner-ink/commit/25043976ebfdebe8abb149cafa3f7fff7c5e278d))
-* :ambulance: conflict between fast refresh and react.lazy ([2c1a92b](https://github.com/knownasnaffy/inner-ink/commit/2c1a92be4a4f29867ac15e821b8540293d9ec77f))
-* :ambulance: remove top-level await from `src/frontend/utils/init.ts` ([9ac7a8d](https://github.com/knownasnaffy/inner-ink/commit/9ac7a8d91e67acd82844e5492677f327b1ccdfc1))
-* :art: remove incomplete sections ([ac671f1](https://github.com/knownasnaffy/inner-ink/commit/ac671f1050443203ed4097752dae8ba8fa891c91))
-* :bug: add @semantic-release/changelog ([5f81b08](https://github.com/knownasnaffy/inner-ink/commit/5f81b082ab08e22bb6acabe6bc237ef11ce2e9cc))
-* :bug: add tauri-plugin-sql to main.rs ([e831f2b](https://github.com/knownasnaffy/inner-ink/commit/e831f2b5dc8f49878e2a07a938dc817d091b1407))
-* :bug: app name container was not a draggable region ([385d49a](https://github.com/knownasnaffy/inner-ink/commit/385d49a270b0f648a41539457447ac244b883f18))
-* :bug: change maximize button style based on window state ([7e0e561](https://github.com/knownasnaffy/inner-ink/commit/7e0e56146dda64de341fad14f3caab1c299a9818))
-* :bug: correct titlebar import ([2fa1efd](https://github.com/knownasnaffy/inner-ink/commit/2fa1efdb18de434341a9f38bef28ebfda4d74ec5))
-* :bug: fix theme changer ([363a079](https://github.com/knownasnaffy/inner-ink/commit/363a079581b9a3821503fc77aae318a97ad1b305))
-* :bug: include `tailwind.config.ts` in tsconfig ([0a7bb1f](https://github.com/knownasnaffy/inner-ink/commit/0a7bb1fb754d976a95612b1b2227e565463b2555))
-* :bug: made `maximized` and `notMaximized` state icons swap ([d234668](https://github.com/knownasnaffy/inner-ink/commit/d234668e3e5162b694f1d2eddc7e98a50f921ab4))
-* :bug: make main window visible ([a35e2fb](https://github.com/knownasnaffy/inner-ink/commit/a35e2fb51f4696aaa5494eef53290cc2a2412922))
-* :bug: remove type: any ([192617c](https://github.com/knownasnaffy/inner-ink/commit/192617c720c01e640a749cbf292a8b337caa9535))
-* :bug: resolve window maximize state issue ([3ab577b](https://github.com/knownasnaffy/inner-ink/commit/3ab577bc6dcec619c5d09dcad3aad33bdb78bb67))
-* :pencil2: typo ([331d8c7](https://github.com/knownasnaffy/inner-ink/commit/331d8c7208974f0467b26633d3a992e2569eba2c))
-* :rotating_light: non-interactive elements with click handler in SearchResults ([1d78184](https://github.com/knownasnaffy/inner-ink/commit/1d781845c65d58a6c2b81b23857439d9fd3f3736))
-* :rotating_light: non-interactive elements with click handler in ThemeList ([fb8f134](https://github.com/knownasnaffy/inner-ink/commit/fb8f134afe416b1f3aadf3d3284ba4c54667f485))
-* add auto-update in pwa settings ([cc33a88](https://github.com/knownasnaffy/inner-ink/commit/cc33a88d502f45638250f12b182b0d93706797f9))
-* change auto-update to prompt update ([5474164](https://github.com/knownasnaffy/inner-ink/commit/54741647eef040619b2121f4046fa23421c7c832))
-* change store name and some logs ([542b490](https://github.com/knownasnaffy/inner-ink/commit/542b4904128a270e3afd3dfdee4b95e6b40f4c7d))
-* condition for detecting new release ([8b66c4b](https://github.com/knownasnaffy/inner-ink/commit/8b66c4bb23d634cc640c1003048e568d90c5f1f8))
-* **deps:** update rust crate tauri to 1.5.3 ([653fe60](https://github.com/knownasnaffy/inner-ink/commit/653fe60ded304ea2cfdc3e4f5e756b6d17a80a80))
-* improve auto save feature ([abe5dcb](https://github.com/knownasnaffy/inner-ink/commit/abe5dcbec0faa3e1444358fe86fd818d6cf83dc7))
-* show prompt on updates ([91d5ceb](https://github.com/knownasnaffy/inner-ink/commit/91d5cebfa00fbe48f8cd6b932a1a55b825a373a0))
 
 
 ### Features
 
-* :construction: (WIP) add custom title bar ([38adf56](https://github.com/knownasnaffy/inner-ink/commit/38adf5601769927f4c07f3443bc3eb5c8fa51e22))
-* :construction: animate search results (WIP) ([2eea167](https://github.com/knownasnaffy/inner-ink/commit/2eea1678693e5475c0a3f3bdc413e528f88ac320))
-* :construction: search feature (WIP) ([5dbf662](https://github.com/knownasnaffy/inner-ink/commit/5dbf6621e4516491ca3a42c3d09732cd701f0286))
-* :lipstick: remake dropdown using headlessUI ([3fa5d9b](https://github.com/knownasnaffy/inner-ink/commit/3fa5d9b890a3da413850b783a62f2b48416b09c9))
-* :sparkles: add `content` and `lastSave` states to `MyEditor` ([ca1386b](https://github.com/knownasnaffy/inner-ink/commit/ca1386ba84afee678b64355261f85af58d668b30))
-* :sparkles: add animations via `tailwindcss-animate` ([423d593](https://github.com/knownasnaffy/inner-ink/commit/423d5934599c0336e12670bf40f073af0917cee7))
-* :sparkles: add custom caption component for day-picker ([27988dc](https://github.com/knownasnaffy/inner-ink/commit/27988dc9da8db079cdb4e61051d952f2377e47df))
-* :sparkles: add date picker settings placeholder on SettingsPage ([12ba1de](https://github.com/knownasnaffy/inner-ink/commit/12ba1de9e744355231756c9155d95c6c86184bfc))
-* :sparkles: add date selector click shortcuts to move between dates ([635d168](https://github.com/knownasnaffy/inner-ink/commit/635d168739c0e5adea13a69ae4a12afd149527df))
-* :sparkles: add functioning system theme button ([7655a14](https://github.com/knownasnaffy/inner-ink/commit/7655a148fe0b5cbf41eaa1fcbae3e228426313f3))
-* :sparkles: add jump-to-this-month button ([3326757](https://github.com/knownasnaffy/inner-ink/commit/332675734725c5c5a57d565df5e05b722de4f18c))
-* :sparkles: add keyboard shortcut to open datePicker ([1a7ec00](https://github.com/knownasnaffy/inner-ink/commit/1a7ec001b1c7a3bb4efc6e33b5c4883a013f6030))
-* :sparkles: add loader and made custom theme changer (WIP) ([9281732](https://github.com/knownasnaffy/inner-ink/commit/9281732eb5bb3186e3b8f4fdbd28d77aa86009c0))
-* :sparkles: add placeholders in SettingsPage ([5e392d2](https://github.com/knownasnaffy/inner-ink/commit/5e392d2d54415f789382ec09350ae69b9341a3e7))
-* :sparkles: add shell buttons ([c5c1656](https://github.com/knownasnaffy/inner-ink/commit/c5c1656239200db51bcf2a6f974b68d501864334))
-* :sparkles: add shortcuts to move between dates ([79dbd18](https://github.com/knownasnaffy/inner-ink/commit/79dbd1868a724bb538820c6a2ce8b48c0c2733b1))
-* :sparkles: add splashscreen ([595d63c](https://github.com/knownasnaffy/inner-ink/commit/595d63cadcad924d5d38ad433b1d5b21bbef7275))
-* :sparkles: add title field in editor ([5600a32](https://github.com/knownasnaffy/inner-ink/commit/5600a32837b84c8db86adc1cbd27097a1d0ba68b))
-* :sparkles: auto-save for title field ([2c6b79f](https://github.com/knownasnaffy/inner-ink/commit/2c6b79f67a166ae98379cfe68da3bda0fd69c112))
-* :sparkles: ensure only a single instance is running at a time ([8f54f14](https://github.com/knownasnaffy/inner-ink/commit/8f54f1414901fbade6201f970b15592bc9db86a3))
-* :sparkles: init `IndexedDB` on startup ([665d172](https://github.com/knownasnaffy/inner-ink/commit/665d172db8bb55ca7005e52468493b76e5765381))
-* :sparkles: make layout corner theme responsive ([2f781cb](https://github.com/knownasnaffy/inner-ink/commit/2f781cbdd218a936ec24d934b887b52a8444f572))
-* :sparkles: make titlebar dragable ([abd5ff2](https://github.com/knownasnaffy/inner-ink/commit/abd5ff22f23d0bad6e2ebc4d319fc4350cebd8d9))
-* :sparkles: save daily entries in sqlite database ([ba4e1e2](https://github.com/knownasnaffy/inner-ink/commit/ba4e1e22ba016c58f49ebcedd1d1dc311c68d12b))
-* :sparkles: search through entries and open in editor on click ([23a36f3](https://github.com/knownasnaffy/inner-ink/commit/23a36f3c1cc095f504c64630c04fafed6d22c8d8))
-* :sparkles: store window state for next session ([902ba2f](https://github.com/knownasnaffy/inner-ink/commit/902ba2f916900f0974dbfc1b9cb9594aac3eb076))
-* :sparkles: ui skeleton for search page ([759b272](https://github.com/knownasnaffy/inner-ink/commit/759b2726befbd313bec010ddf4d57858a9c0a9f8))
-* :sparkles: use `tauri` for desktop app instead of a `PWA` ([f00132a](https://github.com/knownasnaffy/inner-ink/commit/f00132ad9ccdff302c78138e4d42d4bd64f8e46d))
-* :truck: change navigation from react-router-dom to navigation through state ([99fc784](https://github.com/knownasnaffy/inner-ink/commit/99fc78433600a03cd5fb4f5171b824824ca45d0d))
-* add automatic **page** reload ([9bd4666](https://github.com/knownasnaffy/inner-ink/commit/9bd466661efb6602b4784cb8345e4ccccc4a7e1e))
-* add fake search ([2a84973](https://github.com/knownasnaffy/inner-ink/commit/2a84973bad487f77d87241d344a78eff4e591145))
-* add version section in settings ([177112a](https://github.com/knownasnaffy/inner-ink/commit/177112a229db541cd595fc01a3cfe712eba67701))
-* **app:** :construction: add react-day-picker as the calendar date picker ([6d9a232](https://github.com/knownasnaffy/inner-ink/commit/6d9a232c41d848d1005ace67493ee43ea6760197))
-* **app:** :sparkles: add settings to control date picker behaviour ([2998fc1](https://github.com/knownasnaffy/inner-ink/commit/2998fc1e6b404b68c7c1f7a7e03dd836dd508fce))
-* **app:** :sparkles: settings can now be changed ([5ab3ea8](https://github.com/knownasnaffy/inner-ink/commit/5ab3ea8037ee74239ff8f7917000357597f10c10))
-* **auth:** :lipstick: Add SignUpPage UI ([73f980c](https://github.com/knownasnaffy/inner-ink/commit/73f980c496f3518b3d7b5c574102e1153af467c2))
-* **auth:** :passport_control: add redirect to LoginPage ([137fbf6](https://github.com/knownasnaffy/inner-ink/commit/137fbf6122f3039d56d9d93512a1ce11204ecf22))
-* change `<a>` to `<button>` elements in sidebar ([9a702d4](https://github.com/knownasnaffy/inner-ink/commit/9a702d47e766e0ee51c67cce18c7765c033a44f5))
-* **editor:** add textarea as a placeholder for RTE ([773fd9d](https://github.com/knownasnaffy/inner-ink/commit/773fd9dd16fa9a3ec965d5c113083435fbf7483c))
-* introduce addEntry function ([35e18f5](https://github.com/knownasnaffy/inner-ink/commit/35e18f5349e1542d2cbaf3c34af2a132ee9ac8fc))
-* remove preview button ([5940ba2](https://github.com/knownasnaffy/inner-ink/commit/5940ba248b7c05afb10ba8bd286d226d93247006))
-* show `selectedDay` on `HomePage` in the modal button ([d50a39b](https://github.com/knownasnaffy/inner-ink/commit/d50a39bcb5fa4a2f54ec6fde0580cd31f02a8b89))
-* update icons ([ab7218b](https://github.com/knownasnaffy/inner-ink/commit/ab7218b1015dff9d1b6bdd2602597d1815935946))
-
-
-### Reverts
-
-* :lipstick: change heading back to normal ([80e0f01](https://github.com/knownasnaffy/inner-ink/commit/80e0f010d12d25edbe902d0ed1fc323cb97cebbd))
-* :rewind: remove splashscreen ([14cfae9](https://github.com/knownasnaffy/inner-ink/commit/14cfae91fc32b24d885a3e18fd0e93ca873aa2de))
-* **auth:** :passport_control: remove auth ([4116563](https://github.com/knownasnaffy/inner-ink/commit/41165635ff2bf658e932f9d225cbe1a5db369c80))
-* **service-worker:** :rewind: Remove useless periodic function ([0ccad40](https://github.com/knownasnaffy/inner-ink/commit/0ccad4042568a5ae34d0f16b62d0a9675f646e14))
-
-# 1.0.0 (2023-12-05)
-
-
-### Bug Fixes
-
-* :adhesive_bandage: make param `description` conditional ([2504397](https://github.com/knownasnaffy/inner-ink/commit/25043976ebfdebe8abb149cafa3f7fff7c5e278d))
-* :ambulance: conflict between fast refresh and react.lazy ([2c1a92b](https://github.com/knownasnaffy/inner-ink/commit/2c1a92be4a4f29867ac15e821b8540293d9ec77f))
-* :ambulance: remove top-level await from `src/frontend/utils/init.ts` ([9ac7a8d](https://github.com/knownasnaffy/inner-ink/commit/9ac7a8d91e67acd82844e5492677f327b1ccdfc1))
-* :art: remove incomplete sections ([ac671f1](https://github.com/knownasnaffy/inner-ink/commit/ac671f1050443203ed4097752dae8ba8fa891c91))
-* :bug: add @semantic-release/changelog ([5f81b08](https://github.com/knownasnaffy/inner-ink/commit/5f81b082ab08e22bb6acabe6bc237ef11ce2e9cc))
-* :bug: add tauri-plugin-sql to main.rs ([e831f2b](https://github.com/knownasnaffy/inner-ink/commit/e831f2b5dc8f49878e2a07a938dc817d091b1407))
-* :bug: app name container was not a draggable region ([385d49a](https://github.com/knownasnaffy/inner-ink/commit/385d49a270b0f648a41539457447ac244b883f18))
-* :bug: change maximize button style based on window state ([7e0e561](https://github.com/knownasnaffy/inner-ink/commit/7e0e56146dda64de341fad14f3caab1c299a9818))
-* :bug: correct titlebar import ([2fa1efd](https://github.com/knownasnaffy/inner-ink/commit/2fa1efdb18de434341a9f38bef28ebfda4d74ec5))
-* :bug: fix theme changer ([363a079](https://github.com/knownasnaffy/inner-ink/commit/363a079581b9a3821503fc77aae318a97ad1b305))
-* :bug: include `tailwind.config.ts` in tsconfig ([0a7bb1f](https://github.com/knownasnaffy/inner-ink/commit/0a7bb1fb754d976a95612b1b2227e565463b2555))
-* :bug: made `maximized` and `notMaximized` state icons swap ([d234668](https://github.com/knownasnaffy/inner-ink/commit/d234668e3e5162b694f1d2eddc7e98a50f921ab4))
-* :bug: make main window visible ([a35e2fb](https://github.com/knownasnaffy/inner-ink/commit/a35e2fb51f4696aaa5494eef53290cc2a2412922))
-* :bug: remove type: any ([192617c](https://github.com/knownasnaffy/inner-ink/commit/192617c720c01e640a749cbf292a8b337caa9535))
-* :bug: resolve window maximize state issue ([3ab577b](https://github.com/knownasnaffy/inner-ink/commit/3ab577bc6dcec619c5d09dcad3aad33bdb78bb67))
-* :pencil2: typo ([331d8c7](https://github.com/knownasnaffy/inner-ink/commit/331d8c7208974f0467b26633d3a992e2569eba2c))
-* :rotating_light: non-interactive elements with click handler in SearchResults ([1d78184](https://github.com/knownasnaffy/inner-ink/commit/1d781845c65d58a6c2b81b23857439d9fd3f3736))
-* :rotating_light: non-interactive elements with click handler in ThemeList ([fb8f134](https://github.com/knownasnaffy/inner-ink/commit/fb8f134afe416b1f3aadf3d3284ba4c54667f485))
-* add auto-update in pwa settings ([cc33a88](https://github.com/knownasnaffy/inner-ink/commit/cc33a88d502f45638250f12b182b0d93706797f9))
-* change auto-update to prompt update ([5474164](https://github.com/knownasnaffy/inner-ink/commit/54741647eef040619b2121f4046fa23421c7c832))
-* change store name and some logs ([542b490](https://github.com/knownasnaffy/inner-ink/commit/542b4904128a270e3afd3dfdee4b95e6b40f4c7d))
-* condition for detecting new release ([8b66c4b](https://github.com/knownasnaffy/inner-ink/commit/8b66c4bb23d634cc640c1003048e568d90c5f1f8))
-* **deps:** update rust crate tauri to 1.5.3 ([653fe60](https://github.com/knownasnaffy/inner-ink/commit/653fe60ded304ea2cfdc3e4f5e756b6d17a80a80))
-* improve auto save feature ([abe5dcb](https://github.com/knownasnaffy/inner-ink/commit/abe5dcbec0faa3e1444358fe86fd818d6cf83dc7))
-* show prompt on updates ([91d5ceb](https://github.com/knownasnaffy/inner-ink/commit/91d5cebfa00fbe48f8cd6b932a1a55b825a373a0))
-
-
-### Features
-
-* :construction: (WIP) add custom title bar ([38adf56](https://github.com/knownasnaffy/inner-ink/commit/38adf5601769927f4c07f3443bc3eb5c8fa51e22))
-* :construction: animate search results (WIP) ([2eea167](https://github.com/knownasnaffy/inner-ink/commit/2eea1678693e5475c0a3f3bdc413e528f88ac320))
-* :construction: search feature (WIP) ([5dbf662](https://github.com/knownasnaffy/inner-ink/commit/5dbf6621e4516491ca3a42c3d09732cd701f0286))
-* :lipstick: remake dropdown using headlessUI ([3fa5d9b](https://github.com/knownasnaffy/inner-ink/commit/3fa5d9b890a3da413850b783a62f2b48416b09c9))
-* :sparkles: add `content` and `lastSave` states to `MyEditor` ([ca1386b](https://github.com/knownasnaffy/inner-ink/commit/ca1386ba84afee678b64355261f85af58d668b30))
-* :sparkles: add animations via `tailwindcss-animate` ([423d593](https://github.com/knownasnaffy/inner-ink/commit/423d5934599c0336e12670bf40f073af0917cee7))
-* :sparkles: add custom caption component for day-picker ([27988dc](https://github.com/knownasnaffy/inner-ink/commit/27988dc9da8db079cdb4e61051d952f2377e47df))
-* :sparkles: add date picker settings placeholder on SettingsPage ([12ba1de](https://github.com/knownasnaffy/inner-ink/commit/12ba1de9e744355231756c9155d95c6c86184bfc))
-* :sparkles: add date selector click shortcuts to move between dates ([635d168](https://github.com/knownasnaffy/inner-ink/commit/635d168739c0e5adea13a69ae4a12afd149527df))
-* :sparkles: add functioning system theme button ([7655a14](https://github.com/knownasnaffy/inner-ink/commit/7655a148fe0b5cbf41eaa1fcbae3e228426313f3))
-* :sparkles: add jump-to-this-month button ([3326757](https://github.com/knownasnaffy/inner-ink/commit/332675734725c5c5a57d565df5e05b722de4f18c))
-* :sparkles: add keyboard shortcut to open datePicker ([1a7ec00](https://github.com/knownasnaffy/inner-ink/commit/1a7ec001b1c7a3bb4efc6e33b5c4883a013f6030))
-* :sparkles: add loader and made custom theme changer (WIP) ([9281732](https://github.com/knownasnaffy/inner-ink/commit/9281732eb5bb3186e3b8f4fdbd28d77aa86009c0))
-* :sparkles: add placeholders in SettingsPage ([5e392d2](https://github.com/knownasnaffy/inner-ink/commit/5e392d2d54415f789382ec09350ae69b9341a3e7))
-* :sparkles: add shell buttons ([c5c1656](https://github.com/knownasnaffy/inner-ink/commit/c5c1656239200db51bcf2a6f974b68d501864334))
-* :sparkles: add shortcuts to move between dates ([79dbd18](https://github.com/knownasnaffy/inner-ink/commit/79dbd1868a724bb538820c6a2ce8b48c0c2733b1))
-* :sparkles: add splashscreen ([595d63c](https://github.com/knownasnaffy/inner-ink/commit/595d63cadcad924d5d38ad433b1d5b21bbef7275))
-* :sparkles: add title field in editor ([5600a32](https://github.com/knownasnaffy/inner-ink/commit/5600a32837b84c8db86adc1cbd27097a1d0ba68b))
-* :sparkles: auto-save for title field ([2c6b79f](https://github.com/knownasnaffy/inner-ink/commit/2c6b79f67a166ae98379cfe68da3bda0fd69c112))
-* :sparkles: ensure only a single instance is running at a time ([8f54f14](https://github.com/knownasnaffy/inner-ink/commit/8f54f1414901fbade6201f970b15592bc9db86a3))
-* :sparkles: init `IndexedDB` on startup ([665d172](https://github.com/knownasnaffy/inner-ink/commit/665d172db8bb55ca7005e52468493b76e5765381))
-* :sparkles: make layout corner theme responsive ([2f781cb](https://github.com/knownasnaffy/inner-ink/commit/2f781cbdd218a936ec24d934b887b52a8444f572))
-* :sparkles: make titlebar dragable ([abd5ff2](https://github.com/knownasnaffy/inner-ink/commit/abd5ff22f23d0bad6e2ebc4d319fc4350cebd8d9))
-* :sparkles: save daily entries in sqlite database ([ba4e1e2](https://github.com/knownasnaffy/inner-ink/commit/ba4e1e22ba016c58f49ebcedd1d1dc311c68d12b))
-* :sparkles: search through entries and open in editor on click ([23a36f3](https://github.com/knownasnaffy/inner-ink/commit/23a36f3c1cc095f504c64630c04fafed6d22c8d8))
-* :sparkles: store window state for next session ([902ba2f](https://github.com/knownasnaffy/inner-ink/commit/902ba2f916900f0974dbfc1b9cb9594aac3eb076))
-* :sparkles: ui skeleton for search page ([759b272](https://github.com/knownasnaffy/inner-ink/commit/759b2726befbd313bec010ddf4d57858a9c0a9f8))
-* :sparkles: use `tauri` for desktop app instead of a `PWA` ([f00132a](https://github.com/knownasnaffy/inner-ink/commit/f00132ad9ccdff302c78138e4d42d4bd64f8e46d))
-* :truck: change navigation from react-router-dom to navigation through state ([99fc784](https://github.com/knownasnaffy/inner-ink/commit/99fc78433600a03cd5fb4f5171b824824ca45d0d))
-* add automatic **page** reload ([9bd4666](https://github.com/knownasnaffy/inner-ink/commit/9bd466661efb6602b4784cb8345e4ccccc4a7e1e))
-* add fake search ([2a84973](https://github.com/knownasnaffy/inner-ink/commit/2a84973bad487f77d87241d344a78eff4e591145))
-* add version section in settings ([177112a](https://github.com/knownasnaffy/inner-ink/commit/177112a229db541cd595fc01a3cfe712eba67701))
-* **app:** :construction: add react-day-picker as the calendar date picker ([6d9a232](https://github.com/knownasnaffy/inner-ink/commit/6d9a232c41d848d1005ace67493ee43ea6760197))
-* **app:** :sparkles: add settings to control date picker behaviour ([2998fc1](https://github.com/knownasnaffy/inner-ink/commit/2998fc1e6b404b68c7c1f7a7e03dd836dd508fce))
-* **app:** :sparkles: settings can now be changed ([5ab3ea8](https://github.com/knownasnaffy/inner-ink/commit/5ab3ea8037ee74239ff8f7917000357597f10c10))
-* **auth:** :lipstick: Add SignUpPage UI ([73f980c](https://github.com/knownasnaffy/inner-ink/commit/73f980c496f3518b3d7b5c574102e1153af467c2))
-* **auth:** :passport_control: add redirect to LoginPage ([137fbf6](https://github.com/knownasnaffy/inner-ink/commit/137fbf6122f3039d56d9d93512a1ce11204ecf22))
-* change `<a>` to `<button>` elements in sidebar ([9a702d4](https://github.com/knownasnaffy/inner-ink/commit/9a702d47e766e0ee51c67cce18c7765c033a44f5))
-* **editor:** add textarea as a placeholder for RTE ([773fd9d](https://github.com/knownasnaffy/inner-ink/commit/773fd9dd16fa9a3ec965d5c113083435fbf7483c))
-* introduce addEntry function ([35e18f5](https://github.com/knownasnaffy/inner-ink/commit/35e18f5349e1542d2cbaf3c34af2a132ee9ac8fc))
-* remove preview button ([5940ba2](https://github.com/knownasnaffy/inner-ink/commit/5940ba248b7c05afb10ba8bd286d226d93247006))
-* show `selectedDay` on `HomePage` in the modal button ([d50a39b](https://github.com/knownasnaffy/inner-ink/commit/d50a39bcb5fa4a2f54ec6fde0580cd31f02a8b89))
-* update icons ([ab7218b](https://github.com/knownasnaffy/inner-ink/commit/ab7218b1015dff9d1b6bdd2602597d1815935946))
-
-
-### Reverts
-
-* :lipstick: change heading back to normal ([80e0f01](https://github.com/knownasnaffy/inner-ink/commit/80e0f010d12d25edbe902d0ed1fc323cb97cebbd))
-* :rewind: remove splashscreen ([14cfae9](https://github.com/knownasnaffy/inner-ink/commit/14cfae91fc32b24d885a3e18fd0e93ca873aa2de))
-* **auth:** :passport_control: remove auth ([4116563](https://github.com/knownasnaffy/inner-ink/commit/41165635ff2bf658e932f9d225cbe1a5db369c80))
-* **service-worker:** :rewind: Remove useless periodic function ([0ccad40](https://github.com/knownasnaffy/inner-ink/commit/0ccad4042568a5ae34d0f16b62d0a9675f646e14))
+* ✨ basic editing with a date picker
+* ✨ search through entries
+* ✨ multiple themes
+* ✨ keyboard friendly interface
+* ✨ keyboard shortcuts like `ctrl`+`tab` opens next entry and `ctrl`+`shift`+`tab` opens previous entry
