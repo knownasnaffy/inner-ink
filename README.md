@@ -33,7 +33,7 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 
 ## Limitations
 
--   Currently, the editor is unable to save the last change made. Whether it is a character types or a line pasted or deleted at once. We will try to fix this issue in upcoming.
+-   Currently, the editor is unable to save the last change made. Whether it is a character typed or a line pasted or deleted at once. We will try to fix this issue in upcoming. Till then, try to add an extra space before changing the selected day or closing the app.
 
 ## Contributing
 
