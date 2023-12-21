@@ -3,7 +3,9 @@ import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	root: './',
+	plugins: [react()],
+	publicDir: 'frontend/public',
+	// Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
 	// prevent vite from obscuring rust errors
 	clearScreen: false,
 	// Tauri expects a fixed port, fail if that port is not available
@@ -30,5 +32,4 @@ export default defineConfig({
 		// produce sourcemaps for debug builds
 		sourcemap: !!process.env.TAURI_DEBUG,
 	},
-	plugins: [react()],
 })

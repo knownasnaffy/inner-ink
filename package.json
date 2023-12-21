@@ -5,54 +5,15 @@
 	"repository": "https://github.com/knownasnaffy/inner-ink",
 	"private": true,
 	"scripts": {
-		"build": "tauri build",
-		"build:web": "vite build src/frontend",
-		"commit": "cz",
-		"dev": "tauri dev",
-		"dev:web": "vite src/frontend",
 		"format": "prettier . --write",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"lint-staged": "lint-staged",
-		"prepare": "husky install",
-		"preview": "vite preview"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	},
-	"dependencies": {
-		"@headlessui/react": "^1.7.17",
-		"@heroicons/react": "^2.0.18",
-		"@tauri-apps/api": "^1.5.2",
-		"bcryptjs": "^2.4.3",
-		"clsx": "^2.0.0",
-		"date-fns": "^2.30.0",
-		"formik": "^2.4.5",
-		"react": "^18.2.0",
-		"react-day-picker": "^8.9.1",
-		"react-dom": "^18.2.0",
-		"react-hotkeys-hook": "^4.4.1",
-		"react-router-dom": "^6.20.1",
-		"tauri-plugin-sql-api": "github:tauri-apps/tauri-plugin-sql#v1",
-		"yup": "^1.3.3",
-		"zustand": "^4.4.7"
+		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"@tailwindcss/typography": "^0.5.10",
-		"@tauri-apps/cli": "^1.5.8",
-		"@types/bcryptjs": "^2.4.6",
-		"@types/node": "^20.10.4",
-		"@types/react": "^18.2.45",
-		"@types/react-dom": "^18.2.17",
 		"@typescript-eslint/eslint-plugin": "^6.14.0",
 		"@typescript-eslint/parser": "^6.14.0",
-		"@vitejs/plugin-react": "^4.2.1",
-		"autoprefixer": "^10.4.16",
-		"commitizen": "^4.3.0",
-		"cz-conventional-changelog": "^3.3.0",
-		"daisyui": "^4.4.20",
-		"eslint": "^8.55.0",
+		"eslint": "^8.56.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-jsx-a11y": "^6.8.0",
 		"eslint-plugin-react": "^7.33.2",
@@ -61,14 +22,9 @@
 		"eslint-plugin-unicorn": "^50.0.0",
 		"husky": "^8.0.3",
 		"lint-staged": "^15.2.0",
-		"postcss": "^8.4.32",
-		"postcss-load-config": "^5.0.2",
 		"prettier": "^3.1.1",
 		"prettier-plugin-pkg": "^0.18.0",
-		"tailwindcss": "^3.3.6",
-		"tailwindcss-animate": "^1.0.7",
-		"typescript": "^5.3.3",
-		"vite": "^5.0.10"
+		"typescript": "^5.3.3"
 	},
 	"lint-staged": {
 		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
