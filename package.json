@@ -46,7 +46,6 @@
 					"assets": [
 						"release-artifacts/**"
 					],
-					"draftRelease": "true",
 					"releaseNameTemplate": "Inner Ink v<%= nextRelease.version %>"
 				}
 			],
