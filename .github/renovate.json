@@ -1,5 +1,5 @@
 {
-	"baseBranches": ["dev"],
+	"baseBranches": ["main"],
 	"extends": [
 		"config:recommended",
 		":assignAndReview(knownasnaffy)",
