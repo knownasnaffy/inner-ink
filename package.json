@@ -5,6 +5,8 @@
 	"repository": "https://github.com/knownasnaffy/inner-ink",
 	"private": true,
 	"scripts": {
+		"build": "pnpm --filter=app build",
+		"dev": "pnpm --filter=app dev",
 		"format": "prettier . --write",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"lint-staged": "lint-staged",
