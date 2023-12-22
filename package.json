@@ -8,9 +8,12 @@
 		"format": "prettier . --write",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"lint-staged": "lint-staged",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"release": "semantic-release"
 	},
 	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
 		"@typescript-eslint/eslint-plugin": "^6.14.0",
 		"@typescript-eslint/parser": "^6.14.0",
 		"eslint": "^8.56.0",
@@ -24,10 +27,38 @@
 		"lint-staged": "^15.2.0",
 		"prettier": "^3.1.1",
 		"prettier-plugin-pkg": "^0.18.0",
+		"semantic-release": "^22.0.12",
 		"typescript": "^5.3.3"
 	},
 	"lint-staged": {
 		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 0",
 		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
+	},
+	"release": {
+		"plugins": [
+			"@semantic-release/commit-analyzer",
+			"@semantic-release/release-notes-generator",
+			"@semantic-release/changelog",
+			"@semantic-release/npm",
+			[
+				"@semantic-release/github",
+				{
+					"assets": [
+						"release-artifacts/**"
+					],
+					"draftRelease": "true",
+					"releaseNameTemplate": "Inner Ink v<%= nextRelease.version %>"
+				}
+			],
+			[
+				"@semantic-release/git",
+				{
+					"message": "chore(release): v${nextRelease.version}\n\n${nextRelease.notes}"
+				}
+			]
+		],
+		"branches": [
+			"main"
+		]
 	}
 }
