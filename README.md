@@ -35,15 +35,16 @@ Secure in its encryption, your expressions find solace in this digital haven. Di
 
 -   Currently, the editor is unable to save the last change made. Whether it is a character typed or a line pasted or deleted at once. We will try to fix this issue in upcoming. Till then, try to add an extra space before changing the selected day or closing the app.
 
+## Support
+
+This project uses [GitHub Issues](https://github.com/knownasnaffy/inner-ink/issues) to [track bugs](CONTRIBUTING.md#reporting-bugs) and [feature requests](CONTRIBUTING.md#suggesting-enhancements). Please search the existing issues before filing new issues to avoid duplicates.
+Read [Security](./SECURITY.md) for information on reporting security vulnerabilities.
+
 ## Contributing
 
 We welcome contributions from the community to help improve Inner Ink. Please read our [Contribution Guidelines](CONTRIBUTING.md) to learn about our development process, coding standards, and how to contribute.
 
 We appreciate your interest in making Inner Ink better!
-
-## Support
-
-This project uses [GitHub Issues](https://github.com/knownasnaffy/inner-ink/issues) to [track bugs](CONTRIBUTING.md#reporting-bugs) and [feature requests](CONTRIBUTING.md#suggesting-enhancements). Please search the existing issues before filing new issues to avoid duplicates.
 
 ## Resources Used
 
