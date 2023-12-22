@@ -55,6 +55,7 @@ const MyEditor = () => {
 
 		fetchSavedData()
 	}, [selectedDay, setContent, setTitle])
+
 	return (
 		<div className='flex flex-col h-full'>
 			<input
@@ -64,12 +65,17 @@ const MyEditor = () => {
 				placeholder='Have a title in mind?'
 				className='w-full max-w-full text-lg font-semibold border-b-2 rounded-b-none input border-base-100 bg-base-200'
 			/>
-			<textarea
-				className='box-border w-full h-full rounded-t-none resize-none textarea bg-base-200'
-				placeholder='How was your day?'
-				value={content}
-				onChange={(event) => handleTextChange(event, 'content')}
-			></textarea>
+			<div className='relative h-full'>
+				<textarea
+					className='box-border w-full h-full rounded-t-none resize-none textarea bg-base-200'
+					placeholder='How was your day?'
+					value={content}
+					onChange={(event) => handleTextChange(event, 'content')}
+				></textarea>
+				<div className='absolute bottom-0 right-0 flex flex-row text-base-content/60 bg-base-300 rounded-tl-btn rounded-br-btn text-sm py-1.5 px-2 gap-1.5'>
+					<span>{(content.match(/\S+/g) || []).length} words</span>
+				</div>
+			</div>
 		</div>
 	)
 }
