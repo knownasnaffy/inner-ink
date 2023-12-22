@@ -123,7 +123,7 @@ jobs:
             - name: Rust cache
               uses: swatinem/rust-cache@v2
               with:
-                  workspaces: './src/backend -> target'
+                  workspaces: './app/backend -> target'
 
             - name: Install dependencies
               run: pnpm install
