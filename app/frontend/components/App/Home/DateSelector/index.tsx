@@ -3,7 +3,6 @@ import { useHotkeys } from 'react-hotkeys-hook'
 import { addDays, isSameDay, subDays } from 'date-fns'
 
 import dateStore from '../../../../hooks/dateStore'
-import { getSettings } from '../../../../utils/settings'
 import CustomCaption from './CustomCaption'
 import { useEffect, useState } from 'react'
 import { getEditedDates } from '../../../../utils/database'
@@ -24,6 +23,9 @@ const DateSelector = () => {
 	const setVisibleMonth = dateStore((state) => state.setVisibleMonth)
 	const title = editorStore((state) => state.title)
 	const content = editorStore((state) => state.content)
+
+	const disableFutureEntry = dateStore((state) => state.disableFutureEntry)
+	const weekStart = dateStore((state) => state.weekStart)
 
 	const [editedDates, setEditedDates] = useState<Date[]>([])
 
@@ -56,10 +58,7 @@ const DateSelector = () => {
 	)
 
 	useHotkeys('ctrl+tab', () => {
-		if (
-			getSettings().disableFutureEntry &&
-			isSameDay(selectedDay, new Date())
-		) {
+		if (disableFutureEntry && isSameDay(selectedDay, new Date())) {
 			return
 		} else {
 			setSelectedDay(addDays(selectedDay, 1))
@@ -78,16 +77,12 @@ const DateSelector = () => {
 					mode='single' // Allow only a single day to be selected
 					selected={selectedDay}
 					onDayClick={handleDayClick} // Perform other functions as well when day is selected
-					toDate={
-						getSettings().disableFutureEntry
-							? new Date()
-							: undefined
-					} // Disable future selection
+					toDate={disableFutureEntry ? new Date() : undefined} // Disable future selection
 					month={visibleMonth}
 					onMonthChange={setVisibleMonth} // Month displayed changes when an outside day is selected
 					showOutsideDays // Display days of next and previous months
 					fixedWeeks // Display 6 weeks at a time
-					weekStartsOn={getSettings().weekStart} // Start of the week
+					weekStartsOn={weekStart} // Start of the week
 					modifiers={{ edited: editedDates }}
 					modifiersClassNames={{
 						selected: 'dp-selected-day',

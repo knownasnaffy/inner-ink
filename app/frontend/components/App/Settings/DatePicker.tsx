@@ -1,6 +1,14 @@
+import dateStore, { WeekStart } from '../../../hooks/dateStore'
 import BooleanSettings from './BooleanSetting'
 
 const DatePicker = () => {
+	const disableFutureEntry = dateStore((state) => state.disableFutureEntry)
+	const setDisableFutureEntry = dateStore(
+		(state) => state.setDisableFutureEntry,
+	)
+	const setWeekStart = dateStore((state) => state.setWeekStart)
+	const weekStart = dateStore((state) => state.weekStart)
+
 	return (
 		<>
 			<h3 className='mt-4 mb-2 text-lg font-semibold'>Date Picker</h3>
@@ -10,6 +18,10 @@ const DatePicker = () => {
 				title='Disable entry in future'
 				description='Permission to write for future days'
 				position='top'
+				checked={disableFutureEntry}
+				onChange={(event) =>
+					setDisableFutureEntry(event.target.checked)
+				}
 			/>
 			{/* ### First day of the week */}
 			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 border-base-100 rounded-b-btn collapse-title bg-base-200 text-md'>
@@ -24,11 +36,26 @@ const DatePicker = () => {
 				</div>
 				<select
 					className='w-full select select-bordered select-sm max-w-fit'
-					defaultValue='System Default'
+					value={weekStart}
+					onChange={(event) =>
+						setWeekStart(Number(event.target.value) as WeekStart)
+					}
 				>
-					<option>System Default</option>
-					<option>English</option>
-					<option>French</option>
+					{[
+						'Sunday',
+						'Monday',
+						'Tuesday',
+						'Wednesday',
+						'Thursday',
+						'Friday',
+						'Saturday',
+					].map((day, index) => {
+						return (
+							<option key={index} value={index}>
+								{day}
+							</option>
+						)
+					})}
 				</select>
 			</div>
 		</>
