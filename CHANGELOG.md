@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/knownasnaffy/inner-ink/compare/v1.1.1...v1.2.0) (2023-12-22)
+
+
+### Features
+
+* :sparkles: styled edited dates in DateSelecter component ([#35](https://github.com/knownasnaffy/inner-ink/issues/35)) ([1dd8e6b](https://github.com/knownasnaffy/inner-ink/commit/1dd8e6b0478a6ad6ff7324b0875a195c49cdc06b))
+
 ## [1.1.1](https://github.com/knownasnaffy/inner-ink/compare/v1.1.0...v1.1.1) (2023-12-21)
 
 
