@@ -11,7 +11,7 @@ body {
 	.dp-btn {
 		@apply btn btn-circle;
 	}
-	.dp-bookmarked {
+	.dp-edited {
 		@apply btn-secondary;
 	}
 	.dp-selected-day {

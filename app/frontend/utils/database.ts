@@ -1,4 +1,4 @@
-import { format } from 'date-fns'
+import { format, parse } from 'date-fns'
 import Database from 'tauri-plugin-sql-api'
 
 export type Entry = {
@@ -116,8 +116,22 @@ export const getEntry = async (date: Date): Promise<Entry | undefined> => {
 export const searchEntries = async (query: string) => {
 	const database = await Database.load('sqlite:database.db')
 
-	const existingRecord: Entry[] = await database.select(
+	const entries: Entry[] = await database.select(
 		`SELECT * FROM entries WHERE content LIKE '%${query}%'`,
 	)
-	return existingRecord.length > 0 ? existingRecord : undefined
+	return entries.length > 0 ? entries : undefined
+}
+
+export const getEditedDates = async () => {
+	const database = await Database.load('sqlite:database.db')
+
+	const entries: Entry[] = await database.select('SELECT * FROM entries')
+
+	const filteredDates: Date[] = entries
+		.filter(
+			(entry) => entry.title.trim() !== '' || entry.content.trim() !== '',
+		)
+		.map((entry) => parse(entry.date, 'dd-MM-yyyy', new Date()))
+
+	return filteredDates
 }
