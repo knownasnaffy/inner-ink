@@ -23,14 +23,6 @@
 				"unmaximize": true,
 				"unminimize": true,
 				"startDragging": true
-			},
-			"fs": {
-				"all": false,
-				"exists": true,
-				"scope": ["$APPDATA/database.db"]
-			},
-			"path": {
-				"all": true
 			}
 		},
 		"bundle": {
