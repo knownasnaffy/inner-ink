@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/knownasnaffy/inner-ink/compare/v1.2.0...v1.3.0) (2023-12-23)
+
+
+### Bug Fixes
+
+* :passport_control: remove unused permissions ([760fe81](https://github.com/knownasnaffy/inner-ink/commit/760fe813bae9f72278c3826181a63a4632684bc0))
+
+
+### Features
+
+* :sparkles: add word count in the bottom right of textarea ([76d206a](https://github.com/knownasnaffy/inner-ink/commit/76d206abc170a66d87b1bb935cfd6b59e2b4a0b9))
+* :sparkles: sync datepicker settings with application state, settings will now be instantly updated on change ([a891a47](https://github.com/knownasnaffy/inner-ink/commit/a891a47ee19b844100fe7d867594b42422206e9e))
+
 # [1.2.0](https://github.com/knownasnaffy/inner-ink/compare/v1.1.1...v1.2.0) (2023-12-22)
 
 
