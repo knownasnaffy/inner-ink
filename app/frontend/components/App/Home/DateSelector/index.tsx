@@ -6,7 +6,6 @@ import dateStore from '../../../../hooks/dateStore'
 import CustomCaption from './CustomCaption'
 import { useEffect, useState } from 'react'
 import { getEditedDates } from '../../../../utils/database'
-import editorStore from '../../../../hooks/editorStore'
 
 const classNames: ClassNames = {
 	button: 'dp-btn',
@@ -21,8 +20,6 @@ const DateSelector = () => {
 	const setSelectedDay = dateStore((state) => state.setSelectedDay)
 	const visibleMonth = dateStore((state) => state.visibleMonth)
 	const setVisibleMonth = dateStore((state) => state.setVisibleMonth)
-	const title = editorStore((state) => state.title)
-	const content = editorStore((state) => state.content)
 
 	const disableFutureEntry = dateStore((state) => state.disableFutureEntry)
 	const weekStart = dateStore((state) => state.weekStart)
@@ -41,7 +38,7 @@ const DateSelector = () => {
 		}
 
 		fetchEditedDays()
-	}, [title, content])
+	}, [selectedDay])
 
 	const handleDayClick: DayClickEventHandler = (day: Date) => {
 		setSelectedDay(day)
