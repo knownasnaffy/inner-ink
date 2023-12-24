@@ -122,6 +122,12 @@ export const searchEntries = async (query: string) => {
 	return entries.length > 0 ? entries : undefined
 }
 
+export const clearEntries = async () => {
+	const database = await Database.load('sqlite:database.db')
+
+	await database.execute('DELETE FROM entries')
+}
+
 export const getEditedDates = async () => {
 	const database = await Database.load('sqlite:database.db')
 
