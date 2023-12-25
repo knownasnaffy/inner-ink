@@ -81,7 +81,7 @@ export const verifyUser = async (password: string): Promise<boolean> => {
 		: false
 }
 
-export const saveEntry = async (date: Date, title: string, content: string) => {
+export const setEntryTitle = async (date: Date, title: string) => {
 	const database = await Database.load('sqlite:database.db')
 
 	const formattedDate = format(date, 'dd-MM-yyyy')
@@ -91,13 +91,32 @@ export const saveEntry = async (date: Date, title: string, content: string) => {
 	)
 
 	await (existingRecord.length > 0
-		? database.execute(
-				'UPDATE entries SET title = $1, content = $2 WHERE date = $3',
-				[title, content, formattedDate],
-			)
+		? database.execute('UPDATE entries SET title = $1 WHERE date = $2', [
+				title,
+				formattedDate,
+			])
 		: database.execute(
-				'INSERT INTO entries (date, title, content) VALUES ($1, $2, $3)',
-				[formattedDate, title, content],
+				'INSERT INTO entries (date, title) VALUES ($1, $2)',
+				[formattedDate, title],
+			))
+}
+export const setEntryContent = async (date: Date, content: string) => {
+	const database = await Database.load('sqlite:database.db')
+
+	const formattedDate = format(date, 'dd-MM-yyyy')
+	const existingRecord: Entry[] = await database.select(
+		'SELECT * FROM entries WHERE date = $1',
+		[formattedDate],
+	)
+
+	await (existingRecord.length > 0
+		? database.execute('UPDATE entries SET content = $1 WHERE date = $2', [
+				content,
+				formattedDate,
+			])
+		: database.execute(
+				'INSERT INTO entries (date, content) VALUES ($1, $2)',
+				[formattedDate, content],
 			))
 }
 
@@ -134,9 +153,9 @@ export const getEditedDates = async () => {
 	const entries: Entry[] = await database.select('SELECT * FROM entries')
 
 	const filteredDates: Date[] = entries
-		.filter(
-			(entry) => entry.title.trim() !== '' || entry.content.trim() !== '',
-		)
+		// .filter(
+		// 	(entry) => entry.title.trim() !== '' || entry.content.trim() !== '',
+		// )
 		.map((entry) => parse(entry.date, 'dd-MM-yyyy', new Date()))
 
 	return filteredDates
