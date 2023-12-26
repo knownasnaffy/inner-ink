@@ -48,6 +48,8 @@ We appreciate your interest in making Inner Ink better!
 -   Icons by: [Heroicons](https://heroicons.com/)
 -   UI library: [DaisyUI](https://daisyui.com/)
 -   Backend framework: [Tauri](https://tauri.app/)
--   Other dependencies: [`package.json`](./package.json), [`cargo.toml`](./src/backend/Cargo.toml)
+-   Other dependencies: [`package.json`](./package.json), [`app/package.json`](./app/package.json), [`cargo.toml`](./src/backend/Cargo.toml)
 
-<!-- TODO: Add icons8 reference to app according to https://icons8.com/license -->
+## License
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknownasnaffy%2Finner-ink.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fknownasnaffy%2Finner-ink?ref=badge_large&issueType=license)
