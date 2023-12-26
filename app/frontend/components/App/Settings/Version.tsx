@@ -1,20 +1,21 @@
 import BooleanSettings from './BooleanSetting'
+import packageJson from '../../../../../package.json'
 
 const Version = () => {
 	return (
 		<>
-			<h3 className='mt-4 mb-2 text-lg font-semibold'>Version</h3>
+			<h3 className='mb-2 mt-4 text-lg font-semibold'>Version</h3>
 			{/* ### Update check */}
-			<div className='flex flex-row items-center justify-between pr-4 rounded-t-btn collapse-title bg-base-200 text-md'>
+			<div className='rounded-t-btn collapse-title bg-base-200 text-md flex flex-row items-center justify-between pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<div>
-						v0.1.0
-						<p className='text-sm text-base-content/50'>
+						v{packageJson.version}
+						<p className='text-base-content/50 text-sm'>
 							Last checked: 18-11-2023
 						</p>
 					</div>
 				</div>
-				<button className='capitalize btn btn-primary btn-sm'>
+				<button className='btn btn-primary btn-sm capitalize'>
 					Check for updates
 				</button>
 			</div>
