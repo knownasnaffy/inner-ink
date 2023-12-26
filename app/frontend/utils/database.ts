@@ -7,10 +7,10 @@ export type Entry = {
 	content: string
 }
 
-export type User = {
-	name: string
-	password: string
-}
+// export type User = {
+// 	name: string
+// 	password: string
+// }
 
 export const initDB = async (): Promise<Database | undefined> => {
 	const database = await Database.load('sqlite:database.db')
@@ -23,12 +23,12 @@ export const initDB = async (): Promise<Database | undefined> => {
 				content TEXT
 			)
 		`)
-		await database.execute(`
-			CREATE TABLE IF NOT EXISTS user (
-				name TEXT,
-				password TEXT
-			)
-		`)
+		// await database.execute(`
+		// 	CREATE TABLE IF NOT EXISTS user (
+		// 		name TEXT,
+		// 		password TEXT
+		// 	)
+		// `)
 		console.log('Database initialised')
 		return database
 	} catch (error) {
@@ -39,47 +39,47 @@ export const initDB = async (): Promise<Database | undefined> => {
 	}
 }
 
-import bcrypt from 'bcryptjs'
+// import bcrypt from 'bcryptjs'
 
-async function hashPassword(password: string): Promise<string> {
-	const saltRounds = 10 // Salt rounds for bcrypt
-	const hashedPassword = await bcrypt.hash(password, saltRounds)
-	return hashedPassword
-}
+// async function hashPassword(password: string): Promise<string> {
+// 	const saltRounds = 10 // Salt rounds for bcrypt
+// 	const hashedPassword = await bcrypt.hash(password, saltRounds)
+// 	return hashedPassword
+// }
 
-export const getUser = async (): Promise<User | undefined> => {
-	const database = await initDB()
-	const user: User[] = await database!.select('SELECT * FROM user')
+// export const getUser = async (): Promise<User | undefined> => {
+// 	const database = await initDB()
+// 	const user: User[] = await database!.select('SELECT * FROM user')
 
-	return user.length > 0 ? user[0] : undefined
-}
+// 	return user.length > 0 ? user[0] : undefined
+// }
 
-export const saveUser = async (
-	name: string,
-	password: string,
-): Promise<void> => {
-	const hashedPassword = await hashPassword(password)
-	const database = await Database.load('sqlite:database.db')
-	const user: User[] = await database.select('SELECT * FROM user')
+// export const saveUser = async (
+// 	name: string,
+// 	password: string,
+// ): Promise<void> => {
+// 	const hashedPassword = await hashPassword(password)
+// 	const database = await Database.load('sqlite:database.db')
+// 	const user: User[] = await database.select('SELECT * FROM user')
 
-	await (user.length > 0
-		? database.execute(
-				'UPDATE user SET name = $1, password = $2 WHERE name = $3',
-				[name, hashedPassword, user[0].name],
-			)
-		: database.execute(
-				'INSERT INTO user (name, password) VALUES ($1, $2)',
-				[name, hashedPassword],
-			))
-}
+// 	await (user.length > 0
+// 		? database.execute(
+// 				'UPDATE user SET name = $1, password = $2 WHERE name = $3',
+// 				[name, hashedPassword, user[0].name],
+// 			)
+// 		: database.execute(
+// 				'INSERT INTO user (name, password) VALUES ($1, $2)',
+// 				[name, hashedPassword],
+// 			))
+// }
 
-export const verifyUser = async (password: string): Promise<boolean> => {
-	const user = await getUser()
+// export const verifyUser = async (password: string): Promise<boolean> => {
+// 	const user = await getUser()
 
-	return user && (await bcrypt.compare(password, user!.password))
-		? true
-		: false
-}
+// 	return user && (await bcrypt.compare(password, user!.password))
+// 		? true
+// 		: false
+// }
 
 export const setEntryTitle = async (date: Date, title: string) => {
 	const database = await Database.load('sqlite:database.db')
