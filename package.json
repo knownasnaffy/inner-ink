@@ -13,6 +13,9 @@
 		"prepare": "husky install",
 		"release": "semantic-release"
 	},
+	"dependencies": {
+		"prettier-plugin-tailwindcss": "^0.5.9"
+	},
 	"devDependencies": {
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
