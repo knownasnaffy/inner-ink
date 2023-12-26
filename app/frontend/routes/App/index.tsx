@@ -26,9 +26,9 @@ const AppLayout = () => {
 	// }
 
 	return (
-		<div className='h-[calc(100vh-32px)] flex bg-base-300'>
+		<div className='bg-base-300 flex h-[calc(100vh-32px)]'>
 			<Sidebar />
-			<div className='grow bg-base-100 rounded-tl-box'>
+			<div className='bg-base-100 rounded-tl-box grow'>
 				<Outlet />
 			</div>
 		</div>

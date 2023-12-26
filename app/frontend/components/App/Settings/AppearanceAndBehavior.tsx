@@ -4,13 +4,13 @@ import { ThemeList } from './ThemeList'
 const AppearanceAndBehavior = () => {
 	return (
 		<>
-			<h3 className='mt-4 mb-2 text-lg font-semibold'>
+			<h3 className='mb-2 mt-4 text-lg font-semibold'>
 				Appearance & Behaviour
 			</h3>
 			{/* ### Application theme */}
-			<div className='rounded-b-none rounded-t-btn collapse collapse-arrow bg-base-200'>
+			<div className='rounded-t-btn collapse-arrow bg-base-200 collapse rounded-b-none'>
 				<input type='checkbox' />
-				<div className='font-semibold collapse-title text-md'>
+				<div className='collapse-title text-md font-semibold'>
 					<div className='flex flex-row items-center gap-2'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
@@ -18,7 +18,7 @@ const AppearanceAndBehavior = () => {
 							viewBox='0 0 24 24'
 							strokeWidth={1.5}
 							stroke='currentColor'
-							className='w-6 h-6 shrink-0'
+							className='h-6 w-6 shrink-0'
 						>
 							<path
 								strokeLinecap='round'
@@ -44,7 +44,7 @@ const AppearanceAndBehavior = () => {
 						viewBox='0 0 24 24'
 						strokeWidth={1.5}
 						stroke='currentColor'
-						className='w-6 h-6 shrink-0'
+						className='h-6 w-6 shrink-0'
 					>
 						<path
 							strokeLinecap='round'
@@ -58,7 +58,7 @@ const AppearanceAndBehavior = () => {
 				position='middle'
 			/>
 			{/* ### Language */}
-			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 border-base-100 rounded-b-btn collapse-title bg-base-200 text-md'>
+			<div className='border-base-100 rounded-b-btn collapse-title bg-base-200 text-md flex flex-row items-center justify-between gap-4 border-t-2 pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
@@ -66,7 +66,7 @@ const AppearanceAndBehavior = () => {
 						viewBox='0 0 24 24'
 						strokeWidth={1.5}
 						stroke='currentColor'
-						className='w-6 h-6 shrink-0'
+						className='h-6 w-6 shrink-0'
 					>
 						<path
 							strokeLinecap='round'
@@ -76,14 +76,14 @@ const AppearanceAndBehavior = () => {
 					</svg>
 					<div>
 						Language
-						<p className='text-sm text-base-content/50'>
+						<p className='text-base-content/50 text-sm'>
 							Select a display language fpr this app. Overides
 							default Windows interface language
 						</p>
 					</div>
 				</div>
 				<select
-					className='w-full select select-bordered select-sm max-w-fit'
+					className='select select-bordered select-sm w-full max-w-fit'
 					defaultValue='System Default'
 				>
 					<option>System Default</option>

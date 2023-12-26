@@ -11,7 +11,7 @@ const DatePicker = () => {
 
 	return (
 		<>
-			<h3 className='mt-4 mb-2 text-lg font-semibold'>Date Picker</h3>
+			<h3 className='mb-2 mt-4 text-lg font-semibold'>Date Picker</h3>
 			{/* ### Disable Entry in Future */}
 			{/* TODO: Change disableFutureEntry to enableFutureEntry everywhere */}
 			<BooleanSettings
@@ -24,7 +24,7 @@ const DatePicker = () => {
 				}
 			/>
 			{/* ### First day of the week */}
-			<div className='flex flex-row items-center justify-between gap-4 pr-4 border-t-2 border-base-100 rounded-b-btn collapse-title bg-base-200 text-md'>
+			<div className='border-base-100 rounded-b-btn collapse-title bg-base-200 text-md flex flex-row items-center justify-between gap-4 border-t-2 pr-4'>
 				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<div>
 						First day of the week
@@ -35,7 +35,7 @@ const DatePicker = () => {
 					</div>
 				</div>
 				<select
-					className='w-full select select-bordered select-sm max-w-fit'
+					className='select select-bordered select-sm w-full max-w-fit'
 					value={weekStart}
 					onChange={(event) =>
 						setWeekStart(Number(event.target.value) as WeekStart)

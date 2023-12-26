@@ -32,12 +32,12 @@ export default function Header() {
 	return (
 		<div className='flex justify-between'>
 			<button
-				className='text-lg capitalize btn btn-ghost'
+				className='btn btn-ghost text-lg capitalize'
 				onClick={handleDateSelect}
 			>
 				{currentDate}
 			</button>
-			<div className='flex flex-row gap-1 w-fit h-fit'>
+			<div className='flex h-fit w-fit flex-row gap-1'>
 				<button className='btn btn-ghost btn-square'>
 					<BookmarkSlashIcon className='h-6' />
 				</button>

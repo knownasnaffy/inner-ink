@@ -2,10 +2,10 @@ import { Outlet } from 'react-router-dom'
 
 const AuthLayout = () => {
 	return (
-		<div className='h-[calc(100vh-32px)] flex flex-col justify-center'>
-			<div className='relative py-3 max-w-sm self-center w-full'>
-				<div className='absolute inset-0 transform shadow-lg bg-gradient-to-r from-primary to-secondary skew-y-0 -rotate-6 rounded-box'></div>
-				<div className='relative shadow-lg rounded-box'>
+		<div className='flex h-[calc(100vh-32px)] flex-col justify-center'>
+			<div className='relative w-full max-w-sm self-center py-3'>
+				<div className='from-primary to-secondary rounded-box absolute inset-0 -rotate-6 skew-y-0 transform bg-gradient-to-r shadow-lg'></div>
+				<div className='rounded-box relative shadow-lg'>
 					<Outlet />
 				</div>
 			</div>

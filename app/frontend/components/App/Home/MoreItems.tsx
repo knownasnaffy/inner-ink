@@ -20,13 +20,13 @@ const MoreItems = () => {
 				leaveFrom='transform opacity-100 scale-100'
 				leaveTo='transform opacity-0 scale-95'
 			>
-				<Menu.Items className='absolute right-0 mt-1 origin-top-right shadow-lg bg-base-100 border border-base-300 rounded-box divide-y divide-base-300 focus:outline-none px-1.5 w-40'>
+				<Menu.Items className='bg-base-100 border-base-300 rounded-box divide-base-300 absolute right-0 mt-1 w-40 origin-top-right divide-y border px-1.5 shadow-lg focus:outline-none'>
 					<div className='py-1.5'>
 						<Menu.Item>
 							{({ active }) => (
 								<button
 									className={clsx(
-										'group flex w-full items-center rounded-btn px-3 py-2 text-sm',
+										'rounded-btn group flex w-full items-center px-3 py-2 text-sm',
 										active
 											? 'text-primary bg-primary/5'
 											: 'text-base-content',
@@ -38,7 +38,7 @@ const MoreItems = () => {
 										viewBox='0 0 24 24'
 										strokeWidth={1.5}
 										stroke='currentColor'
-										className='w-6 h-6 fill-primary/5 stroke-primary mr-2'
+										className='fill-primary/5 stroke-primary mr-2 h-6 w-6'
 									>
 										<path
 											strokeLinecap='round'
@@ -54,7 +54,7 @@ const MoreItems = () => {
 							{({ active }) => (
 								<button
 									className={clsx(
-										'group flex w-full items-center rounded-btn px-3 py-2 text-sm',
+										'rounded-btn group flex w-full items-center px-3 py-2 text-sm',
 										active
 											? 'text-primary bg-primary/5'
 											: 'text-base-content',
@@ -66,7 +66,7 @@ const MoreItems = () => {
 										viewBox='0 0 24 24'
 										strokeWidth={1.5}
 										stroke='currentColor'
-										className='w-6 h-6 -rotate-90 fill-primary/5 stroke-primary mr-2'
+										className='fill-primary/5 stroke-primary mr-2 h-6 w-6 -rotate-90'
 									>
 										<path
 											strokeLinecap='round'
@@ -82,7 +82,7 @@ const MoreItems = () => {
 							{({ active }) => (
 								<button
 									className={clsx(
-										'group flex w-full items-center rounded-btn px-3 py-2 text-sm',
+										'rounded-btn group flex w-full items-center px-3 py-2 text-sm',
 										active
 											? 'text-primary bg-primary/5'
 											: 'text-base-content',
@@ -94,7 +94,7 @@ const MoreItems = () => {
 										viewBox='0 0 24 24'
 										strokeWidth={1.5}
 										stroke='currentColor'
-										className='w-6 h-6 fill-primary/5 stroke-primary mr-2'
+										className='fill-primary/5 stroke-primary mr-2 h-6 w-6'
 									>
 										<path
 											strokeLinecap='round'
@@ -112,7 +112,7 @@ const MoreItems = () => {
 							{({ active }) => (
 								<button
 									className={clsx(
-										'group flex w-full items-center rounded-btn px-3 py-2 text-sm',
+										'rounded-btn group flex w-full items-center px-3 py-2 text-sm',
 										active
 											? 'text-secondary bg-secondary/5'
 											: 'text-base-content',
@@ -124,7 +124,7 @@ const MoreItems = () => {
 										viewBox='0 0 24 24'
 										strokeWidth={1.5}
 										stroke='currentColor'
-										className='w-6 h-6 fill-secondary/5 stroke-secondary mr-2'
+										className='fill-secondary/5 stroke-secondary mr-2 h-6 w-6'
 									>
 										<path
 											strokeLinecap='round'
@@ -140,7 +140,7 @@ const MoreItems = () => {
 							{({ active }) => (
 								<button
 									className={clsx(
-										'group flex w-full items-center rounded-btn px-3 py-2 text-sm',
+										'rounded-btn group flex w-full items-center px-3 py-2 text-sm',
 										active
 											? 'text-secondary bg-secondary/5'
 											: 'text-base-content',
@@ -152,7 +152,7 @@ const MoreItems = () => {
 										viewBox='0 0 24 24'
 										strokeWidth={1.5}
 										stroke='currentColor'
-										className='w-6 h-6 fill-secondary/5 stroke-secondary mr-2'
+										className='fill-secondary/5 stroke-secondary mr-2 h-6 w-6'
 									>
 										<path
 											strokeLinecap='round'
@@ -170,7 +170,7 @@ const MoreItems = () => {
 							{({ active }) => (
 								<button
 									className={clsx(
-										'group flex w-full items-center rounded-btn px-3 py-2 text-sm',
+										'rounded-btn group flex w-full items-center px-3 py-2 text-sm',
 										active
 											? 'text-error bg-error/5'
 											: 'text-base-content',
@@ -182,7 +182,7 @@ const MoreItems = () => {
 										viewBox='0 0 24 24'
 										strokeWidth={1.5}
 										stroke='currentColor'
-										className='w-6 h-6 fill-error/5 stroke-error mr-2'
+										className='fill-error/5 stroke-error mr-2 h-6 w-6'
 									>
 										<path
 											strokeLinecap='round'

@@ -3,22 +3,22 @@ import { clearEntries } from '../../../utils/database'
 const BackupAndRestore = () => {
 	return (
 		<>
-			<h3 className='mt-4 mb-2 text-lg font-semibold'>
+			<h3 className='mb-2 mt-4 text-lg font-semibold'>
 				Backup and Reset
 			</h3>
 			{/* Reset */}
-			<div className='flex flex-row items-center justify-between rounded-btn pr-4 collapse-title bg-base-200 text-md border-t-2 border-base-100'>
-				<div className='flex flex-row items-center font-semibold gap-2'>
+			<div className='rounded-btn collapse-title bg-base-200 text-md border-base-100 flex flex-row items-center justify-between border-t-2 pr-4'>
+				<div className='flex flex-row items-center gap-2 font-semibold'>
 					<div>
 						Reset
-						<p className='text-sm text-base-content/50'>
+						<p className='text-base-content/50 text-sm'>
 							Revert to first install
 						</p>
 					</div>
 				</div>
 				<div className='flex flex-row gap-2'>
 					<button
-						className='capitalize btn btn-error btn-sm'
+						className='btn btn-error btn-sm capitalize'
 						onClick={clearEntries}
 					>
 						Reset Entries

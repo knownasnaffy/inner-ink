@@ -8,11 +8,11 @@ const CustomCaption = (properties: CaptionProps) => {
 	const setVisibleMonth = dateStore((state) => state.setVisibleMonth)
 
 	return (
-		<div className='text-primary flex justify-between items-center pb-2'>
-			<p className='font-bold text-2xl pl-2.5'>
+		<div className='text-primary flex items-center justify-between pb-2'>
+			<p className='pl-2.5 text-2xl font-bold'>
 				{format(properties.displayMonth, 'MMMM yyyy')}
 			</p>
-			<div className='w-fit flex gap-1'>
+			<div className='flex w-fit gap-1'>
 				<button
 					className='btn btn-circle btn-ghost'
 					disabled={!previousMonth}
@@ -24,7 +24,7 @@ const CustomCaption = (properties: CaptionProps) => {
 						viewBox='0 0 24 24'
 						strokeWidth={2.5}
 						stroke='currentColor'
-						className='w-6 h-6'
+						className='h-6 w-6'
 					>
 						<path
 							strokeLinecap='round'
@@ -44,7 +44,7 @@ const CustomCaption = (properties: CaptionProps) => {
 						viewBox='0 0 24 24'
 						strokeWidth={2.5}
 						stroke='currentColor'
-						className='w-6 h-6'
+						className='h-6 w-6'
 					>
 						<path
 							strokeLinecap='round'
@@ -66,7 +66,7 @@ const CustomCaption = (properties: CaptionProps) => {
 						viewBox='0 0 24 24'
 						strokeWidth={2.5}
 						stroke='currentColor'
-						className='w-6 h-6'
+						className='h-6 w-6'
 					>
 						<path
 							strokeLinecap='round'

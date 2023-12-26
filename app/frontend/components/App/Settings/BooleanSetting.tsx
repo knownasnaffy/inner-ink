@@ -18,7 +18,7 @@ const BooleanSettings = ({
 	return (
 		<div
 			className={clsx(
-				'flex flex-row items-center justify-between pr-4 border-t-2 border-base-100 collapse-title bg-base-200 text-md',
+				'border-base-100 collapse-title bg-base-200 text-md flex flex-row items-center justify-between border-t-2 pr-4',
 				position === 'top'
 					? 'rounded-t-btn'
 					: position === 'middle'
@@ -32,7 +32,7 @@ const BooleanSettings = ({
 				{icon && icon}
 				<div className=''>
 					{title}
-					<p className='text-sm text-base-content/50'>
+					<p className='text-base-content/50 text-sm'>
 						{description}
 					</p>
 				</div>

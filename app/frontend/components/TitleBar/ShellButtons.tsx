@@ -37,9 +37,9 @@ export const ShellButtons = () => {
 		setIsWindowMaximized(!isWindowMaximized)
 	}
 	return (
-		<div className='flex flex-row scale-90 w-fit'>
+		<div className='flex w-fit scale-90 flex-row'>
 			<button
-				className='scale-75 cursor-default btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content'
+				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content scale-75 cursor-default'
 				onClick={minimize}
 			>
 				<svg
@@ -48,7 +48,7 @@ export const ShellButtons = () => {
 					viewBox='0 0 24 24'
 					strokeWidth={1.5}
 					stroke='currentColor'
-					className='w-6 h-6'
+					className='h-6 w-6'
 				>
 					<path
 						strokeLinecap='round'
@@ -58,7 +58,7 @@ export const ShellButtons = () => {
 				</svg>
 			</button>
 			<button
-				className='scale-75 cursor-default btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content'
+				className='btn btn-circle btn-sm btn-success text-success hover:text-success-content focus:focus-visible:text-success-content scale-75 cursor-default'
 				onClick={toggleMaximize}
 			>
 				{isWindowMaximized ? (
@@ -68,7 +68,7 @@ export const ShellButtons = () => {
 						viewBox='0 0 24 24'
 						strokeWidth={1.5}
 						stroke='currentColor'
-						className='w-6 h-6'
+						className='h-6 w-6'
 					>
 						<path
 							strokeLinecap='round'
@@ -83,7 +83,7 @@ export const ShellButtons = () => {
 						viewBox='0 0 24 24'
 						strokeWidth={1.5}
 						stroke='currentColor'
-						className='w-6 h-6'
+						className='h-6 w-6'
 					>
 						<path
 							strokeLinecap='round'
@@ -94,7 +94,7 @@ export const ShellButtons = () => {
 				)}
 			</button>
 			<button
-				className='scale-75 cursor-default btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content'
+				className='btn btn-circle btn-sm btn-error text-error hover:text-error-content focus:focus-visible:text-error-content scale-75 cursor-default'
 				onClick={closeWindow}
 			>
 				<svg
@@ -103,7 +103,7 @@ export const ShellButtons = () => {
 					viewBox='0 0 24 24'
 					strokeWidth={1.5}
 					stroke='currentColor'
-					className='w-6 h-6'
+					className='h-6 w-6'
 				>
 					<path
 						strokeLinecap='round'

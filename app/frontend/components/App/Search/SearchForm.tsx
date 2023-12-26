@@ -24,7 +24,7 @@ export const SearchForm = ({ onSubmit }: SearchFormProperties) => {
 				type='text'
 				value={searchQuery}
 				onChange={handleChange}
-				className='join-item input input-bordered input-sm max-w-md w-full'
+				className='join-item input input-bordered input-sm w-full max-w-md'
 			/>
 			<button type='submit' className='join-item btn btn-primary btn-sm'>
 				Search

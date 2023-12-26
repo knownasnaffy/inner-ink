@@ -53,8 +53,8 @@ const RegisterPage = () => {
 			<div className='card-body'>
 				<h1
 					className={clsx(
-						'card-title text-2xl w-full',
-						'table after:bg-gradient-to-r after:from-primary after:to-secondary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full pb-1.5',
+						'card-title w-full text-2xl',
+						'after:from-primary after:to-secondary table pb-1.5 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-gradient-to-r',
 					)}
 				>
 					Register
@@ -68,7 +68,7 @@ const RegisterPage = () => {
 				>
 					{({ isSubmitting }) => (
 						<Form>
-							<div className='w-full form-control'>
+							<div className='form-control w-full'>
 								<label htmlFor='name' className='label'>
 									<span className='label-text'>Name</span>
 								</label>
@@ -76,7 +76,7 @@ const RegisterPage = () => {
 									type='text'
 									id='name'
 									name='name'
-									className='input input-bordered w-full input-primary placeholder-neutral'
+									className='input input-bordered input-primary placeholder-neutral w-full'
 								/>
 								<ErrorMessage
 									name='name'
@@ -85,7 +85,7 @@ const RegisterPage = () => {
 								/>
 							</div>
 
-							<div className='w-full form-control'>
+							<div className='form-control w-full'>
 								<label htmlFor='password' className='label'>
 									<span className='label-text'>Password</span>
 								</label>
@@ -93,7 +93,7 @@ const RegisterPage = () => {
 									type='password'
 									id='password'
 									name='password'
-									className='input input-bordered w-full input-primary placeholder-neutral'
+									className='input input-bordered input-primary placeholder-neutral w-full'
 								/>
 								<ErrorMessage
 									name='password'
@@ -102,7 +102,7 @@ const RegisterPage = () => {
 								/>
 							</div>
 
-							<div className='w-full form-control'>
+							<div className='form-control w-full'>
 								<label
 									htmlFor='repeatPassword'
 									className='label'
@@ -115,7 +115,7 @@ const RegisterPage = () => {
 									type='password'
 									id='repeatPassword'
 									name='repeatPassword'
-									className='input input-bordered w-full input-primary placeholder-neutral'
+									className='input input-bordered input-primary placeholder-neutral w-full'
 								/>
 								<ErrorMessage
 									name='repeatPassword'

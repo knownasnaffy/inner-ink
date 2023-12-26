@@ -16,17 +16,17 @@ export const ThemeButton = ({ themeName }: { themeName: typeOfThemes }) => {
 				}
 			}}
 			className={clsx(
-				'bg-base-100 p-2 card gap-1 select-none hover:cursor-pointer',
-				'focus:outline focus:outline-primary hover:opacity-90 focus:outline-[3px]',
+				'bg-base-100 card select-none gap-1 p-2 hover:cursor-pointer',
+				'focus:outline-primary hover:opacity-90 focus:outline focus:outline-[3px]',
 				theme === themeName &&
-					'outline-dashed outline-primary outline-offset-1',
+					'outline-primary outline-dashed outline-offset-1',
 			)}
 			onClick={() => setTheme(themeName)}
 			data-theme={themeName}
 		>
-			<span className='bg-primary card p-1.5 w-full'></span>
-			<span className='bg-secondary card p-1.5 w-3/4'></span>
-			<span className='bg-accent card p-1.5 w-1/2'></span>
+			<span className='bg-primary card w-full p-1.5'></span>
+			<span className='bg-secondary card w-3/4 p-1.5'></span>
+			<span className='bg-accent card w-1/2 p-1.5'></span>
 			<p className='text-sm capitalize'>{themeName}</p>
 		</div>
 	)

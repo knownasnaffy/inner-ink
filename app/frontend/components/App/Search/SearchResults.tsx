@@ -13,12 +13,12 @@ export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 		// navigate('/')
 	}
 	return (
-		<div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 mt-4 animate-in fade-in duration-300'>
+		<div className='animate-in fade-in mt-4 grid grid-cols-1 gap-3 duration-300 md:grid-cols-2 lg:grid-cols-3'>
 			{entries.map((entry, index) => {
 				return (
 					<button
 						key={index}
-						className='card card-compact bg-base-200 shadow-sm hover:shadow-md transition duration-300 hover:cursor-pointer'
+						className='card card-compact bg-base-200 shadow-sm transition duration-300 hover:cursor-pointer hover:shadow-md'
 						onClick={() =>
 							selectEntry(
 								parse(entry.date, 'dd-MM-yyyy', new Date()),
@@ -37,8 +37,8 @@ export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 									? entry.title
 									: 'No Title'}
 							</div>
-							<p className='truncate max-h-20'>{entry.content}</p>
-							<div className='card-actions justify-end text-base-content/80 mt-2'>
+							<p className='max-h-20 truncate'>{entry.content}</p>
+							<div className='card-actions text-base-content/80 mt-2 justify-end'>
 								{format(
 									parse(entry.date, 'dd-MM-yyyy', new Date()),
 									'PPPP',
@@ -54,9 +54,9 @@ export const SearchResult = ({ entries }: { entries: Entry[] }) => {
 
 export const ResultNotFound = () => {
 	return (
-		<div className='flex flex-col text-center justify-center grow mt-4 bg-base-200 rounded-box text-base-content/70 animate-in fade-in duration-300'>
+		<div className='bg-base-200 rounded-box text-base-content/70 animate-in fade-in mt-4 flex grow flex-col justify-center text-center duration-300'>
 			<p className='text-4xl font-extrabold'>＞﹏＜</p>
-			<p className='text-2xl px-4'>
+			<p className='px-4 text-2xl'>
 				No matching results. Did you ever write this?
 			</p>
 		</div>
@@ -65,9 +65,9 @@ export const ResultNotFound = () => {
 
 export const EmptySearchResult = () => {
 	return (
-		<div className='flex flex-col text-center justify-center grow mt-4 bg-base-200 rounded-box text-base-content/70 animate-in fade-in duration-300'>
+		<div className='bg-base-200 rounded-box text-base-content/70 animate-in fade-in mt-4 flex grow flex-col justify-center text-center duration-300'>
 			<p className='text-4xl font-extrabold'>( ﾉ ﾟｰﾟ)ﾉ</p>
-			<p className='text-2xl px-4'>
+			<p className='px-4 text-2xl'>
 				Nothing here. Maybe type something in that field up there?
 			</p>
 		</div>

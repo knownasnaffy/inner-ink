@@ -4,7 +4,7 @@ import Header from '../../components/App/Home/Header'
 
 const HomePage = () => {
 	return (
-		<div className='flex flex-col h-full gap-2 pt-4 pb-6 px-8 md:px-10 lg:px-14 animate-in slide-in-from-right'>
+		<div className='animate-in slide-in-from-right flex h-full flex-col gap-2 px-8 pb-6 pt-4 md:px-10 lg:px-14'>
 			<Header />
 			<div className='grow'>
 				<MyEditor />

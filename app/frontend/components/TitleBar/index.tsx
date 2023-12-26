@@ -2,14 +2,14 @@ import { ShellButtons } from './ShellButtons'
 
 const TitleBar = () => {
 	return (
-		<div className='h-fit py-1 bg-base-300'>
+		<div className='bg-base-300 h-fit py-1'>
 			<div
 				data-tauri-drag-region
-				className='h-6 ml-1 pl-3 mr-1 pr-1 flex flex-row justify-between items-center'
+				className='ml-1 mr-1 flex h-6 flex-row items-center justify-between pl-3 pr-1'
 			>
-				<span className='flex items-center text-base-content/60 pointer-events-none'>
+				<span className='text-base-content/60 pointer-events-none flex items-center'>
 					Inner Ink
-					<span className='ml-2 badge badge-sm badge-secondary'>
+					<span className='badge badge-sm badge-secondary ml-2'>
 						Preview
 					</span>
 				</span>

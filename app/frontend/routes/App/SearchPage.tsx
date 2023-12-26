@@ -24,9 +24,9 @@ const SearchPage = () => {
 	}
 
 	return (
-		<div className='flex flex-col h-full px-8 py-4 overflow-auto md:px-10 lg:px-14 gutter-stable animate-in slide-in-from-right'>
-			<div className='flex flex-row justify-between h-fit'>
-				<h2 className='table text-2xl font-semibold rounded-none'>
+		<div className='gutter-stable animate-in slide-in-from-right flex h-full flex-col overflow-auto px-8 py-4 md:px-10 lg:px-14'>
+			<div className='flex h-fit flex-row justify-between'>
+				<h2 className='table rounded-none text-2xl font-semibold'>
 					Search
 				</h2>
 				<SearchForm onSubmit={handleSubmit} />
