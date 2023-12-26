@@ -1,3 +1,30 @@
+# [2.0.0](https://github.com/knownasnaffy/inner-ink/compare/v1.3.0...v2.0.0) (2023-12-26)
+
+
+### Bug Fixes
+
+* :ambulance: include initDB function in main script ([8f2a168](https://github.com/knownasnaffy/inner-ink/commit/8f2a1682185b85459100f5a94574a19f00e96ccf))
+* :bug: application window can now be resized from titlebar edges ([9d336ee](https://github.com/knownasnaffy/inner-ink/commit/9d336ee87d0b881e71bd842ec7e7aaf626c065ce))
+
+
+### Features
+
+* :sparkles: add toolbar to format editor text with options - `bold`, `italic`, `underline`, `strikethrough` ([fc589e3](https://github.com/knownasnaffy/inner-ink/commit/fc589e3e7b9b905a3c0f9f218f924d39fdee693f))
+* :sparkles: replace content textarea with rich text editor ([a3b2f98](https://github.com/knownasnaffy/inner-ink/commit/a3b2f98a8eaedbc2177d03ca4ac53dc538eb2b71)), closes [#36](https://github.com/knownasnaffy/inner-ink/issues/36)
+* :sparkles: update edited days based on textContent of editor instead of EditorState ([1eafc89](https://github.com/knownasnaffy/inner-ink/commit/1eafc89ddac15de392775f88dd1650a468ff9e41))
+* :sparkles: working reset entries button (be careful!) ([3ae59a6](https://github.com/knownasnaffy/inner-ink/commit/3ae59a6cf18bb9726781735ea1c8f7b9ba7e0570))
+
+
+### Performance Improvements
+
+* :zap: editedDates only change when the selectedDay is changed instead of title and content ([50e80d7](https://github.com/knownasnaffy/inner-ink/commit/50e80d709c5afd0daa6f04bc451824570e42d14c))
+
+
+### BREAKING CHANGES
+
+* entries table structure changed in database, delete old $appData/database.db file to upgrade.
+* textarea content is not compatible with editorState saved in the content field.
+
 # [1.3.0](https://github.com/knownasnaffy/inner-ink/compare/v1.2.0...v1.3.0) (2023-12-23)
 
 
