@@ -44,7 +44,7 @@ export default function TitleComponent() {
 				triggerTitleSave(selectedDay, event.target.value)
 			}}
 			placeholder='Have a title in mind?'
-			className='w-full max-w-full text-lg font-semibold border-b-2 rounded-b-none input border-base-100 bg-base-200'
+			className='input bg-base-200 placeholder:text-base-content/50 focus:placeholder:text-base-content/20 w-full max-w-full rounded-b-none text-lg font-semibold focus:border-none focus:outline-none'
 		/>
 	)
 }

@@ -112,3 +112,27 @@ body {
 		opacity: 1;
 	}
 }
+
+.editor-textItalic {
+	@apply italic;
+}
+
+.editor-textUnderline {
+	@apply underline;
+}
+
+.editor-textStrikethrough {
+	@apply line-through;
+}
+
+.editor-textUnderlineStrikethrough {
+	text-decoration-line: underline line-through;
+}
+
+code {
+	@apply bg-base-300 rounded-btn m-0 p-0;
+}
+
+code > .editor-code {
+	@apply m-0 p-0;
+}

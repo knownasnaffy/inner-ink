@@ -14,7 +14,7 @@ export default function MyWordCountPlugin() {
 	}, [editor, setContentWordCount])
 
 	return (
-		<div className='absolute z-20 bottom-[1px] right-[1px] flex flex-row text-base-content/60 bg-base-300 rounded-tl-btn rounded-br-btn text-sm py-1.5 px-2 gap-1.5'>
+		<div className='text-base-content/60 bg-base-300 rounded-tl-btn rounded-br-btn flex flex-row items-center gap-1.5 px-2 text-sm'>
 			<span>
 				{/* Combined word count of title and content */}
 				{contentWordCount + (title.match(/\S+/g) || []).length} words
