@@ -5,6 +5,7 @@ export type Entry = {
 	date: string
 	title: string
 	content: string
+	is_content_empty: 1 | 0
 }
 
 // export type User = {
@@ -20,7 +21,8 @@ export const initDB = async (): Promise<Database | undefined> => {
 			CREATE TABLE IF NOT EXISTS entries (
 				date DATE PRIMARY KEY,
 				title TEXT,
-				content TEXT
+				content TEXT,
+				is_content_empty BOOLEAN DEFAULT 1
 			)
 		`)
 		// await database.execute(`
@@ -100,6 +102,7 @@ export const setEntryTitle = async (date: Date, title: string) => {
 				[formattedDate, title],
 			))
 }
+
 export const setEntryContent = async (date: Date, content: string) => {
 	const database = await Database.load('sqlite:database.db')
 
@@ -118,6 +121,17 @@ export const setEntryContent = async (date: Date, content: string) => {
 				'INSERT INTO entries (date, content) VALUES ($1, $2)',
 				[formattedDate, content],
 			))
+}
+
+export const setIsEntryContentEmpty = async (date: Date, isEmpty: boolean) => {
+	const database = await Database.load('sqlite:database.db')
+
+	const is_content_empty = isEmpty ? 1 : 0
+	const formattedDate = format(date, 'dd-MM-yyyy')
+	await database.execute(
+		'UPDATE entries SET is_content_empty = $2 WHERE date = $1',
+		[formattedDate, is_content_empty],
+	)
 }
 
 export const getEntry = async (date: Date): Promise<Entry | undefined> => {
@@ -152,10 +166,13 @@ export const getEditedDates = async () => {
 
 	const entries: Entry[] = await database.select('SELECT * FROM entries')
 
+	console.log(entries)
 	const filteredDates: Date[] = entries
-		// .filter(
-		// 	(entry) => entry.title.trim() !== '' || entry.content.trim() !== '',
-		// )
+		.filter(
+			(entry) =>
+				(entry.title || '').trim() !== '' ||
+				entry.is_content_empty === 0,
+		)
 		.map((entry) => parse(entry.date, 'dd-MM-yyyy', new Date()))
 
 	return filteredDates

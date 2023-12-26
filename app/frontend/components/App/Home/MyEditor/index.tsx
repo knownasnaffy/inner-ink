@@ -9,10 +9,11 @@ import TitleComponent from './TitleComponent'
 import editorTheme from '../../../../config/editorTheme'
 import MyAutoRefreshPlugin from './MyAutoRefreshPlugin'
 import MyAutoSavePlugin from './MyAutoSavePlugin'
+import MyEmptyCheckPlugin from './MyEmptyCheckPlugin'
 
 const MyEditor = () => {
 	return (
-		<div className='flex flex-col h-full'>
+		<div className='flex h-full flex-col'>
 			<TitleComponent />
 			<div className='relative h-full'>
 				<LexicalComposer
@@ -24,10 +25,10 @@ const MyEditor = () => {
 				>
 					<RichTextPlugin
 						contentEditable={
-							<ContentEditable className='textarea bg-base-200 rounded-t-none box-border h-full' />
+							<ContentEditable className='textarea bg-base-200 box-border h-full rounded-t-none' />
 						}
 						placeholder={
-							<div className='absolute top-2.5 left-4 select-none pointer-events-none text-black/20'>
+							<div className='pointer-events-none absolute left-4 top-2.5 select-none text-black/20'>
 								Enter some text...
 							</div>
 						}
@@ -38,6 +39,7 @@ const MyEditor = () => {
 					<MyWordCountPlugin />
 					<MyAutoSavePlugin />
 					<MyAutoRefreshPlugin />
+					<MyEmptyCheckPlugin />
 				</LexicalComposer>
 			</div>
 		</div>
