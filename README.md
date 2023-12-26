@@ -2,6 +2,8 @@
   <img src='./src/backend/icons/128x128.png' align='middle' />
 
 # Inner Ink
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknownasnaffy%2Finner-ink.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fknownasnaffy%2Finner-ink?ref=badge_shield)
+
 
   <p><i>~ Write Your Story, One Entry at a Time</i></p>
 
@@ -9,6 +11,9 @@
   <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/knownasnaffy/inner-ink/main?style=for-the-badge&label=version">
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/knownasnaffy/inner-ink/ci.yml?style=for-the-badge&label=CI">
 </div>
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fknownasnaffy%2Finner-ink.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fknownasnaffy%2Finner-ink?ref=badge_large)
 
 ## Description
 
