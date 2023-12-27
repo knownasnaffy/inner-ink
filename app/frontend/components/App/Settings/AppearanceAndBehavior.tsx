@@ -77,8 +77,8 @@ const AppearanceAndBehavior = () => {
 						<div>
 							Language
 							<p className='text-base-content/50 text-sm'>
-								Select a display language fpr this app. Overides
-								default Windows interface language
+								Select a display language fpr this app.
+								Overrides default Windows interface language
 							</p>
 						</div>
 					</div>
