@@ -1,10 +1,10 @@
-import BooleanSettings from './BooleanSetting'
+// import BooleanSettings from './BooleanSetting'
 import packageJson from '../../../../../package.json'
 
 const Version = () => {
 	return (
 		<>
-			<h3 className='mb-2 mt-4 text-lg font-semibold'>Version</h3>
+			{/* <h3 className='mb-2 mt-4 text-lg font-semibold'>Version</h3> */}
 			{/* ### Update check */}
 			<div className='join join-vertical w-full'>
 				<div className='rounded-t-btn collapse-title bg-base-200 text-md join-item flex flex-row items-center justify-between pr-4'>
@@ -16,15 +16,20 @@ const Version = () => {
 							</p>
 						</div>
 					</div>
-					<button className='btn btn-primary btn-sm capitalize'>
+					<a
+						href='https://github.com/knownasnaffy/inner-ink/releases'
+						target='blank'
+						rel='noopener noreferrer'
+						className='btn btn-primary btn-sm capitalize'
+					>
 						Check for updates
-					</button>
+					</a>
 				</div>
 				{/* ### Download updates automatically */}
-				<BooleanSettings
+				{/* <BooleanSettings
 					title='Download updates automatically'
 					description='Except on metered connections'
-				/>
+				/> */}
 			</div>
 		</>
 	)

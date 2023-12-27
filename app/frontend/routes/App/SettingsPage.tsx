@@ -6,8 +6,8 @@ import Version from '../../components/App/Settings/Version'
 const SettingsPage = () => {
 	return (
 		<div className='gutter-stable animate-in slide-in-from-right h-full overflow-auto px-8 py-4 md:px-10 lg:px-14'>
-			<h2 className='table rounded-none text-2xl font-semibold'>
-				Settings
+			<h2 className='table rounded-none pb-2 text-2xl font-semibold'>
+				Preferences
 			</h2>
 			{/* ## Version */}
 			<Version />
