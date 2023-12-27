@@ -19,18 +19,14 @@ const CustomCaption = (properties: CaptionProps) => {
 					onClick={() => previousMonth && goToMonth(previousMonth)}
 				>
 					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
-						viewBox='0 0 24 24'
-						strokeWidth={2.5}
+						width='24'
+						height='24'
+						fill='currentColor'
 						stroke='currentColor'
-						className='h-6 w-6'
+						viewBox='0 0 24 24'
+						xmlns='http://www.w3.org/2000/svg'
 					>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							d='M15.75 19.5L8.25 12l7.5-7.5'
-						/>
+						<path d='M15.53 4.22a.75.75 0 0 1 0 1.06L8.81 12l6.72 6.72a.75.75 0 1 1-1.06 1.06l-7.25-7.25a.75.75 0 0 1 0-1.06l7.25-7.25a.75.75 0 0 1 1.06 0Z' />
 					</svg>
 				</button>
 				<button
@@ -39,18 +35,14 @@ const CustomCaption = (properties: CaptionProps) => {
 					onClick={() => nextMonth && goToMonth(nextMonth)}
 				>
 					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
-						viewBox='0 0 24 24'
-						strokeWidth={2.5}
+						width='24'
+						height='24'
+						fill='currentColor'
 						stroke='currentColor'
-						className='h-6 w-6'
+						viewBox='0 0 24 24'
+						xmlns='http://www.w3.org/2000/svg'
 					>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							d='M8.25 4.5l7.5 7.5-7.5 7.5'
-						/>
+						<path d='M8.47 4.22a.75.75 0 0 0 0 1.06L15.19 12l-6.72 6.72a.75.75 0 1 0 1.06 1.06l7.25-7.25a.75.75 0 0 0 0-1.06L9.53 4.22a.75.75 0 0 0-1.06 0Z' />
 					</svg>
 				</button>
 				<button
@@ -61,18 +53,14 @@ const CustomCaption = (properties: CaptionProps) => {
 					}}
 				>
 					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
-						viewBox='0 0 24 24'
-						strokeWidth={2.5}
+						width='24'
+						height='24'
+						fill='currentColor'
 						stroke='currentColor'
-						className='h-6 w-6'
+						viewBox='0 0 24 24'
+						xmlns='http://www.w3.org/2000/svg'
 					>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							d='M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5'
-						/>
+						<path d='M2.75 4.5a.75.75 0 0 1 .75.75v13a.75.75 0 0 1-1.5 0v-13a.75.75 0 0 1 .75-.75Zm18.5 0a.75.75 0 0 1 .75.75v.867a.75.75 0 0 1-1.5 0V5.25a.75.75 0 0 1 .75-.75Zm0 3.467a.75.75 0 0 1 .75.75v1.733a.75.75 0 0 1-1.5 0V8.717a.75.75 0 0 1 .75-.75Zm0 4.333a.75.75 0 0 1 .75.75v1.733a.75.75 0 0 1-1.5 0V13.05a.75.75 0 0 1 .75-.75Zm0 4.333a.75.75 0 0 1 .75.75v.867a.75.75 0 0 1-1.5 0v-.867a.75.75 0 0 1 .75-.75Zm-2.47-4.353a.75.75 0 0 0 0-1.06l-5-5a.75.75 0 1 0-1.06 1.06L16.44 11H5.75a.75.75 0 0 0 0 1.5h10.69l-3.72 3.72a.75.75 0 1 0 1.06 1.06l5-5Z' />
 					</svg>
 				</button>
 			</div>

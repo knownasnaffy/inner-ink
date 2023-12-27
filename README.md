@@ -45,7 +45,7 @@ We appreciate your interest in making Inner Ink better!
 ## Resources Used
 
 -   Logo icon by: [Icons8](https://icons8.com/)
--   Icons by: [Heroicons](https://heroicons.com/)
+-   Icon set: [Fluent Icons](https://fluenticons.co/)
 -   UI library: [DaisyUI](https://daisyui.com/)
 -   Backend framework: [Tauri](https://tauri.app/)
 -   Other dependencies: [`package.json`](./package.json), [`app/package.json`](./app/package.json), [`cargo.toml`](./src/backend/Cargo.toml)

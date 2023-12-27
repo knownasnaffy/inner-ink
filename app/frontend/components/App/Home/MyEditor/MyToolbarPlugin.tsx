@@ -293,7 +293,7 @@ const MyToolbarPlugin = () => {
 		)
 	}, [updateToolbar, editor])
 	return (
-		<div className='bg-base-300 rounded-tr-btn rounded-bl-btn flex flex-row gap-0.5 p-0.5 pr-1 pt-1 text-sm'>
+		<div className='bg-base-300 rounded-tr-btn rounded-bl-btn flex flex-row gap-0.5 p-1 text-sm'>
 			<button
 				className={clsx(
 					'btn btn-ghost btn-square btn-sm font-extrabold',
@@ -304,40 +304,64 @@ const MyToolbarPlugin = () => {
 					editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'bold')
 				}}
 			>
-				<span className='-translate-y-0.5'>B</span>
+				<svg
+					viewBox='0 0 24 24'
+					xmlns='http://www.w3.org/2000/svg'
+					className='h-4 w-4 fill-current stroke-current stroke-[0.5]'
+				>
+					<path d='M6.935 4.44A1.5 1.5 0 0 1 7.996 4h4.383C15.017 4 17 6.182 17 8.625a4.63 4.63 0 0 1-.865 2.682c1.077.827 1.866 2.12 1.866 3.813C18 18.232 15.3 20 13.12 20H8a1.5 1.5 0 0 1-1.5-1.5l-.004-13c0-.397.158-.779.44-1.06ZM9.5 10.25h2.88c.903 0 1.62-.76 1.62-1.625S13.281 7 12.38 7H9.498l.002 3.25Zm0 3V17h3.62c.874 0 1.88-.754 1.88-1.88 0-1.13-.974-1.87-1.88-1.87H9.5Z' />
+				</svg>
 			</button>
 			<button
 				className={clsx(
-					'btn btn-ghost btn-square btn-sm font-serif italic',
+					'btn btn-ghost btn-square btn-sm',
 					isItalic ? 'btn-active' : '',
 				)}
 				onClick={() => {
 					editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'italic')
 				}}
 			>
-				I
+				<svg
+					viewBox='0 0 24 24'
+					xmlns='http://www.w3.org/2000/svg'
+					className='h-4 w-4 fill-current stroke-current stroke-[0.5]'
+				>
+					<path d='M9.75 4h8.504a.75.75 0 0 1 .102 1.493l-.102.006h-3.197L10.037 18.5h4.213a.75.75 0 0 1 .742.648l.007.102a.75.75 0 0 1-.648.743L14.25 20h-9.5a.747.747 0 0 1-.746-.75c0-.38.28-.694.645-.743l.101-.007h3.685l.021-.065L13.45 5.499h-3.7a.75.75 0 0 1-.742-.648L9 4.75a.75.75 0 0 1 .648-.743L9.751 4h8.503-8.503Z' />
+				</svg>
 			</button>
 			<button
 				className={clsx(
-					'btn btn-ghost btn-square btn-sm font-serif underline',
+					'btn btn-ghost btn-square btn-sm',
 					isUnderline ? 'btn-active' : '',
 				)}
 				onClick={() => {
 					editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'underline')
 				}}
 			>
-				U
+				<svg
+					viewBox='0 0 24 24'
+					xmlns='http://www.w3.org/2000/svg'
+					className='h-4 w-4 fill-current stroke-current stroke-[0.5]'
+				>
+					<path d='M6.75 19h10.5a.75.75 0 0 1 .102 1.493l-.102.007H6.75a.75.75 0 0 1-.102-1.493L6.75 19h10.5-10.5Zm10.5-15a.75.75 0 0 1 .743.648L18 4.75v6c0 4.394-2.063 6.75-6.003 6.75-3.855 0-5.91-2.255-5.994-6.466L6 10.75v-6a.75.75 0 0 1 1.493-.102l.007.102v6C7.496 14.358 8.933 16 11.997 16c2.985 0 4.428-1.56 4.5-4.976l.003-.274v-6a.75.75 0 0 1 .75-.75Z' />
+				</svg>
 			</button>
 			<button
 				className={clsx(
-					'btn btn-ghost btn-square btn-sm line-through',
+					'btn btn-ghost btn-square btn-sm',
 					isStrikethrough ? 'btn-active' : '',
 				)}
 				onClick={() => {
 					editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'strikethrough')
 				}}
 			>
-				<span className='-translate-y-0.5'>S</span>
+				<svg
+					viewBox='0 0 24 24'
+					xmlns='http://www.w3.org/2000/svg'
+					className='h-4 w-4 fill-current stroke-current stroke-[0.5]'
+				>
+					<path d='M4.75 12h14.5a.75.75 0 0 1 .102 1.493l-.101.007h-2.975c.88.813 1.336 1.793 1.336 2.935 0 2.825-3.232 4.64-6.754 4.23-2.235-.26-3.809-1.155-4.635-2.702a.75.75 0 0 1 1.323-.707c.57 1.068 1.702 1.712 3.485 1.92 2.743.318 5.081-.995 5.081-2.741 0-1.172-.805-2.127-2.565-2.886l-.116-.049H4.75a.75.75 0 0 1-.743-.648L4 12.75a.75.75 0 0 1 .648-.743L4.75 12h14.5-14.5Zm1.511-3.877c.152-2.83 2.822-4.468 6.324-4.061 2.188.254 3.863 1.053 4.982 2.409a.75.75 0 1 1-1.157.955c-.852-1.033-2.17-1.662-3.999-1.874-2.717-.316-4.65.804-4.65 2.571 0 .772.234 1.348.83 1.982l.128.132c.094.096.197.195.25.24l.031.02H7.08l-.024-.038c-.143-.206-.856-1.195-.795-2.336Z' />
+				</svg>
 			</button>
 			{/* <button
 				className={clsx(
@@ -348,20 +372,7 @@ const MyToolbarPlugin = () => {
 					editor.dispatchCommand(FORMAT_TEXT_COMMAND, 'code')
 				}}
 			>
-				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
-					viewBox='0 0 24 24'
-					strokeWidth={2}
-					stroke='currentColor'
-					className='w-4 h-4'
-				>
-					<path
-						strokeLinecap='round'
-						strokeLinejoin='round'
-						d='M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5'
-					/>
-				</svg>
+				<svg width="24" height="24" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m8.066 18.943 6.5-14.5a.75.75 0 0 1 1.404.518l-.036.096-6.5 14.5a.75.75 0 0 1-1.404-.518l.036-.096 6.5-14.5-6.5 14.5ZM2.22 11.47l4.25-4.25a.75.75 0 0 1 1.133.976l-.073.085L3.81 12l3.72 3.719a.75.75 0 0 1-.976 1.133l-.084-.073-4.25-4.25a.75.75 0 0 1-.073-.976l.073-.084 4.25-4.25-4.25 4.25Zm14.25-4.25a.75.75 0 0 1 .976-.073l.084.073 4.25 4.25a.75.75 0 0 1 .073.976l-.073.085-4.25 4.25a.75.75 0 0 1-1.133-.977l.073-.084L20.19 12l-3.72-3.72a.75.75 0 0 1 0-1.06Z" fill="#212121"/></svg>
 			</button> */}
 		</div>
 	)

@@ -43,18 +43,11 @@ export const ShellButtons = () => {
 				onClick={minimize}
 			>
 				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
 					viewBox='0 0 24 24'
-					strokeWidth={1.5}
-					stroke='currentColor'
-					className='h-6 w-6'
+					xmlns='http://www.w3.org/2000/svg'
+					className='h-5 w-5 fill-current'
 				>
-					<path
-						strokeLinecap='round'
-						strokeLinejoin='round'
-						d='M19.5 12h-15'
-					/>
+					<path d='M3.755 12.5h16.492a.75.75 0 0 0 0-1.5H3.755a.75.75 0 0 0 0 1.5Z' />
 				</svg>
 			</button>
 			<button
@@ -63,33 +56,19 @@ export const ShellButtons = () => {
 			>
 				{isWindowMaximized ? (
 					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
 						viewBox='0 0 24 24'
-						strokeWidth={1.5}
-						stroke='currentColor'
-						className='h-6 w-6'
+						xmlns='http://www.w3.org/2000/svg'
+						className='h-5 w-5 fill-current'
 					>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							d='M16.5 8.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v8.25A2.25 2.25 0 006 16.5h2.25m8.25-8.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-7.5A2.25 2.25 0 018.25 18v-1.5m8.25-8.25h-6a2.25 2.25 0 00-2.25 2.25v6'
-						/>
+						<path d='M7.518 5H6.009a3.25 3.25 0 0 1 3.24-3h8.001A4.75 4.75 0 0 1 22 6.75v8a3.25 3.25 0 0 1-3 3.24v-1.508a1.75 1.75 0 0 0 1.5-1.732v-8a3.25 3.25 0 0 0-3.25-3.25h-8A1.75 1.75 0 0 0 7.518 5ZM5.25 6A3.25 3.25 0 0 0 2 9.25v9.5A3.25 3.25 0 0 0 5.25 22h9.5A3.25 3.25 0 0 0 18 18.75v-9.5A3.25 3.25 0 0 0 14.75 6h-9.5ZM3.5 9.25c0-.966.784-1.75 1.75-1.75h9.5c.967 0 1.75.784 1.75 1.75v9.5a1.75 1.75 0 0 1-1.75 1.75h-9.5a1.75 1.75 0 0 1-1.75-1.75v-9.5Z' />
 					</svg>
 				) : (
 					<svg
-						xmlns='http://www.w3.org/2000/svg'
-						fill='none'
 						viewBox='0 0 24 24'
-						strokeWidth={1.5}
-						stroke='currentColor'
-						className='h-6 w-6'
+						xmlns='http://www.w3.org/2000/svg'
+						className='h-5 w-5 fill-current'
 					>
-						<path
-							strokeLinecap='round'
-							strokeLinejoin='round'
-							d='M5.25 7.5A2.25 2.25 0 017.5 5.25h9a2.25 2.25 0 012.25 2.25v9a2.25 2.25 0 01-2.25 2.25h-9a2.25 2.25 0 01-2.25-2.25v-9z'
-						/>
+						<path d='M5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75A2.75 2.75 0 0 1 5.75 3Zm0 1.5c-.69 0-1.25.56-1.25 1.25v12.5c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25H5.75Z' />
 					</svg>
 				)}
 			</button>
@@ -98,18 +77,11 @@ export const ShellButtons = () => {
 				onClick={closeWindow}
 			>
 				<svg
-					xmlns='http://www.w3.org/2000/svg'
-					fill='none'
 					viewBox='0 0 24 24'
-					strokeWidth={1.5}
-					stroke='currentColor'
-					className='h-6 w-6'
+					xmlns='http://www.w3.org/2000/svg'
+					className='h-5 w-5 fill-current'
 				>
-					<path
-						strokeLinecap='round'
-						strokeLinejoin='round'
-						d='M6 18L18 6M6 6l12 12'
-					/>
+					<path d='m4.397 4.554.073-.084a.75.75 0 0 1 .976-.073l.084.073L12 10.939l6.47-6.47a.75.75 0 1 1 1.06 1.061L13.061 12l6.47 6.47a.75.75 0 0 1 .072.976l-.073.084a.75.75 0 0 1-.976.073l-.084-.073L12 13.061l-6.47 6.47a.75.75 0 0 1-1.06-1.061L10.939 12l-6.47-6.47a.75.75 0 0 1-.072-.976l.073-.084-.073.084Z' />
 				</svg>
 			</button>
 		</div>
