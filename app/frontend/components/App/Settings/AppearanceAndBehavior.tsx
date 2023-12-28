@@ -1,7 +1,31 @@
+import {
+	enable as enableAS,
+	isEnabled,
+	disable as disableAS,
+} from 'tauri-plugin-autostart-api'
 import BooleanSettings from './BooleanSetting'
 import { ThemeList } from './ThemeList'
+import { ChangeEventHandler, useLayoutEffect, useState } from 'react'
 
 const AppearanceAndBehavior = () => {
+	const [autoStart, setAutoStart] = useState<boolean>()
+	useLayoutEffect(() => {
+		const fetchSettings = async () => {
+			const isASEnabled = await isEnabled()
+			setAutoStart(isASEnabled)
+		}
+
+		fetchSettings()
+	})
+
+	const handleASChange: ChangeEventHandler<HTMLInputElement> = async (
+		event,
+	) => {
+		const checked = event.target.checked
+		await (checked ? enableAS() : disableAS())
+		setAutoStart(checked)
+	}
+
 	return (
 		<>
 			<h3 className='mb-2 mt-4 text-lg font-semibold'>
@@ -42,6 +66,8 @@ const AppearanceAndBehavior = () => {
 					}
 					title='Run at startup'
 					description='Start when windows starts'
+					checked={autoStart}
+					onChange={handleASChange}
 				/>
 				{/* ### Language */}
 				<div className='border-base-100 rounded-btn collapse-title bg-base-200 text-md join-item flex flex-row items-center justify-between gap-4 border-t-2 pr-4'>
