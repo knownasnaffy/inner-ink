@@ -15,6 +15,7 @@ import SettingsPage from './routes/App/SettingsPage'
 // import RegisterPage from './routes/Auth/RegisterPage'
 import { useEffect } from 'react'
 import { getSettings } from './utils/settings'
+import ShortcutsPage from './routes/App/ShortcutsPage'
 
 const router = createBrowserRouter([
 	{
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
 					{
 						path: 'settings',
 						element: <SettingsPage />,
+					},
+					{
+						path: 'keyboard-shortcuts',
+						element: <ShortcutsPage />,
 					},
 				],
 			},
