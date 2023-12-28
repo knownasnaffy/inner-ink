@@ -26,7 +26,7 @@ const MyEditor = () => {
 				>
 					<RichTextPlugin
 						contentEditable={
-							<ContentEditable className='textarea bg-base-200 peer box-border h-full max-h-[calc(100vh-208px)] overflow-auto rounded-none pb-4 focus:border-none focus:outline-none' />
+							<ContentEditable className='textarea bg-base-200 peer box-border h-full max-h-[calc(100vh-224px)] overflow-auto rounded-none pb-4 focus:border-none focus:outline-none' />
 						}
 						placeholder={
 							<div className='text-base-content/50 peer-focus:text-base-content/20 pointer-events-none absolute left-4 top-2.5 select-none'>
@@ -40,7 +40,7 @@ const MyEditor = () => {
 					<MyAutoSavePlugin />
 					<MyAutoRefreshPlugin />
 					<MyEmptyCheckPlugin />
-					<div className='bg-base-200 rounded-b-btn flex justify-between'>
+					<div className='bg-base-200 rounded-b-btn flex justify-between pt-2'>
 						<MyToolbarPlugin />
 						<MyWordCountPlugin />
 					</div>
