@@ -20,6 +20,9 @@ fn main() {
             Ok(())
         })
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
+            let window = app.get_window("main").unwrap();
+            window.unminimize().unwrap();
+            window.set_focus().unwrap();
             println!("{}, {argv:?}, {cwd}", app.package_info().name);
 
             app.emit_all("single-instance", Payload { args: argv, cwd })
