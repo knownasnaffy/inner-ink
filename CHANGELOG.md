@@ -1,3 +1,21 @@
+# [2.1.0](https://github.com/knownasnaffy/inner-ink/compare/v2.0.0...v2.1.0) (2023-12-29)
+
+
+### Bug Fixes
+
+* :lipstick: add gap between border and last line of scrollable editor ([5ff8b08](https://github.com/knownasnaffy/inner-ink/commit/5ff8b08c60fe352fbd6384847f0bb0bee18c6d51))
+* :pencil2: typo in settings page ([b56be3d](https://github.com/knownasnaffy/inner-ink/commit/b56be3d49a8d11c6b790183b34f39c53c51a9312))
+
+
+### Features
+
+* :children_crossing: focus main window after preventing another window from opening ([c40bb72](https://github.com/knownasnaffy/inner-ink/commit/c40bb7235e04f1ab8b71a9a7286bee915e41a4be))
+* :lipstick: update all icons with fluent icon set ([8b867ae](https://github.com/knownasnaffy/inner-ink/commit/8b867ae2416807c5648c75062950dc50ce88824a))
+* :sparkles: add dynamic version from package.json in settings page ([b5e2396](https://github.com/knownasnaffy/inner-ink/commit/b5e2396a0ce1abedec0828f3f5d8d0d8cf9e1d30))
+* :sparkles: add github releases page link in settings and comment out update download skeleton section ([5e1f333](https://github.com/knownasnaffy/inner-ink/commit/5e1f3335811447b40888b4bab87a1cb7ec82ae8c))
+* :sparkles: add keyboard shortcuts page ([a75531d](https://github.com/knownasnaffy/inner-ink/commit/a75531dbff976450618abd1d3bc2e9f16fe40114))
+* :sparkles: functioning `autostart app on boot` setting ([7d4f78f](https://github.com/knownasnaffy/inner-ink/commit/7d4f78f7ae4822de14da12d03ff05565a71661a1))
+
 # [2.0.0](https://github.com/knownasnaffy/inner-ink/compare/v1.3.0...v2.0.0) (2023-12-26)
 
 
