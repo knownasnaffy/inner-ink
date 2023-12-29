@@ -13,11 +13,14 @@ export type Entry = {
 // 	password: string
 // }
 
-export const initDB = async (): Promise<Database | undefined> => {
-	const database = await Database.load('sqlite:database.db')
+const appDataPath = import.meta.env.MODE === 'development' ? 'dev-' : ''
 
+export const initDB = async () => {
 	try {
-		await database.execute(`
+		const entriesDatabase = await Database.load(
+			'sqlite:' + appDataPath + 'database.db',
+		)
+		await entriesDatabase.execute(`
 			CREATE TABLE IF NOT EXISTS entries (
 				date DATE PRIMARY KEY,
 				title TEXT,
@@ -32,7 +35,6 @@ export const initDB = async (): Promise<Database | undefined> => {
 		// 	)
 		// `)
 		console.log('Database initialised')
-		return database
 	} catch (error) {
 		console.error(
 			'An exception occurred while initialising database',
@@ -84,7 +86,9 @@ export const initDB = async (): Promise<Database | undefined> => {
 // }
 
 export const setEntryTitle = async (date: Date, title: string) => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	const formattedDate = format(date, 'dd-MM-yyyy')
 	const existingRecord: Entry[] = await database.select(
@@ -104,7 +108,9 @@ export const setEntryTitle = async (date: Date, title: string) => {
 }
 
 export const setEntryContent = async (date: Date, content: string) => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	const formattedDate = format(date, 'dd-MM-yyyy')
 	const existingRecord: Entry[] = await database.select(
@@ -124,7 +130,9 @@ export const setEntryContent = async (date: Date, content: string) => {
 }
 
 export const setIsEntryContentEmpty = async (date: Date, isEmpty: boolean) => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	const is_content_empty = isEmpty ? 1 : 0
 	const formattedDate = format(date, 'dd-MM-yyyy')
@@ -135,7 +143,9 @@ export const setIsEntryContentEmpty = async (date: Date, isEmpty: boolean) => {
 }
 
 export const getEntry = async (date: Date): Promise<Entry | undefined> => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	const formattedDate = format(date, 'dd-MM-yyyy')
 	const existingRecord: Entry[] = await database.select(
@@ -147,7 +157,9 @@ export const getEntry = async (date: Date): Promise<Entry | undefined> => {
 }
 
 export const searchEntries = async (query: string) => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	const entries: Entry[] = await database.select(
 		`SELECT * FROM entries WHERE content LIKE '%${query}%'`,
@@ -156,13 +168,17 @@ export const searchEntries = async (query: string) => {
 }
 
 export const clearEntries = async () => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	await database.execute('DELETE FROM entries')
 }
 
 export const getEditedDates = async () => {
-	const database = await Database.load('sqlite:database.db')
+	const database = await Database.load(
+		'sqlite:' + appDataPath + 'database.db',
+	)
 
 	const entries: Entry[] = await database.select('SELECT * FROM entries')
 
