@@ -43,7 +43,7 @@ export default function TitleComponent() {
 				// save if inactive for 700 ms
 				triggerTitleSave(selectedDay, event.target.value)
 			}}
-			placeholder='Have a title in mind?'
+			placeholder='A Memorable Caption'
 			className='input bg-base-200 placeholder:text-base-content/50 focus:placeholder:text-base-content/20 w-full max-w-full rounded-b-none text-lg font-semibold focus:border-none focus:outline-none'
 		/>
 	)

@@ -30,7 +30,7 @@ const MyEditor = () => {
 						}
 						placeholder={
 							<div className='text-base-content/50 peer-focus:text-base-content/20 pointer-events-none absolute left-4 top-2.5 select-none'>
-								How was your day?
+								Empty Canvas for Your Stories
 							</div>
 						}
 						ErrorBoundary={LexicalErrorBoundary}
