@@ -10,6 +10,8 @@
   <img alt="GitHub Workflow Status (with event)" src="https://img.shields.io/github/actions/workflow/status/knownasnaffy/inner-ink/ci.yml?style=for-the-badge&label=CI">
 </div>
 
+![Screenshot 2023-12-30 195326](https://github.com/knownasnaffy/inner-ink/assets/64461700/ea6c548d-766c-4113-9c7d-1960cc01f9f2)
+![Screenshot 2023-12-30 195732](https://github.com/knownasnaffy/inner-ink/assets/64461700/34411354-5304-4b12-b255-de9397ac1420)
 ## Description
 
 Welcome to an elegantly designed diary app, meticulously crafted to serve as your virtual testament to life's moments. Indulge in the art of journaling reimagined—where your thoughts, dreams, and experiences seamlessly converge. Imbued with an array of customization options, our app invites you to infuse your personal touch, transforming each entry into an artistic rendition of your narrative.
