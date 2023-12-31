@@ -1,5 +1,8 @@
-import dateStore, { WeekStart } from '../../../hooks/dateStore'
+import dateStore from '../../../hooks/dateStore'
 import BooleanSettings from './BooleanSetting'
+import { Fragment } from 'react'
+import { Listbox, Transition } from '@headlessui/react'
+import clsx from 'clsx'
 
 const DatePicker = () => {
 	const disableFutureEntry = dateStore((state) => state.disableFutureEntry)
@@ -8,7 +11,15 @@ const DatePicker = () => {
 	)
 	const setWeekStart = dateStore((state) => state.setWeekStart)
 	const weekStart = dateStore((state) => state.weekStart)
-
+	const days = [
+		'Sunday',
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+	]
 	return (
 		<>
 			<h3 className='mb-2 mt-4 text-lg font-semibold'>Date Picker</h3>
@@ -43,31 +54,66 @@ const DatePicker = () => {
 						</svg>
 						<div>First day of the week</div>
 					</div>
-					<select
-						className='select select-bordered select-sm w-full max-w-fit'
+					<Listbox
 						value={weekStart}
-						onChange={(event) =>
-							setWeekStart(
-								Number(event.target.value) as WeekStart,
-							)
-						}
+						onChange={(value) => setWeekStart(value)}
+						as='div'
+						className='relative w-fit'
 					>
-						{[
-							'Sunday',
-							'Monday',
-							'Tuesday',
-							'Wednesday',
-							'Thursday',
-							'Friday',
-							'Saturday',
-						].map((day, index) => {
-							return (
-								<option key={index} value={index}>
-									{day}
-								</option>
-							)
-						})}
-					</select>
+						<Listbox.Button className='select select-bordered select-sm w-full max-w-sm'>
+							{days[weekStart]}
+						</Listbox.Button>
+						<Transition
+							as={Fragment}
+							leave='transition ease-in duration-100'
+							leaveFrom='opacity-100'
+							leaveTo='opacity-0'
+						>
+							<Listbox.Options
+								className='menu menu-sm rounded-btn bg-base-100 absolute bottom-9 right-0 z-20 shadow-md focus:outline-none'
+								as='div'
+							>
+								{[
+									'Sunday',
+									'Monday',
+									'Tuesday',
+									'Wednesday',
+									'Thursday',
+									'Friday',
+									'Saturday',
+								].map((day, index) => (
+									<li key={index}>
+										<Listbox.Option
+											className={({ active, selected }) =>
+												clsx(
+													'transition-none',
+													active && 'active',
+													selected && 'font-bold',
+												)
+											}
+											value={index}
+											as='a'
+										>
+											{day}
+											{/* {({ selected }) => (
+												<>
+													<span
+													className={`block truncate ${
+														selected
+														? 'font-medium'
+														: 'font-normal'
+													}`}
+													>
+													{day}
+													</span>
+													</>
+												)} */}
+										</Listbox.Option>
+									</li>
+								))}
+							</Listbox.Options>
+						</Transition>
+					</Listbox>
 				</div>
 			</div>
 		</>
