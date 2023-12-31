@@ -14,7 +14,6 @@ const DatePicker = () => {
 			<h3 className='mb-2 mt-4 text-lg font-semibold'>Date Picker</h3>
 			<div className='join join-vertical w-full'>
 				{/* ### Disable Entry in Future */}
-				{/* TODO: Change disableFutureEntry to enableFutureEntry everywhere */}
 				<BooleanSettings
 					icon={
 						<svg
