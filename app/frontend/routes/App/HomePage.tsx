@@ -1,4 +1,3 @@
-import DateSelector from '../../components/App/Home/DateSelector'
 import MyEditor from '../../components/App/Home/MyEditor'
 import Header from '../../components/App/Home/Header'
 
@@ -9,7 +8,6 @@ const HomePage = () => {
 			<div className='grow'>
 				<MyEditor />
 			</div>
-			<DateSelector />
 		</div>
 	)
 }
