@@ -181,8 +181,6 @@ export const getEditedDates = async () => {
 	)
 
 	const entries: Entry[] = await database.select('SELECT * FROM entries')
-
-	console.log(entries)
 	const filteredDates: Date[] = entries
 		.filter(
 			(entry) =>
