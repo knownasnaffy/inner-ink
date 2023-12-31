@@ -3,7 +3,7 @@ import { ContentEditable } from '@lexical/react/LexicalContentEditable'
 import { HistoryPlugin } from '@lexical/react/LexicalHistoryPlugin'
 import { RichTextPlugin } from '@lexical/react/LexicalRichTextPlugin'
 import LexicalErrorBoundary from '@lexical/react/LexicalErrorBoundary'
-import MyAutoFocusPlugin from './MyAutoFocusPlugin'
+// import MyAutoFocusPlugin from './MyAutoFocusPlugin'
 import MyWordCountPlugin from './MyWordCountPlugin'
 import TitleComponent from './TitleComponent'
 import editorTheme from '../../../../config/editorTheme'
@@ -36,7 +36,7 @@ const MyEditor = () => {
 						ErrorBoundary={LexicalErrorBoundary}
 					/>
 					<HistoryPlugin />
-					<MyAutoFocusPlugin />
+					{/* <MyAutoFocusPlugin /> */}
 					<MyAutoSavePlugin />
 					<MyAutoRefreshPlugin />
 					<MyEmptyCheckPlugin />

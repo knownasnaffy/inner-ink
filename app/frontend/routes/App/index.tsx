@@ -1,5 +1,12 @@
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import Sidebar from '../../components/App/Sidebar'
+import { getShortcut, globalShortcutOptions } from '../../config/shortcuts'
+import { useHotkeys } from 'react-hotkeys-hook'
+import sidebarItems from '../../config/sidebar'
+
+function findUrl(name: string) {
+	return sidebarItems.find((item) => item.name === name)?.path
+}
 
 const AppLayout = () => {
 	// const [newUser, setNewUser] = useState<boolean>()
@@ -24,6 +31,37 @@ const AppLayout = () => {
 	// 		<Navigate to='/auth/register' replace />
 	// 	)
 	// }
+
+	const navigate = useNavigate()
+
+	useHotkeys(
+		getShortcut('to-home')!,
+		() => {
+			navigate(findUrl('home')!)
+		},
+		globalShortcutOptions,
+	)
+	useHotkeys(
+		getShortcut('to-search')!,
+		() => {
+			navigate(findUrl('search')!)
+		},
+		globalShortcutOptions,
+	)
+	useHotkeys(
+		getShortcut('to-shortcuts')!,
+		() => {
+			navigate(findUrl('keyboard shortcuts')!)
+		},
+		globalShortcutOptions,
+	)
+	useHotkeys(
+		getShortcut('to-settings')!,
+		() => {
+			navigate(findUrl('settings')!)
+		},
+		globalShortcutOptions,
+	)
 
 	return (
 		<div className='bg-base-300 flex h-[calc(100vh-32px)]'>
