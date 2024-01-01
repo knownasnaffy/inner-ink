@@ -9,7 +9,6 @@ export default function MyEmptyCheckPlugin() {
 	useEffect(() => {
 		return editor.registerTextContentListener((textContent) => {
 			setIsEntryContentEmpty(selectedDay, textContent.trim() === '')
-			console.log(selectedDay, textContent.trim() === '')
 		})
 	}, [editor, selectedDay])
 
