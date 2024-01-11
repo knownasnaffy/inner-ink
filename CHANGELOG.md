@@ -1,3 +1,22 @@
+# [2.2.0](https://github.com/knownasnaffy/inner-ink/compare/v2.1.0...v2.2.0) (2024-01-11)
+
+
+### Bug Fixes
+
+* :fire: remove functionless components ([aa86b8f](https://github.com/knownasnaffy/inner-ink/commit/aa86b8fbeec5fbbfeef380716f9fd2d795c39aeb))
+* :fire: remove functionless language options from settings page ([cb0305f](https://github.com/knownasnaffy/inner-ink/commit/cb0305fd9dbaf4dd5f46a7b632c2e693cb5a3ab1))
+* :mute: remove unnecessary logs ([7596aec](https://github.com/knownasnaffy/inner-ink/commit/7596aec9192244e63227e875043302d748ca377e))
+* **deps:** update dependency date-fns to v3 ([316b4b8](https://github.com/knownasnaffy/inner-ink/commit/316b4b8918232ce056a4288aa890ea763ceddbb3))
+
+
+### Features
+
+* :lipstick: add custom select options component using headlessui for weekStart ([40be839](https://github.com/knownasnaffy/inner-ink/commit/40be8398365dae0d3a152e4292cd2b45a495d02d))
+* :lipstick: change scrollbar track color to transparent ([0f7cfe2](https://github.com/knownasnaffy/inner-ink/commit/0f7cfe23f6318fe276cb73a090b2d59c37fc6e4d))
+* :lipstick: remove top padding in sidebar ([fdf96da](https://github.com/knownasnaffy/inner-ink/commit/fdf96da4427330b4703da8599afca9b914ed26ff))
+* :wheelchair: add global shortcuts to jump between pages ([53348d9](https://github.com/knownasnaffy/inner-ink/commit/53348d9058a123ac4269624f723a4b48036c875b))
+* 💖 good looking placeholder texts for inputs ([cb27c32](https://github.com/knownasnaffy/inner-ink/commit/cb27c324e2db8f8dee4b7715fe497aad8e9b42d8))
+
 # [2.1.0](https://github.com/knownasnaffy/inner-ink/compare/v2.0.0...v2.1.0) (2023-12-29)
 
 
