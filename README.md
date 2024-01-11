@@ -51,7 +51,7 @@ We appreciate your interest in making Inner Ink better!
 -   Icon set: [Fluent Icons](https://fluenticons.co/)
 -   UI library: [DaisyUI](https://daisyui.com/)
 -   Backend framework: [Tauri](https://tauri.app/)
--   Other dependencies: [`package.json`](./package.json), [`app/package.json`](./app/package.json), [`cargo.toml`](./src/backend/Cargo.toml)
+-   Other dependencies: [`package.json`](./package.json), [`app/package.json`](./app/package.json), [`cargo.toml`](./app/backend/Cargo.toml)
 
 ## License
 
