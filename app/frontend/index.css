@@ -47,7 +47,7 @@ body {
 
 /* Scrollbar Track */
 ::-webkit-scrollbar-track {
-	@apply bg-base-100;
+	@apply bg-transparent;
 }
 
 /* Scrollbar Handle */
