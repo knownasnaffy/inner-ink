@@ -22,7 +22,7 @@ const Sidebar = () => {
 	// const navigate = useNavigate()
 	const { topNavButtons, bottomNavButtons } = getNavButtons()
 	return (
-		<div className='bg-base-300 flex w-fit grow-0 flex-col justify-between px-1.5 py-2'>
+		<div className='bg-base-300 flex w-fit grow-0 flex-col justify-between px-1.5 pb-2'>
 			{/* Upper Buttons */}
 			<div className='flex flex-col gap-2'>
 				{topNavButtons.map(
