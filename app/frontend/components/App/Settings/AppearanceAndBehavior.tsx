@@ -91,9 +91,9 @@ const AppearanceAndBehavior = () => {
 						className='select select-bordered select-sm w-full max-w-fit'
 						defaultValue='System Default'
 					>
-						<option>System Default</option>
-						<option>English</option>
-						<option>French</option>
+						{/* <option>System Default</option> */}
+						<option>English (Default)</option>
+						{/* <option>French</option> */}
 					</select>
 				</div>
 			</div>
