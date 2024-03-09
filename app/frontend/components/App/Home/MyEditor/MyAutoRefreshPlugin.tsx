@@ -17,7 +17,9 @@ export default function MyAutoRefreshPlugin() {
 				if (entry?.content) {
 					// Load editorState if data exists
 					const editorState = editor.parseEditorState(entry.content)
-					editor.setEditorState(editorState)
+					// Passing `null` as a selection value to prevent focusing the editor
+					// eslint-disable-next-line unicorn/no-null
+					editor.setEditorState(editorState.clone(null))
 				} else {
 					// Create empty editorState and pass it to editor
 					const editorState =
