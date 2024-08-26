@@ -20,6 +20,33 @@ function App() {
 			<div className='flex flex-col w-full h-screen'>
 				<Menubar className='rounded-none w-full p-0.5 h-10'>
 					<MenubarMenu>
+						<MenubarTrigger className='px-2.5 py-1 font-bold'>Inner Ink</MenubarTrigger>
+						<MenubarContent sideOffset={2} alignOffset={0}>
+							<MenubarItem>
+								New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+							</MenubarItem>
+							<MenubarItem>
+								New Window <MenubarShortcut>⌘N</MenubarShortcut>
+							</MenubarItem>
+							<MenubarItem disabled>
+								New Incognito Window
+							</MenubarItem>
+							<MenubarSeparator />
+							<MenubarSub>
+								<MenubarSubTrigger>Share</MenubarSubTrigger>
+								<MenubarSubContent>
+									<MenubarItem>Email link</MenubarItem>
+									<MenubarItem>Messages</MenubarItem>
+									<MenubarItem>Notes</MenubarItem>
+								</MenubarSubContent>
+							</MenubarSub>
+							<MenubarSeparator />
+							<MenubarItem>
+								Print... <MenubarShortcut>⌘P</MenubarShortcut>
+							</MenubarItem>
+						</MenubarContent>
+					</MenubarMenu>
+					<MenubarMenu>
 						<MenubarTrigger className='px-2.5 py-1'>File</MenubarTrigger>
 						<MenubarContent sideOffset={2} alignOffset={0}>
 							<MenubarItem>
