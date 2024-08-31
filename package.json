@@ -2,6 +2,6 @@
 	"name": "inner-ink",
 	"private": true,
 	"workspaces": [
-    "desktop"
-  ]
+		"desktop"
+	]
 }
