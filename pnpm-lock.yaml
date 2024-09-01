@@ -14,13 +14,13 @@ importers:
     devDependencies:
       '@semantic-release/changelog':
         specifier: ^6.0.3
-        version: 6.0.3(semantic-release@23.0.0)
+        version: 6.0.3(semantic-release@23.0.0(typescript@5.3.3))
       '@semantic-release/git':
         specifier: ^10.0.1
-        version: 10.0.1(semantic-release@23.0.0)
+        version: 10.0.1(semantic-release@23.0.0(typescript@5.3.3))
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.14.0
-        version: 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.56.0)(typescript@5.3.3)
+        version: 6.14.0(@typescript-eslint/parser@6.14.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser':
         specifier: ^6.14.0
         version: 6.14.0(eslint@8.56.0)(typescript@5.3.3)
@@ -68,7 +68,7 @@ importers:
     dependencies:
       '@headlessui/react':
         specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+        version: 1.7.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@lexical/code':
         specifier: ^0.12.5
         version: 0.12.5(lexical@0.12.5)
@@ -80,10 +80,10 @@ importers:
         version: 0.12.5(lexical@0.12.5)
       '@lexical/react':
         specifier: ^0.12.5
-        version: 0.12.5(lexical@0.12.5)(react-dom@18.2.0)(react@18.2.0)(yjs@13.6.10)
+        version: 0.12.5(lexical@0.12.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(yjs@13.6.10)
       '@lexical/rich-text':
         specifier: ^0.12.5
-        version: 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
+        version: 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/selection':
         specifier: ^0.12.5
         version: 0.12.5(lexical@0.12.5)
@@ -119,16 +119,16 @@ importers:
         version: 18.2.0(react@18.2.0)
       react-hotkeys-hook:
         specifier: ^4.4.1
-        version: 4.4.1(react-dom@18.2.0)(react@18.2.0)
+        version: 4.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-router-dom:
         specifier: ^6.20.1
-        version: 6.20.1(react-dom@18.2.0)(react@18.2.0)
+        version: 6.20.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       tauri-plugin-autostart-api:
         specifier: github:tauri-apps/tauri-plugin-autostart#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c
       tauri-plugin-sql-api:
         specifier: github:tauri-apps/tauri-plugin-sql#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6
       yup:
         specifier: ^1.3.3
         version: 1.3.3
@@ -138,7 +138,7 @@ importers:
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@3.3.6)
+        version: 0.5.15(tailwindcss@3.3.6)
       '@tauri-apps/cli':
         specifier: ^1.5.8
         version: 1.5.8
@@ -156,7 +156,7 @@ importers:
         version: 18.2.17
       '@vitejs/plugin-react':
         specifier: ^4.0.3
-        version: 4.2.1(vite@5.0.10)
+        version: 4.2.1(vite@5.0.10(@types/node@20.10.4))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.16(postcss@8.4.32)
@@ -168,7 +168,7 @@ importers:
         version: 8.4.32
       postcss-load-config:
         specifier: ^5.0.2
-        version: 5.0.2(postcss@8.4.32)
+        version: 5.0.2(jiti@1.21.0)(postcss@8.4.32)
       tailwindcss:
         specifier: ^3.3.6
         version: 3.3.6
@@ -464,6 +464,7 @@ packages:
   '@humanwhocodes/config-array@0.11.13':
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -471,6 +472,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.1':
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@jridgewell/gen-mapping@0.3.3':
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -787,17 +789,17 @@ packages:
     resolution: {integrity: sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==}
     engines: {node: '>=18'}
 
-  '@tailwindcss/typography@0.5.10':
-    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
+  '@tailwindcss/typography@0.5.15':
+    resolution: {integrity: sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==}
     peerDependencies:
-      tailwindcss: '>=3.0.0 || insiders'
+      tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20'
 
   '@tauri-apps/api@1.5.2':
     resolution: {integrity: sha512-tZK3XJiIUnUdHN7rGqA+j57dvT3/7z2bEiPfWmO3uAymv2JMBJrfGwbyDWLjGue37UVhh0gLYSkA9wV+/bASwA==}
     engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
 
-  '@tauri-apps/api@1.5.3':
-    resolution: {integrity: sha512-zxnDjHHKjOsrIzZm6nO5Xapb/BxqUq1tc7cGkFXsFkGTsSWgCPH1D8mm0XS9weJY2OaR73I3k3S+b7eSzJDfqA==}
+  '@tauri-apps/api@1.6.0':
+    resolution: {integrity: sha512-rqI++FWClU5I2UBp4HXFvl+sBWkdigBkxnpJDQUWttNyG7IZP4FwQGhTNL5EOw0vI8i6eSAJ5frLqO7n7jbJdg==}
     engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
 
   '@tauri-apps/cli-darwin-arm64@1.5.8':
@@ -1672,9 +1674,11 @@ packages:
 
   glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
@@ -1815,6 +1819,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -2062,8 +2067,8 @@ packages:
   lexical@0.12.5:
     resolution: {integrity: sha512-ZMqisIxNe+JBqaUa1Qmz7ghpvnmARHxgYz+F0rcXRtSPZtgEL8OT2c9xk8CJ4ccVpf+qRQlONzCEIZfQQHd/RA==}
 
-  lib0@0.2.88:
-    resolution: {integrity: sha512-KyroiEvCeZcZEMx5Ys+b4u4eEBbA1ch7XUaBhYpwa/nPMrzTjUhI4RfcytmQfYoTBPcdyx+FX6WFNIoNuJzJfQ==}
+  lib0@0.2.97:
+    resolution: {integrity: sha512-Q4d1ekgvufi9FiHkkL46AhecfNjznSL9MRNoJRQ76gBHS9OqU2ArfQK0FvBpuxgWeJeNI0LVgAYMIpsGeX4gYg==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -2797,6 +2802,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup@4.6.1:
@@ -3020,14 +3026,12 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf}
-    name: tauri-plugin-autostart-api
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c}
     version: 0.0.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39}
-    name: tauri-plugin-sql-api
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6}
     version: 0.0.0
 
   temp-dir@3.0.0:
@@ -3554,7 +3558,7 @@ snapshots:
 
   '@eslint/js@8.56.0': {}
 
-  '@headlessui/react@1.7.17(react-dom@18.2.0)(react@18.2.0)':
+  '@headlessui/react@1.7.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       client-only: 0.0.1
       react: 18.2.0
@@ -3638,12 +3642,12 @@ snapshots:
       '@lexical/utils': 0.12.5(lexical@0.12.5)
       lexical: 0.12.5
 
-  '@lexical/markdown@0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(lexical@0.12.5)':
+  '@lexical/markdown@0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(lexical@0.12.5)':
     dependencies:
       '@lexical/code': 0.12.5(lexical@0.12.5)
       '@lexical/link': 0.12.5(lexical@0.12.5)
       '@lexical/list': 0.12.5(lexical@0.12.5)
-      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
+      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/text': 0.12.5(lexical@0.12.5)
       '@lexical/utils': 0.12.5(lexical@0.12.5)
       lexical: 0.12.5
@@ -3659,14 +3663,14 @@ snapshots:
     dependencies:
       lexical: 0.12.5
 
-  '@lexical/plain-text@0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)':
+  '@lexical/plain-text@0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)':
     dependencies:
       '@lexical/clipboard': 0.12.5(lexical@0.12.5)
       '@lexical/selection': 0.12.5(lexical@0.12.5)
       '@lexical/utils': 0.12.5(lexical@0.12.5)
       lexical: 0.12.5
 
-  '@lexical/react@0.12.5(lexical@0.12.5)(react-dom@18.2.0)(react@18.2.0)(yjs@13.6.10)':
+  '@lexical/react@0.12.5(lexical@0.12.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(yjs@13.6.10)':
     dependencies:
       '@lexical/clipboard': 0.12.5(lexical@0.12.5)
       '@lexical/code': 0.12.5(lexical@0.12.5)
@@ -3676,10 +3680,10 @@ snapshots:
       '@lexical/link': 0.12.5(lexical@0.12.5)
       '@lexical/list': 0.12.5(lexical@0.12.5)
       '@lexical/mark': 0.12.5(lexical@0.12.5)
-      '@lexical/markdown': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(lexical@0.12.5)
+      '@lexical/markdown': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/overflow': 0.12.5(lexical@0.12.5)
-      '@lexical/plain-text': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
-      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
+      '@lexical/plain-text': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
+      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/selection': 0.12.5(lexical@0.12.5)
       '@lexical/table': 0.12.5(lexical@0.12.5)
       '@lexical/text': 0.12.5(lexical@0.12.5)
@@ -3692,7 +3696,7 @@ snapshots:
     transitivePeerDependencies:
       - yjs
 
-  '@lexical/rich-text@0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)':
+  '@lexical/rich-text@0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)':
     dependencies:
       '@lexical/clipboard': 0.12.5(lexical@0.12.5)
       '@lexical/selection': 0.12.5(lexical@0.12.5)
@@ -3847,7 +3851,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.6.1':
     optional: true
 
-  '@semantic-release/changelog@6.0.3(semantic-release@23.0.0)':
+  '@semantic-release/changelog@6.0.3(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -3855,7 +3859,7 @@ snapshots:
       lodash: 4.17.21
       semantic-release: 23.0.0(typescript@5.3.3)
 
-  '@semantic-release/commit-analyzer@11.1.0(semantic-release@23.0.0)':
+  '@semantic-release/commit-analyzer@11.1.0(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       conventional-changelog-angular: 7.0.0
       conventional-commits-filter: 4.0.0
@@ -3872,7 +3876,7 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/git@10.0.1(semantic-release@23.0.0)':
+  '@semantic-release/git@10.0.1(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -3886,7 +3890,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@9.2.5(semantic-release@23.0.0)':
+  '@semantic-release/github@9.2.5(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@octokit/core': 5.0.2
       '@octokit/plugin-paginate-rest': 9.1.5(@octokit/core@5.0.2)
@@ -3908,7 +3912,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/npm@11.0.2(semantic-release@23.0.0)':
+  '@semantic-release/npm@11.0.2(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
@@ -3925,7 +3929,7 @@ snapshots:
       semver: 7.5.4
       tempy: 3.1.0
 
-  '@semantic-release/release-notes-generator@12.1.0(semantic-release@23.0.0)':
+  '@semantic-release/release-notes-generator@12.1.0(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       conventional-changelog-angular: 7.0.0
       conventional-changelog-writer: 7.0.1
@@ -3945,7 +3949,7 @@ snapshots:
 
   '@sindresorhus/merge-streams@1.0.0': {}
 
-  '@tailwindcss/typography@0.5.10(tailwindcss@3.3.6)':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.3.6)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
@@ -3955,7 +3959,7 @@ snapshots:
 
   '@tauri-apps/api@1.5.2': {}
 
-  '@tauri-apps/api@1.5.3': {}
+  '@tauri-apps/api@1.6.0': {}
 
   '@tauri-apps/cli-darwin-arm64@1.5.8':
     optional: true
@@ -4052,7 +4056,7 @@ snapshots:
 
   '@types/semver@7.5.6': {}
 
-  '@typescript-eslint/eslint-plugin@6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.56.0)(typescript@5.3.3)':
+  '@typescript-eslint/eslint-plugin@6.14.0(@typescript-eslint/parser@6.14.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
       '@typescript-eslint/parser': 6.14.0(eslint@8.56.0)(typescript@5.3.3)
@@ -4067,6 +4071,7 @@ snapshots:
       natural-compare: 1.4.0
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4079,6 +4084,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.14.0
       debug: 4.3.4
       eslint: 8.56.0
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4095,6 +4101,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.56.0
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4110,6 +4117,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4135,7 +4143,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.2.1(vite@5.0.10)':
+  '@vitejs/plugin-react@4.2.1(vite@5.0.10(@types/node@20.10.4))':
     dependencies:
       '@babel/core': 7.23.5
       '@babel/plugin-transform-react-jsx-self': 7.23.3(@babel/core@7.23.5)
@@ -4474,6 +4482,7 @@ snapshots:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
+    optionalDependencies:
       typescript: 5.3.3
 
   cross-spawn@7.0.3:
@@ -5379,7 +5388,7 @@ snapshots:
 
   lexical@0.12.5: {}
 
-  lib0@0.2.88:
+  lib0@0.2.97:
     dependencies:
       isomorphic.js: 0.2.5
 
@@ -5740,14 +5749,17 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.32):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.32
       yaml: 2.3.4
+    optionalDependencies:
+      postcss: 8.4.32
 
-  postcss-load-config@5.0.2(postcss@8.4.32):
+  postcss-load-config@5.0.2(jiti@1.21.0)(postcss@8.4.32):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.32
       yaml: 2.3.4
+    optionalDependencies:
+      jiti: 1.21.0
+      postcss: 8.4.32
 
   postcss-nested@6.0.1(postcss@8.4.32):
     dependencies:
@@ -5827,7 +5839,7 @@ snapshots:
 
   react-fast-compare@2.0.4: {}
 
-  react-hotkeys-hook@4.4.1(react-dom@18.2.0)(react@18.2.0):
+  react-hotkeys-hook@4.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5836,7 +5848,7 @@ snapshots:
 
   react-refresh@0.14.0: {}
 
-  react-router-dom@6.20.1(react-dom@18.2.0)(react@18.2.0):
+  react-router-dom@6.20.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@remix-run/router': 1.13.1
       react: 18.2.0
@@ -6000,11 +6012,11 @@ snapshots:
 
   semantic-release@23.0.0(typescript@5.3.3):
     dependencies:
-      '@semantic-release/commit-analyzer': 11.1.0(semantic-release@23.0.0)
+      '@semantic-release/commit-analyzer': 11.1.0(semantic-release@23.0.0(typescript@5.3.3))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 9.2.5(semantic-release@23.0.0)
-      '@semantic-release/npm': 11.0.2(semantic-release@23.0.0)
-      '@semantic-release/release-notes-generator': 12.1.0(semantic-release@23.0.0)
+      '@semantic-release/github': 9.2.5(semantic-release@23.0.0(typescript@5.3.3))
+      '@semantic-release/npm': 11.0.2(semantic-release@23.0.0(typescript@5.3.3))
+      '@semantic-release/release-notes-generator': 12.1.0(semantic-release@23.0.0(typescript@5.3.3))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.3.3)
       debug: 4.3.4
@@ -6257,13 +6269,13 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf:
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c:
     dependencies:
-      '@tauri-apps/api': 1.5.3
+      '@tauri-apps/api': 1.6.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39:
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6:
     dependencies:
-      '@tauri-apps/api': 1.5.3
+      '@tauri-apps/api': 1.6.0
 
   temp-dir@3.0.0: {}
 
@@ -6411,11 +6423,11 @@ snapshots:
 
   vite@5.0.10(@types/node@20.10.4):
     dependencies:
-      '@types/node': 20.10.4
       esbuild: 0.19.8
       postcss: 8.4.32
       rollup: 4.6.1
     optionalDependencies:
+      '@types/node': 20.10.4
       fsevents: 2.3.3
 
   which-boxed-primitive@1.0.2:
@@ -6500,7 +6512,7 @@ snapshots:
 
   yjs@13.6.10:
     dependencies:
-      lib0: 0.2.88
+      lib0: 0.2.97
 
   yocto-queue@0.1.0: {}
 
@@ -6513,6 +6525,7 @@ snapshots:
 
   zustand@4.4.7(@types/react@18.2.45)(react@18.2.0):
     dependencies:
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    optionalDependencies:
       '@types/react': 18.2.45
       react: 18.2.0
-      use-sync-external-store: 1.2.0(react@18.2.0)
