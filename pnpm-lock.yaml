@@ -14,13 +14,13 @@ importers:
     devDependencies:
       '@semantic-release/changelog':
         specifier: ^6.0.3
-        version: 6.0.3(semantic-release@23.0.0)
+        version: 6.0.3(semantic-release@23.0.0(typescript@5.3.3))
       '@semantic-release/git':
         specifier: ^10.0.1
-        version: 10.0.1(semantic-release@23.0.0)
+        version: 10.0.1(semantic-release@23.0.0(typescript@5.3.3))
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.14.0
-        version: 6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.56.0)(typescript@5.3.3)
+        version: 6.14.0(@typescript-eslint/parser@6.14.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3)
       '@typescript-eslint/parser':
         specifier: ^6.14.0
         version: 6.14.0(eslint@8.56.0)(typescript@5.3.3)
@@ -68,7 +68,7 @@ importers:
     dependencies:
       '@headlessui/react':
         specifier: ^1.7.17
-        version: 1.7.17(react-dom@18.2.0)(react@18.2.0)
+        version: 1.7.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@lexical/code':
         specifier: ^0.12.5
         version: 0.12.5(lexical@0.12.5)
@@ -80,10 +80,10 @@ importers:
         version: 0.12.5(lexical@0.12.5)
       '@lexical/react':
         specifier: ^0.12.5
-        version: 0.12.5(lexical@0.12.5)(react-dom@18.2.0)(react@18.2.0)(yjs@13.6.10)
+        version: 0.12.5(lexical@0.12.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(yjs@13.6.10)
       '@lexical/rich-text':
         specifier: ^0.12.5
-        version: 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
+        version: 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/selection':
         specifier: ^0.12.5
         version: 0.12.5(lexical@0.12.5)
@@ -119,16 +119,16 @@ importers:
         version: 18.2.0(react@18.2.0)
       react-hotkeys-hook:
         specifier: ^4.4.1
-        version: 4.4.1(react-dom@18.2.0)(react@18.2.0)
+        version: 4.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-router-dom:
         specifier: ^6.20.1
-        version: 6.20.1(react-dom@18.2.0)(react@18.2.0)
+        version: 6.20.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       tauri-plugin-autostart-api:
         specifier: github:tauri-apps/tauri-plugin-autostart#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c
       tauri-plugin-sql-api:
         specifier: github:tauri-apps/tauri-plugin-sql#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6
       yup:
         specifier: ^1.3.3
         version: 1.3.3
@@ -156,10 +156,10 @@ importers:
         version: 18.2.17
       '@vitejs/plugin-react':
         specifier: ^4.0.3
-        version: 4.2.1(vite@5.0.10)
+        version: 4.2.1(vite@5.0.10(@types/node@20.10.4))
       autoprefixer:
         specifier: ^10.4.16
-        version: 10.4.16(postcss@8.4.32)
+        version: 10.4.20(postcss@8.4.32)
       daisyui:
         specifier: ^4.4.20
         version: 4.4.20(postcss@8.4.32)
@@ -168,7 +168,7 @@ importers:
         version: 8.4.32
       postcss-load-config:
         specifier: ^5.0.2
-        version: 5.0.2(postcss@8.4.32)
+        version: 5.0.2(jiti@1.21.0)(postcss@8.4.32)
       tailwindcss:
         specifier: ^3.3.6
         version: 3.3.6
@@ -464,6 +464,7 @@ packages:
   '@humanwhocodes/config-array@0.11.13':
     resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
     engines: {node: '>=10.10.0'}
+    deprecated: Use @eslint/config-array instead
 
   '@humanwhocodes/module-importer@1.0.1':
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -471,6 +472,7 @@ packages:
 
   '@humanwhocodes/object-schema@2.0.1':
     resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
+    deprecated: Use @eslint/object-schema instead
 
   '@jridgewell/gen-mapping@0.3.3':
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
@@ -796,8 +798,8 @@ packages:
     resolution: {integrity: sha512-tZK3XJiIUnUdHN7rGqA+j57dvT3/7z2bEiPfWmO3uAymv2JMBJrfGwbyDWLjGue37UVhh0gLYSkA9wV+/bASwA==}
     engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
 
-  '@tauri-apps/api@1.5.3':
-    resolution: {integrity: sha512-zxnDjHHKjOsrIzZm6nO5Xapb/BxqUq1tc7cGkFXsFkGTsSWgCPH1D8mm0XS9weJY2OaR73I3k3S+b7eSzJDfqA==}
+  '@tauri-apps/api@1.6.0':
+    resolution: {integrity: sha512-rqI++FWClU5I2UBp4HXFvl+sBWkdigBkxnpJDQUWttNyG7IZP4FwQGhTNL5EOw0vI8i6eSAJ5frLqO7n7jbJdg==}
     engines: {node: '>= 14.6.0', npm: '>= 6.6.0', yarn: '>= 1.19.1'}
 
   '@tauri-apps/cli-darwin-arm64@1.5.8':
@@ -1088,8 +1090,8 @@ packages:
   asynciterator.prototype@1.0.0:
     resolution: {integrity: sha512-wwHYEIS0Q80f5mosx3L/dfG5t5rjEa9Ft51GTaNt862EnpyGHpgz2RkZvLPp1oF5TnAiTohkEKVEu8pQPJI7Vg==}
 
-  autoprefixer@10.4.16:
-    resolution: {integrity: sha512-7vd3UC6xKp0HLfua5IjZlcXvGAGy7cBAXTg2lyQ/8WpNhd6SiZ8Be+xm3FyBSYJx5GKcpRCzBh7RH4/0dnY+uQ==}
+  autoprefixer@10.4.20:
+    resolution: {integrity: sha512-XY25y5xSv/wEoqzDyXXME4AFfkZI0P23z6Fs3YgymDnKJkCGOnkL0iTxCa85UTqaSgfcqyf3UA6+c7wUvx/16g==}
     engines: {node: ^10 || ^12 || >=14}
     hasBin: true
     peerDependencies:
@@ -1134,6 +1136,11 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  browserslist@4.23.3:
+    resolution: {integrity: sha512-btwCFJVjI4YWDNfau8RhZ+B1Q/VLoUITrm3RlP6y1tYGWIOa+InuYiRGXUBXo8nA1qKmHMyLB/iVQg5TT4eFoA==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
   builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
@@ -1151,6 +1158,9 @@ packages:
 
   caniuse-lite@1.0.30001570:
     resolution: {integrity: sha512-+3e0ASu4sw1SWaoCtvPeyXp+5PsjigkSt8OXZbF9StH5pQWbxEjLAZE3n8Aup5udop1uRiKA7a4utUk/uoSpUw==}
+
+  caniuse-lite@1.0.30001655:
+    resolution: {integrity: sha512-jRGVy3iSGO5Uutn2owlb5gR6qsGngTw9ZTb4ali9f3glshcNmJ2noam4Mo9zia5P9Dk3jNNydy7vQjuE5dQmfg==}
 
   cardinal@2.1.1:
     resolution: {integrity: sha512-JSr5eOgoEymtYHBjNWyjrMqet9Am2miJhlfKNdqLp6zoeAh0KN5dRAcxlecj5mAJrmQomgiOBj35xHLrFjqBpw==}
@@ -1384,6 +1394,9 @@ packages:
   electron-to-chromium@1.4.615:
     resolution: {integrity: sha512-/bKPPcgZVUziECqDc+0HkT87+0zhaWSZHNXqF8FLd2lQcptpmUFwoCSWjCdOng9Gdq+afKArPdEg/0ZW461Eng==}
 
+  electron-to-chromium@1.5.13:
+    resolution: {integrity: sha512-lbBcvtIJ4J6sS4tb5TLp1b4LyfCdMkwStzXPyAgVgTRAsep4bvrAGaBOP7ZJtQMNJpSQ9SqG4brWOroNaQtm7Q==}
+
   emoji-regex@10.3.0:
     resolution: {integrity: sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==}
 
@@ -1432,6 +1445,10 @@ packages:
 
   escalade@3.1.1:
     resolution: {integrity: sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==}
+    engines: {node: '>=6'}
+
+  escalade@3.2.0:
+    resolution: {integrity: sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==}
     engines: {node: '>=6'}
 
   escape-string-regexp@1.0.5:
@@ -1672,9 +1689,11 @@ packages:
 
   glob@7.1.6:
     resolution: {integrity: sha512-LwaxwyZ72Lk7vZINtNNrywX0ZuLyStrdDtabefZKAY5ZGJhVtgdznluResxNmPitE0SAO+O26sWTHeKSI2wMBA==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   globals@11.12.0:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
@@ -1815,6 +1834,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
@@ -2062,8 +2082,8 @@ packages:
   lexical@0.12.5:
     resolution: {integrity: sha512-ZMqisIxNe+JBqaUa1Qmz7ghpvnmARHxgYz+F0rcXRtSPZtgEL8OT2c9xk8CJ4ccVpf+qRQlONzCEIZfQQHd/RA==}
 
-  lib0@0.2.88:
-    resolution: {integrity: sha512-KyroiEvCeZcZEMx5Ys+b4u4eEBbA1ch7XUaBhYpwa/nPMrzTjUhI4RfcytmQfYoTBPcdyx+FX6WFNIoNuJzJfQ==}
+  lib0@0.2.97:
+    resolution: {integrity: sha512-Q4d1ekgvufi9FiHkkL46AhecfNjznSL9MRNoJRQ76gBHS9OqU2ArfQK0FvBpuxgWeJeNI0LVgAYMIpsGeX4gYg==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -2224,6 +2244,9 @@ packages:
 
   node-releases@2.0.14:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
+
+  node-releases@2.0.18:
+    resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
 
   normalize-package-data@2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
@@ -2483,6 +2506,9 @@ packages:
 
   picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
+
+  picocolors@1.0.1:
+    resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
   picomatch@2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
@@ -2797,6 +2823,7 @@ packages:
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup@4.6.1:
@@ -3020,14 +3047,12 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf}
-    name: tauri-plugin-autostart-api
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c}
     version: 0.0.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39}
-    name: tauri-plugin-sql-api
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6}
     version: 0.0.0
 
   temp-dir@3.0.0:
@@ -3175,6 +3200,12 @@ packages:
 
   update-browserslist-db@1.0.13:
     resolution: {integrity: sha512-xebP81SNcPuNpPP3uzeW1NYXxI3rxyJzF3pD6sH4jE7o/IX+WtSpwnVU+qIsDPyk0d3hmFQ7mjqc6AtV604hbg==}
+    hasBin: true
+    peerDependencies:
+      browserslist: '>= 4.21.0'
+
+  update-browserslist-db@1.1.0:
+    resolution: {integrity: sha512-EdRAaAyk2cUE1wOf2DkEhzxqOQvFOoRJFNS6NeyJ01Gp2beMRpBAINjM2iDXE3KCuKhwnvHIQCJm6ThL2Z+HzQ==}
     hasBin: true
     peerDependencies:
       browserslist: '>= 4.21.0'
@@ -3554,7 +3585,7 @@ snapshots:
 
   '@eslint/js@8.56.0': {}
 
-  '@headlessui/react@1.7.17(react-dom@18.2.0)(react@18.2.0)':
+  '@headlessui/react@1.7.17(react-dom@18.2.0(react@18.2.0))(react@18.2.0)':
     dependencies:
       client-only: 0.0.1
       react: 18.2.0
@@ -3638,12 +3669,12 @@ snapshots:
       '@lexical/utils': 0.12.5(lexical@0.12.5)
       lexical: 0.12.5
 
-  '@lexical/markdown@0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(lexical@0.12.5)':
+  '@lexical/markdown@0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(lexical@0.12.5)':
     dependencies:
       '@lexical/code': 0.12.5(lexical@0.12.5)
       '@lexical/link': 0.12.5(lexical@0.12.5)
       '@lexical/list': 0.12.5(lexical@0.12.5)
-      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
+      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/text': 0.12.5(lexical@0.12.5)
       '@lexical/utils': 0.12.5(lexical@0.12.5)
       lexical: 0.12.5
@@ -3659,14 +3690,14 @@ snapshots:
     dependencies:
       lexical: 0.12.5
 
-  '@lexical/plain-text@0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)':
+  '@lexical/plain-text@0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)':
     dependencies:
       '@lexical/clipboard': 0.12.5(lexical@0.12.5)
       '@lexical/selection': 0.12.5(lexical@0.12.5)
       '@lexical/utils': 0.12.5(lexical@0.12.5)
       lexical: 0.12.5
 
-  '@lexical/react@0.12.5(lexical@0.12.5)(react-dom@18.2.0)(react@18.2.0)(yjs@13.6.10)':
+  '@lexical/react@0.12.5(lexical@0.12.5)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(yjs@13.6.10)':
     dependencies:
       '@lexical/clipboard': 0.12.5(lexical@0.12.5)
       '@lexical/code': 0.12.5(lexical@0.12.5)
@@ -3676,10 +3707,10 @@ snapshots:
       '@lexical/link': 0.12.5(lexical@0.12.5)
       '@lexical/list': 0.12.5(lexical@0.12.5)
       '@lexical/mark': 0.12.5(lexical@0.12.5)
-      '@lexical/markdown': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(lexical@0.12.5)
+      '@lexical/markdown': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/overflow': 0.12.5(lexical@0.12.5)
-      '@lexical/plain-text': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
-      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)
+      '@lexical/plain-text': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
+      '@lexical/rich-text': 0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)
       '@lexical/selection': 0.12.5(lexical@0.12.5)
       '@lexical/table': 0.12.5(lexical@0.12.5)
       '@lexical/text': 0.12.5(lexical@0.12.5)
@@ -3692,7 +3723,7 @@ snapshots:
     transitivePeerDependencies:
       - yjs
 
-  '@lexical/rich-text@0.12.5(@lexical/clipboard@0.12.5)(@lexical/selection@0.12.5)(@lexical/utils@0.12.5)(lexical@0.12.5)':
+  '@lexical/rich-text@0.12.5(@lexical/clipboard@0.12.5(lexical@0.12.5))(@lexical/selection@0.12.5(lexical@0.12.5))(@lexical/utils@0.12.5(lexical@0.12.5))(lexical@0.12.5)':
     dependencies:
       '@lexical/clipboard': 0.12.5(lexical@0.12.5)
       '@lexical/selection': 0.12.5(lexical@0.12.5)
@@ -3847,7 +3878,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.6.1':
     optional: true
 
-  '@semantic-release/changelog@6.0.3(semantic-release@23.0.0)':
+  '@semantic-release/changelog@6.0.3(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -3855,7 +3886,7 @@ snapshots:
       lodash: 4.17.21
       semantic-release: 23.0.0(typescript@5.3.3)
 
-  '@semantic-release/commit-analyzer@11.1.0(semantic-release@23.0.0)':
+  '@semantic-release/commit-analyzer@11.1.0(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       conventional-changelog-angular: 7.0.0
       conventional-commits-filter: 4.0.0
@@ -3872,7 +3903,7 @@ snapshots:
 
   '@semantic-release/error@4.0.0': {}
 
-  '@semantic-release/git@10.0.1(semantic-release@23.0.0)':
+  '@semantic-release/git@10.0.1(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@semantic-release/error': 3.0.0
       aggregate-error: 3.1.0
@@ -3886,7 +3917,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/github@9.2.5(semantic-release@23.0.0)':
+  '@semantic-release/github@9.2.5(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@octokit/core': 5.0.2
       '@octokit/plugin-paginate-rest': 9.1.5(@octokit/core@5.0.2)
@@ -3908,7 +3939,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@semantic-release/npm@11.0.2(semantic-release@23.0.0)':
+  '@semantic-release/npm@11.0.2(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       '@semantic-release/error': 4.0.0
       aggregate-error: 5.0.0
@@ -3925,7 +3956,7 @@ snapshots:
       semver: 7.5.4
       tempy: 3.1.0
 
-  '@semantic-release/release-notes-generator@12.1.0(semantic-release@23.0.0)':
+  '@semantic-release/release-notes-generator@12.1.0(semantic-release@23.0.0(typescript@5.3.3))':
     dependencies:
       conventional-changelog-angular: 7.0.0
       conventional-changelog-writer: 7.0.1
@@ -3955,7 +3986,7 @@ snapshots:
 
   '@tauri-apps/api@1.5.2': {}
 
-  '@tauri-apps/api@1.5.3': {}
+  '@tauri-apps/api@1.6.0': {}
 
   '@tauri-apps/cli-darwin-arm64@1.5.8':
     optional: true
@@ -4052,7 +4083,7 @@ snapshots:
 
   '@types/semver@7.5.6': {}
 
-  '@typescript-eslint/eslint-plugin@6.14.0(@typescript-eslint/parser@6.14.0)(eslint@8.56.0)(typescript@5.3.3)':
+  '@typescript-eslint/eslint-plugin@6.14.0(@typescript-eslint/parser@6.14.0(eslint@8.56.0)(typescript@5.3.3))(eslint@8.56.0)(typescript@5.3.3)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
       '@typescript-eslint/parser': 6.14.0(eslint@8.56.0)(typescript@5.3.3)
@@ -4067,6 +4098,7 @@ snapshots:
       natural-compare: 1.4.0
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4079,6 +4111,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.14.0
       debug: 4.3.4
       eslint: 8.56.0
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4095,6 +4128,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.56.0
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4110,6 +4144,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.5.4
       ts-api-utils: 1.0.3(typescript@5.3.3)
+    optionalDependencies:
       typescript: 5.3.3
     transitivePeerDependencies:
       - supports-color
@@ -4135,7 +4170,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.2.1(vite@5.0.10)':
+  '@vitejs/plugin-react@4.2.1(vite@5.0.10(@types/node@20.10.4))':
     dependencies:
       '@babel/core': 7.23.5
       '@babel/plugin-transform-react-jsx-self': 7.23.3(@babel/core@7.23.5)
@@ -4277,13 +4312,13 @@ snapshots:
     dependencies:
       has-symbols: 1.0.3
 
-  autoprefixer@10.4.16(postcss@8.4.32):
+  autoprefixer@10.4.20(postcss@8.4.32):
     dependencies:
-      browserslist: 4.22.2
-      caniuse-lite: 1.0.30001570
+      browserslist: 4.23.3
+      caniuse-lite: 1.0.30001655
       fraction.js: 4.3.7
       normalize-range: 0.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
@@ -4321,6 +4356,13 @@ snapshots:
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.22.2)
 
+  browserslist@4.23.3:
+    dependencies:
+      caniuse-lite: 1.0.30001655
+      electron-to-chromium: 1.5.13
+      node-releases: 2.0.18
+      update-browserslist-db: 1.1.0(browserslist@4.23.3)
+
   builtin-modules@3.3.0: {}
 
   call-bind@1.0.5:
@@ -4334,6 +4376,8 @@ snapshots:
   camelcase-css@2.0.1: {}
 
   caniuse-lite@1.0.30001570: {}
+
+  caniuse-lite@1.0.30001655: {}
 
   cardinal@2.1.1:
     dependencies:
@@ -4474,6 +4518,7 @@ snapshots:
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       parse-json: 5.2.0
+    optionalDependencies:
       typescript: 5.3.3
 
   cross-spawn@7.0.3:
@@ -4561,6 +4606,8 @@ snapshots:
       readable-stream: 2.3.8
 
   electron-to-chromium@1.4.615: {}
+
+  electron-to-chromium@1.5.13: {}
 
   emoji-regex@10.3.0: {}
 
@@ -4682,6 +4729,8 @@ snapshots:
       '@esbuild/win32-x64': 0.19.8
 
   escalade@3.1.1: {}
+
+  escalade@3.2.0: {}
 
   escape-string-regexp@1.0.5: {}
 
@@ -5379,7 +5428,7 @@ snapshots:
 
   lexical@0.12.5: {}
 
-  lib0@0.2.88:
+  lib0@0.2.97:
     dependencies:
       isomorphic.js: 0.2.5
 
@@ -5534,6 +5583,8 @@ snapshots:
       skin-tone: 2.0.0
 
   node-releases@2.0.14: {}
+
+  node-releases@2.0.18: {}
 
   normalize-package-data@2.5.0:
     dependencies:
@@ -5708,6 +5759,8 @@ snapshots:
 
   picocolors@1.0.0: {}
 
+  picocolors@1.0.1: {}
+
   picomatch@2.3.1: {}
 
   pidtree@0.6.0: {}
@@ -5740,14 +5793,17 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.32):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.32
       yaml: 2.3.4
+    optionalDependencies:
+      postcss: 8.4.32
 
-  postcss-load-config@5.0.2(postcss@8.4.32):
+  postcss-load-config@5.0.2(jiti@1.21.0)(postcss@8.4.32):
     dependencies:
       lilconfig: 3.0.0
-      postcss: 8.4.32
       yaml: 2.3.4
+    optionalDependencies:
+      jiti: 1.21.0
+      postcss: 8.4.32
 
   postcss-nested@6.0.1(postcss@8.4.32):
     dependencies:
@@ -5827,7 +5883,7 @@ snapshots:
 
   react-fast-compare@2.0.4: {}
 
-  react-hotkeys-hook@4.4.1(react-dom@18.2.0)(react@18.2.0):
+  react-hotkeys-hook@4.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5836,7 +5892,7 @@ snapshots:
 
   react-refresh@0.14.0: {}
 
-  react-router-dom@6.20.1(react-dom@18.2.0)(react@18.2.0):
+  react-router-dom@6.20.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@remix-run/router': 1.13.1
       react: 18.2.0
@@ -6000,11 +6056,11 @@ snapshots:
 
   semantic-release@23.0.0(typescript@5.3.3):
     dependencies:
-      '@semantic-release/commit-analyzer': 11.1.0(semantic-release@23.0.0)
+      '@semantic-release/commit-analyzer': 11.1.0(semantic-release@23.0.0(typescript@5.3.3))
       '@semantic-release/error': 4.0.0
-      '@semantic-release/github': 9.2.5(semantic-release@23.0.0)
-      '@semantic-release/npm': 11.0.2(semantic-release@23.0.0)
-      '@semantic-release/release-notes-generator': 12.1.0(semantic-release@23.0.0)
+      '@semantic-release/github': 9.2.5(semantic-release@23.0.0(typescript@5.3.3))
+      '@semantic-release/npm': 11.0.2(semantic-release@23.0.0(typescript@5.3.3))
+      '@semantic-release/release-notes-generator': 12.1.0(semantic-release@23.0.0(typescript@5.3.3))
       aggregate-error: 5.0.0
       cosmiconfig: 9.0.0(typescript@5.3.3)
       debug: 4.3.4
@@ -6257,13 +6313,13 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a534e61e246e6d96ab938fcd3e644dcb74d5c0bf:
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/1e02acce1b4bb5ee461f7670012d7d105a13be4c:
     dependencies:
-      '@tauri-apps/api': 1.5.3
+      '@tauri-apps/api': 1.6.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/0ff47f365d6f331c78bc75ed90a2246e0d4a8b39:
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/7ae8847ab1f2252e8b6f0fe44af215ac40664fd6:
     dependencies:
-      '@tauri-apps/api': 1.5.3
+      '@tauri-apps/api': 1.6.0
 
   temp-dir@3.0.0: {}
 
@@ -6390,7 +6446,13 @@ snapshots:
     dependencies:
       browserslist: 4.22.2
       escalade: 3.1.1
-      picocolors: 1.0.0
+      picocolors: 1.0.1
+
+  update-browserslist-db@1.1.0(browserslist@4.23.3):
+    dependencies:
+      browserslist: 4.23.3
+      escalade: 3.2.0
+      picocolors: 1.0.1
 
   uri-js@4.4.1:
     dependencies:
@@ -6411,11 +6473,11 @@ snapshots:
 
   vite@5.0.10(@types/node@20.10.4):
     dependencies:
-      '@types/node': 20.10.4
       esbuild: 0.19.8
       postcss: 8.4.32
       rollup: 4.6.1
     optionalDependencies:
+      '@types/node': 20.10.4
       fsevents: 2.3.3
 
   which-boxed-primitive@1.0.2:
@@ -6500,7 +6562,7 @@ snapshots:
 
   yjs@13.6.10:
     dependencies:
-      lib0: 0.2.88
+      lib0: 0.2.97
 
   yocto-queue@0.1.0: {}
 
@@ -6513,6 +6575,7 @@ snapshots:
 
   zustand@4.4.7(@types/react@18.2.45)(react@18.2.0):
     dependencies:
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    optionalDependencies:
       '@types/react': 18.2.45
       react: 18.2.0
-      use-sync-external-store: 1.2.0(react@18.2.0)
