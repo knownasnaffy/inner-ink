@@ -12,7 +12,7 @@
 		"tauri": "tauri"
 	},
 	"dependencies": {
-		"@headlessui/react": "^1.7.17",
+		"@headlessui/react": "^2.0.0",
 		"@lexical/code": "^0.17.0",
 		"@lexical/link": "^0.17.0",
 		"@lexical/list": "^0.17.0",
