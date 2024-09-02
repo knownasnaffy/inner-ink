@@ -10,7 +10,7 @@
 		"format": "prettier . --write",
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"lint-staged": "lint-staged",
-		"prepare": "husky install",
+		"prepare": "husky",
 		"release": "semantic-release"
 	},
 	"dependencies": {
