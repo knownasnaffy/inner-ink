@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-module */
 import type { Config } from 'tailwindcss'
 import typography from '@tailwindcss/typography'
 import tailwindAnimate from 'tailwindcss-animate'
