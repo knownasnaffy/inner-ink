@@ -138,7 +138,7 @@ importers:
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@3.3.6)
+        version: 0.5.15(tailwindcss@3.3.6)
       '@tauri-apps/cli':
         specifier: ^1.5.8
         version: 1.5.8
@@ -789,10 +789,10 @@ packages:
     resolution: {integrity: sha512-rUV5WyJrJLoloD4NDN1V1+LDMDWOa4OTsT4yYJwQNpTU6FWxkxHpL7eu4w+DmiH8x/EAM1otkPE1+LaspIbplw==}
     engines: {node: '>=18'}
 
-  '@tailwindcss/typography@0.5.10':
-    resolution: {integrity: sha512-Pe8BuPJQJd3FfRnm6H0ulKIGoMEQS+Vq01R6M5aCrFB/ccR/shT+0kXLjouGC1gFLm9hopTFN+DMP0pfwRWzPw==}
+  '@tailwindcss/typography@0.5.15':
+    resolution: {integrity: sha512-AqhlCXl+8grUz8uqExv5OTtgpjuVIwFTSXTrh8y9/pw6q2ek7fJ+Y8ZEVw7EB2DCcuCOtEjf9w3+J3rzts01uA==}
     peerDependencies:
-      tailwindcss: '>=3.0.0 || insiders'
+      tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20'
 
   '@tauri-apps/api@1.5.2':
     resolution: {integrity: sha512-tZK3XJiIUnUdHN7rGqA+j57dvT3/7z2bEiPfWmO3uAymv2JMBJrfGwbyDWLjGue37UVhh0gLYSkA9wV+/bASwA==}
@@ -3949,7 +3949,7 @@ snapshots:
 
   '@sindresorhus/merge-streams@1.0.0': {}
 
-  '@tailwindcss/typography@0.5.10(tailwindcss@3.3.6)':
+  '@tailwindcss/typography@0.5.15(tailwindcss@3.3.6)':
     dependencies:
       lodash.castarray: 4.4.0
       lodash.isplainobject: 4.0.6
