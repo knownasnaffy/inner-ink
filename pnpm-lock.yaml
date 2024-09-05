@@ -146,7 +146,7 @@ importers:
         version: 2.4.6
       '@types/node':
         specifier: ^20.10.4
-        version: 20.16.4
+        version: 20.16.5
       '@types/react':
         specifier: ^18.2.15
         version: 18.3.5
@@ -155,7 +155,7 @@ importers:
         version: 18.3.0
       '@vitejs/plugin-react':
         specifier: ^4.0.3
-        version: 4.3.1(vite@5.4.3(@types/node@20.16.4))
+        version: 4.3.1(vite@5.4.3(@types/node@20.16.5))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.20(postcss@8.4.45)
@@ -176,7 +176,7 @@ importers:
         version: 1.0.7(tailwindcss@3.4.10)
       vite:
         specifier: ^5.0.0
-        version: 5.4.3(@types/node@20.16.4)
+        version: 5.4.3(@types/node@20.16.5)
 
 packages:
 
@@ -875,8 +875,8 @@ packages:
   '@types/hoist-non-react-statics@3.3.5':
     resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
 
-  '@types/node@20.16.4':
-    resolution: {integrity: sha512-ioyQ1zK9aGEomJ45zz8S8IdzElyxhvP1RVWnPrXDf6wFaUb+kk1tEcVVJkF7RPGM0VWI7cp5U57oCPIn5iN1qg==}
+  '@types/node@20.16.5':
+    resolution: {integrity: sha512-VwYCweNo3ERajwy0IUlqqcyZ8/A7Zwa9ZP3MnENWcB11AejO+tLy3pu850goUW2FC/IJMdZUfKpX/yxL1gymCA==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -4217,7 +4217,7 @@ snapshots:
       '@types/react': 18.3.5
       hoist-non-react-statics: 3.3.2
 
-  '@types/node@20.16.4':
+  '@types/node@20.16.5':
     dependencies:
       undici-types: 6.19.8
 
@@ -4317,14 +4317,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.3.1(vite@5.4.3(@types/node@20.16.4))':
+  '@vitejs/plugin-react@4.3.1(vite@5.4.3(@types/node@20.16.5))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.3(@types/node@20.16.4)
+      vite: 5.4.3(@types/node@20.16.5)
     transitivePeerDependencies:
       - supports-color
 
@@ -6797,13 +6797,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite@5.4.3(@types/node@20.16.4):
+  vite@5.4.3(@types/node@20.16.5):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.45
       rollup: 4.21.2
     optionalDependencies:
-      '@types/node': 20.16.4
+      '@types/node': 20.16.5
       fsevents: 2.3.3
 
   which-boxed-primitive@1.0.2:
