@@ -20,7 +20,7 @@
 		"@lexical/rich-text": "^0.17.0",
 		"@lexical/selection": "^0.17.0",
 		"@lexical/utils": "^0.17.0",
-		"@tauri-apps/api": "^1.5.2",
+		"@tauri-apps/api": "^2.0.0",
 		"bcryptjs": "^2.4.3",
 		"clsx": "^2.0.0",
 		"date-fns": "^3.0.0",
@@ -38,7 +38,7 @@
 	},
 	"devDependencies": {
 		"@tailwindcss/typography": "^0.5.10",
-		"@tauri-apps/cli": "^1.5.8",
+		"@tauri-apps/cli": "^2.0.0",
 		"@types/bcryptjs": "^2.4.6",
 		"@types/node": "^20.10.4",
 		"@types/react": "^18.2.15",
