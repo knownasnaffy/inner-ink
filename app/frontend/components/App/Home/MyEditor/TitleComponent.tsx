@@ -15,7 +15,7 @@ export default function TitleComponent() {
 			clearTimeout(autoSaveTitleTimeout.current)
 		}
 
-		autoSaveTitleTimeout.current = window.setTimeout(() => {
+		autoSaveTitleTimeout.current = globalThis.setTimeout(() => {
 			setEntryTitle(date, newTitle)
 		}, 700)
 	}
