@@ -12,7 +12,7 @@ export default function MyAutoSavePlugin() {
 		if (autoSaveContentTimeout.current) {
 			clearTimeout(autoSaveContentTimeout.current)
 		}
-		autoSaveContentTimeout.current = window.setTimeout(() => {
+		autoSaveContentTimeout.current = globalThis.setTimeout(() => {
 			setEntryContent(date, newContent)
 		}, 700)
 	}
