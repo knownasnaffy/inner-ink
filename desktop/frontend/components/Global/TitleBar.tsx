@@ -22,7 +22,7 @@ import { Button } from '../ui/button'
 import { getCurrentWindow } from '@tauri-apps/api/window'
 
 const TitleBar = () => {
-		const appWindow = getCurrentWindow()
+	const appWindow = getCurrentWindow()
 	// 		?.addEventListener('click', () => appWindow.minimize())
 	// 	document
 	// 		.getElementById('titlebar-maximize')
@@ -33,10 +33,19 @@ const TitleBar = () => {
 	// })
 	return (
 		<div
-			data-tauri-drag-region
-			className='h-fit w-full flex flex-row border-b select-none'
+			onMouseDown={(e) => {
+				if (e.buttons === 1) {
+					e.detail === 2
+						? appWindow.toggleMaximize()
+						: appWindow.startDragging()
+				}
+			}}
+			// onDoubleClick={() => appWindow.toggleMaximize()}
+			className='h-fit w-full flex flex-row justify-between border-b select-none'
 		>
-			<Menubar data-tauri-drag-region className='rounded-none w-full py-0.5 border-none shadow-none'>
+			<Menubar
+				className='rounded-none w-fit py-0.5 border-none shadow-none'
+							>
 				<MenubarMenu>
 					<MenubarTrigger className='px-2.5 py-1 font-bold select-none'>
 						Inner Ink
@@ -173,7 +182,7 @@ const TitleBar = () => {
 					id='titlebar-minimize'
 					onClick={() => appWindow.minimize()}
 				>
-						<MinusIcon />
+					<MinusIcon />
 				</Button>
 				<Button
 					className='px-3 h-full rounded-none select-none cursor-default'
@@ -181,7 +190,7 @@ const TitleBar = () => {
 					id='titlebar-maximize'
 					onClick={() => appWindow.toggleMaximize()}
 				>
-						<EnterFullScreenIcon />
+					<EnterFullScreenIcon />
 				</Button>
 				<Button
 					className='px-3 h-full rounded-none select-none cursor-default'
@@ -189,7 +198,7 @@ const TitleBar = () => {
 					id='titlebar-close'
 					onClick={() => appWindow.close()}
 				>
-						<Cross1Icon />
+					<Cross1Icon />
 				</Button>
 			</div>
 		</div>
