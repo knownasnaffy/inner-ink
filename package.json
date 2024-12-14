@@ -4,6 +4,7 @@
 	"type": "module",
 	"repository": "https://github.com/knownasnaffy/inner-ink",
 	"private": true,
+	"packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
 	"scripts": {
 		"build": "pnpm --filter=app build",
 		"dev": "pnpm --filter=app dev",
@@ -14,7 +15,6 @@
 		"release": "semantic-release"
 	},
 	"devDependencies": {
-		"prettier-plugin-tailwindcss": "^0.6.0",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/git": "^10.0.1",
 		"@typescript-eslint/eslint-plugin": "^8.0.0",
@@ -30,6 +30,7 @@
 		"lint-staged": "^15.2.0",
 		"prettier": "^3.1.1",
 		"prettier-plugin-pkg": "^0.18.0",
+		"prettier-plugin-tailwindcss": "^0.6.0",
 		"semantic-release": "^23.0.0",
 		"typescript": "^5.3.3"
 	},
