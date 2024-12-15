@@ -16,7 +16,12 @@ fn main() {
     tauri::Builder::default()
         .setup(|app| {
             let main_window = app.get_window("main").unwrap();
-            set_shadow(&main_window, true).expect("Unsupported platform!");
+
+            #[cfg(target_os = "windows")]
+            if let Err(err) = set_shadow(&main_window, true) {
+                eprintln!("Failed to set shadow: {err}");
+            }
+
             Ok(())
         })
         .plugin(tauri_plugin_single_instance::init(|app, argv, cwd| {
