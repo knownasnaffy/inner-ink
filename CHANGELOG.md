@@ -1,3 +1,24 @@
+## [2.2.1](https://github.com/knownasnaffy/inner-ink/compare/v2.2.0...v2.2.1) (2024-12-15)
+
+
+### Bug Fixes
+
+* :bug: content will not be selected when changing between dates ([7462964](https://github.com/knownasnaffy/inner-ink/commit/74629643531b68c0f7705d11f8b330ddcc654dab))
+* **deps:** update dependency prettier-plugin-tailwindcss to ^0.6.0 ([5be9bda](https://github.com/knownasnaffy/inner-ink/commit/5be9bda2f6451fb27805e3d39d7ceabcc0c87960))
+* **deps:** update dependency react-hotkeys-hook to v4.5.1 ([ec5d711](https://github.com/knownasnaffy/inner-ink/commit/ec5d711837b34d5331287ffaf4822450dc03a905))
+* **deps:** update dependency react-hotkeys-hook to v4.6.1 ([af020ac](https://github.com/knownasnaffy/inner-ink/commit/af020ac6f7bdda3517d5fed39488a2dc321f8daa))
+* **deps:** update dependency react-router-dom to v6.26.2 ([5e82727](https://github.com/knownasnaffy/inner-ink/commit/5e82727dc51ceb0b7d71db37cd543cd46947e684))
+* **deps:** update dependency react-router-dom to v6.28.0 ([33cb940](https://github.com/knownasnaffy/inner-ink/commit/33cb940579bcf327f996c9bbc507d9d0b3e579b7))
+* **deps:** update dependency react-router-dom to v7 ([4372091](https://github.com/knownasnaffy/inner-ink/commit/4372091e79b1f13a26a492edd0ea222d24e85ae6))
+* **deps:** update dependency react-router-dom to v7.0.1 ([772644f](https://github.com/knownasnaffy/inner-ink/commit/772644fc2e5ed0d19d42cc7c3622400ba728f2d1))
+* **deps:** update dependency react-router-dom to v7.0.2 ([812a788](https://github.com/knownasnaffy/inner-ink/commit/812a788958d7896f754f5ed832a892ae325eb804))
+* **deps:** update dependency yup to v1.5.0 ([81518c1](https://github.com/knownasnaffy/inner-ink/commit/81518c117e7127b063ebb0d47dcb728f907dce6e))
+* **deps:** update lexical monorepo to ^0.17.0 ([e11877c](https://github.com/knownasnaffy/inner-ink/commit/e11877c2141e866218465d821c1aa9fa126b8960))
+* **deps:** update lexical monorepo to ^0.20.0 ([381b3e4](https://github.com/knownasnaffy/inner-ink/commit/381b3e4c262720e8ca1ab92a14572a93b74181f8))
+* **deps:** update rust crate serde to v1.0.215 ([ec8e5ae](https://github.com/knownasnaffy/inner-ink/commit/ec8e5ae529a0ed902a021878d80e42727c17f8ca))
+* **deps:** update rust crate serde_json to v1.0.133 ([8df4265](https://github.com/knownasnaffy/inner-ink/commit/8df4265a52685e4ade2fe7473a12da50148e3540))
+* window_shadows was crashing app on arch linux, made it windows-only ([424031d](https://github.com/knownasnaffy/inner-ink/commit/424031d845852a2a1cea54d90ce1cd124ed99e2a))
+
 # [2.2.0](https://github.com/knownasnaffy/inner-ink/compare/v2.1.0...v2.2.0) (2024-01-11)
 
 
