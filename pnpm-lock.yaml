@@ -124,16 +124,16 @@ importers:
         version: 7.1.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tauri-plugin-autostart-api:
         specifier: github:tauri-apps/tauri-plugin-autostart#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a9b47759a9f3887f9b49809a48aeff45e048f51f
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74
       tauri-plugin-sql-api:
         specifier: github:tauri-apps/tauri-plugin-sql#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/84c076c4a341ed9216a99229679ee34ace1efa8c
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf
       yup:
         specifier: ^1.3.3
         version: 1.6.0
       zustand:
         specifier: ^4.4.7
-        version: 4.5.5(@types/react@18.3.13)(react@18.3.1)
+        version: 4.5.6(@types/react@18.3.13)(react@18.3.1)
     devDependencies:
       '@tailwindcss/typography':
         specifier: ^0.5.10
@@ -3262,12 +3262,12 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a9b47759a9f3887f9b49809a48aeff45e048f51f:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a9b47759a9f3887f9b49809a48aeff45e048f51f}
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74}
     version: 0.0.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/84c076c4a341ed9216a99229679ee34ace1efa8c:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/84c076c4a341ed9216a99229679ee34ace1efa8c}
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf}
     version: 0.0.0
 
   temp-dir@3.0.0:
@@ -3433,10 +3433,10 @@ packages:
     resolution: {integrity: sha512-n2huDr9h9yzd6exQVnH/jU5mr+Pfx08LRXXZhkLLetAMESRj+anQsTAh940iMrIetKAmry9coFuZQ2jY8/p3WA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
-  use-sync-external-store@1.2.2:
-    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
+  use-sync-external-store@1.4.0:
+    resolution: {integrity: sha512-9WXSPC5fMv61vaupRkCKCxsPxBocVnwakBEkMIHHpkTTg6icbJtg6jzgtLDm4bl3cSHAca52rYWih0k4K3PfHw==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -3565,8 +3565,8 @@ packages:
   yup@1.6.0:
     resolution: {integrity: sha512-/dny6arMf5CV6ZPAGpXYVw0wR8qcDF15H8zILTQWoRf6jHN1nJNFL1IAlFfUMlO7QGifMVHZle/l8YJdxtWfxg==}
 
-  zustand@4.5.5:
-    resolution: {integrity: sha512-+0PALYNJNgK6hldkgDq2vLrw5f6g/jCInz52n9RTpropGgeAf/ioFUCdtsjCqu4gNhW9D01rUQBROoRjdzyn2Q==}
+  zustand@4.5.6:
+    resolution: {integrity: sha512-ibr/n1hBzLLj5Y+yUcU7dYw8p6WnIVzdJbnX+1YpaScvZVF2ziugqHs+LAmHw4lWO9c/zRj+K1ncgWDQuthEdQ==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
       '@types/react': '>=16.8'
@@ -6848,11 +6848,11 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/a9b47759a9f3887f9b49809a48aeff45e048f51f:
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74:
     dependencies:
       '@tauri-apps/api': 1.6.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/84c076c4a341ed9216a99229679ee34ace1efa8c:
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf:
     dependencies:
       '@tauri-apps/api': 1.6.0
 
@@ -7003,7 +7003,7 @@ snapshots:
 
   url-join@5.0.0: {}
 
-  use-sync-external-store@1.2.2(react@18.3.1):
+  use-sync-external-store@1.4.0(react@18.3.1):
     dependencies:
       react: 18.3.1
 
@@ -7138,9 +7138,9 @@ snapshots:
       toposort: 2.0.2
       type-fest: 2.19.0
 
-  zustand@4.5.5(@types/react@18.3.13)(react@18.3.1):
+  zustand@4.5.6(@types/react@18.3.13)(react@18.3.1):
     dependencies:
-      use-sync-external-store: 1.2.2(react@18.3.1)
+      use-sync-external-store: 1.4.0(react@18.3.1)
     optionalDependencies:
       '@types/react': 18.3.13
       react: 18.3.1
