@@ -146,7 +146,7 @@ importers:
         version: 2.4.6
       '@types/node':
         specifier: ^22.0.0
-        version: 22.10.7
+        version: 22.10.10
       '@types/react':
         specifier: ^18.2.15
         version: 18.3.18
@@ -155,7 +155,7 @@ importers:
         version: 18.3.5(@types/react@18.3.18)
       '@vitejs/plugin-react':
         specifier: ^4.0.3
-        version: 4.3.4(vite@5.4.11(@types/node@22.10.7))
+        version: 4.3.4(vite@5.4.11(@types/node@22.10.10))
       autoprefixer:
         specifier: ^10.4.16
         version: 10.4.20(postcss@8.5.1)
@@ -176,7 +176,7 @@ importers:
         version: 1.0.7(tailwindcss@3.4.17)
       vite:
         specifier: ^5.0.0
-        version: 5.4.11(@types/node@22.10.7)
+        version: 5.4.11(@types/node@22.10.10)
 
 packages:
 
@@ -886,8 +886,8 @@ packages:
   '@types/hoist-non-react-statics@3.3.5':
     resolution: {integrity: sha512-SbcrWzkKBw2cdwRTwQAswfpB9g9LJWfjtUeW/jvNwbhC8cpmmNYVePa+ncbUe0rGTQ7G3Ff6mYUN2VMfLVr+Sg==}
 
-  '@types/node@22.10.7':
-    resolution: {integrity: sha512-V09KvXxFiutGp6B7XkpaDXlNadZxrzajcY50EuoLIpQ6WWYCSvf19lVIazzfIzQvhUN2HjX12spLojTnhuKlGg==}
+  '@types/node@22.10.10':
+    resolution: {integrity: sha512-X47y/mPNzxviAGY5TcYPtYL8JsY3kAq2n8fMmKoRCxq/c4v4pyGNCzM2R6+M5/umG4ZfHuT+sgqDYqWc9rJ6ww==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -4336,7 +4336,7 @@ snapshots:
       '@types/react': 18.3.18
       hoist-non-react-statics: 3.3.2
 
-  '@types/node@22.10.7':
+  '@types/node@22.10.10':
     dependencies:
       undici-types: 6.20.0
 
@@ -4432,14 +4432,14 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.3.4(vite@5.4.11(@types/node@22.10.7))':
+  '@vitejs/plugin-react@4.3.4(vite@5.4.11(@types/node@22.10.10))':
     dependencies:
       '@babel/core': 7.26.0
       '@babel/plugin-transform-react-jsx-self': 7.25.9(@babel/core@7.26.0)
       '@babel/plugin-transform-react-jsx-source': 7.25.9(@babel/core@7.26.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.11(@types/node@22.10.7)
+      vite: 5.4.11(@types/node@22.10.10)
     transitivePeerDependencies:
       - supports-color
 
@@ -7094,13 +7094,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite@5.4.11(@types/node@22.10.7):
+  vite@5.4.11(@types/node@22.10.10):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.5.1
       rollup: 4.27.2
     optionalDependencies:
-      '@types/node': 22.10.7
+      '@types/node': 22.10.10
       fsevents: 2.3.3
 
   which-boxed-primitive@1.1.1:
