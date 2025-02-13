@@ -93,8 +93,8 @@ importers:
         specifier: ^1.5.2
         version: 1.6.0
       bcryptjs:
-        specifier: ^2.4.3
-        version: 2.4.3
+        specifier: ^3.0.0
+        version: 3.0.0
       clsx:
         specifier: ^2.0.0
         version: 2.1.1
@@ -124,10 +124,10 @@ importers:
         version: 7.1.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tauri-plugin-autostart-api:
         specifier: github:tauri-apps/tauri-plugin-autostart#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/905c79c6dd3e681c8bc15a6a9e1374e257442043
       tauri-plugin-sql-api:
         specifier: github:tauri-apps/tauri-plugin-sql#v1
-        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf
+        version: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/f766cdacba244a135b11c4c5d6b8d561618d0b58
       yup:
         specifier: ^1.3.3
         version: 1.6.1
@@ -1097,8 +1097,9 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
-  bcryptjs@2.4.3:
-    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
+  bcryptjs@3.0.0:
+    resolution: {integrity: sha512-Q2vVGpGC7B7m9wggpcA5lq4OYR5OS1nrXoUpnH9MmogXU8HpxzKg63uxtCrLebY5v/y3o0r7JcGCpR/vTGGn7A==}
+    hasBin: true
 
   before-after-hook@3.0.2:
     resolution: {integrity: sha512-Nik3Sc0ncrMK4UUdXQmAnRtzmNQTAAXmXIopizwZ1W1t8QmfJj+zL4OA2I7XPTPW5z5TDqv4hRo/JzouDJnX3A==}
@@ -3270,12 +3271,12 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74}
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/905c79c6dd3e681c8bc15a6a9e1374e257442043:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/905c79c6dd3e681c8bc15a6a9e1374e257442043}
     version: 0.0.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf:
-    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf}
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/f766cdacba244a135b11c4c5d6b8d561618d0b58:
+    resolution: {tarball: https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/f766cdacba244a135b11c4c5d6b8d561618d0b58}
     version: 0.0.0
 
   temp-dir@3.0.0:
@@ -4609,7 +4610,7 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
-  bcryptjs@2.4.3: {}
+  bcryptjs@3.0.0: {}
 
   before-after-hook@3.0.2: {}
 
@@ -6942,11 +6943,11 @@ snapshots:
     transitivePeerDependencies:
       - ts-node
 
-  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/0be4d74f4223d683548f521555546ce8b26c3e74:
+  tauri-plugin-autostart-api@https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/905c79c6dd3e681c8bc15a6a9e1374e257442043:
     dependencies:
       '@tauri-apps/api': 1.6.0
 
-  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/2b34ad6aecb4133f458a00e84fc02fcdd94f26bf:
+  tauri-plugin-sql-api@https://codeload.github.com/tauri-apps/tauri-plugin-sql/tar.gz/f766cdacba244a135b11c4c5d6b8d561618d0b58:
     dependencies:
       '@tauri-apps/api': 1.6.0
 
