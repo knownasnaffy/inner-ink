@@ -4,7 +4,7 @@
 	"type": "module",
 	"repository": "https://github.com/knownasnaffy/inner-ink",
 	"private": true,
-	"packageManager": "pnpm@9.15.5+sha512.845196026aab1cc3f098a0474b64dfbab2afe7a1b4e91dd86895d8e4aa32a7a6d03049e2d0ad770bbe4de023a7122fb68c1a1d6e0d033c7076085f9d5d4800d4",
+	"packageManager": "pnpm@10.5.1+sha512.c424c076bd25c1a5b188c37bb1ca56cc1e136fbf530d98bcb3289982a08fd25527b8c9c4ec113be5e3393c39af04521dd647bcf1d0801eaf8ac6a7b14da313af",
 	"scripts": {
 		"build": "pnpm --filter=app build",
 		"dev": "pnpm --filter=app dev",
