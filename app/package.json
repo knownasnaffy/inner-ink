@@ -21,7 +21,7 @@
 		"@lexical/selection": "^0.20.0",
 		"@lexical/utils": "^0.20.0",
 		"@tauri-apps/api": "^1.5.2",
-		"bcryptjs": "^2.4.3",
+		"bcryptjs": "^3.0.0",
 		"clsx": "^2.0.0",
 		"date-fns": "^3.0.0",
 		"formik": "^2.4.5",
