@@ -28,6 +28,7 @@ jobs:
                   filters: |
                       app:
                         - 'app/**'
+                        - '.github/workflows/*'
                       tsc:
                         - '**/*.{ts,tsx}'
                         - '.eslintrc.*'
