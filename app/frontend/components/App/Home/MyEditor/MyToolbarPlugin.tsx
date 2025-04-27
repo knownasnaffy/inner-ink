@@ -62,6 +62,22 @@ function FloatingLinkEditor({ editor }: { editor: LexicalEditor }) {
 	const inputRef = useRef(null)
 	const mouseDownRef = useRef(false)
 	const [linkUrl, setLinkUrl] = useState('')
+
+	function sanitizeUrl(url: string): string {
+		try {
+			const parsedUrl = new URL(url, window.location.origin)
+			if (
+				parsedUrl.protocol === 'http:' ||
+				parsedUrl.protocol === 'https:' ||
+				parsedUrl.protocol === 'mailto:'
+			) {
+				return parsedUrl.href
+			}
+		} catch {
+			// Invalid URL
+		}
+		return ''
+	}
 	const [isEditMode, setEditMode] = useState(false)
 	const [lastSelection, setLastSelection] = useState<BaseSelection>()
 
@@ -158,7 +174,7 @@ function FloatingLinkEditor({ editor }: { editor: LexicalEditor }) {
 					className='link-input'
 					value={linkUrl}
 					onChange={(event) => {
-						setLinkUrl(event.target.value)
+						setLinkUrl(sanitizeUrl(event.target.value))
 					}}
 					onKeyDown={(event) => {
 						if (event.key === 'Enter') {
