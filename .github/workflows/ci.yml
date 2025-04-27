@@ -28,11 +28,13 @@ jobs:
                   filters: |
                       app:
                         - 'app/**'
+                        - '.github/workflows/*'
                       tsc:
                         - '**/*.{ts,tsx}'
                         - '.eslintrc.*'
                         - '**/tsconfig*.json'
                         - 'package.json'
+                        - '.github/workflows/*'
     ts-lint:
         name: Lint TS files
         runs-on: ubuntu-latest
