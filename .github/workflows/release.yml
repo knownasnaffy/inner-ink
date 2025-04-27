@@ -75,7 +75,7 @@ jobs:
         strategy:
             fail-fast: false
             matrix:
-                platform: [windows-latest, macos-latest, ubuntu-20.04]
+                platform: [windows-latest, macos-latest, ubuntu-22.04]
         runs-on: ${{ matrix.platform }}
 
         steps:
@@ -107,7 +107,7 @@ jobs:
                       ${{ runner.os }}-pnpm-store-
 
             - name: Install dependencies (ubuntu only)
-              if: matrix.platform == 'ubuntu-20.04'
+              if: matrix.platform == 'ubuntu-22.04'
               run: |
                   sudo apt-get update
                   sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
@@ -150,7 +150,7 @@ jobs:
 
             - name: Upload binary - .deb (ubuntu only)
               uses: actions/upload-artifact@v4
-              if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
+              if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-22.04' }}
               with:
                   if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-deb
@@ -159,7 +159,7 @@ jobs:
 
             - name: Upload binary - .appimage (ubuntu only)
               uses: actions/upload-artifact@v4
-              if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-20.04' }}
+              if: ${{ needs.changes.outputs.isNewVer == 'true' && matrix.platform == 'ubuntu-22.04' }}
               with:
                   if-no-files-found: error
                   name: release-${{ needs.changes.outputs.newVer }}-ubuntu-appimage
