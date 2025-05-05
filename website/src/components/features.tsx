@@ -1,7 +1,7 @@
 export default function Features() {
 	return (
 		<div className='bg-base-300 max-lg:pb-30 max-lg:px-6 max-lg:pt-40 lg:py-40'>
-			<div className='container mx-auto flex max-w-5xl flex-col items-center gap-8'>
+			<div className='container mx-auto flex max-w-5xl flex-col items-center gap-10'>
 				<div className='prose prose-lg flex flex-col items-center text-center'>
 					<h2 className='mb-2'>Your Digital Sanctury</h2>
 					<p>
@@ -11,21 +11,21 @@ export default function Features() {
 				</div>
 				<div className='grid gap-10 lg:grid-cols-3 lg:grid-rows-2 lg:gap-6'>
 					<FeatureItemWrapper>
-						<div className='mb-2 flex items-center gap-3'>
+						<div className='mb-2 flex flex-col items-center gap-3 lg:flex-row'>
 							{bookIcon}
 							<h3 className='mb-0 mt-0'>Intuitive Interface</h3>
 						</div>
-						<p className='mt-0 max-lg:pl-1'>
+						<p className='mt-0 max-lg:pl-1 max-lg:text-center'>
 							Simple and user-friendly interface for easy
 							navigation and journaling.
 						</p>
 					</FeatureItemWrapper>
 					<FeatureItemWrapper>
-						<div className='mb-2 flex items-center gap-3 max-lg:justify-end'>
+						<div className='mb-2 flex flex-col items-center gap-3 lg:flex-row'>
 							{searchIcon}
 							<h3 className='mb-0 mt-0'>Organization & Search</h3>
 						</div>
-						<p className='mt-0 max-lg:pl-1 max-lg:text-right'>
+						<p className='mt-0 max-lg:pl-1 max-lg:text-center'>
 							Effortlessly organize entries by date. Search
 							feature for quick access.
 						</p>
@@ -38,32 +38,32 @@ export default function Features() {
 							}}
 						></div>
 						<div className='h-fit'>
-							<div className='mb-2 flex items-center gap-3'>
+							<div className='mb-2 flex flex-col items-center gap-3 lg:flex-row'>
 								{moonIcon}
 								<h3 className='mb-0 mt-0'>Customizable UI</h3>
 							</div>
-							<p className='mb-0 mt-0 max-lg:pl-1'>
+							<p className='mb-0 mt-0 max-lg:pl-1 max-lg:text-center'>
 								Change themes and more visible features to match
 								your personal style.
 							</p>
 						</div>
 					</div>
 					<FeatureItemWrapper>
-						<div className='mb-2 flex items-center gap-3 max-lg:justify-end'>
+						<div className='mb-2 flex flex-col items-center gap-3 lg:flex-row'>
 							{textIcon}
 							<h3 className='mb-0 mt-0'>Rich-Text Entries</h3>
 						</div>
-						<p className='mt-0 max-lg:pl-1 max-lg:text-right'>
+						<p className='mt-0 max-lg:pl-1 max-lg:text-center'>
 							Personalize your entries with rich-text formatting,
 							bold, italics, and more.
 						</p>
 					</FeatureItemWrapper>
 					<FeatureItemWrapper>
-						<div className='mb-2 flex items-center gap-3'>
+						<div className='mb-2 flex flex-col items-center gap-3 lg:flex-row'>
 							{keyboardIcon}
 							<h3 className='mb-0 mt-0'>Accessibility</h3>
 						</div>
-						<p className='mt-0 max-lg:pl-1'>
+						<p className='mt-0 max-lg:pl-1 max-lg:text-center'>
 							Keyboard-friendly interface designed with
 							accessibility in mind for all users.
 						</p>
