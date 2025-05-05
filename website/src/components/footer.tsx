@@ -1,7 +1,7 @@
 export default function Footer() {
 	return (
 		<div className='bg-base-300 py-10'>
-			<div className='container mx-auto flex max-w-5xl items-center justify-between'>
+			<div className='container mx-auto flex max-w-5xl flex-col-reverse items-center justify-between gap-y-4 lg:flex-row'>
 				<p className='text-base-content/70'>
 					© 2025 Inner Ink. All rights reserved.
 				</p>
