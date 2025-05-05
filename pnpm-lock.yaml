@@ -4291,7 +4291,7 @@ snapshots:
       read-pkg: 9.0.1
       registry-auth-token: 5.0.2
       semantic-release: 23.1.1(typescript@5.8.3)
-      semver: 7.6.3
+      semver: 7.7.1
       tempy: 3.1.0
 
   '@semantic-release/release-notes-generator@13.0.0(semantic-release@23.1.1(typescript@5.8.3))':
@@ -4366,7 +4366,7 @@ snapshots:
 
   '@tauri-apps/cli@1.6.3':
     dependencies:
-      semver: 7.6.3
+      semver: 7.7.1
     optionalDependencies:
       '@tauri-apps/cli-darwin-arm64': 1.6.3
       '@tauri-apps/cli-darwin-x64': 1.6.3
@@ -4860,7 +4860,7 @@ snapshots:
       handlebars: 4.7.8
       json-stringify-safe: 5.0.1
       meow: 12.1.1
-      semver: 7.6.3
+      semver: 7.7.1
       split2: 4.2.0
 
   conventional-commits-filter@4.0.0: {}
@@ -6199,7 +6199,7 @@ snapshots:
   normalize-package-data@6.0.2:
     dependencies:
       hosted-git-info: 7.0.2
-      semver: 7.6.3
+      semver: 7.7.1
       validate-npm-package-license: 3.0.4
 
   normalize-path@3.0.0: {}
@@ -6762,7 +6762,7 @@ snapshots:
 
   semver-diff@4.0.0:
     dependencies:
-      semver: 7.6.3
+      semver: 7.7.1
 
   semver-regex@4.0.5: {}
 

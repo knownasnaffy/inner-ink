@@ -37,7 +37,7 @@ export const ShellButtons = () => {
 		setIsWindowMaximized(!isWindowMaximized)
 	}
 	return (
-		<div className='flex w-fit scale-90 flex-row'>
+		<div className='flex w-fit scale-75 flex-row'>
 			<button
 				className='btn btn-circle btn-sm btn-warning text-warning hover:text-warning-content focus:focus-visible:text-warning-content scale-75 cursor-default'
 				onClick={minimize}

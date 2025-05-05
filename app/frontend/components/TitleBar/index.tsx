@@ -5,7 +5,7 @@ const TitleBar = () => {
 		<div className='bg-base-300 h-fit py-1'>
 			<div
 				data-tauri-drag-region
-				className='ml-1 mr-1 flex h-6 flex-row items-center justify-between pl-3 pr-1'
+				className='ml-1 mr-1 flex h-6 flex-row items-center justify-between pl-3'
 			>
 				<span className='text-base-content/60 pointer-events-none flex items-center'>
 					Inner Ink
