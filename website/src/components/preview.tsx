@@ -3,7 +3,7 @@ export default function Preview() {
 		<div className='relative pb-20'>
 			<div className='rounded-box border-base-200 bg-base-200 container mx-auto min-h-12 max-w-5xl border-8 shadow-2xl shadow-black'>
 				<img
-					src='/preview-dark.png'
+					src={`${import.meta.env.BASE_URL}/preview-dark.png`}
 					alt='Inner Ink Preview'
 					className='rounded-box'
 				/>
