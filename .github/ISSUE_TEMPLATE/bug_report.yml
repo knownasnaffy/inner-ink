@@ -48,16 +48,6 @@ body:
       attributes:
           label: Possible Solution
 
-    - type: dropdown
-      id: version
-      attributes:
-          label: Inner Ink Version
-          description: What version of our software are you running?
-          options:
-              - v1.0.0
-      validations:
-          required: true
-
     - type: checkboxes
       id: operating-systems
       attributes:
