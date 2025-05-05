@@ -1,3 +1,31 @@
+## [2.2.2](https://github.com/knownasnaffy/inner-ink/compare/v2.2.1...v2.2.2) (2025-05-05)
+
+
+### Bug Fixes
+
+* **deps:** update dependency react-hotkeys-hook to v4.6.2 ([c12b9e3](https://github.com/knownasnaffy/inner-ink/commit/c12b9e3a94bada86004bccd9664fddf9039ba41f))
+* **deps:** update dependency react-router-dom to v7.1.1 ([fdd572c](https://github.com/knownasnaffy/inner-ink/commit/fdd572c0e8dcd3e01fd6a9d934c033ceafba7eda))
+* **deps:** update dependency react-router-dom to v7.1.2 ([8f28e33](https://github.com/knownasnaffy/inner-ink/commit/8f28e33afb927513d25d14d638ff5cffc3163682))
+* **deps:** update dependency react-router-dom to v7.1.3 ([08f1c84](https://github.com/knownasnaffy/inner-ink/commit/08f1c84f80e16887ed5e1070bc996e5c2090f4ea))
+* **deps:** update dependency react-router-dom to v7.1.4 ([73851c0](https://github.com/knownasnaffy/inner-ink/commit/73851c05e327205efa125962f5c57567b24f5fde))
+* **deps:** update dependency react-router-dom to v7.1.5 ([d2ba646](https://github.com/knownasnaffy/inner-ink/commit/d2ba64652fd62928a58208bad04468b83103f9a3))
+* **deps:** update dependency react-router-dom to v7.2.0 ([10c647c](https://github.com/knownasnaffy/inner-ink/commit/10c647c3b88eadf9d9b10e4d26d0b396a09fada4))
+* **deps:** update dependency react-router-dom to v7.3.0 ([d29e51a](https://github.com/knownasnaffy/inner-ink/commit/d29e51af520dbc5d21cb94a665c8e5edadbc088f))
+* **deps:** update dependency react-router-dom to v7.5.1 ([897e0a8](https://github.com/knownasnaffy/inner-ink/commit/897e0a8a529429911f638c74b8f1ff12d324b1fc))
+* **deps:** update dependency react-router-dom to v7.5.3 ([814cc02](https://github.com/knownasnaffy/inner-ink/commit/814cc02785313e3a7cb6400432aa95171fc7a9ef))
+* **deps:** update dependency yup to v1.6.0 ([4047d99](https://github.com/knownasnaffy/inner-ink/commit/4047d995533a631a65c2df27f37d0d24bac2ea69))
+* **deps:** update dependency yup to v1.6.1 ([c7066e2](https://github.com/knownasnaffy/inner-ink/commit/c7066e2b90c5da83102f6e8764e02facce3ed77b))
+* **deps:** update dependency zustand to v4.5.6 ([bd50aa3](https://github.com/knownasnaffy/inner-ink/commit/bd50aa35eddd8613c80417be853aa295ea2c4a6d))
+* **deps:** update rust crate serde to v1.0.217 ([ff8db90](https://github.com/knownasnaffy/inner-ink/commit/ff8db90cf0a36d79fbf8b178c3ed9907cc5b8577))
+* **deps:** update rust crate serde to v1.0.218 ([1241b46](https://github.com/knownasnaffy/inner-ink/commit/1241b467264e7b912f619a13e7b0cb99b6b1eba9))
+* **deps:** update rust crate serde to v1.0.219 ([ae172e3](https://github.com/knownasnaffy/inner-ink/commit/ae172e31e81a0f0c47f049fc6f30cfd25416fdd9))
+* **deps:** update rust crate serde_json to v1.0.136 ([b52bce9](https://github.com/knownasnaffy/inner-ink/commit/b52bce9aa39c26c13244e576dc92546301427354))
+* **deps:** update rust crate serde_json to v1.0.137 ([1492f94](https://github.com/knownasnaffy/inner-ink/commit/1492f9439d5a3288258851258fd5601de2666167))
+* **deps:** update rust crate serde_json to v1.0.140 ([a861229](https://github.com/knownasnaffy/inner-ink/commit/a861229203e05635372bfa32050f44d6655def3d))
+* **deps:** update tauri monorepo ([1e4021a](https://github.com/knownasnaffy/inner-ink/commit/1e4021a405a7931b4ffd3293ef9d0ca149104355))
+* DOM text reinterpreted as HTML ([63eb21c](https://github.com/knownasnaffy/inner-ink/commit/63eb21c639d3903d951d27998afd611d3cc504e6))
+* update react-router to 7.5.2 ([dcaaf40](https://github.com/knownasnaffy/inner-ink/commit/dcaaf40e0597a35a01bde4659f9116133ace04d0))
+
 ## [2.2.1](https://github.com/knownasnaffy/inner-ink/compare/v2.2.0...v2.2.1) (2024-12-15)
 
 
