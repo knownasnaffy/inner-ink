@@ -6,6 +6,15 @@ on:
     pull_request:
         branches: ['dev', 'main']
 
+permissions:
+    contents: read
+    id-token: write
+    pages: write
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+    cancel-in-progress: true
+
 jobs:
     changes:
         name: Filter changes
@@ -14,6 +23,7 @@ jobs:
         outputs:
             app: ${{ steps.filter.outputs.app }}
             tsc: ${{ steps.filter.outputs.tsc }}
+            website: ${{ steps.filter.outputs.website }}
 
         steps:
             - uses: actions/checkout@v4
@@ -30,10 +40,13 @@ jobs:
                         - 'app/**'
                         - '.github/workflows/*'
                       tsc:
-                        - '**/*.{ts,tsx}'
+                        - 'app/*.{ts,tsx}'
                         - '.eslintrc.*'
                         - '**/tsconfig*.json'
                         - 'package.json'
+                        - '.github/workflows/*'
+                      website:
+                        - 'website/**'
                         - '.github/workflows/*'
     ts-lint:
         name: Lint TS files
@@ -73,6 +86,67 @@ jobs:
 
             - name: Lint ts files
               run: pnpm lint
+
+    website:
+        name: Build Website
+        runs-on: ubuntu-latest
+        needs: changes
+        if: needs.changes.outputs.website == 'true' || github.ref == 'refs/heads/main'
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup node.js 22.x
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  run_install: false
+
+            - name: Get pnpm store directory
+              shell: bash
+              run: |
+                  echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+            - name: Setup pnpm cache
+              uses: actions/cache@v4
+              with:
+                  path: ${{ env.STORE_PATH }}
+                  key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+                  restore-keys: |
+                      ${{ runner.os }}-pnpm-store-
+
+            - name: Install dependencies
+              run: pnpm install
+
+            - name: Lint website
+              run: |
+                  cd website
+                  pnpm lint
+
+            - name: Build website
+              run: |
+                  cd website
+                  pnpm build
+
+            - name: Setup Pages
+              if: github.ref == 'refs/heads/main'
+              uses: actions/configure-pages@v5
+
+            - name: Upload artifact
+              if: github.ref == 'refs/heads/main'
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: './website/dist'
+
+            - name: Deploy to GitHub Pages
+              if: github.ref == 'refs/heads/main'
+              id: deployment
+              uses: actions/deploy-pages@v4
 
     build:
         name: Build app

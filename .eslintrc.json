@@ -23,7 +23,7 @@
 		"tsconfigRootDir": "./app"
 	},
 	"parser": "@typescript-eslint/parser",
-	"ignorePatterns": ["dist"],
+	"ignorePatterns": ["dist", "website"],
 	"rules": {
 		"react-refresh/only-export-components": [
 			"warn",
