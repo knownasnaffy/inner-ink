@@ -34,7 +34,7 @@ export default function Features() {
 						<div
 							className='rounded-box hidden grow bg-cover lg:block'
 							style={{
-								backgroundImage: `url('${import.meta.env.BASE_URL}/themes.png')`,
+								backgroundImage: `url('/themes.png')`,
 							}}
 						></div>
 						<div className='h-fit'>
