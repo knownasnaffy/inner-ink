@@ -121,7 +121,7 @@ importers:
         version: 4.6.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-router-dom:
         specifier: ^7.5.2
-        version: 7.5.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tauri-plugin-autostart-api:
         specifier: github:tauri-apps/tauri-plugin-autostart#v1
         version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/905c79c6dd3e681c8bc15a6a9e1374e257442043
@@ -3440,15 +3440,15 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router-dom@7.5.2:
-    resolution: {integrity: sha512-yk1XW8Fj7gK7flpYBXF3yzd2NbX6P7Kxjvs2b5nu1M04rb5pg/Zc4fGdBNTeT4eDYL2bvzWNyKaIMJX/RKHTTg==}
+  react-router-dom@7.6.3:
+    resolution: {integrity: sha512-DiWJm9qdUAmiJrVWaeJdu4TKu13+iB/8IEi0EW/XgaHCjW/vWGrwzup0GVvaMteuZjKnh5bEvJP/K0MDnzawHw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  react-router@7.5.2:
-    resolution: {integrity: sha512-9Rw8r199klMnlGZ8VAsV/I8WrIF6IyJ90JQUdboupx1cdkgYqwnrYjH+I/nY/7cA1X5zia4mDJqH36npP7sxGQ==}
+  react-router@7.6.3:
+    resolution: {integrity: sha512-zf45LZp5skDC6I3jDLXQUu0u26jtuP4lEGbc7BbdyxenBN1vJSTA18czM2D+h5qyMBuMrD+9uB+mU37HIoKGRA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -3945,9 +3945,6 @@ packages:
 
   tslib@2.7.0:
     resolution: {integrity: sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==}
-
-  turbo-stream@2.4.0:
-    resolution: {integrity: sha512-FHncC10WpBd2eOmGwpmQsWLDoK4cqsA/UT/GqNoaKOQnT8uzhtCbg3EoUDMvqpOSAI0S26mr0rkjzbOO6S3v1g==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -7636,18 +7633,17 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router-dom@7.5.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router-dom@7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-router: 7.5.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-router: 7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  react-router@7.5.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router@7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       cookie: 1.0.2
       react: 18.3.1
       set-cookie-parser: 2.7.1
-      turbo-stream: 2.4.0
     optionalDependencies:
       react-dom: 18.3.1(react@18.3.1)
 
@@ -8273,8 +8269,6 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   tslib@2.7.0: {}
-
-  turbo-stream@2.4.0: {}
 
   type-check@0.4.0:
     dependencies:
