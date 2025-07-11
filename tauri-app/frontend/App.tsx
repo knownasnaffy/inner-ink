@@ -1,51 +1,30 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
-import "./App.css";
+import { useQuery } from '@tanstack/react-query'
+import './App.css'
+import { isOnboarding } from './lib/utils/user'
+import ErrorWithMessage from './components/error'
+import OnBoarding from './views/onboarding'
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
+  const { isLoading, error, data } = useQuery({
+    queryKey: ['repoData'],
+    queryFn: isOnboarding,
+  })
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
-  }
-
-  return (
-    <main className="container">
-      <h1>Welcome to Tauri + React</h1>
-
-      <div className="row">
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+  if (isLoading)
+    return (
+      <div className='flex h-screen items-center justify-center'>
+        <span className='loading loading-spinner loading-xl text-primary lg:scale-125'></span>
       </div>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
+    )
 
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
-    </main>
-  );
+  if (error)
+    return (
+      <div className='flex h-screen items-center justify-center'>
+        <ErrorWithMessage message='An error occured while trying to get data from the store' />
+      </div>
+    )
+
+  return <main className=''>{data ? <OnBoarding /> : 'Welcome back'}</main>
 }
 
-export default App;
+export default App
