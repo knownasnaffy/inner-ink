@@ -1,3 +1,8 @@
 packages:
-    - 'app/'
-    - 'website/'
+  - app/
+  - tauri-app/
+  - website/
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - esbuild

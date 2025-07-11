@@ -1,67 +1,67 @@
 {
-	"name": "inner-ink",
-	"version": "2.2.2",
-	"type": "module",
-	"repository": "https://github.com/knownasnaffy/inner-ink",
-	"private": true,
-	"packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
-	"scripts": {
-		"build": "pnpm --filter=app build",
-		"dev": "pnpm --filter=app dev",
-		"format": "prettier . --write",
-		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 8",
-		"lint-staged": "lint-staged",
-		"prepare": "husky",
-		"release": "semantic-release"
-	},
-	"devDependencies": {
-		"@semantic-release/changelog": "^6.0.3",
-		"@semantic-release/git": "^10.0.1",
-		"@typescript-eslint/eslint-plugin": "^8.0.0",
-		"@typescript-eslint/parser": "^8.0.0",
-		"eslint": "^8.56.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-jsx-a11y": "^6.8.0",
-		"eslint-plugin-react": "^7.33.2",
-		"eslint-plugin-react-hooks": "^5.0.0",
-		"eslint-plugin-react-refresh": "^0.4.5",
-		"eslint-plugin-unicorn": "^56.0.0",
-		"husky": "^9.0.0",
-		"lint-staged": "^15.2.0",
-		"prettier": "^3.1.1",
-		"prettier-plugin-pkg": "^0.19.0",
-		"prettier-plugin-tailwindcss": "^0.6.0",
-		"semantic-release": "^23.0.0",
-		"typescript": "^5.3.3"
-	},
-	"lint-staged": {
-		"**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 8",
-		"!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
-	},
-	"release": {
-		"plugins": [
-			"@semantic-release/commit-analyzer",
-			"@semantic-release/release-notes-generator",
-			"@semantic-release/changelog",
-			"@semantic-release/npm",
-			[
-				"@semantic-release/github",
-				{
-					"assets": [
-						"release-artifacts/**"
-					],
-					"releaseNameTemplate": "Inner Ink v<%= nextRelease.version %>"
-				}
-			],
-			[
-				"@semantic-release/git",
-				{
-					"message": "chore(release): v${nextRelease.version}\n\n${nextRelease.notes}"
-				}
-			]
-		],
-		"branches": [
-			"main"
-		]
-	}
+  "name": "inner-ink",
+  "version": "2.2.2",
+  "type": "module",
+  "repository": "https://github.com/knownasnaffy/inner-ink",
+  "private": true,
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad",
+  "scripts": {
+    "build": "pnpm --filter=tauri-app build",
+    "dev": "pnpm --filter=tauri-app dev",
+    "format": "prettier . --write",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 8",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "release": "semantic-release"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "prettier-plugin-pkg": "^0.19.0",
+    "prettier-plugin-tailwindcss": "^0.6.0",
+    "semantic-release": "^23.0.0",
+    "typescript": "^5.3.3"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint --fix --report-unused-disable-directives --max-warnings 8",
+    "!./pnpm-lock.yaml": "prettier --ignore-unknown --write"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "release-artifacts/**"
+          ],
+          "releaseNameTemplate": "Inner Ink v<%= nextRelease.version %>"
+        }
+      ],
+      [
+        "@semantic-release/git",
+        {
+          "message": "chore(release): v${nextRelease.version}\n\n${nextRelease.notes}"
+        }
+      ]
+    ],
+    "branches": [
+      "main"
+    ]
+  }
 }
