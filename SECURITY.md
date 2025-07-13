@@ -10,7 +10,7 @@ If you believe you have found a security vulnerability in our app, please report
 
 To report a security issue, please use the GitHub Security Advisory "[Report a Vulnerability](https://github.com/knownasnaffy/inner-ink/security/advisories/new)" tab.
 
-If you prefer to submit without logging in, send an email to [naffydharni006@gmail.com](mailto:naffydharni006@gmail.com).
+If you prefer to submit without logging in, send an email to [contact@barinderpreet.com](mailto:contact@barinderpreet.com).
 
 Report security bugs in third-party modules to the person or team maintaining the module. You can also report a vulnerability through the [npm contact form](https://www.npmjs.com/support) by selecting "I'm reporting a security vulnerability".
 
