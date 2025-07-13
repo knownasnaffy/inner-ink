@@ -1,0 +1,10 @@
+* Inner Ink
+
+** The Flow
+   App starts and checks if the user is onboarded, if he isn't, start the
+   on-boarding process.
+*** On Boarding
+    - Greeted with a welcome message
+    - Prompt to enter Name (optional)
+    - Prompt to enter master password
+    - Prompt to setup recovery questions
