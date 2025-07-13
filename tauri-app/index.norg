@@ -5,6 +5,6 @@
    on-boarding process.
 *** On Boarding
     - Greeted with a welcome message
-    - Prompt to enter Name (optional)
+    - Prompt to enter Name (optional) (will save onboarding state to store)
     - Prompt to enter master password
     - Prompt to setup recovery questions

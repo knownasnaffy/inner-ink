@@ -1,43 +1,37 @@
 import { useQuery } from '@tanstack/react-query'
-import { motion } from 'framer-motion'
 import './App.css'
-import { isOnboarding } from './lib/utils/user'
-import ErrorWithMessage from './components/error'
+import { delay } from './lib/utils'
 import OnBoarding from './views/onboarding'
+import { myStore } from './lib/utils/store'
+import FullScreenLoader from './components/full-screen-loader'
+import FullScreenError from './components/full-screen-error'
 
 function App() {
-  const { isLoading, error, data } = useQuery({
+  const {
+    isLoading,
+    error,
+    data: onBoardingStatus,
+  } = useQuery({
     queryKey: ['repoData'],
-    queryFn: isOnboarding,
+    queryFn: async (): Promise<string | false> => {
+      await delay(1000)
+      const status = await myStore.get<string>('onboarding')
+      return status ? status : false
+    },
   })
 
-  if (isLoading)
-    return (
-      <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: -20, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className='flex h-screen items-center justify-center'
-      >
-        <span className='loading loading-spinner loading-xl text-primary lg:scale-125'></span>
-      </motion.div>
-    )
+  if (isLoading) return <FullScreenLoader />
 
   if (error)
     return (
-      <motion.div
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: -20, opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className='flex h-screen items-center justify-center'
-      >
-        <ErrorWithMessage message='An error occured while trying to get data from the store' />
-      </motion.div>
+      <FullScreenError message='An error occured while trying to get data from the store' />
     )
 
-  return data ? <OnBoarding /> : 'Welcome back'
+  return onBoardingStatus !== 'done' ? (
+    <OnBoarding onBoarding={onBoardingStatus!} />
+  ) : (
+    'Welcome back'
+  )
 }
 
 export default App

@@ -19,11 +19,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
-    "paths": {
-      "@/*": ["./frontend/*"],
-    }
-
   },
   "include": ["frontend"],
   "references": [{ "path": "./tsconfig.node.json" }]
