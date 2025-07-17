@@ -121,7 +121,7 @@ importers:
         version: 4.6.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react-router-dom:
         specifier: ^7.5.2
-        version: 7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.7.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       tauri-plugin-autostart-api:
         specifier: github:tauri-apps/tauri-plugin-autostart#v1
         version: https://codeload.github.com/tauri-apps/tauri-plugin-autostart/tar.gz/4424517fbfb76ff3eaddebaec6482a56b480a514
@@ -2915,8 +2915,8 @@ packages:
   lexical@0.20.0:
     resolution: {integrity: sha512-lJEHLFACXqRf3u/VlIOu9T7MJ51O4la92uOBwiS9Sx+juDK3Nrru5Vgl1aUirV1qK8XEM3h6Org2HcrsrzZ3ZA==}
 
-  lib0@0.2.111:
-    resolution: {integrity: sha512-NZPvycjIPaSY1DV9uz88RJYFwrul6kLMtZGIw1T1zE6i1E9q17XElZJPfWVn2iVDQTLLqhJijghuVxKS/z8EHQ==}
+  lib0@0.2.114:
+    resolution: {integrity: sha512-gcxmNFzA4hv8UYi8j43uPlQ7CGcyMJ2KQb5kZASw6SnAKAf10hK12i2fjrS3Cl/ugZa5Ui6WwIu1/6MIXiHttQ==}
     engines: {node: '>=16'}
     hasBin: true
 
@@ -3759,15 +3759,15 @@ packages:
     resolution: {integrity: sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==}
     engines: {node: '>=0.10.0'}
 
-  react-router-dom@7.6.3:
-    resolution: {integrity: sha512-DiWJm9qdUAmiJrVWaeJdu4TKu13+iB/8IEi0EW/XgaHCjW/vWGrwzup0GVvaMteuZjKnh5bEvJP/K0MDnzawHw==}
+  react-router-dom@7.7.0:
+    resolution: {integrity: sha512-wwGS19VkNBkneVh9/YD0pK3IsjWxQUVMDD6drlG7eJpo1rXBtctBqDyBm/k+oKHRAm1x9XWT3JFC82QI9YOXXA==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
       react-dom: '>=18'
 
-  react-router@7.6.3:
-    resolution: {integrity: sha512-zf45LZp5skDC6I3jDLXQUu0u26jtuP4lEGbc7BbdyxenBN1vJSTA18czM2D+h5qyMBuMrD+9uB+mU37HIoKGRA==}
+  react-router@7.7.0:
+    resolution: {integrity: sha512-3FUYSwlvB/5wRJVTL/aavqHmfUKe0+Xm9MllkYgGo9eDwNdkvwlJGjpPxono1kCycLt6AnDTgjmXvK3/B4QGuw==}
     engines: {node: '>=20.0.0'}
     peerDependencies:
       react: '>=18'
@@ -7624,7 +7624,7 @@ snapshots:
 
   lexical@0.20.0: {}
 
-  lib0@0.2.111:
+  lib0@0.2.114:
     dependencies:
       isomorphic.js: 0.2.5
 
@@ -8232,13 +8232,13 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-router-dom@7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router-dom@7.7.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      react-router: 7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react-router: 7.7.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
 
-  react-router@7.6.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router@7.7.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
       cookie: 1.0.2
       react: 18.3.1
@@ -9175,7 +9175,7 @@ snapshots:
 
   yjs@13.6.18:
     dependencies:
-      lib0: 0.2.111
+      lib0: 0.2.114
 
   yocto-queue@0.1.0: {}
 
