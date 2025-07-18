@@ -1,4 +1,3 @@
-// src-tauri/src/state.rs
 use std::sync::Mutex;
 
 pub struct AppState {

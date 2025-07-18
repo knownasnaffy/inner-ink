@@ -2,13 +2,8 @@ import { motion } from 'framer-motion'
 import { FormEventHandler, useState } from 'react'
 import { setUserName } from '../lib/utils/user'
 import { Circle } from 'lucide-react'
-import { useQuery } from '@tanstack/react-query'
-import { delay } from '../lib/utils'
-import { myStore } from '../lib/utils/store'
-import FullScreenLoader from '../components/full-screen-loader'
-import FullScreenError from '../components/full-screen-error'
 import { invoke } from '@tauri-apps/api/core'
-import Example, {
+import {
   Select,
   SelectContent,
   selectItem,
@@ -16,6 +11,7 @@ import Example, {
   SelectTrigger,
 } from '../components/ui/select'
 import defaultRecoveryQuestions from '../lib/db/default-recovery-questions'
+import { myStore } from '../lib/utils/store'
 
 export default function OnBoarding({
   onBoarding,
@@ -163,22 +159,40 @@ function OnBoardingPassword({ setStep }: { setStep(step: number): void }) {
   )
 }
 
-function OnBoardingRecovery({ setStep }: { setStep(step: number): void }) {
+function OnBoardingRecovery({}: { setStep(step: number): void }) {
+  const [whitespaceError, setWhitespaceError] = useState(false)
+  const [question1, setQuestion1] = useState<selectItem>(
+    defaultRecoveryQuestions[0],
+  )
+  const [question2, setQuestion2] = useState<selectItem>(
+    defaultRecoveryQuestions[1],
+  )
+
   const storeRecoveryQuestionAndAnswer: FormEventHandler<
     HTMLFormElement
   > = async (event) => {
     event.preventDefault()
 
-    const answerInput = event.currentTarget.elements.namedItem(
-      'password',
+    const answer1Input = event.currentTarget.elements.namedItem(
+      'answer1',
     ) as HTMLInputElement
+    if (answer1Input.value.trim().length === 0) return setWhitespaceError(true)
 
-    console.log(await invoke('get_password'))
+    const answer2Input = event.currentTarget.elements.namedItem(
+      'answer2',
+    ) as HTMLInputElement
+    if (answer2Input.value.trim().length === 0) return setWhitespaceError(true)
+
+    await invoke('setup_recovery', {
+      questions: [question1, question2],
+      answers: [answer1Input.value, answer2Input.value],
+    }).then(async () => {
+      await myStore
+        .set('onboarding', 'done')
+        .then(() => window.location.reload())
+    })
   }
 
-  const [question, setQuestion] = useState<selectItem>(
-    defaultRecoveryQuestions[0],
-  )
   return (
     <motion.div
       layoutId='3'
@@ -197,27 +211,56 @@ function OnBoardingRecovery({ setStep }: { setStep(step: number): void }) {
           className='join join-vertical mt-3 w-full'
           onSubmit={storeRecoveryQuestionAndAnswer}
         >
-          <Select value={question} onChange={setQuestion}>
+          {/* Question 1 */}
+          <Select value={question1} onChange={setQuestion1}>
             <SelectTrigger className='focus-within:select-primary join-item'>
-              {question?.name}
+              {question1?.name || 'Select first question'}
             </SelectTrigger>
             <SelectContent>
-              {defaultRecoveryQuestions.map((item) => (
-                <SelectOption key={item.id} value={item} />
-              ))}
+              {defaultRecoveryQuestions
+                .filter((q) => q.id !== question2?.id)
+                .map((item) => (
+                  <SelectOption key={item.id} value={item} />
+                ))}
             </SelectContent>
           </Select>
           <input
             className='input join-item focus-within:input-primary w-full px-4'
-            name='answer'
+            name='answer1'
             placeholder={
-              (question as (typeof defaultRecoveryQuestions)[0])
-                .answerPlaceholder
+              (question1 as (typeof defaultRecoveryQuestions)[0])
+                .answerPlaceholder || 'Answer to first question'
             }
           />
+
+          {/* Question 2 */}
+          <Select value={question2} onChange={setQuestion2}>
+            <SelectTrigger className='focus-within:select-primary join-item'>
+              {question2?.name || 'Select second question'}
+            </SelectTrigger>
+            <SelectContent>
+              {defaultRecoveryQuestions
+                .filter((q) => q.id !== question1?.id)
+                .map((item) => (
+                  <SelectOption key={item.id} value={item} />
+                ))}
+            </SelectContent>
+          </Select>
+          <input
+            className='input join-item focus-within:input-primary w-full px-4'
+            name='answer2'
+            placeholder={
+              (question2 as (typeof defaultRecoveryQuestions)[0])
+                ?.answerPlaceholder || 'Answer to second question'
+            }
+          />
+
           <button type='submit' className='btn btn-primary join-item grow'>
             Continue
           </button>
+          {whitespaceError && (
+            <span className='text-error mt-3'>Whitespaces? Seriously?</span>
+          )}
         </form>
       </div>
     </motion.div>
