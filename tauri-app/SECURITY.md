@@ -33,14 +33,14 @@ Process:
 3. Generate salt for recovery derivation  
 4. Derive recovery key from answers using Argon2
 5. Cross-encrypt and store:
-   ├── Encrypted(password_derived_key, recovery_key) → stored on disk
-   └── Encrypted(recovery_derived_key, password_key) → stored on disk
+   ├── Encrypted(master_key, recovery_key) → stored on disk
+   └── Encrypted(recovery_key, master_key) → stored on disk
 
 Storage Structure:
 ├── user_salt (password derivation)
 ├── recovery_salt (recovery questions derivation)
-├── encrypted_recovery_key (encrypted with password-derived key)
-└── encrypted_password_key (encrypted with recovery-derived key)
+├── encrypted_recovery_key (encrypted with master key)
+└── encrypted_master_key (encrypted with recovery key)
 ```
 
 ### Subsequent Logins
@@ -67,8 +67,8 @@ User Input: Recovery Answers
 Process:
 1. Load recovery_salt from disk  
 2. Derive recovery key from answers + salt using Argon2
-3. Decrypt stored password key using recovery key
-4. Use decrypted password key as master key
+3. Decrypt stored master key using recovery key
+4. Use decrypted master key for session
 5. Store master key in application memory
 
 Result: Authenticated session via recovery path
@@ -181,7 +181,7 @@ Authentication: Built-in AEAD (Authenticated Encryption with Associated Data)
     "user_salt": "base64_encoded_32_bytes",
     "recovery_salt": "base64_encoded_32_bytes", 
     "encrypted_recovery_key": "base64_encoded_encrypted_data",
-    "encrypted_password_key": "base64_encoded_encrypted_data"
+    "encrypted_master_key": "base64_encoded_encrypted_data"
   },
   "entries": {
     "2024-01-15": {
